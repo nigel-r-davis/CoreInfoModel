@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:OpenModel_Profile="http:///schemas/OpenModel_Profile/_S30WUD8HEeiIisB6uOvKFA/26" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/OpenModel_Profile/_S30WUD8HEeiIisB6uOvKFA/26 UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_S32LgD8HEeiIisB6uOvKFA">
+  <uml:Model xmi:id="_SEvj0M4cEem0y513gQlC0Q" name="Party">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_SKTZQM4cEem0y513gQlC0Q">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_a5W0EM4cEem0y513gQlC0Q" name="Party" isAbstract="true">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_w2mvsM42Eem0y513gQlC0Q" annotatedElement="_a5W0EM4cEem0y513gQlC0Q">
+        <body>An abstract class that allows us to link to either Person or OrganizationUnit.</body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_ye0CcM4cEem0y513gQlC0Q">
+        <general xmi:type="uml:Class" href="CoreModel.uml#_iVJ1kI2wEeO38ZmbECnvbg"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="__aKekM4cEem0y513gQlC0Q" name="PartyRole">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_bmUMcM43Eem0y513gQlC0Q" annotatedElement="__aKekM4cEem0y513gQlC0Q">
+        <body>Represents Party behavior, in the context of a PartyRoleRelationship. &#xD;
+For example a Person may be a butcher in the context of a work relationship, a daughter, wife and mother in the context of family relationships. &#xD;
+An Organization Unit may be an employer in the context of its employees a supplier to its customer and a customer to its suppliers (in the context of a given transaction).</body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_J5UlEM4dEem0y513gQlC0Q">
+        <general xmi:type="uml:Class" href="CoreModel.uml#_k5nWYI2wEeO38ZmbECnvbg"/>
+      </generalization>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_gkq-0s4hEem0y513gQlC0Q" name="_partyRoleContactReason" type="_RI638M4gEem0y513gQlC0Q" aggregation="composite" association="_gkqXwM4hEem0y513gQlC0Q">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_dGviUDBsEeqsBLPUmmYf3g" annotatedElement="_gkq-0s4hEem0y513gQlC0Q">
+          <body>The reasons as to why this Party may need to be contacted in the context of this PartyRole.</body>
+        </ownedComment>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gkrl4M4hEem0y513gQlC0Q"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gkrl4c4hEem0y513gQlC0Q" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ybGCQs4rEem0y513gQlC0Q" name="_partyRoleType" type="_eVwrsM4rEem0y513gQlC0Q" association="_ybFbMM4rEem0y513gQlC0Q">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_h5dDYDBsEeqsBLPUmmYf3g" annotatedElement="_ybGCQs4rEem0y513gQlC0Q">
+          <body>The specification of this PartyRole.</body>
+        </ownedComment>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ybGpUM4rEem0y513gQlC0Q" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ybHQYM4rEem0y513gQlC0Q" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_FJOLsjCMEeqsBLPUmmYf3g" name="_party" type="_a5W0EM4cEem0y513gQlC0Q" association="_FJNkoDCMEeqsBLPUmmYf3g">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_leskkDCUEeqsBLPUmmYf3g" annotatedElement="_FJOLsjCMEeqsBLPUmmYf3g">
+          <body>The specific Party playing the role.&#xD;
+A role can exist with no Party playing that role.</body>
+        </ownedComment>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FJPZ0DCMEeqsBLPUmmYf3g"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FJPZ0TCMEeqsBLPUmmYf3g" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_RI638M4gEem0y513gQlC0Q" name="PartyRoleContactReason">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_Xf6iUM44Eem0y513gQlC0Q" annotatedElement="_RI638M4gEem0y513gQlC0Q">
+        <body>A class that records various reasons for contacting a Party in the context of a role. Each instance can be decorated with many different contact methods.&#xD;
+Note that we link to PartyRole, not Party as this allows for contextual contact methods.&#xD;
+The contact method may be:&#xD;
+- allocated as a result of the role, e.g., an employee role is provided with an email by the employer role&#xD;
+- provided by the party independent of the role, e.g., a person's private email provided by an employee role to the employer role for personal contact&#xD;
+- provided by the party with respect to the role, e.g., a person creates a specific email address related to their role</body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_ozX7EM4gEem0y513gQlC0Q">
+        <general xmi:type="uml:Class" href="CoreModel.uml#_k5nWYI2wEeO38ZmbECnvbg"/>
+      </generalization>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_dNGUwBvuEeqCeNa5GcKdyg" name="reason">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_j1PlMDBtEeqsBLPUmmYf3g" annotatedElement="_dNGUwBvuEeqCeNa5GcKdyg">
+          <body>The reason for the contact. For example “in case of emergency”, “for building access requests”.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_gkqXwM4hEem0y513gQlC0Q" name="PartyRoleHasContactReason" memberEnd="_gkq-0s4hEem0y513gQlC0Q _gkrl4s4hEem0y513gQlC0Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gkq-0M4hEem0y513gQlC0Q" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gkq-0c4hEem0y513gQlC0Q" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_gkrl4s4hEem0y513gQlC0Q" name="partyrole" type="__aKekM4cEem0y513gQlC0Q" association="_gkqXwM4hEem0y513gQlC0Q">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OBStwM4iEem0y513gQlC0Q" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OCIbQM4iEem0y513gQlC0Q" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_AZxLUM4mEem0y513gQlC0Q" name="PartyRoleEmailContact">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_b-sawM44Eem0y513gQlC0Q" annotatedElement="_AZxLUM4mEem0y513gQlC0Q">
+        <body>Represents the information needed to contact someone by email.&#xD;
+&#xD;
+This is an example structure that could be used directly where appropriate but could be replaced with other similar structures where necessary. &#xD;
+For example, in some roles there may be multiple email addresses, perhaps where the role has an admin.</body>
+      </ownedComment>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_RQWt8M4mEem0y513gQlC0Q" name="emailAddress">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_qpvX0DBtEeqsBLPUmmYf3g" annotatedElement="_RQWt8M4mEem0y513gQlC0Q">
+          <body>The contact email address.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_14vKoM4nEem0y513gQlC0Q" name="PartyRoleMailContact">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_jiSvEM44Eem0y513gQlC0Q" annotatedElement="_14vKoM4nEem0y513gQlC0Q">
+        <body>Represents the information needed to contact someone via mail or to visit them. &#xD;
+Note that some addresses (such as post boxes) are only for mail and some addresses are used for both mail and geographic locations. &#xD;
+For geographic locations the address may be linked to geographic coordinates in the Location model. &#xD;
+&#xD;
+This is an example structure, that allows for only one address, that could be used directly where appropriate but could be replaced with other similar structures where necessary. &#xD;
+For example, in some roles there may be multiple postal addresses, perhaps where the address depends upon the country of the sender.</body>
+      </ownedComment>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ZHfXYM4oEem0y513gQlC0Q" name="isPostalAddress">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_zfoP4DBsEeqsBLPUmmYf3g" annotatedElement="_ZHfXYM4oEem0y513gQlC0Q">
+          <body>If this is a valid postal address (e.g., can be used to send a letter to).</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_foMEQM4oEem0y513gQlC0Q" name="isStreetAddress">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_6Z3eIDBsEeqsBLPUmmYf3g" annotatedElement="_foMEQM4oEem0y513gQlC0Q">
+          <body>If this is a valid street address.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_UaiqoM4pEem0y513gQlC0Q" name="_geographicAddress" association="_UahcgM4pEem0y513gQlC0Q">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_AK0wIDBtEeqsBLPUmmYf3g" annotatedElement="_UaiqoM4pEem0y513gQlC0Q">
+          <body>The Location for this address contact. It should contain the address details.&#xD;
+Some postal addresses will not have meaningful locations, e.g., PO Box.</body>
+        </ownedComment>
+        <type xmi:type="uml:Class" href="Location.uml#__O62gEzREeqW7qYrErtEXA"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UajRsM4pEem0y513gQlC0Q" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UajRsc4pEem0y513gQlC0Q" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ldkjQM4oEem0y513gQlC0Q" name="PartyRolePhoneDetails">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_outwoM44Eem0y513gQlC0Q" annotatedElement="_ldkjQM4oEem0y513gQlC0Q">
+        <body>Provides specific phone number details.&#xD;
+&#xD;
+This is an example structure that could be used directly where appropriate but could be replaced with other similar structures where necessary. &#xD;
+For example, the information could include country information.</body>
+      </ownedComment>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_8fIaYM4oEem0y513gQlC0Q" name="phoneNumber">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_Loi7MDBuEeqsBLPUmmYf3g" annotatedElement="_8fIaYM4oEem0y513gQlC0Q">
+          <body>The contact phone number as a string.&#xD;
+It should be formatted using an existing standard format such as ITU-T E.164</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_-FtWQBv-EeqCeNa5GcKdyg" name="phoneNumberType">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_qv6b0DBuEeqsBLPUmmYf3g" annotatedElement="_-FtWQBv-EeqCeNa5GcKdyg">
+          <body>The phone number type, such as home, mobile, office, admin, 24 hour, daytime only.&#xD;
+&#xD;
+The attribute can be omitted where there is no relevant type information.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Q9880DByEeqsBLPUmmYf3g"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Q-PQsDByEeqsBLPUmmYf3g" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_XE7z8Bv_EeqCeNa5GcKdyg" name="priority">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_xbnpYDBvEeqsBLPUmmYf3g" annotatedElement="_XE7z8Bv_EeqCeNa5GcKdyg">
+          <body>The contact priority, 1 is highest priority, then 2,3, …&#xD;
+&#xD;
+The priority attribute can be omitted where all phone numbers are equally applicable. A blank or null value counts as the lowest priority.&#xD;
+&#xD;
+</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NbBBkDByEeqsBLPUmmYf3g"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NbWYwDByEeqsBLPUmmYf3g" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_GWvYsM4pEem0y513gQlC0Q" name="Person">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_NrDLcM43Eem0y513gQlC0Q" annotatedElement="_GWvYsM4pEem0y513gQlC0Q">
+        <body>Represents an individual, independent of any roles that they may play.</body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_KP_FsM4qEem0y513gQlC0Q" general="_a5W0EM4cEem0y513gQlC0Q"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_UahcgM4pEem0y513gQlC0Q" name="MailContactUsesAddress" memberEnd="_UaiqoM4pEem0y513gQlC0Q _UajRss4pEem0y513gQlC0Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UaiDkM4pEem0y513gQlC0Q" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UaiDkc4pEem0y513gQlC0Q" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_UajRss4pEem0y513gQlC0Q" name="partyroleaddresscontact" type="_14vKoM4nEem0y513gQlC0Q" association="_UahcgM4pEem0y513gQlC0Q">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_k5yEQM4pEem0y513gQlC0Q"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_k7sIwM4pEem0y513gQlC0Q" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_M0TckM4qEem0y513gQlC0Q" name="OrganizationUnit">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_TOMD4M43Eem0y513gQlC0Q" annotatedElement="_M0TckM4qEem0y513gQlC0Q">
+        <body>Represents a company entity or a unit within that entity (even if it doesn’t have separate legal status).</body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_StfdgM4qEem0y513gQlC0Q" general="_a5W0EM4cEem0y513gQlC0Q"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_a4RGkM4qEem0y513gQlC0Q" name="type">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_nMrY4DBeEeqsBLPUmmYf3g" annotatedElement="_a4RGkM4qEem0y513gQlC0Q">
+          <body>The type of OrganizationUnit such as department, company, section.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_eVwrsM4rEem0y513gQlC0Q" name="PartyRoleType">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_naKh0DCLEeqsBLPUmmYf3g" annotatedElement="_eVwrsM4rEem0y513gQlC0Q">
+        <body>The specification class for PartyRole. It allows us to define types of PartyRoles, such as :&#xD;
+• Employee, organization-parent, organization-child&#xD;
+• Customer, Owner …&#xD;
+</body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_dYG1cBvvEeqCeNa5GcKdyg">
+        <general xmi:type="uml:Class" href="CoreModel.uml#_iVJ1kI2wEeO38ZmbECnvbg"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ybFbMM4rEem0y513gQlC0Q" name="PartyRoleSpecifiedByPartyRoleType" memberEnd="_ybGCQs4rEem0y513gQlC0Q _ybHQYc4rEem0y513gQlC0Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ybGCQM4rEem0y513gQlC0Q" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ybGCQc4rEem0y513gQlC0Q" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ybHQYc4rEem0y513gQlC0Q" name="partyrole" type="__aKekM4cEem0y513gQlC0Q" association="_ybFbMM4rEem0y513gQlC0Q">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LTm1sDBdEeqsBLPUmmYf3g"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LT8M4DBdEeqsBLPUmmYf3g" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_gTK-IM4sEem0y513gQlC0Q" name="PartyRoleRelationship">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_ifK6oM43Eem0y513gQlC0Q" annotatedElement="_gTK-IM4sEem0y513gQlC0Q">
+        <body>A class that defines the relationships (contexts) that PartyRoles exist in.&#xD;
+So that an employer can be related to its employees and a mother to her children.</body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_swrnsM4sEem0y513gQlC0Q">
+        <general xmi:type="uml:Class" href="CoreModel.uml#_iVJ1kI2wEeO38ZmbECnvbg"/>
+      </generalization>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_lhYS8c4tEem0y513gQlC0Q" name="_partyRoleRelationshipType" type="_5hyisM4sEem0y513gQlC0Q" association="_lhXE0M4tEem0y513gQlC0Q">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_5QKm8DBzEeqsBLPUmmYf3g" annotatedElement="_lhYS8c4tEem0y513gQlC0Q">
+          <body>The specification for this relationship.</body>
+        </ownedComment>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lhY6AM4tEem0y513gQlC0Q" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lhY6Ac4tEem0y513gQlC0Q" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_IiHR0s4uEem0y513gQlC0Q" name="_partyRole" type="__aKekM4cEem0y513gQlC0Q" aggregation="composite" association="_IiGqwM4uEem0y513gQlC0Q">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_B2dHUDB0EeqsBLPUmmYf3g" annotatedElement="_IiHR0s4uEem0y513gQlC0Q">
+          <body>The specific roles in this relationship. &#xD;
+A PartyRoleRelationship is only meaningful with two or more PartyRole instances. &#xD;
+A PartyRole cannot exist independently of a PartyRoleRelationship explaining the PartyRole with respect to one or more other PartyRoles.</body>
+        </ownedComment>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IiK8MM4uEem0y513gQlC0Q" value="2"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IiOmkM4uEem0y513gQlC0Q" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5hyisM4sEem0y513gQlC0Q" name="PartyRoleRelationshipType">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_LkbBcDB0EeqsBLPUmmYf3g" annotatedElement="_5hyisM4sEem0y513gQlC0Q">
+        <body>The specification class for PartyRoleRelationship.&#xD;
+It allows us to define types of relationships, such as parent-child or organization-hierarchy.&#xD;
+</body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_TdzIcBvvEeqCeNa5GcKdyg">
+        <general xmi:type="uml:Class" href="CoreModel.uml#_iVJ1kI2wEeO38ZmbECnvbg"/>
+      </generalization>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_PhxgwD26EeqNzoiCK4mkvg" name="_partyRoleRelationshipEntryType" type="_CVbbQD26EeqNzoiCK4mkvg" aggregation="composite" association="_PhsoQD26EeqNzoiCK4mkvg">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_LYPNoD28EeqNzoiCK4mkvg" annotatedElement="_PhxgwD26EeqNzoiCK4mkvg">
+          <body>Entry types for the PartyRoleRelationshipType.</body>
+        </ownedComment>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Phyu4D26EeqNzoiCK4mkvg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PhzV8D26EeqNzoiCK4mkvg" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_lhXE0M4tEem0y513gQlC0Q" name="PartyRoleRelationshipSpecifiedByPartyRoleRelationshipType" memberEnd="_lhYS8c4tEem0y513gQlC0Q _lhY6As4tEem0y513gQlC0Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lhXr4M4tEem0y513gQlC0Q" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_lhYS8M4tEem0y513gQlC0Q" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_lhY6As4tEem0y513gQlC0Q" name="partyrolerelationship" type="_gTK-IM4sEem0y513gQlC0Q" association="_lhXE0M4tEem0y513gQlC0Q">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DjTOcM4uEem0y513gQlC0Q"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DlOhEM4uEem0y513gQlC0Q" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_IiGqwM4uEem0y513gQlC0Q" name="PartyRoleRelationshipHasRoles" memberEnd="_IiHR0s4uEem0y513gQlC0Q _IiSQ8M4uEem0y513gQlC0Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_IiHR0M4uEem0y513gQlC0Q" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_IiHR0c4uEem0y513gQlC0Q" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_IiSQ8M4uEem0y513gQlC0Q" name="symmetricpartyrolerelationship" type="_gTK-IM4sEem0y513gQlC0Q" association="_IiGqwM4uEem0y513gQlC0Q">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Mps80M4vEem0y513gQlC0Q" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MpzDcM4vEem0y513gQlC0Q" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_uWNAMBvtEeqCeNa5GcKdyg" name="EmailContactForPartyRole" client="_AZxLUM4mEem0y513gQlC0Q" supplier="_RI638M4gEem0y513gQlC0Q"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_vJXigBvtEeqCeNa5GcKdyg" name="AddressContactForPartyRole" client="_14vKoM4nEem0y513gQlC0Q" supplier="_RI638M4gEem0y513gQlC0Q"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_v9KW8BvtEeqCeNa5GcKdyg" name="PhoneContactForPartyRole" client="_EGWDIDBwEeqsBLPUmmYf3g" supplier="_RI638M4gEem0y513gQlC0Q"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_HvqBIBwBEeqCeNa5GcKdyg" name="CdHasRelatedPartyRole">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HvqoMBwBEeqCeNa5GcKdyg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_HvqoMRwBEeqCeNa5GcKdyg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <memberEnd xmi:type="uml:Property" href="CoreModel.uml#_HvrPQBwBEeqCeNa5GcKdyg"/>
+      <memberEnd xmi:type="uml:Property" href="#_IY2vIBwBEeqCeNa5GcKdyg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_IY2vIBwBEeqCeNa5GcKdyg" name="constraintdomain" association="_HvqBIBwBEeqCeNa5GcKdyg">
+        <type xmi:type="uml:Class" href="CoreModel.uml#_RcjQAOksEea0ZYSsp-EUkw"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TjeNcBwBEeqCeNa5GcKdyg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Tk04UBwBEeqCeNa5GcKdyg" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_yIVd8BwBEeqCeNa5GcKdyg" name="CdConstrainsPartyRole">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yIXTIBwBEeqCeNa5GcKdyg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yIXTIRwBEeqCeNa5GcKdyg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <memberEnd xmi:type="uml:Property" href="CoreModel.uml#_yIXTIhwBEeqCeNa5GcKdyg"/>
+      <memberEnd xmi:type="uml:Property" href="#_yIYhQRwBEeqCeNa5GcKdyg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_yIYhQRwBEeqCeNa5GcKdyg" name="constraintdomain" association="_yIVd8BwBEeqCeNa5GcKdyg">
+        <type xmi:type="uml:Class" href="CoreModel.uml#_RcjQAOksEea0ZYSsp-EUkw"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9dJaEBwBEeqCeNa5GcKdyg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9dSkABwBEeqCeNa5GcKdyg" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_EGWDIDBwEeqsBLPUmmYf3g" name="PartyRolePhoneContact">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_Oe_cgDBxEeqsBLPUmmYf3g" annotatedElement="_EGWDIDBwEeqsBLPUmmYf3g">
+        <body>Represents the information needed to contact someone via phone. &#xD;
+&#xD;
+This is an example structure, showing two levels in the augmentation, that could be used directly where appropriate but could be replaced with other similar structures where necessary. &#xD;
+For example, in some roles there may be only one telephone number in which case a simple single level augmentation could be used.</body>
+      </ownedComment>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_UeNCYDBwEeqsBLPUmmYf3g" name="_partyRolePhoneDetails" type="_ldkjQM4oEem0y513gQlC0Q" aggregation="composite" association="_UeIw8DBwEeqsBLPUmmYf3g">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_FvJXgDBxEeqsBLPUmmYf3g" annotatedElement="_UeNCYDBwEeqsBLPUmmYf3g">
+          <body>Details the various numbers that can be used for the contact.</body>
+        </ownedComment>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UeOQgDBwEeqsBLPUmmYf3g" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UeOQgTBwEeqsBLPUmmYf3g" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_UeIw8DBwEeqsBLPUmmYf3g" name="PartyRolePhoneContactHasDetails" memberEnd="_UeNCYDBwEeqsBLPUmmYf3g _UeOQgjBwEeqsBLPUmmYf3g">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UeLNMDBwEeqsBLPUmmYf3g" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UeLNMTBwEeqsBLPUmmYf3g" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_UeOQgjBwEeqsBLPUmmYf3g" name="partyrolephonecontact" type="_EGWDIDBwEeqsBLPUmmYf3g" association="_UeIw8DBwEeqsBLPUmmYf3g"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_8Am40DB0EeqsBLPUmmYf3g" name="RelationshipType">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_QjtsUDB8EeqsBLPUmmYf3g" name="ASYMMETRIC"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Wul6MDB8EeqsBLPUmmYf3g" name="SYMMETRIC"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_FJNkoDCMEeqsBLPUmmYf3g" name="PartyPlayingRole" memberEnd="_FJOLsjCMEeqsBLPUmmYf3g _FJPZ0jCMEeqsBLPUmmYf3g">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FJOLsDCMEeqsBLPUmmYf3g" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FJOLsTCMEeqsBLPUmmYf3g" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_PEXwwDCNEeqsBLPUmmYf3g" annotatedElement="_FJNkoDCMEeqsBLPUmmYf3g">
+        <body>The specific Party playing the specific PartyRole in the relationship.</body>
+      </ownedComment>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_FJPZ0jCMEeqsBLPUmmYf3g" name="partyrole" type="__aKekM4cEem0y513gQlC0Q" association="_FJNkoDCMEeqsBLPUmmYf3g">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TgUXoDCNEeqsBLPUmmYf3g"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TiFSMDCNEeqsBLPUmmYf3g" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_CVbbQD26EeqNzoiCK4mkvg" name="PartyRoleRelationshipEntryType">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_l7L9UD27EeqNzoiCK4mkvg" annotatedElement="_CVbbQD26EeqNzoiCK4mkvg">
+        <body>Defines the PartyRole types used in a PartyRoleRelationshipType. Note that this is a use of the occurrence pattern. </body>
+      </ownedComment>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Q11wsj26EeqNzoiCK4mkvg" name="_partyRoleType" type="_eVwrsM4rEem0y513gQlC0Q" association="_Q11JoD26EeqNzoiCK4mkvg">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_UAmxoD28EeqNzoiCK4mkvg" annotatedElement="_Q11wsj26EeqNzoiCK4mkvg">
+          <body>The PartyRoleType for this relationship entry type.</body>
+        </ownedComment>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Q12-0D26EeqNzoiCK4mkvg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Q12-0T26EeqNzoiCK4mkvg" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_PhsoQD26EeqNzoiCK4mkvg" name="PartyRoleRelationshipTypeHasEntries" memberEnd="_PhxgwD26EeqNzoiCK4mkvg _PhzV8T26EeqNzoiCK4mkvg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PhvrkD26EeqNzoiCK4mkvg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PhwSoD26EeqNzoiCK4mkvg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_PhzV8T26EeqNzoiCK4mkvg" name="partyrolerelationshiptype" type="_5hyisM4sEem0y513gQlC0Q" association="_PhsoQD26EeqNzoiCK4mkvg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Q11JoD26EeqNzoiCK4mkvg" name="PartyRoleRelationshipEntryOfType" memberEnd="_Q11wsj26EeqNzoiCK4mkvg _Q12-0j26EeqNzoiCK4mkvg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Q11wsD26EeqNzoiCK4mkvg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Q11wsT26EeqNzoiCK4mkvg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Q12-0j26EeqNzoiCK4mkvg" name="partyrolerelationshipentitytype" type="_CVbbQD26EeqNzoiCK4mkvg" association="_Q11JoD26EeqNzoiCK4mkvg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IhrFoD27EeqNzoiCK4mkvg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IivcoD27EeqNzoiCK4mkvg" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_yu2RAF7AEeqzG4RIqKiE-A" name="PartyRoleLocationContact">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_cQF4QCA1EeyDD-DAP_bQOA" annotatedElement="_yu2RAF7AEeqzG4RIqKiE-A">
+        <body>Represents the information needed to contact someone in order to visit a site. For example, the person may need to approve visitors to the site.</body>
+      </ownedComment>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_fSja8F7BEeqzG4RIqKiE-A" name="_location" association="_fSfwkF7BEeqzG4RIqKiE-A">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_lhRvwCA1EeyDD-DAP_bQOA" annotatedElement="_fSja8F7BEeqzG4RIqKiE-A">
+          <body>The locations that this PartyRole is the contact for.</body>
+        </ownedComment>
+        <type xmi:type="uml:Class" href="Location.uml#_ycer8M1zEem0y513gQlC0Q"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fSkCAF7BEeqzG4RIqKiE-A" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fSkCAV7BEeqzG4RIqKiE-A" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_HHryYF7BEeqzG4RIqKiE-A" name="LocationContactFDorPartyRole" client="_yu2RAF7AEeqzG4RIqKiE-A" supplier="_RI638M4gEem0y513gQlC0Q"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_fSfwkF7BEeqzG4RIqKiE-A" name="ContactAtLocation" memberEnd="_fSja8F7BEeqzG4RIqKiE-A _fSkCAl7BEeqzG4RIqKiE-A">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fShlwF7BEeqzG4RIqKiE-A" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fShlwV7BEeqzG4RIqKiE-A" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_fSkCAl7BEeqzG4RIqKiE-A" name="partyrolelocationcontact" type="_yu2RAF7AEeqzG4RIqKiE-A" association="_fSfwkF7BEeqzG4RIqKiE-A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_m4VgkF7BEeqzG4RIqKiE-A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_m5unsF7BEeqzG4RIqKiE-A" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_YdtRAM4cEem0y513gQlC0Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Yd0lwM4cEem0y513gQlC0Q" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Yd0lwc4cEem0y513gQlC0Q" key="Version" value="0.0.47"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Yd0lws4cEem0y513gQlC0Q" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Yd0lw84cEem0y513gQlC0Q" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Yd0lxM4cEem0y513gQlC0Q" key="Date" value="2019-06-17"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Yd0lxc4cEem0y513gQlC0Q" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Ydz-sM4cEem0y513gQlC0Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UmlProfiles/Experimental.profile.uml#_unEcAJDrEemIv9iw4JXc9w"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="UmlProfiles/Experimental.profile.uml#_EDtRcAH_Eea6DZDQ0h6cdQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Yd0lxs4cEem0y513gQlC0Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Yf5CUM4cEem0y513gQlC0Q" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Yf5CUc4cEem0y513gQlC0Q" key="Version" value="0.2.14"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Yf5CUs4cEem0y513gQlC0Q" key="Comment" value="New stereotype OpenModelStatement added. It contains the generic information of the model and extends the Metaclass &quot;Model&quot;."/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Yf5CU84cEem0y513gQlC0Q" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Yf5CVM4cEem0y513gQlC0Q" key="Date" value="2018-04-13"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Yf5CVc4cEem0y513gQlC0Q" key="Author" value="IISOMI"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Yd0lx84cEem0y513gQlC0Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_S32LgD8HEeiIisB6uOvKFA"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_m1xqsHBgEd6FKu9XX1078A"/>
+    </profileApplication>
+  </uml:Model>
+  <OpenModel_Profile:OpenModelStatement xmi:id="_Yf4bQM4cEem0y513gQlC0Q" base_Model="_SEvj0M4cEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_a5W0Ec4cEem0y513gQlC0Q" base_Class="_a5W0EM4cEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_deDlcM4cEem0y513gQlC0Q" base_Element="_a5W0EM4cEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="__aKekc4cEem0y513gQlC0Q" base_Class="__aKekM4cEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_DBUygM4dEem0y513gQlC0Q" base_Element="__aKekM4cEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_RI638c4gEem0y513gQlC0Q" base_Class="_RI638M4gEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_jrbw4M4gEem0y513gQlC0Q" base_Element="_RI638M4gEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_gkq-084hEem0y513gQlC0Q" base_StructuralFeature="_gkq-0s4hEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_gkrl484hEem0y513gQlC0Q" base_StructuralFeature="_gkrl4s4hEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_kKdc8M4lEem0y513gQlC0Q" base_Element="_gkqXwM4hEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_AZxLUc4mEem0y513gQlC0Q" base_Class="_AZxLUM4mEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_Gml58M4mEem0y513gQlC0Q" base_Element="_gkq-0s4hEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_OiXdsM4mEem0y513gQlC0Q" base_Element="_AZxLUM4mEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_RQWt8c4mEem0y513gQlC0Q" base_StructuralFeature="_RQWt8M4mEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_gavNcM4mEem0y513gQlC0Q" base_Element="_RQWt8M4mEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_14vKoc4nEem0y513gQlC0Q" base_Class="_14vKoM4nEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_RGMacM4oEem0y513gQlC0Q" base_Element="_14vKoM4nEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_ZHfXYc4oEem0y513gQlC0Q" base_StructuralFeature="_ZHfXYM4oEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_dflZAM4oEem0y513gQlC0Q" base_Element="_ZHfXYM4oEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_foMEQc4oEem0y513gQlC0Q" base_StructuralFeature="_foMEQM4oEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_hN-WUM4oEem0y513gQlC0Q" base_Element="_foMEQM4oEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_ldlKUM4oEem0y513gQlC0Q" base_Class="_ldkjQM4oEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_ui_2sM4oEem0y513gQlC0Q" base_Element="_ldkjQM4oEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_8fJBcM4oEem0y513gQlC0Q" base_StructuralFeature="_8fIaYM4oEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="__813YM4oEem0y513gQlC0Q" base_Element="_8fIaYM4oEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_GWvYsc4pEem0y513gQlC0Q" base_Class="_GWvYsM4pEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_Uaiqoc4pEem0y513gQlC0Q" base_StructuralFeature="_UaiqoM4pEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_UajRs84pEem0y513gQlC0Q" base_StructuralFeature="_UajRss4pEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_dkcOYM4pEem0y513gQlC0Q" base_Element="_UahcgM4pEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_qAbN8M4pEem0y513gQlC0Q" base_Element="_UaiqoM4pEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_HjGBoM4qEem0y513gQlC0Q" base_Element="_GWvYsM4pEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_M0Tckc4qEem0y513gQlC0Q" base_Class="_M0TckM4qEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_a4RGkc4qEem0y513gQlC0Q" base_StructuralFeature="_a4RGkM4qEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_gB9kQM4qEem0y513gQlC0Q" base_Element="_a4RGkM4qEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_jWIqwM4qEem0y513gQlC0Q" base_Element="_M0TckM4qEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_eVxSwM4rEem0y513gQlC0Q" base_Class="_eVwrsM4rEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_l6YTsM4rEem0y513gQlC0Q" base_Element="_eVwrsM4rEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_ybGCQ84rEem0y513gQlC0Q" base_StructuralFeature="_ybGCQs4rEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_ybHQYs4rEem0y513gQlC0Q" base_StructuralFeature="_ybHQYc4rEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_JqgIIM4sEem0y513gQlC0Q" base_Element="_ybFbMM4rEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_NNXx8M4sEem0y513gQlC0Q" base_Element="_ybGCQs4rEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_gTK-Ic4sEem0y513gQlC0Q" base_Class="_gTK-IM4sEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_l4H0cM4sEem0y513gQlC0Q" base_Element="_gTK-IM4sEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_5hyisc4sEem0y513gQlC0Q" base_Class="_5hyisM4sEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_e06a8M4tEem0y513gQlC0Q" base_Element="_5hyisM4sEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_lhYS8s4tEem0y513gQlC0Q" base_StructuralFeature="_lhYS8c4tEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_lhY6A84tEem0y513gQlC0Q" base_StructuralFeature="_lhY6As4tEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_rdFcYM4tEem0y513gQlC0Q" base_Element="_lhXE0M4tEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_Ag_UAM4uEem0y513gQlC0Q" base_Element="_lhYS8c4tEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_IiH44M4uEem0y513gQlC0Q" base_StructuralFeature="_IiHR0s4uEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_IiSQ8c4uEem0y513gQlC0Q" base_StructuralFeature="_IiSQ8M4uEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_NY0soM4vEem0y513gQlC0Q" base_Element="_IiGqwM4uEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_SJhbgM4vEem0y513gQlC0Q" base_Element="_IiHR0s4uEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Specify xmi:id="_8N5IwBvtEeqCeNa5GcKdyg" base_Abstraction="_uWNAMBvtEeqCeNa5GcKdyg"/>
+  <OpenModel_Profile:Specify xmi:id="_ArPd0BvuEeqCeNa5GcKdyg" base_Abstraction="_vJXigBvtEeqCeNa5GcKdyg"/>
+  <OpenModel_Profile:Specify xmi:id="_CxTLYBvuEeqCeNa5GcKdyg" base_Abstraction="_v9KW8BvtEeqCeNa5GcKdyg"/>
+  <OpenModel_Profile:Experimental xmi:id="_OshAMBvuEeqCeNa5GcKdyg" base_Element="_v9KW8BvtEeqCeNa5GcKdyg"/>
+  <OpenModel_Profile:Experimental xmi:id="_RSbSgBvuEeqCeNa5GcKdyg" base_Element="_vJXigBvtEeqCeNa5GcKdyg"/>
+  <OpenModel_Profile:Experimental xmi:id="_S1C70BvuEeqCeNa5GcKdyg" base_Element="_uWNAMBvtEeqCeNa5GcKdyg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_dNGUwRvuEeqCeNa5GcKdyg" base_StructuralFeature="_dNGUwBvuEeqCeNa5GcKdyg"/>
+  <OpenModel_Profile:Experimental xmi:id="_1g_WcBvuEeqCeNa5GcKdyg" base_Element="_dNGUwBvuEeqCeNa5GcKdyg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_-Ft9UBv-EeqCeNa5GcKdyg" base_StructuralFeature="_-FtWQBv-EeqCeNa5GcKdyg"/>
+  <OpenModel_Profile:Experimental xmi:id="_MaZj4Bv_EeqCeNa5GcKdyg" base_Element="_-FtWQBv-EeqCeNa5GcKdyg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_XE7z8Rv_EeqCeNa5GcKdyg" base_StructuralFeature="_XE7z8Bv_EeqCeNa5GcKdyg"/>
+  <OpenModel_Profile:Experimental xmi:id="_ciGnQBv_EeqCeNa5GcKdyg" base_Element="_XE7z8Bv_EeqCeNa5GcKdyg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_IY2vIRwBEeqCeNa5GcKdyg" base_StructuralFeature="_IY2vIBwBEeqCeNa5GcKdyg"/>
+  <OpenModel_Profile:Experimental xmi:id="_l1jdsBwBEeqCeNa5GcKdyg" base_Element="_HvqBIBwBEeqCeNa5GcKdyg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_yIYhQhwBEeqCeNa5GcKdyg" base_StructuralFeature="_yIYhQRwBEeqCeNa5GcKdyg"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_EGWDITBwEeqsBLPUmmYf3g" base_Class="_EGWDIDBwEeqsBLPUmmYf3g"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_UeNCYTBwEeqsBLPUmmYf3g" base_StructuralFeature="_UeNCYDBwEeqsBLPUmmYf3g"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_UeOQgzBwEeqsBLPUmmYf3g" base_StructuralFeature="_UeOQgjBwEeqsBLPUmmYf3g"/>
+  <OpenModel_Profile:Experimental xmi:id="_1t0o8DBwEeqsBLPUmmYf3g" base_Element="_UeIw8DBwEeqsBLPUmmYf3g"/>
+  <OpenModel_Profile:Experimental xmi:id="_49seQDBwEeqsBLPUmmYf3g" base_Element="_UeNCYDBwEeqsBLPUmmYf3g"/>
+  <OpenModel_Profile:Experimental xmi:id="_A0qdsDB1EeqsBLPUmmYf3g" base_Element="_8Am40DB0EeqsBLPUmmYf3g"/>
+  <OpenModel_Profile:Experimental xmi:id="_C4JYYDB1EeqsBLPUmmYf3g" base_Element="_EGWDIDBwEeqsBLPUmmYf3g"/>
+  <OpenModel_Profile:Experimental xmi:id="_iWULQDB8EeqsBLPUmmYf3g" base_Element="_QjtsUDB8EeqsBLPUmmYf3g"/>
+  <OpenModel_Profile:Experimental xmi:id="_kJxs8DB8EeqsBLPUmmYf3g" base_Element="_Wul6MDB8EeqsBLPUmmYf3g"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_FJOywDCMEeqsBLPUmmYf3g" base_StructuralFeature="_FJOLsjCMEeqsBLPUmmYf3g"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_FJPZ0zCMEeqsBLPUmmYf3g" base_StructuralFeature="_FJPZ0jCMEeqsBLPUmmYf3g"/>
+  <OpenModel_Profile:Experimental xmi:id="_110doDCMEeqsBLPUmmYf3g" base_Element="_FJNkoDCMEeqsBLPUmmYf3g"/>
+  <OpenModel_Profile:Experimental xmi:id="_97fkQDCMEeqsBLPUmmYf3g" base_Element="_FJOLsjCMEeqsBLPUmmYf3g"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_CVcCUD26EeqNzoiCK4mkvg" base_Class="_CVbbQD26EeqNzoiCK4mkvg"/>
+  <OpenModel_Profile:Experimental xmi:id="_KlgbED26EeqNzoiCK4mkvg" base_Element="_CVbbQD26EeqNzoiCK4mkvg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_PhxgwT26EeqNzoiCK4mkvg" base_StructuralFeature="_PhxgwD26EeqNzoiCK4mkvg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_PhzV8j26EeqNzoiCK4mkvg" base_StructuralFeature="_PhzV8T26EeqNzoiCK4mkvg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_Q12XwD26EeqNzoiCK4mkvg" base_StructuralFeature="_Q11wsj26EeqNzoiCK4mkvg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_Q13l4D26EeqNzoiCK4mkvg" base_StructuralFeature="_Q12-0j26EeqNzoiCK4mkvg"/>
+  <OpenModel_Profile:Experimental xmi:id="_rt9psD26EeqNzoiCK4mkvg" base_Element="_PhsoQD26EeqNzoiCK4mkvg"/>
+  <OpenModel_Profile:Experimental xmi:id="_vAfxcD26EeqNzoiCK4mkvg" base_Element="_PhxgwD26EeqNzoiCK4mkvg"/>
+  <OpenModel_Profile:Experimental xmi:id="_NOeL8D27EeqNzoiCK4mkvg" base_Element="_Q11JoD26EeqNzoiCK4mkvg"/>
+  <OpenModel_Profile:Experimental xmi:id="_TDMjoD27EeqNzoiCK4mkvg" base_Element="_Q11wsj26EeqNzoiCK4mkvg"/>
+  <OpenModel_Profile:Example xmi:id="_hpTMsF69EeqzG4RIqKiE-A" base_Element="_AZxLUM4mEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Example xmi:id="_nZx9kF69EeqzG4RIqKiE-A" base_Element="_14vKoM4nEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Example xmi:id="_prqgoF69EeqzG4RIqKiE-A" base_Element="_EGWDIDBwEeqsBLPUmmYf3g"/>
+  <OpenModel_Profile:Example xmi:id="_IRKqUF6-EeqzG4RIqKiE-A" base_Element="_ldkjQM4oEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_yu2RAV7AEeqzG4RIqKiE-A" base_Class="_yu2RAF7AEeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:Example xmi:id="_5vNVYF7AEeqzG4RIqKiE-A" base_Element="_yu2RAF7AEeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:Experimental xmi:id="_5zaf8F7AEeqzG4RIqKiE-A" base_Element="_yu2RAF7AEeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:Specify xmi:id="_Qz_foF7BEeqzG4RIqKiE-A" base_Abstraction="_HHryYF7BEeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:Experimental xmi:id="_Q3jJ8F7BEeqzG4RIqKiE-A" base_Element="_HHryYF7BEeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_fSja8V7BEeqzG4RIqKiE-A" base_StructuralFeature="_fSja8F7BEeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_fSkCA17BEeqzG4RIqKiE-A" base_StructuralFeature="_fSkCAl7BEeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:Experimental xmi:id="_n_qVAF7BEeqzG4RIqKiE-A" base_Element="_fSfwkF7BEeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:Experimental xmi:id="_wg1r4F7BEeqzG4RIqKiE-A" base_Element="_fSja8F7BEeqzG4RIqKiE-A"/>
+</xmi:XMI>
