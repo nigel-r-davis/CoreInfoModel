@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:OpenModel_Profile="http:///schemas/OpenModel_Profile/_S30WUD8HEeiIisB6uOvKFA/26" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/OpenModel_Profile/_S30WUD8HEeiIisB6uOvKFA/26 UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_S32LgD8HEeiIisB6uOvKFA">
+  <uml:Package xmi:id="_kr10UEDrEeWHCPNn7aoIVw" name="ExplanatoryFiguresUsedInDocumentsAndSlides">
+    <packagedElement xmi:type="uml:Package" xmi:id="_nhv2sB7-EemtpZa4_mUYIA" name="ResidualDiagrams-NotFixed">
+      <packagedElement xmi:type="uml:Package" xmi:id="_VetpMF0yEemrw9dHM7ymiw" name="StateDiagrams"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_Jv7n0BrnEeyhEox3NNKLzg" name="ComponentSystemDiagrams"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_fQfmQBrnEeyhEox3NNKLzg" name="EquipmentDiagrams"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_p16s0BrnEeyhEox3NNKLzg" name="TopologyDiagrams"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_xkm20BrnEeyhEox3NNKLzg" name="ForwardingDiagrams"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_9Vec0BrnEeyhEox3NNKLzg" name="SpecDiqagrams"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_oAYDAF0xEemrw9dHM7ymiw" name="ProcessingConstructDiagrams"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_TPs4cBroEeyhEox3NNKLzg" name="FoundationDiagrams"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_bdeLIBroEeyhEox3NNKLzg" name="ResilienceDiagrams"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_je5D4BroEeyhEox3NNKLzg" name="OperationsDiagrams"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ywHfQPmLEeuaBrRKvVboCA" name="ResidualFixedDiagrams">
+      <packagedElement xmi:type="uml:Package" xmi:id="_3wpvwF0vEemrw9dHM7ymiw" name="TopologyDiagrams"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_vpGZ0F0vEemrw9dHM7ymiw" name="SpecDiagrams"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_oQyIcF0vEemrw9dHM7ymiw" name="ResilienceDiagrams"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_atrv0F0vEemrw9dHM7ymiw" name="ForwardingDiagrams"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_eFDroOrIEeunksDBuvppGw" name="Equipment"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_0JVH4B0MEeyf8vn2o9fKVw" name="PreviousAssignmentState">
+        <packagedElement xmi:type="uml:StateMachine" xmi:id="__pbS8YFVEeeGAbqDM4f-JQ" name="LifecycleState">
+          <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_QYe0wIFXEeeGAbqDM4f-JQ" name="Initial1"/>
+          <region xmi:type="uml:Region" xmi:id="__pbS8oFVEeeGAbqDM4f-JQ" name="Region1">
+            <transition xmi:type="uml:Transition" xmi:id="_YyP8EIFXEeeGAbqDM4f-JQ" source="_QYe0wIFXEeeGAbqDM4f-JQ" target="_1M_64IFWEeeGAbqDM4f-JQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_ZtYHkIFXEeeGAbqDM4f-JQ" source="_RKoDYIFXEeeGAbqDM4f-JQ" target="_3GzVIIFWEeeGAbqDM4f-JQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_avpc4IFXEeeGAbqDM4f-JQ" source="_Rs1YkIFXEeeGAbqDM4f-JQ" target="_5VQJsIFWEeeGAbqDM4f-JQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_bjCosIFXEeeGAbqDM4f-JQ" source="_SjDO4IFXEeeGAbqDM4f-JQ" target="_7Wqn0IFWEeeGAbqDM4f-JQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_iV3AUIFXEeeGAbqDM4f-JQ" source="_1M_64IFWEeeGAbqDM4f-JQ" target="_3GzVIIFWEeeGAbqDM4f-JQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_jS5QUIFXEeeGAbqDM4f-JQ" source="_3GzVIIFWEeeGAbqDM4f-JQ" target="_5VQJsIFWEeeGAbqDM4f-JQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_kHcSsIFXEeeGAbqDM4f-JQ" source="_5VQJsIFWEeeGAbqDM4f-JQ" target="_3GzVIIFWEeeGAbqDM4f-JQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_lOeMMIFXEeeGAbqDM4f-JQ" source="_5VQJsIFWEeeGAbqDM4f-JQ" target="_7Wqn0IFWEeeGAbqDM4f-JQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_mEqNUIFXEeeGAbqDM4f-JQ" source="_7Wqn0IFWEeeGAbqDM4f-JQ" target="_5VQJsIFWEeeGAbqDM4f-JQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_nML2EIFXEeeGAbqDM4f-JQ" source="_7Wqn0IFWEeeGAbqDM4f-JQ" target="_8__9IIFWEeeGAbqDM4f-JQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_ouWzcIFXEeeGAbqDM4f-JQ" source="_3GzVIIFWEeeGAbqDM4f-JQ" target="_7Wqn0IFWEeeGAbqDM4f-JQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_qK5C4IFXEeeGAbqDM4f-JQ" source="_3GzVIIFWEeeGAbqDM4f-JQ" target="_8__9IIFWEeeGAbqDM4f-JQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_sHNloIFXEeeGAbqDM4f-JQ" source="_1M_64IFWEeeGAbqDM4f-JQ" target="_5VQJsIFWEeeGAbqDM4f-JQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_tRC7gIFXEeeGAbqDM4f-JQ" source="_1M_64IFWEeeGAbqDM4f-JQ" target="_7Wqn0IFWEeeGAbqDM4f-JQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_vDdUUIFXEeeGAbqDM4f-JQ" source="_5VQJsIFWEeeGAbqDM4f-JQ" target="_8__9IIFWEeeGAbqDM4f-JQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_7NZhoIFXEeeGAbqDM4f-JQ" source="_8__9IIFWEeeGAbqDM4f-JQ" target="_6JNgwIFXEeeGAbqDM4f-JQ"/>
+            <subvertex xmi:type="uml:State" xmi:id="_1M_64IFWEeeGAbqDM4f-JQ" name="PLANNED"/>
+            <subvertex xmi:type="uml:State" xmi:id="_3GzVIIFWEeeGAbqDM4f-JQ" name="INSTALLED"/>
+            <subvertex xmi:type="uml:State" xmi:id="_5VQJsIFWEeeGAbqDM4f-JQ" name="POTENTIAL_AVAILABLE"/>
+            <subvertex xmi:type="uml:State" xmi:id="_7Wqn0IFWEeeGAbqDM4f-JQ" name="POTENTIAL_BUSY"/>
+            <subvertex xmi:type="uml:State" xmi:id="_8__9IIFWEeeGAbqDM4f-JQ" name="PENDING_REMOVAL"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_RKoDYIFXEeeGAbqDM4f-JQ" name="Initial2"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_Rs1YkIFXEeeGAbqDM4f-JQ" name="Initial3"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_SjDO4IFXEeeGAbqDM4f-JQ" name="Initial4"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_6JNgwIFXEeeGAbqDM4f-JQ" name="FinalState1"/>
+          </region>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_m9XXIBVcEeydhfc-Qbe6Ag">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_m9XXIRVcEeydhfc-Qbe6Ag" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_S32LgD8HEeiIisB6uOvKFA"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_m9YlQBVcEeydhfc-Qbe6Ag" source="duplicatedProfile"/>
+      <appliedProfile xmi:type="uml:Profile" href="UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_m1xqsHBgEd6FKu9XX1078A"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_m9ZMUBVcEeydhfc-Qbe6Ag">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_m9ZMURVcEeydhfc-Qbe6Ag" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_m9ZMUhVcEeydhfc-Qbe6Ag" key="Version" value="0.0.47"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_m9ZMUxVcEeydhfc-Qbe6Ag" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_m9ZMVBVcEeydhfc-Qbe6Ag" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_m9ZMVRVcEeydhfc-Qbe6Ag" key="Date" value="2019-06-17"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_m9ZMVhVcEeydhfc-Qbe6Ag" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_m9ZMVxVcEeydhfc-Qbe6Ag" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UmlProfiles/Experimental.profile.uml#_unEcAJDrEemIv9iw4JXc9w"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_m9aacBVcEeydhfc-Qbe6Ag" source="duplicatedProfile"/>
+      <appliedProfile xmi:type="uml:Profile" href="UmlProfiles/Experimental.profile.uml#_EDtRcAH_Eea6DZDQ0h6cdQ"/>
+    </profileApplication>
+  </uml:Package>
+  <OpenModel_Profile:Experimental xmi:id="_9IfK8BVbEeydhfc-Qbe6Ag" base_Element="_kr10UEDrEeWHCPNn7aoIVw"/>
+</xmi:XMI>

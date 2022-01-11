@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:OpenModel_Profile="http:///schemas/OpenModel_Profile/_S30WUD8HEeiIisB6uOvKFA/26" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/OpenModel_Profile/_S30WUD8HEeiIisB6uOvKFA/26 UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_S32LgD8HEeiIisB6uOvKFA">
+  <uml:Model xmi:id="_a4IQ0M1zEem0y513gQlC0Q" name="Location">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_bE_BEM1zEem0y513gQlC0Q">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ycer8M1zEem0y513gQlC0Q" name="Location" isAbstract="true">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_5XTFMM3EEem0y513gQlC0Q" annotatedElement="_ycer8M1zEem0y513gQlC0Q">
+        <body>An abstract class that allows for decoupling of the different ways of locating something.</body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_MFJLYM14Eem0y513gQlC0Q">
+        <general xmi:type="uml:Class" href="CoreModel.uml#_iVJ1kI2wEeO38ZmbECnvbg"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ONmCcM10Eem0y513gQlC0Q" name="LocationRole">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_fyDecM3GEem0y513gQlC0Q" annotatedElement="_ONmCcM10Eem0y513gQlC0Q">
+        <body>Represents location contextual behavior, in the context of a LocationRoleRelationship.&#xD;
+For example a central office site may be a 'trunk hub' for fiber transmission and a 'delivery location' for given material orders.&#xD;
+A role can exist with no location fulfilling that role.</body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_yx0F8M13Eem0y513gQlC0Q">
+        <general xmi:type="uml:Class" href="CoreModel.uml#_k5nWYI2wEeO38ZmbECnvbg"/>
+      </generalization>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_q95oQM14Eem0y513gQlC0Q" name="_locationRoleType" type="_XH7jYM14Eem0y513gQlC0Q" association="_q94aIM14Eem0y513gQlC0Q">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_1mEdMEziEeqW7qYrErtEXA" annotatedElement="_q95oQM14Eem0y513gQlC0Q">
+          <body>The specification of this LocationRole.</body>
+        </ownedComment>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_q962YM14Eem0y513gQlC0Q" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_q962Yc14Eem0y513gQlC0Q" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WQApA0zREeqW7qYrErtEXA" name="_location" type="_ycer8M1zEem0y513gQlC0Q" association="_WQApAEzREeqW7qYrErtEXA">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_FPEgcEzlEeqW7qYrErtEXA" annotatedElement="_WQApA0zREeqW7qYrErtEXA">
+          <body>A location that takes this role.</body>
+        </ownedComment>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WQBQEUzREeqW7qYrErtEXA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WQBQEkzREeqW7qYrErtEXA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_XH7jYM14Eem0y513gQlC0Q" name="LocationRoleType">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_8pkVIEziEeqW7qYrErtEXA" annotatedElement="_XH7jYM14Eem0y513gQlC0Q">
+        <body>The specification class for LocationRole.</body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_-FHuIEzXEeqW7qYrErtEXA">
+        <general xmi:type="uml:Class" href="CoreModel.uml#_iVJ1kI2wEeO38ZmbECnvbg"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_q94aIM14Eem0y513gQlC0Q" name="LocationRoleSpecifiedByLocationRoleType" memberEnd="_q95oQM14Eem0y513gQlC0Q _q97dcM14Eem0y513gQlC0Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q95BMM14Eem0y513gQlC0Q" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_q95BMc14Eem0y513gQlC0Q" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_q97dcM14Eem0y513gQlC0Q" name="locationrole" type="_ONmCcM10Eem0y513gQlC0Q" association="_q94aIM14Eem0y513gQlC0Q">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w-13AM14Eem0y513gQlC0Q"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w-6vgM14Eem0y513gQlC0Q" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_InWZYM15Eem0y513gQlC0Q" name="LocationRoleRelationship">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_rH58YM3GEem0y513gQlC0Q" annotatedElement="_InWZYM15Eem0y513gQlC0Q">
+        <body>Provides the context for related LocationRoles.&#xD;
+For example a central office site may be a 'trunk hub' for fiber transmission systems and a 'delivery location' for a given material order.&#xD;
+In the Party model, roles are expected to be a strong concept. In the location model, roles are a weaker concept and shouldn't be overused.</body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_uK2oQM1_Eem0y513gQlC0Q">
+        <general xmi:type="uml:Class" href="CoreModel.uml#_iVJ1kI2wEeO38ZmbECnvbg"/>
+      </generalization>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_z4cAss2AEem0y513gQlC0Q" name="_locationRelationshipType" type="_73jo0M1_Eem0y513gQlC0Q" association="_z4bZoM2AEem0y513gQlC0Q">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_2FRT8EzdEeqW7qYrErtEXA" annotatedElement="_z4cAss2AEem0y513gQlC0Q">
+          <body>The specification for this relationship.</body>
+        </ownedComment>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_z4cnwM2AEem0y513gQlC0Q" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_z4dO0M2AEem0y513gQlC0Q" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_DRCdkEzREeqW7qYrErtEXA" name="_locationRole" type="_ONmCcM10Eem0y513gQlC0Q" aggregation="composite" association="_DQ-MIEzREeqW7qYrErtEXA">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_clE9kEzlEeqW7qYrErtEXA" annotatedElement="_DRCdkEzREeqW7qYrErtEXA">
+          <body>A LocationRole in the LocationRoleRelationship.&#xD;
+A LocationRoleRelationship is not meaningful with less than two role instances. &#xD;
+A LocationRole cannot exist independent of a LocationRoleRelationship explaining the LocationRole with respect to one or more other LocationRoles.</body>
+        </ownedComment>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DRESwEzREeqW7qYrErtEXA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DRE50EzREeqW7qYrErtEXA" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_73jo0M1_Eem0y513gQlC0Q" name="LocationRoleRelationshipType">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_YEFmAEziEeqW7qYrErtEXA" annotatedElement="_73jo0M1_Eem0y513gQlC0Q">
+        <body>The specification class for LocationRoleRelationship.&#xD;
+It allows us to define types of location relationships.</body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_tIMS8EzXEeqW7qYrErtEXA">
+        <general xmi:type="uml:Class" href="CoreModel.uml#_iVJ1kI2wEeO38ZmbECnvbg"/>
+      </generalization>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_MqL-QkzREeqW7qYrErtEXA" name="_locationRoleRelationshipEntryType" type="_IE-GoEzREeqW7qYrErtEXA" aggregation="composite" association="_MqLXMEzREeqW7qYrErtEXA">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_Qtyb8EzkEeqW7qYrErtEXA" annotatedElement="_MqL-QkzREeqW7qYrErtEXA">
+          <body>Entry type for the LocationRoleRelationshipType.</body>
+        </ownedComment>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MqMlUEzREeqW7qYrErtEXA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MqNMYEzREeqW7qYrErtEXA" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_z4bZoM2AEem0y513gQlC0Q" name="LocationRoleRelationshipSpecifiedByLocationRelationshipType" memberEnd="_z4cAss2AEem0y513gQlC0Q _z4d14M2AEem0y513gQlC0Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_z4cAsM2AEem0y513gQlC0Q" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_z4cAsc2AEem0y513gQlC0Q" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_z4d14M2AEem0y513gQlC0Q" name="locationrelationship" type="_InWZYM15Eem0y513gQlC0Q" association="_z4bZoM2AEem0y513gQlC0Q">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_j3IXQEzXEeqW7qYrErtEXA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_j3dHYEzXEeqW7qYrErtEXA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_IcNYAM2HEem0y513gQlC0Q" name="LocalLocation">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_7OkTYM3FEem0y513gQlC0Q" annotatedElement="_IcNYAM2HEem0y513gQlC0Q">
+        <body>Represents locations that use local definitions that ignore the curvature of the earth (often these are locations inside a building or a small, flat block of land). &#xD;
+A LocalLocation can have zero, one or more decorating classes.</body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_um-p8M2HEem0y513gQlC0Q" general="_ycer8M1zEem0y513gQlC0Q"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_BeLZc82IEem0y513gQlC0Q" name="_geographicLocation" type="_gKWBQM2HEem0y513gQlC0Q" association="_BeLZcM2IEem0y513gQlC0Q">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_Qfu9YEzaEeqW7qYrErtEXA" annotatedElement="_BeLZc82IEem0y513gQlC0Q">
+          <body>The GeographicLocation that this LocalLocation is defined by.</body>
+        </ownedComment>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BeMnkM2IEem0y513gQlC0Q" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BeMnkc2IEem0y513gQlC0Q" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_gKWBQM2HEem0y513gQlC0Q" name="GeographicLocation">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_g58JAM3FEem0y513gQlC0Q" annotatedElement="_gKWBQM2HEem0y513gQlC0Q">
+        <body>A class representing locations that are located using global definitions that takes the curvature of the earth into account (often these are 'outside' locations). &#xD;
+A GeographicLocation can have zero, one or more decorating classes.</body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_t0FNYM2HEem0y513gQlC0Q" general="_ycer8M1zEem0y513gQlC0Q"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_BeLZcM2IEem0y513gQlC0Q" name="LocalLocationWithinGeographicLocation" memberEnd="_BeLZc82IEem0y513gQlC0Q _BeMnks2IEem0y513gQlC0Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BeLZcc2IEem0y513gQlC0Q" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BeLZcs2IEem0y513gQlC0Q" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_BeMnks2IEem0y513gQlC0Q" name="locallocation" type="_IcNYAM2HEem0y513gQlC0Q" association="_BeLZcM2IEem0y513gQlC0Q">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RtVIoM2IEem0y513gQlC0Q"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RtaoMM2IEem0y513gQlC0Q" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_i0L74M2IEem0y513gQlC0Q" name="LocalPoint" isAbstract="true">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_QotgwM3GEem0y513gQlC0Q" annotatedElement="_i0L74M2IEem0y513gQlC0Q">
+        <body>An abstract class that covers both absolute and relative local point representations (other geometric options could also be considered to cover regions etc.). &#xD;
+LocalPoints defined in a cartesian projection don’t take the curvature of the earth into account as it is not significant within a building or on a small block of land.&#xD;
+&#xD;
+This is an example structure that could be used directly where appropriate but could be replaced with other similar structures where necessary. </body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_yxKrEM2KEem0y513gQlC0Q">
+        <general xmi:type="uml:Class" href="CoreModel.uml#_iVJ1kI2wEeO38ZmbECnvbg"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_pfM7AM2LEem0y513gQlC0Q" name="GeographicSite">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_m1T7QM3FEem0y513gQlC0Q" annotatedElement="_pfM7AM2LEem0y513gQlC0Q">
+        <body>Represents a well-known named location, such as a service provider's central office or GSM base station.&#xD;
+This is a convenience class for locations of interest.&#xD;
+&#xD;
+This is an example structure that could be used directly where appropriate but could be replaced with other similar structures where necessary. </body>
+      </ownedComment>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_8hc4wEzTEeqW7qYrErtEXA" name="siteName">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_xf5AEEzkEeqW7qYrErtEXA" annotatedElement="_8hc4wEzTEeqW7qYrErtEXA">
+          <body>The name of the site.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_7KcYQM2MEem0y513gQlC0Q" name="SimpleGeographicAddress">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_w7s8cM3FEem0y513gQlC0Q" annotatedElement="_7KcYQM2MEem0y513gQlC0Q">
+        <body>An address that doesn't break up the address string into all of its semantic parts. &#xD;
+It just opaquely represents the address as three lines of text.&#xD;
+&#xD;
+This is an example structure that could be used directly where appropriate but could be replaced with other similar structures where necessary. &#xD;
+For example, a more complex decorator of GeographicLocation could also be added that splits up the structure of the address.</body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_UuCocF7DEeqzG4RIqKiE-A" general="__O62gEzREeqW7qYrErtEXA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_xxvHAM2NEem0y513gQlC0Q" name="addressLine1">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_UTKcoEzjEeqW7qYrErtEXA" annotatedElement="_xxvHAM2NEem0y513gQlC0Q">
+          <body>The first line of text in the address.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Rfvw4M2OEem0y513gQlC0Q" name="addressLine2">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_WysaIEzjEeqW7qYrErtEXA" annotatedElement="_Rfvw4M2OEem0y513gQlC0Q">
+          <body>The second line of text in the address.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_TvAdwM2OEem0y513gQlC0Q" name="addressLine3">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_ZlYkMEzjEeqW7qYrErtEXA" annotatedElement="_TvAdwM2OEem0y513gQlC0Q">
+          <body>The third line of text in the address.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_KUdpcGQ9EeqzG4RIqKiE-A" name="isPostalAddress">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_KUdpcWQ9EeqzG4RIqKiE-A" annotatedElement="_KUdpcGQ9EeqzG4RIqKiE-A">
+          <body>If this is a valid postal address (e.g., can be used to send a letter to).</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_KUjwEGQ9EeqzG4RIqKiE-A" name="isStreetAddress">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_KUjwEWQ9EeqzG4RIqKiE-A" annotatedElement="_KUjwEGQ9EeqzG4RIqKiE-A">
+          <body>If this is a valid street address.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ePSloM2OEem0y513gQlC0Q" name="GeographicPoint">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_SPrGcEzZEeqW7qYrErtEXA" annotatedElement="_ePSloM2OEem0y513gQlC0Q">
+        <body>A point location as would be returned from a GPS unit. &#xD;
+Note that the projection etc. details aren't shown – WGS84 can be assumed. &#xD;
+Note that a GeographicPoint can be related to LocalReferencePoints to allow conversion between global and local reference systems.&#xD;
+&#xD;
+This is an example structure that could be used directly where appropriate but could be replaced with other similar structures where necessary. </body>
+      </ownedComment>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_rac_YM2OEem0y513gQlC0Q" name="latitude">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_l3pLkEzZEeqW7qYrErtEXA" annotatedElement="_rac_YM2OEem0y513gQlC0Q">
+          <body>Latitude in degrees decimal.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_0egZ0M2OEem0y513gQlC0Q" name="longitude">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_oZmyAEzZEeqW7qYrErtEXA" annotatedElement="_0egZ0M2OEem0y513gQlC0Q">
+          <body>Longitude in degrees decimal.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_0-sVwM2OEem0y513gQlC0Q" name="elevation">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_qfI7IEzZEeqW7qYrErtEXA" annotatedElement="_0-sVwM2OEem0y513gQlC0Q">
+          <body>Elevation in meters.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_yA7usM2PEem0y513gQlC0Q" name="SimpleLocalAddress">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_KaVS8M3GEem0y513gQlC0Q" annotatedElement="_yA7usM2PEem0y513gQlC0Q">
+        <body>A local address that just opaquely represents a local address as a single line of text. &#xD;
+For example, a module location in a telephone exchange/central office could be a formatted string of name/value pairs like “suite:1/rack:7/chassis:2/slot:3”.&#xD;
+&#xD;
+This is an example structure that could be used directly where appropriate but could be replaced with other similar structures where necessary. &#xD;
+For example, a more complex decorator of LocalLocation could also be added that splits up the structure of the address.</body>
+      </ownedComment>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_EATeUM2QEem0y513gQlC0Q" name="localAddress">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_CqECgEzkEeqW7qYrErtEXA" annotatedElement="_EATeUM2QEem0y513gQlC0Q">
+          <body>The local address is a single string.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_SONugM2QEem0y513gQlC0Q" name="LocalReferencePoint">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_YD3DsM3GEem0y513gQlC0Q" annotatedElement="_SONugM2QEem0y513gQlC0Q">
+        <body>Defines the datum point and orientation (angles theta, pi, psi from north and straight up) of the local reference system in relationship to the WGS84 geographic reference system. &#xD;
+LocalRelativePoints are defined as an offset from a LocalReferencePoint.&#xD;
+Note also that relating the LocalReferencePoint back to a GeographicPoint allows the local and geographic points to be merged into one seamless representation.&#xD;
+The local reference point will often be chosen for convenience, for example one corner of a building or a corner of a block of land.</body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_hHaXYM2QEem0y513gQlC0Q" general="_i0L74M2IEem0y513gQlC0Q"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_41NpcM2QEem0y513gQlC0Q" name="x">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_kpU28EzcEeqW7qYrErtEXA" annotatedElement="_41NpcM2QEem0y513gQlC0Q">
+          <body>The offset of the local datum from the geographic point location in the x direction.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_-Jx6YM2QEem0y513gQlC0Q" name="y">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_mWC3cEzcEeqW7qYrErtEXA" annotatedElement="_-Jx6YM2QEem0y513gQlC0Q">
+          <body>The offset of the local datum from the geographic point location in the y direction.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_-r2ssM2QEem0y513gQlC0Q" name="z">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_oNe6MEzcEeqW7qYrErtEXA" annotatedElement="_-r2ssM2QEem0y513gQlC0Q">
+          <body>The offset of the local datum from the geographic point location in the z direction.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="__EOJYM2QEem0y513gQlC0Q" name="theta">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_d7fF8EzcEeqW7qYrErtEXA" annotatedElement="__EOJYM2QEem0y513gQlC0Q">
+          <body>The angle of rotation around the z-axis that the local reference system y-axis is from north, in degrees decimal.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="__T3u8M2QEem0y513gQlC0Q" name="pi">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_DDFgIEzcEeqW7qYrErtEXA" annotatedElement="__T3u8M2QEem0y513gQlC0Q">
+          <body>The angle that the local reference system x-axis is from tangent, in degrees decimal. For a non-tilted floor, this is always 0.0.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="__jyaQM2QEem0y513gQlC0Q" name="psi">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_QCyQwEzcEeqW7qYrErtEXA" annotatedElement="__jyaQM2QEem0y513gQlC0Q">
+          <body>The angle that the local reference system y-axis is from tangent, in degrees decimal. For a non-tilted floor, this is always 0.0.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_m6G5UM2REem0y513gQlC0Q" name="_geographicPoint" type="_ePSloM2OEem0y513gQlC0Q" association="_m6GSQM2REem0y513gQlC0Q">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_66-wkEzbEeqW7qYrErtEXA" annotatedElement="_m6G5UM2REem0y513gQlC0Q">
+          <body>The GeographicPoint that this LocalReferencePoint is defined relative to.</body>
+        </ownedComment>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_m6HgYM2REem0y513gQlC0Q" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_m6HgYc2REem0y513gQlC0Q" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_WH5V0M2QEem0y513gQlC0Q" name="LocalRelativePoint">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_y7acgEzcEeqW7qYrErtEXA" annotatedElement="_WH5V0M2QEem0y513gQlC0Q">
+        <body>A local point value as defined in the local cartesian reference system datum defined by the related LocalReferencePoint.</body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_iLDlsM2QEem0y513gQlC0Q" general="_i0L74M2IEem0y513gQlC0Q"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Rmd8kM2REem0y513gQlC0Q" name="x">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_7kOFYEzcEeqW7qYrErtEXA" annotatedElement="_Rmd8kM2REem0y513gQlC0Q">
+          <body>The distance from the local datum in the x direction in meters.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_VKD_IM2REem0y513gQlC0Q" name="y">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_9uEGwEzcEeqW7qYrErtEXA" annotatedElement="_VKD_IM2REem0y513gQlC0Q">
+          <body>The distance from the local datum in the y direction in meters.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_VZ7AEM2REem0y513gQlC0Q" name="z">
+        <ownedComment xmi:type="uml:Comment" xmi:id="__kCw8EzcEeqW7qYrErtEXA" annotatedElement="_VZ7AEM2REem0y513gQlC0Q">
+          <body>The distance from the local datum in the z direction in meters.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_gSFccs2REem0y513gQlC0Q" name="_localReferencePoint" type="_SONugM2QEem0y513gQlC0Q" association="_gSE1YM2REem0y513gQlC0Q">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_DqpZ8EzdEeqW7qYrErtEXA" annotatedElement="_gSFccs2REem0y513gQlC0Q">
+          <body>The datum that this point is relative to.</body>
+        </ownedComment>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gSGDgM2REem0y513gQlC0Q" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gSGDgc2REem0y513gQlC0Q" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_gSE1YM2REem0y513gQlC0Q" name="LocalPointRelativeToReferencePoint" memberEnd="_gSFccs2REem0y513gQlC0Q _gSGqkM2REem0y513gQlC0Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gSFccM2REem0y513gQlC0Q" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gSFccc2REem0y513gQlC0Q" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_gSGqkM2REem0y513gQlC0Q" name="localrelativepoint" type="_WH5V0M2QEem0y513gQlC0Q" association="_gSE1YM2REem0y513gQlC0Q">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_viaGwGQ9EeqzG4RIqKiE-A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vju8cGQ9EeqzG4RIqKiE-A" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_m6GSQM2REem0y513gQlC0Q" name="LocalReferencePointAtGeographicPoint" memberEnd="_m6G5UM2REem0y513gQlC0Q _m6HgYs2REem0y513gQlC0Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_m6GSQc2REem0y513gQlC0Q" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_m6GSQs2REem0y513gQlC0Q" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_m6HgYs2REem0y513gQlC0Q" name="localreferencepoint" type="_SONugM2QEem0y513gQlC0Q" association="_m6GSQM2REem0y513gQlC0Q">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1XrWIM2REem0y513gQlC0Q"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1Xw1sM2REem0y513gQlC0Q" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_DQ-MIEzREeqW7qYrErtEXA" name="LocationRoleRelationshipHasRoles" memberEnd="_DRCdkEzREeqW7qYrErtEXA _DRE50UzREeqW7qYrErtEXA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DRBPcEzREeqW7qYrErtEXA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DRBPcUzREeqW7qYrErtEXA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_DRE50UzREeqW7qYrErtEXA" name="locationrelationship" type="_InWZYM15Eem0y513gQlC0Q" association="_DQ-MIEzREeqW7qYrErtEXA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_IE-GoEzREeqW7qYrErtEXA" name="LocationRoleRelationshipEntryType">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_bPDbQEzkEeqW7qYrErtEXA" annotatedElement="_IE-GoEzREeqW7qYrErtEXA">
+        <body>Defines the LocationRole types used in a LocationRoleRelationshipType. Note that this is a use of the occurrence pattern. </body>
+      </ownedComment>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_PmW0ckzREeqW7qYrErtEXA" name="_locationRoleType" type="_XH7jYM14Eem0y513gQlC0Q" association="_PmWNYEzREeqW7qYrErtEXA">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_ivFeMEzkEeqW7qYrErtEXA" annotatedElement="_PmW0ckzREeqW7qYrErtEXA">
+          <body>The LocationRoleType for this relationship entry type.</body>
+        </ownedComment>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PmXbgEzREeqW7qYrErtEXA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PmYCkEzREeqW7qYrErtEXA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_MqLXMEzREeqW7qYrErtEXA" name="LocationRoleRelationshipTypeHasEntries" memberEnd="_MqL-QkzREeqW7qYrErtEXA _MqNMYUzREeqW7qYrErtEXA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MqL-QEzREeqW7qYrErtEXA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MqL-QUzREeqW7qYrErtEXA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_MqNMYUzREeqW7qYrErtEXA" name="locationrelationshiptype" type="_73jo0M1_Eem0y513gQlC0Q" association="_MqLXMEzREeqW7qYrErtEXA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_PmWNYEzREeqW7qYrErtEXA" name="LocationRoleEntryOfType" memberEnd="_PmW0ckzREeqW7qYrErtEXA _PmYCkUzREeqW7qYrErtEXA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PmW0cEzREeqW7qYrErtEXA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PmW0cUzREeqW7qYrErtEXA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_PmYCkUzREeqW7qYrErtEXA" name="locationrolerelationshipentrytype" type="_IE-GoEzREeqW7qYrErtEXA" association="_PmWNYEzREeqW7qYrErtEXA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gnu4gEzWEeqW7qYrErtEXA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gn7FwEzWEeqW7qYrErtEXA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_WQApAEzREeqW7qYrErtEXA" name="RolesForLocation" memberEnd="_WQApA0zREeqW7qYrErtEXA _WQB3IEzREeqW7qYrErtEXA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WQApAUzREeqW7qYrErtEXA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WQApAkzREeqW7qYrErtEXA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_WQB3IEzREeqW7qYrErtEXA" name="locationrole" type="_ONmCcM10Eem0y513gQlC0Q" association="_WQApAEzREeqW7qYrErtEXA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AIWcEEzWEeqW7qYrErtEXA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AIiCQEzWEeqW7qYrErtEXA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_2hOGkEzREeqW7qYrErtEXA" name="SiteForGeographicLocation" client="_pfM7AM2LEem0y513gQlC0Q" supplier="_gKWBQM2HEem0y513gQlC0Q"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_3q3PMEzREeqW7qYrErtEXA" name="PointForGeographicLocation" client="_ePSloM2OEem0y513gQlC0Q" supplier="_gKWBQM2HEem0y513gQlC0Q"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_4NyWEEzREeqW7qYrErtEXA" client="_i0L74M2IEem0y513gQlC0Q" supplier="_IcNYAM2HEem0y513gQlC0Q"/>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_4071oEzREeqW7qYrErtEXA" client="_yA7usM2PEem0y513gQlC0Q" supplier="_IcNYAM2HEem0y513gQlC0Q"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="__O62gEzREeqW7qYrErtEXA" name="GeographicAddress">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_nT87EEzlEeqW7qYrErtEXA" annotatedElement="__O62gEzREeqW7qYrErtEXA">
+        <body>The address(es) of the GeographicLocation.&#xD;
+&#xD;
+This is an example structure that could be used directly where appropriate but could be replaced with other similar structures where necessary. </body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_OL3-AEzSEeqW7qYrErtEXA" name="SimpleAddressForGeographicLocation" client="_7KcYQM2MEem0y513gQlC0Q" supplier="_gKWBQM2HEem0y513gQlC0Q"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_TrQLMF7CEeqzG4RIqKiE-A" name="SimplePostalOnlyAddress">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_CC_x4CA4EeyDD-DAP_bQOA" annotatedElement="_TrQLMF7CEeqzG4RIqKiE-A">
+        <body>A simple address example where the address attributes aren’t parsed, but just split into three strings as it would appear in three lines on an envelope. &#xD;
+A PostalOnlyAddress is one that doesn’t directly relate to a geographic location and may be a:&#xD;
+- Post office box&#xD;
+- Mail Bag&#xD;
+- Locked Bag&#xD;
+Or other similar special postal address. </body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_ah1MAF7DEeqzG4RIqKiE-A" general="__O62gEzREeqW7qYrErtEXA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_GiSCcF7FEeqzG4RIqKiE-A" name="addressLine1">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_GiSCcV7FEeqzG4RIqKiE-A" annotatedElement="_GiSCcF7FEeqzG4RIqKiE-A">
+          <body>The first line of text in the address.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_GiQNQF7FEeqzG4RIqKiE-A" name="addressLine2">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_GiQNQV7FEeqzG4RIqKiE-A" annotatedElement="_GiQNQF7FEeqzG4RIqKiE-A">
+          <body>The second line of text in the address.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_GiRbYF7FEeqzG4RIqKiE-A" name="addressLine3">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_GiRbYV7FEeqzG4RIqKiE-A" annotatedElement="_GiRbYF7FEeqzG4RIqKiE-A">
+          <body>The third line of text in the address.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ddo10F7DEeqzG4RIqKiE-A" name="CivicGeographicAddress">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_WpZDkCA3EeyDD-DAP_bQOA" annotatedElement="_ddo10F7DEeqzG4RIqKiE-A">
+        <body>A complex address example conforming to :&#xD;
+- RFC4119: “A Presence-based GEOPRIV Location Object Format”&#xD;
+- RFC 4776: “Dynamic Host Configuration Protocol (DHCPv4 and DHCPv6) Option              for Civic Addresses Configuration Information”&#xD;
+- RFC5139: “Revised Civic Location Format for Presence Information Data Format Location Object (PIDF-LO)”&#xD;
+Note that the civic attributes haven’t been added to the example class.</body>
+      </ownedComment>
+      <generalization xmi:type="uml:Generalization" xmi:id="_VUu_kF7EEeqzG4RIqKiE-A" general="__O62gEzREeqW7qYrErtEXA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Abstraction" xmi:id="_wnDWsF7DEeqzG4RIqKiE-A" name="CivicAddressForGeographicLocation" client="_ddo10F7DEeqzG4RIqKiE-A" supplier="_gKWBQM2HEem0y513gQlC0Q"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_gc0ocM1zEem0y513gQlC0Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gfIVkM1zEem0y513gQlC0Q" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gfIVkc1zEem0y513gQlC0Q" key="Version" value="0.2.14"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gfIVks1zEem0y513gQlC0Q" key="Comment" value="New stereotype OpenModelStatement added. It contains the generic information of the model and extends the Metaclass &quot;Model&quot;."/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gfIVk81zEem0y513gQlC0Q" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gfIVlM1zEem0y513gQlC0Q" key="Date" value="2018-04-13"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gfIVlc1zEem0y513gQlC0Q" key="Author" value="IISOMI"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gc2doM1zEem0y513gQlC0Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_S32LgD8HEeiIisB6uOvKFA"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_m1xqsHBgEd6FKu9XX1078A"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_gfXmIM1zEem0y513gQlC0Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gfXmIs1zEem0y513gQlC0Q" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gfXmI81zEem0y513gQlC0Q" key="Version" value="0.0.47"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gfXmJM1zEem0y513gQlC0Q" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gfXmJc1zEem0y513gQlC0Q" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gfXmJs1zEem0y513gQlC0Q" key="Date" value="2019-06-17"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gfXmJ81zEem0y513gQlC0Q" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gfXmIc1zEem0y513gQlC0Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UmlProfiles/Experimental.profile.uml#_unEcAJDrEemIv9iw4JXc9w"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="UmlProfiles/Experimental.profile.uml#_EDtRcAH_Eea6DZDQ0h6cdQ"/>
+    </profileApplication>
+  </uml:Model>
+  <OpenModel_Profile:OpenModelStatement xmi:id="_gfHugM1zEem0y513gQlC0Q" base_Model="_a4IQ0M1zEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_ycer8c1zEem0y513gQlC0Q" base_Class="_ycer8M1zEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_IHMr8M10Eem0y513gQlC0Q" base_Element="_ycer8M1zEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_ONmCcc10Eem0y513gQlC0Q" base_Class="_ONmCcM10Eem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_cjyE4M10Eem0y513gQlC0Q" base_Element="_ONmCcM10Eem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_XH7jYc14Eem0y513gQlC0Q" base_Class="_XH7jYM14Eem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_q96PUM14Eem0y513gQlC0Q" base_StructuralFeature="_q95oQM14Eem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_q97dcc14Eem0y513gQlC0Q" base_StructuralFeature="_q97dcM14Eem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_7tt0gM14Eem0y513gQlC0Q" base_Element="_q94aIM14Eem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_InWZYc15Eem0y513gQlC0Q" base_Class="_InWZYM15Eem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_ngBH8M1_Eem0y513gQlC0Q" base_Element="_InWZYM15Eem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_73kP4M1_Eem0y513gQlC0Q" base_Class="_73jo0M1_Eem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_EWAb0M2AEem0y513gQlC0Q" base_Element="_73jo0M1_Eem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_HQQmcM2AEem0y513gQlC0Q" base_Element="_XH7jYM14Eem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_z4cAs82AEem0y513gQlC0Q" base_StructuralFeature="_z4cAss2AEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_z4d14c2AEem0y513gQlC0Q" base_StructuralFeature="_z4d14M2AEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_sfvfYM2BEem0y513gQlC0Q" base_Element="_z4bZoM2AEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_xbMFsM2BEem0y513gQlC0Q" base_Element="_z4cAss2AEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_IcNYAc2HEem0y513gQlC0Q" base_Class="_IcNYAM2HEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_gKWBQc2HEem0y513gQlC0Q" base_Class="_gKWBQM2HEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_iwj1kM2HEem0y513gQlC0Q" base_Element="_gKWBQM2HEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_kAfzcM2HEem0y513gQlC0Q" base_Element="_IcNYAM2HEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_BeMAgM2IEem0y513gQlC0Q" base_StructuralFeature="_BeLZc82IEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_BeMnk82IEem0y513gQlC0Q" base_StructuralFeature="_BeMnks2IEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_cvkuEM2IEem0y513gQlC0Q" base_Element="_BeLZcM2IEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_fE_tUM2IEem0y513gQlC0Q" base_Element="_BeLZc82IEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_i0L74c2IEem0y513gQlC0Q" base_Class="_i0L74M2IEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_rW8AEM2IEem0y513gQlC0Q" base_Element="_i0L74M2IEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_pfM7Ac2LEem0y513gQlC0Q" base_Class="_pfM7AM2LEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_HDeRMM2MEem0y513gQlC0Q" base_Element="_pfM7AM2LEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_7KcYQc2MEem0y513gQlC0Q" base_Class="_7KcYQM2MEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_s-yVYM2NEem0y513gQlC0Q" base_Element="_7KcYQM2MEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_xxvHAc2NEem0y513gQlC0Q" base_StructuralFeature="_xxvHAM2NEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_3TKvQM2NEem0y513gQlC0Q" base_Element="_xxvHAM2NEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_Rfvw4c2OEem0y513gQlC0Q" base_StructuralFeature="_Rfvw4M2OEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_RfzbQM2OEem0y513gQlC0Q" base_Element="_Rfvw4M2OEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_TvAdwc2OEem0y513gQlC0Q" base_StructuralFeature="_TvAdwM2OEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_TvDhEM2OEem0y513gQlC0Q" base_Element="_TvAdwM2OEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_ePSloc2OEem0y513gQlC0Q" base_Class="_ePSloM2OEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_rac_Yc2OEem0y513gQlC0Q" base_StructuralFeature="_rac_YM2OEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_zLersM2OEem0y513gQlC0Q" base_Element="_rac_YM2OEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_0egZ0c2OEem0y513gQlC0Q" base_StructuralFeature="_0egZ0M2OEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_0ei2EM2OEem0y513gQlC0Q" base_Element="_0egZ0M2OEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_0-sVwc2OEem0y513gQlC0Q" base_StructuralFeature="_0-sVwM2OEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_0-vZEM2OEem0y513gQlC0Q" base_Element="_0-sVwM2OEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_yA7usc2PEem0y513gQlC0Q" base_Class="_yA7usM2PEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_2YkdUM2PEem0y513gQlC0Q" base_Element="_yA7usM2PEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_EAUFYM2QEem0y513gQlC0Q" base_StructuralFeature="_EATeUM2QEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_MOBGoM2QEem0y513gQlC0Q" base_Element="_EATeUM2QEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_SONugc2QEem0y513gQlC0Q" base_Class="_SONugM2QEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_WH5V0c2QEem0y513gQlC0Q" base_Class="_WH5V0M2QEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_sN3HYM2QEem0y513gQlC0Q" base_Element="_SONugM2QEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_u7WBUM2QEem0y513gQlC0Q" base_Element="_WH5V0M2QEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_41Npcc2QEem0y513gQlC0Q" base_StructuralFeature="_41NpcM2QEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_9HNDEM2QEem0y513gQlC0Q" base_Element="_41NpcM2QEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_-Jx6Yc2QEem0y513gQlC0Q" base_StructuralFeature="_-Jx6YM2QEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_-J0WoM2QEem0y513gQlC0Q" base_Element="_-Jx6YM2QEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_-r3TwM2QEem0y513gQlC0Q" base_StructuralFeature="_-r2ssM2QEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_-r5I8M2QEem0y513gQlC0Q" base_Element="_-r2ssM2QEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="__EOwcM2QEem0y513gQlC0Q" base_StructuralFeature="__EOJYM2QEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="__ERMsM2QEem0y513gQlC0Q" base_Element="__EOJYM2QEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="__T3u8c2QEem0y513gQlC0Q" base_StructuralFeature="__T3u8M2QEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="__T5kIM2QEem0y513gQlC0Q" base_Element="__T3u8M2QEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="__jyaQc2QEem0y513gQlC0Q" base_StructuralFeature="__jyaQM2QEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="__jzoYs2QEem0y513gQlC0Q" base_Element="__jyaQM2QEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_RmejoM2REem0y513gQlC0Q" base_StructuralFeature="_Rmd8kM2REem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_RmgY0s2REem0y513gQlC0Q" base_Element="_Rmd8kM2REem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_VKD_Ic2REem0y513gQlC0Q" base_StructuralFeature="_VKD_IM2REem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_VKI3oM2REem0y513gQlC0Q" base_Element="_VKD_IM2REem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_VZ7AEc2REem0y513gQlC0Q" base_StructuralFeature="_VZ7AEM2REem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_VZ-qcM2REem0y513gQlC0Q" base_Element="_VZ7AEM2REem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_gSFcc82REem0y513gQlC0Q" base_StructuralFeature="_gSFccs2REem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_gSGqkc2REem0y513gQlC0Q" base_StructuralFeature="_gSGqkM2REem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_m6G5Uc2REem0y513gQlC0Q" base_StructuralFeature="_m6G5UM2REem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_m6HgY82REem0y513gQlC0Q" base_StructuralFeature="_m6HgYs2REem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_3PoWQM2REem0y513gQlC0Q" base_Element="_m6GSQM2REem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_JcFfoM2SEem0y513gQlC0Q" base_Element="_gSE1YM2REem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_YC5YAM2SEem0y513gQlC0Q" base_Element="_m6G5UM2REem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_aipX8M2SEem0y513gQlC0Q" base_Element="_gSFccs2REem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_DRDEoEzREeqW7qYrErtEXA" base_StructuralFeature="_DRCdkEzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_DRE50kzREeqW7qYrErtEXA" base_StructuralFeature="_DRE50UzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_IE-GoUzREeqW7qYrErtEXA" base_Class="_IE-GoEzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_MqL-Q0zREeqW7qYrErtEXA" base_StructuralFeature="_MqL-QkzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_MqNMYkzREeqW7qYrErtEXA" base_StructuralFeature="_MqNMYUzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_PmW0c0zREeqW7qYrErtEXA" base_StructuralFeature="_PmW0ckzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_PmYCkkzREeqW7qYrErtEXA" base_StructuralFeature="_PmYCkUzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_WQBQEEzREeqW7qYrErtEXA" base_StructuralFeature="_WQApA0zREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_WQB3IUzREeqW7qYrErtEXA" base_StructuralFeature="_WQB3IEzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="__O62gUzREeqW7qYrErtEXA" base_Class="__O62gEzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_8hc4wUzTEeqW7qYrErtEXA" base_StructuralFeature="_8hc4wEzTEeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Experimental xmi:id="_CSuT0EzUEeqW7qYrErtEXA" base_Element="_8hc4wEzTEeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Specify xmi:id="_Hl0lIEzUEeqW7qYrErtEXA" base_Abstraction="_2hOGkEzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Specify xmi:id="_I7UYcEzUEeqW7qYrErtEXA" base_Abstraction="_OL3-AEzSEeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Specify xmi:id="_La2V8EzUEeqW7qYrErtEXA" base_Abstraction="_3q3PMEzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Specify xmi:id="_VlNRIEzUEeqW7qYrErtEXA" base_Abstraction="_4NyWEEzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Specify xmi:id="_XyVQAEzUEeqW7qYrErtEXA" base_Abstraction="_4071oEzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Experimental xmi:id="_ubFlkEzUEeqW7qYrErtEXA" base_Element="_2hOGkEzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Experimental xmi:id="_vl-EUEzUEeqW7qYrErtEXA" base_Element="_OL3-AEzSEeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Experimental xmi:id="_xC6jcEzUEeqW7qYrErtEXA" base_Element="_3q3PMEzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Experimental xmi:id="_zklO8EzUEeqW7qYrErtEXA" base_Element="_4NyWEEzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Experimental xmi:id="_0ne2YEzUEeqW7qYrErtEXA" base_Element="_4071oEzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Experimental xmi:id="_4ePskEzUEeqW7qYrErtEXA" base_Element="__O62gEzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Experimental xmi:id="_HUn1gEzWEeqW7qYrErtEXA" base_Element="_WQApA0zREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Experimental xmi:id="_JmPS0EzWEeqW7qYrErtEXA" base_Element="_WQApAEzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Experimental xmi:id="_QkQ04EzWEeqW7qYrErtEXA" base_Element="_q95oQM14Eem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_bviagEzWEeqW7qYrErtEXA" base_Element="_IE-GoEzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Experimental xmi:id="_pnLfwEzWEeqW7qYrErtEXA" base_Element="_PmWNYEzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Experimental xmi:id="_vWP7YEzWEeqW7qYrErtEXA" base_Element="_PmW0ckzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Experimental xmi:id="_A5Ya8EzXEeqW7qYrErtEXA" base_Element="_MqLXMEzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Experimental xmi:id="_EgKUYEzXEeqW7qYrErtEXA" base_Element="_MqL-QkzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Experimental xmi:id="_b2PqAEzXEeqW7qYrErtEXA" base_Element="_DQ-MIEzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Experimental xmi:id="_etm4sEzXEeqW7qYrErtEXA" base_Element="_DRCdkEzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Experimental xmi:id="_Mjx6oEzZEeqW7qYrErtEXA" base_Element="_ePSloM2OEem0y513gQlC0Q"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_TrQLMV7CEeqzG4RIqKiE-A" base_Class="_TrQLMF7CEeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_ddpc4F7DEeqzG4RIqKiE-A" base_Class="_ddo10F7DEeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:Specify xmi:id="_ChKL0F7EEeqzG4RIqKiE-A" base_Abstraction="_wnDWsF7DEeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:Experimental xmi:id="_ClJT8F7EEeqzG4RIqKiE-A" base_Element="_wnDWsF7DEeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:Experimental xmi:id="_OoOEQF7EEeqzG4RIqKiE-A" base_Element="_ddo10F7DEeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:Example xmi:id="_OsaAsF7EEeqzG4RIqKiE-A" base_Element="_ddo10F7DEeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:Example xmi:id="_hvZwgF7EEeqzG4RIqKiE-A" base_Element="__O62gEzREeqW7qYrErtEXA"/>
+  <OpenModel_Profile:Example xmi:id="_ky3hgF7EEeqzG4RIqKiE-A" base_Element="_pfM7AM2LEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Example xmi:id="_nuqkQF7EEeqzG4RIqKiE-A" base_Element="_ePSloM2OEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Example xmi:id="_p3ZLUF7EEeqzG4RIqKiE-A" base_Element="_7KcYQM2MEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Example xmi:id="_tKTtkF7EEeqzG4RIqKiE-A" base_Element="_SONugM2QEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Example xmi:id="_vD7hoF7EEeqzG4RIqKiE-A" base_Element="_i0L74M2IEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Example xmi:id="_y8S6UF7EEeqzG4RIqKiE-A" base_Element="_WH5V0M2QEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Example xmi:id="_04rugF7EEeqzG4RIqKiE-A" base_Element="_yA7usM2PEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Example xmi:id="_7bIH0F7EEeqzG4RIqKiE-A" base_Element="_TrQLMF7CEeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:Experimental xmi:id="_7gOqQF7EEeqzG4RIqKiE-A" base_Element="_TrQLMF7CEeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_GiQNQl7FEeqzG4RIqKiE-A" base_StructuralFeature="_GiQNQF7FEeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_GiRbYl7FEeqzG4RIqKiE-A" base_StructuralFeature="_GiRbYF7FEeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_GiSCcl7FEeqzG4RIqKiE-A" base_StructuralFeature="_GiSCcF7FEeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:Experimental xmi:id="_GiTQkF7FEeqzG4RIqKiE-A" base_Element="_GiQNQF7FEeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:Experimental xmi:id="_GiT3oF7FEeqzG4RIqKiE-A" base_Element="_GiRbYF7FEeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:Experimental xmi:id="_GiUesF7FEeqzG4RIqKiE-A" base_Element="_GiSCcF7FEeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_KUeQgGQ9EeqzG4RIqKiE-A" base_StructuralFeature="_KUdpcGQ9EeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_KUjwEmQ9EeqzG4RIqKiE-A" base_StructuralFeature="_KUjwEGQ9EeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:Experimental xmi:id="_KUrE0GQ9EeqzG4RIqKiE-A" base_Element="_KUdpcGQ9EeqzG4RIqKiE-A"/>
+  <OpenModel_Profile:Experimental xmi:id="_KUrr4GQ9EeqzG4RIqKiE-A" base_Element="_KUjwEGQ9EeqzG4RIqKiE-A"/>
+</xmi:XMI>
