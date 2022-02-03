@@ -7330,18 +7330,18 @@ The referenced Class may:&#xD;
           <body>Note that this model is early experimental and is currently not navigable from the formal model classes.</body>
         </ownedComment>
         <ownedComment xmi:type="uml:Comment" xmi:id="_m1p-sNAkEem0y513gQlC0Q">
-          <body>Log has settings:&#xD;
+          <body>StreamLog has settings:&#xD;
 - compaction delay&#xD;
 - retention&#xD;
 - tombstone retention</body>
         </ownedComment>
         <packagedElement xmi:type="uml:Class" xmi:id="_VR6iIM_XEem0y513gQlC0Q" name="Filter">
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_ws3bYs_XEem0y513gQlC0Q" name="_log" type="_q3tGMM_UEem0y513gQlC0Q" aggregation="composite" association="_ws2NQM_XEem0y513gQlC0Q">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_ws3bYs_XEem0y513gQlC0Q" name="_streamLog" type="_q3tGMM_UEem0y513gQlC0Q" aggregation="composite" association="_ws2NQM_XEem0y513gQlC0Q">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ws4pgM_XEem0y513gQlC0Q" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ws4pgc_XEem0y513gQlC0Q" value="1"/>
           </ownedAttribute>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_q3tGMM_UEem0y513gQlC0Q" name="Log">
+        <packagedElement xmi:type="uml:Class" xmi:id="_q3tGMM_UEem0y513gQlC0Q" name="StreamLog">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_pcVpgs_WEem0y513gQlC0Q" name="_streamSource" type="_1sea4M_VEem0y513gQlC0Q" association="_pcUbYM_WEem0y513gQlC0Q">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pcW3oM_WEem0y513gQlC0Q" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pcXesM_WEem0y513gQlC0Q" value="1"/>
@@ -7352,7 +7352,7 @@ The referenced Class may:&#xD;
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1mIF0M_WEem0y513gQlC0Q" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1mIF0c_WEem0y513gQlC0Q" value="1"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_GZKgAs_pEem0y513gQlC0Q" name="_log" type="_q3tGMM_UEem0y513gQlC0Q" association="_GZJR4M_pEem0y513gQlC0Q">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_GZKgAs_pEem0y513gQlC0Q" name="_streamLog" type="_q3tGMM_UEem0y513gQlC0Q" association="_GZJR4M_pEem0y513gQlC0Q">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GZLuIM_pEem0y513gQlC0Q" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GZLuIc_pEem0y513gQlC0Q" value="1"/>
           </ownedAttribute>
@@ -7363,7 +7363,7 @@ The referenced Class may:&#xD;
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uTYQ8M_WEem0y513gQlC0Q" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uTY4AM_WEem0y513gQlC0Q" value="1"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_dQGtcM_nEem0y513gQlC0Q" name="_log" type="_q3tGMM_UEem0y513gQlC0Q" association="_dQERMM_nEem0y513gQlC0Q">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_dQGtcM_nEem0y513gQlC0Q" name="_streamLog" type="_q3tGMM_UEem0y513gQlC0Q" association="_dQERMM_nEem0y513gQlC0Q">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dQIioM_nEem0y513gQlC0Q" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dQIioc_nEem0y513gQlC0Q" value="1"/>
           </ownedAttribute>
@@ -7433,7 +7433,7 @@ The referenced Class may:&#xD;
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pcVpgM_WEem0y513gQlC0Q" source="org.eclipse.papyrus">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pcVpgc_WEem0y513gQlC0Q" key="nature" value="UML_Nature"/>
           </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_pcXesc_WEem0y513gQlC0Q" name="log" type="_q3tGMM_UEem0y513gQlC0Q" association="_pcUbYM_WEem0y513gQlC0Q"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_pcXesc_WEem0y513gQlC0Q" name="streamlog" type="_q3tGMM_UEem0y513gQlC0Q" association="_pcUbYM_WEem0y513gQlC0Q"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Association" xmi:id="_ws2NQM_XEem0y513gQlC0Q" name="Topic" memberEnd="_ws3bYs_XEem0y513gQlC0Q _ws4pgs_XEem0y513gQlC0Q">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ws3bYM_XEem0y513gQlC0Q" source="org.eclipse.papyrus">
@@ -7494,7 +7494,7 @@ This specific model follows a subset of the Component-System Pattern. &#xD;
 </body>
           </ownedComment>
           <generalization xmi:type="uml:Generalization" xmi:id="_mSS8kJJjEemFdrga_Zy80Q" general="_iVJ1kI2wEeO38ZmbECnvbg"/>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_NHFNEcAtEeWbqPZwR-Ot6A" name="_exposureContext" type="_5LsaEFY2EeiyzdV8zVsJ_w" aggregation="shared" association="_NHEmAMAtEeWbqPZwR-Ot6A">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_NHFNEcAtEeWbqPZwR-Ot6A" name="_exposureContext" type="_5LsaEFY2EeiyzdV8zVsJ_w" aggregation="composite" association="_NHEmAMAtEeWbqPZwR-Ot6A">
             <ownedComment xmi:type="uml:Comment" xmi:id="_7CTlQGqhEeiRh-lc79MSRw" annotatedElement="_NHFNEcAtEeWbqPZwR-Ot6A">
               <body>A view supported by the ControlConstruct that may be exposed at a ControlPort of the ControlConstruct.</body>
             </ownedComment>
@@ -8003,10 +8003,7 @@ A user has needs that are satisfied by a provider.</body>
             <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NHEmAcAtEeWbqPZwR-Ot6A" source="org.eclipse.papyrus">
               <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NHFNEMAtEeWbqPZwR-Ot6A" key="nature" value="UML_Nature"/>
             </eAnnotations>
-            <ownedEnd xmi:type="uml:Property" xmi:id="_NHF0IMAtEeWbqPZwR-Ot6A" name="controlConstruct" type="_Vuh_EJmhEeWTOvbfd7_4-A" association="_NHEmAMAtEeWbqPZwR-Ot6A">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RvF50PiIEeaAw4wsR4LIsQ" value="1"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RvLZYPiIEeaAw4wsR4LIsQ" value="*"/>
-            </ownedEnd>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_NHF0IMAtEeWbqPZwR-Ot6A" name="controlConstruct" type="_Vuh_EJmhEeWTOvbfd7_4-A" association="_NHEmAMAtEeWbqPZwR-Ot6A"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Association" xmi:id="_panQ8FpREee0ZvXJLxwizg" name="ControlConstructHasViewMappings" memberEnd="_pbJccFpREee0ZvXJLxwizg _pbLRoFpREee0ZvXJLxwizg">
             <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pbGZIFpREee0ZvXJLxwizg" source="org.eclipse.papyrus">
