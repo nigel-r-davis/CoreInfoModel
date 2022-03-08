@@ -1,0 +1,24 @@
+# OS X
+.DS_Store
+
+# Eclipse
+local.properties
+.settings
+RemoteSystemsTempFiles
+.visualstate
+bin/
+
+# Misc
+*.log
+*.log.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+ 
+# Windows Folder config file
+Desktop.ini
+
+# Eclipse and other temporary files
+*.tmp
+*.bak
