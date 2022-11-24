@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:OpenModel_Profile="http:///schemas/OpenModel_Profile/_S30WUD8HEeiIisB6uOvKFA/26" xmlns:RootElement="http:///schemas/RootElement/_unAKkJDrEemIv9iw4JXc9w/46" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/OpenModel_Profile/_S30WUD8HEeiIisB6uOvKFA/26 UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_S32LgD8HEeiIisB6uOvKFA http:///schemas/RootElement/_unAKkJDrEemIv9iw4JXc9w/46 UmlProfiles/Experimental.profile.uml#_unEcAJDrEemIv9iw4JXc9w">
   <uml:Package xmi:id="_oGqilVLNEeO75dO39GbF8Q" name="CoreModel">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_9NC08C9JEe22jbMp3BDUaA">
+      <body>The ControlTaskTransferFunction is not a spec. It has a spec that sets out the pattern components that it is built from.&#xD;
+It has specific instances of ControlTask it is built from and these can potentially be started/stopped etc.&#xD;
+If the ControlTasks it is built from do not express any control opportunity then they are only represented in the spec layer.&#xD;
+The ControlTaskFlowGraph is only represented fully in the Spec layer.</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_ToHMcC9NEe22jbMp3BDUaA">
+      <body>Need to add attribute to ControlTask to indicate whether it is triggred via a port or from some other source.&#xD;
+Likewise whether the output goes through a port or elsewhere.&#xD;
+Both the above may be spec only properties.</body>
+    </ownedComment>
     <packageImport xmi:type="uml:PackageImport" xmi:id="_8Q4ecKxrEeS5HuAudtqItw">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
     </packageImport>
@@ -455,6 +466,7 @@ At this point it appears that this is not necessary however it has been left in 
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-VhDcxihEeSh8KVgZCMyDw" value="*"/>
           </ownedEnd>
         </packagedElement>
+        <packagedElement xmi:type="uml:Realization" xmi:id="_NEYr8LspEey15NKF0wAXwA" client="_eEpDMFX4EeOVGaP4lO41SQ" supplier="_0oGNoKtNEey15NKF0wAXwA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_DnVCQBsvEeqCeNa5GcKdyg" name="ForwardingConstruct">
         <packagedElement xmi:type="uml:Class" xmi:id="_b_lUAFYgEeOVGaP4lO41SQ" name="FcPort">
@@ -895,6 +907,7 @@ Can be returned to NORMAL by configuration action.</body>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wk6j0FJKEeaDuo8VlVeg_g" value="1"/>
           </ownedEnd>
         </packagedElement>
+        <packagedElement xmi:type="uml:Realization" xmi:id="_DDOwELspEey15NKF0wAXwA" client="_oGqmC1LNEeO75dO39GbF8Q" supplier="_0oGNoKtNEey15NKF0wAXwA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_TPDlEBsvEeqCeNa5GcKdyg" name="FcRoute">
         <packagedElement xmi:type="uml:Class" xmi:id="_9UVusFYfEeOVGaP4lO41SQ" name="FcRoute">
@@ -1289,6 +1302,7 @@ A Link with an Off-network end cannot be encompassed by an FD.</body>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nYEQUAxaEeaoNYuBimvyxQ" value="1"/>
           </ownedEnd>
         </packagedElement>
+        <packagedElement xmi:type="uml:Realization" xmi:id="_GUj98LspEey15NKF0wAXwA" client="_oGqnjVLNEeO75dO39GbF8Q" supplier="_0oGNoKtNEey15NKF0wAXwA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_ROrBsBsvEeqCeNa5GcKdyg" name="ForwardingDomain">
         <packagedElement xmi:type="uml:Class" xmi:id="_-pQ7MCT3Eee9I5wuRX6wwQ" name="FdPort">
@@ -1466,6 +1480,7 @@ See also _lowerLevelFd.</body>
           </eAnnotations>
           <ownedEnd xmi:type="uml:Property" xmi:id="_vXtVUCT6Eee9I5wuRX6wwQ" name="forwardingdomain" type="_oGql-FLNEeO75dO39GbF8Q" association="_vXVh4CT6Eee9I5wuRX6wwQ"/>
         </packagedElement>
+        <packagedElement xmi:type="uml:Realization" xmi:id="_FJ6vwLspEey15NKF0wAXwA" client="_oGql-FLNEeO75dO39GbF8Q" supplier="_0oGNoKtNEey15NKF0wAXwA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_WvFWQBsvEeqCeNa5GcKdyg" name="ConfigurationAndSwitchControl">
         <packagedElement xmi:type="uml:Class" xmi:id="_QDijcNvrEeaL7dYp0KdCwA" name="CascPort">
@@ -1761,6 +1776,7 @@ The C&amp;SC need not have ports.</body>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__lWUwGhREeaD1OSapW1qFw" value="*"/>
           </ownedEnd>
         </packagedElement>
+        <packagedElement xmi:type="uml:Realization" xmi:id="_87qU4LsoEey15NKF0wAXwA" client="_k1gHQJo5EeOyHKqw-cQ_eg" supplier="_0oGNoKtNEey15NKF0wAXwA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_no_5sBsvEeqCeNa5GcKdyg" name="Clock">
         <packagedElement xmi:type="uml:Class" xmi:id="_8lP6kHXAEeeqyuooNTTDCg" name="Clock">
@@ -3267,16 +3283,12 @@ http://www.itu.int/rec/T-REC-X.731/en&#xD;
         </packagedElement>
       </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Package" href="CoreModelEnhancements.uml#_cCVB4BizEeSh8KVgZCMyDw"/>
-    <packagedElement xmi:type="uml:Package" href="ExplanatoryFiguresUsedInDocumentsAndSlides.uml#_kr10UEDrEeWHCPNn7aoIVw"/>
     <packagedElement xmi:type="uml:Package" xmi:id="_8SXM4D-HEeaRI-H69PghuA" name="CorePhysicalModel">
       <packagedElement xmi:type="uml:Package" xmi:id="_EJAVYEdREeasL6dcjI1vEA" name="RuleModels">
         <packagedElement xmi:type="uml:Package" xmi:id="_zoiXQEdREeasL6dcjI1vEA" name="FruNonFruRules">
           <packagedElement xmi:type="uml:Package" xmi:id="_8maRMEdREeasL6dcjI1vEA" name="ObjectClasses">
             <packagedElement xmi:type="uml:Class" xmi:id="_8SXNgD-HEeaRI-H69PghuA" name="FieldReplaceable" isAbstract="true">
-              <ownedComment xmi:type="uml:Comment" xmi:id="_8SXNXD-HEeaRI-H69PghuA">
-                <annotatedElement xmi:type="uml:Class" href="#_8SXNgD-HEeaRI-H69PghuA"/>
-                <annotatedElement xmi:type="uml:Package" href="ExplanatoryFiguresUsedInDocumentsAndSlides.uml#_kr10UEDrEeWHCPNn7aoIVw"/>
+              <ownedComment xmi:type="uml:Comment" xmi:id="_8SXNXD-HEeaRI-H69PghuA" annotatedElement="_8SXNgD-HEeaRI-H69PghuA">
                 <body>A rule class (an abstract specialization of Equipment) that represents an equipment that can be replaced in the field. &#xD;
 May plug in to a holder in another equipment (if not stand-alone). &#xD;
 Realization could use an FRU Boolean on Equipment.</body>
@@ -4296,6 +4308,7 @@ An FRU may occupy more hat one holder (using or blocking are intentionally not d
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dakJ8EmmEeaDccCv6BIgdg" value="1"/>
             </ownedAttribute>
           </packagedElement>
+          <packagedElement xmi:type="uml:Realization" xmi:id="_KgWB4LspEey15NKF0wAXwA" client="_oGqilVLNEeO75dO39GbF8Q" supplier="_0oGNoKtNEey15NKF0wAXwA"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="_-M-CgEdVEeasL6dcjI1vEA" name="Associations">
           <packagedElement xmi:type="uml:Association" xmi:id="_8SXM4j-HEeaRI-H69PghuA" name="CableHasConnector" memberEnd="_8SXM5T-HEeaRI-H69PghuA _8SXNbT-HEeaRI-H69PghuA">
@@ -4333,10 +4346,6 @@ An FRU may occupy more hat one holder (using or blocking are intentionally not d
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8SXNNz-HEeaRI-H69PghuA"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8SXNOD-HEeaRI-H69PghuA" value="1"/>
             </ownedEnd>
-          </packagedElement>
-          <packagedElement xmi:type="uml:Dependency" xmi:id="_dE5dIEdPEeasL6dcjI1vEA" name="HasConcealedConnector">
-            <client xmi:type="uml:Package" href="ExplanatoryFiguresUsedInDocumentsAndSlides.uml#_kr10UEDrEeWHCPNn7aoIVw"/>
-            <supplier xmi:type="uml:Package" href="ExplanatoryFiguresUsedInDocumentsAndSlides.uml#_kr10UEDrEeWHCPNn7aoIVw"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Dependency" xmi:id="_OuL2QEdPEeasL6dcjI1vEA" name="HasConcealedConnectors" client="_FCRcgEdNEeasL6dcjI1vEA" supplier="_8SXNcD-HEeaRI-H69PghuA"/>
           <packagedElement xmi:type="uml:Dependency" xmi:id="_besw0EdOEeasL6dcjI1vEA" name="IsDegenerateFormOfHolder" client="_FCRcgEdNEeasL6dcjI1vEA" supplier="_8SXNjj-HEeaRI-H69PghuA"/>
@@ -5400,9 +5409,7 @@ PinGroup can simply reference the relevant connectors and for each can provide a
         <ownedComment xmi:type="uml:Comment" xmi:id="_1ttAAPzXEea2KOb10ZFHOw" annotatedElement="_8SXM9D-HEeaRI-H69PghuA">
           <body>Function emerges when Equipment is powered.</body>
         </ownedComment>
-        <ownedComment xmi:type="uml:Comment" xmi:id="_h0ujEPzaEea2KOb10ZFHOw">
-          <annotatedElement xmi:type="uml:Association" href="#_IvQ9wEdwEeasL6dcjI1vEA"/>
-          <annotatedElement xmi:type="uml:Package" href="ExplanatoryFiguresUsedInDocumentsAndSlides.uml#_kr10UEDrEeWHCPNn7aoIVw"/>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_h0ujEPzaEea2KOb10ZFHOw" annotatedElement="_IvQ9wEdwEeasL6dcjI1vEA">
           <body>Same association</body>
         </ownedComment>
         <ownedComment xmi:type="uml:Comment" xmi:id="_k9BXcPzfEea2KOb10ZFHOw">
@@ -7263,23 +7270,16 @@ The referenced Class may:&#xD;
           <ownedComment xmi:type="uml:Comment" xmi:id="_9zdaMGF0Eeerc4Zz6ufSeg" annotatedElement="_srxA0GFxEeerc4Zz6ufSeg _wL2cYGFxEeerc4Zz6ufSeg _260OwGFxEeerc4Zz6ufSeg">
             <body>Legality determined by condition on specTargetClass in _linkSpecReference</body>
           </ownedComment>
-          <ownedComment xmi:type="uml:Comment" xmi:id="_RiOs0GIjEeerc4Zz6ufSeg">
-            <annotatedElement xmi:type="uml:Property" href="#_axGsoWIiEeerc4Zz6ufSeg"/>
-            <annotatedElement xmi:type="uml:Property" href="#_Bz2MkGIcEeerc4Zz6ufSeg"/>
-            <annotatedElement xmi:type="uml:Package" href="ExplanatoryFiguresUsedInDocumentsAndSlides.uml#_kr10UEDrEeWHCPNn7aoIVw"/>
+          <ownedComment xmi:type="uml:Comment" xmi:id="_RiOs0GIjEeerc4Zz6ufSeg" annotatedElement="_axGsoWIiEeerc4Zz6ufSeg _Bz2MkGIcEeerc4Zz6ufSeg">
             <body>Legality determined by condition on specTargetClass in _partSpecReference</body>
           </ownedComment>
-          <ownedComment xmi:type="uml:Comment" xmi:id="_IXLZ4GIgEeerc4Zz6ufSeg">
-            <annotatedElement xmi:type="uml:Association" href="#_dieIYGIfEeerc4Zz6ufSeg"/>
-            <annotatedElement xmi:type="uml:Package" href="ExplanatoryFiguresUsedInDocumentsAndSlides.uml#_kr10UEDrEeWHCPNn7aoIVw"/>
+          <ownedComment xmi:type="uml:Comment" xmi:id="_IXLZ4GIgEeerc4Zz6ufSeg" annotatedElement="_dieIYGIfEeerc4Zz6ufSeg">
             <body>Association End detail</body>
           </ownedComment>
           <ownedComment xmi:type="uml:Comment" xmi:id="_DWElkGIiEeerc4Zz6ufSeg" annotatedElement="_6otCQGIgEeerc4Zz6ufSeg _6ou3cGIgEeerc4Zz6ufSeg">
             <body>Association End detail</body>
           </ownedComment>
-          <ownedComment xmi:type="uml:Comment" xmi:id="_E1CogGIjEeerc4Zz6ufSeg">
-            <annotatedElement xmi:type="uml:Property" href="#_axGsoWIiEeerc4Zz6ufSeg"/>
-            <annotatedElement xmi:type="uml:Package" href="ExplanatoryFiguresUsedInDocumentsAndSlides.uml#_kr10UEDrEeWHCPNn7aoIVw"/>
+          <ownedComment xmi:type="uml:Comment" xmi:id="_E1CogGIjEeerc4Zz6ufSeg" annotatedElement="_axGsoWIiEeerc4Zz6ufSeg">
             <body>Association End detail</body>
           </ownedComment>
           <ownedComment xmi:type="uml:Comment" xmi:id="_v_E4gGIdEeerc4Zz6ufSeg" annotatedElement="_B-kEQGIbEeerc4Zz6ufSeg _-pEaAGIYEeerc4Zz6ufSeg">
@@ -7326,28 +7326,56 @@ The referenced Class may:&#xD;
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_X_kAQOebEeapD6ZL2WzaLQ" name="GeneralControllerModel">
       <packagedElement xmi:type="uml:Package" xmi:id="_LydFMBdAEeqAktXlUG_iEw" name="LogAndStream">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_PxIq4CD-Eey5mun8Wbck9w">
-          <body>Note that this model is early experimental and is currently not navigable from the formal model classes.</body>
-        </ownedComment>
         <ownedComment xmi:type="uml:Comment" xmi:id="_m1p-sNAkEem0y513gQlC0Q">
           <body>StreamLog has settings:&#xD;
 - compaction delay&#xD;
 - retention&#xD;
 - tombstone retention</body>
         </ownedComment>
-        <packagedElement xmi:type="uml:Class" xmi:id="_VR6iIM_XEem0y513gQlC0Q" name="Filter">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_9dCNAKtYEey15NKF0wAXwA">
+          <body>Explain better who controls what.</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_xzvkkLxBEey15NKF0wAXwA">
+          <body>Get/Post/Put/Patch</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="__3IKULxCEey15NKF0wAXwA">
+          <body>Need to add Transmit Filter for Get Response construction</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_ZYQiwKtOEey15NKF0wAXwA">
+          <body>Note that not all Aggregates are shown.&#xD;
+The ConstraintDomain, and hence the LogRecordBidy, can incorporate any Aggregates identified in the model</body>
+        </ownedComment>
+        <packagedElement xmi:type="uml:Class" xmi:id="_VR6iIM_XEem0y513gQlC0Q" name="TransmitFilter">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_XZT6kMneEeyRHaEo8DHwog" annotatedElement="_VR6iIM_XEem0y513gQlC0Q">
+            <body>Defines which events are sent to a specific Topic.&#xD;
+The expectation is that ALL events from an ExposureContext will be available through the combination of TransmitFilters and streams such that a client connected to an appropriate set of streams can maintain alignment with the entire ExposureContext as defined by its ConstraintDomain. &#xD;
+May want to allow the client to specify the streams but there is a danger that the client does not set up the right combination of streams to ensure that all content is available. Maybe a set of profiles?  Based upon orchestrator internal partition.&#xD;
+Provider defines one or more profiles defining a set of streams all of which provide full ExposureContext access and the user selects a profile. May be by negotiation, but certainly not created by the client on the fly with random choices. &#xD;
+If the desired profile does not exist then a slow timeframe process will cause it to become available in the next release of the product/catalogue/etc.</body>
+          </ownedComment>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_ws3bYs_XEem0y513gQlC0Q" name="_streamLog" type="_q3tGMM_UEem0y513gQlC0Q" aggregation="composite" association="_ws2NQM_XEem0y513gQlC0Q">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ws4pgM_XEem0y513gQlC0Q" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ws4pgc_XEem0y513gQlC0Q" value="1"/>
           </ownedAttribute>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_q3tGMM_UEem0y513gQlC0Q" name="StreamLog">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_3cCFoMndEeyRHaEo8DHwog" annotatedElement="_q3tGMM_UEem0y513gQlC0Q">
+            <body>Stores StreamLogRecords for a particular Topic.&#xD;
+May do compaction/truncation etc. May use a technology such as Kafka.</body>
+          </ownedComment>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_pcVpgs_WEem0y513gQlC0Q" name="_streamSource" type="_1sea4M_VEem0y513gQlC0Q" association="_pcUbYM_WEem0y513gQlC0Q">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pcW3oM_WEem0y513gQlC0Q" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pcXesM_WEem0y513gQlC0Q" value="1"/>
           </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_j7kUgrsoEey15NKF0wAXwA" name="_storedInformation" type="_x5b3MLsgEey15NKF0wAXwA" aggregation="composite" association="_j7jtcLsoEey15NKF0wAXwA"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_iaPVMM_VEem0y513gQlC0Q" name="LogStreamControl">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_DeB34MneEeyRHaEo8DHwog" annotatedElement="_iaPVMM_VEem0y513gQlC0Q">
+            <body>For stream transmitter, monitors StreamLog state and StreamHandler behaviour.&#xD;
+For stream receiver,monitors ReceiveStreamBuffer.&#xD;
+Controls the communications in response to monitored conditions dropping and restarting connections as appropriate.&#xD;
+Need to explain how the client chooses the record to start from.</body>
+          </ownedComment>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_1mG3ss_WEem0y513gQlC0Q" name="_controlport" type="_D5kTMJmiEeWTOvbfd7_4-A" association="_1mFpkM_WEem0y513gQlC0Q">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1mIF0M_WEem0y513gQlC0Q" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1mIF0c_WEem0y513gQlC0Q" value="1"/>
@@ -7356,9 +7384,20 @@ The referenced Class may:&#xD;
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GZLuIM_pEem0y513gQlC0Q" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GZLuIc_pEem0y513gQlC0Q" value="1"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_I3eQIs_WEem0y513gQlC0Q" name="_streamServer" type="_1sea4M_VEem0y513gQlC0Q" association="_I3bz4M_WEem0y513gQlC0Q"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_I3eQIs_WEem0y513gQlC0Q" name="_streamServer" type="_1sea4M_VEem0y513gQlC0Q" association="_I3bz4M_WEem0y513gQlC0Q">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VMLzELvlEey15NKF0wAXwA"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_V0QfsrvlEey15NKF0wAXwA" name="_receiveStreamPipelineBuffer" type="_Wx9TULu_Eey15NKF0wAXwA" association="_V0PRkLvlEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_V0UxILvlEey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_V0UxIbvlEey15NKF0wAXwA" value="1"/>
+          </ownedAttribute>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_1sea4M_VEem0y513gQlC0Q" name="StreamHandler">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_JnDhEMndEeyRHaEo8DHwog" annotatedElement="_1sea4M_VEem0y513gQlC0Q">
+            <body>Maintains flow integrity of a stream.&#xD;
+Feeds StreamRecords to the ControlPort built from StreamLogRecords from the StreamLog.&#xD;
+Responds to backpressure from the ControlPort accounting for Demand.</body>
+          </ownedComment>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_uTXp4s_WEem0y513gQlC0Q" name="_controlPort" type="_D5kTMJmiEeWTOvbfd7_4-A" association="_uTXC0M_WEem0y513gQlC0Q">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uTYQ8M_WEem0y513gQlC0Q" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uTY4AM_WEem0y513gQlC0Q" value="1"/>
@@ -7366,6 +7405,10 @@ The referenced Class may:&#xD;
           <ownedAttribute xmi:type="uml:Property" xmi:id="_dQGtcM_nEem0y513gQlC0Q" name="_streamLog" type="_q3tGMM_UEem0y513gQlC0Q" association="_dQERMM_nEem0y513gQlC0Q">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dQIioM_nEem0y513gQlC0Q" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dQIioc_nEem0y513gQlC0Q" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_O3i2MrsqEey15NKF0wAXwA" name="conveyedinformation" type="_Do7BoLsqEey15NKF0wAXwA" aggregation="composite" association="_O3hoELsqEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_O3mgkLsqEey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_O3mgkbsqEey15NKF0wAXwA" value="1"/>
           </ownedAttribute>
         </packagedElement>
         <packagedElement xmi:type="uml:Association" xmi:id="_GZJR4M_pEem0y513gQlC0Q" name="AdjustLogParameters" memberEnd="_GZKgAs_pEem0y513gQlC0Q _GZLuIs_pEem0y513gQlC0Q">
@@ -7376,7 +7419,7 @@ The referenced Class may:&#xD;
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ry6AoCELEey5mun8Wbck9w"/>
           </ownedEnd>
         </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_uTXC0M_WEem0y513gQlC0Q" name="Blocks" memberEnd="_uTXp4s_WEem0y513gQlC0Q _uTY4Ac_WEem0y513gQlC0Q">
+        <packagedElement xmi:type="uml:Association" xmi:id="_uTXC0M_WEem0y513gQlC0Q" name="StreamRecords" memberEnd="_uTXp4s_WEem0y513gQlC0Q _uTY4Ac_WEem0y513gQlC0Q">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uTXp4M_WEem0y513gQlC0Q" source="org.eclipse.papyrus">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uTXp4c_WEem0y513gQlC0Q" key="nature" value="UML_Nature"/>
           </eAnnotations>
@@ -7394,27 +7437,19 @@ The referenced Class may:&#xD;
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UIFawPXBEeunUrQYdCgKWA" value="*"/>
           </ownedEnd>
         </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_FPJekM_WEem0y513gQlC0Q" name="Demand" memberEnd="_FPLTwM_WEem0y513gQlC0Q _FPMh4c_WEem0y513gQlC0Q" navigableOwnedEnd="_FPLTwM_WEem0y513gQlC0Q">
+        <packagedElement xmi:type="uml:Association" xmi:id="_FPJekM_WEem0y513gQlC0Q" name="Demand" memberEnd="_FPLTwM_WEem0y513gQlC0Q _FPMh4c_WEem0y513gQlC0Q">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FPKssM_WEem0y513gQlC0Q" source="org.eclipse.papyrus">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FPKssc_WEem0y513gQlC0Q" key="nature" value="UML_Nature"/>
           </eAnnotations>
           <ownedEnd xmi:type="uml:Property" xmi:id="_FPMh4c_WEem0y513gQlC0Q" name="controlport" type="_D5kTMJmiEeWTOvbfd7_4-A" association="_FPJekM_WEem0y513gQlC0Q"/>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_FPLTwM_WEem0y513gQlC0Q" name="_streamServer" type="_1sea4M_VEem0y513gQlC0Q" association="_FPJekM_WEem0y513gQlC0Q">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FPL60M_WEem0y513gQlC0Q"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FPMh4M_WEem0y513gQlC0Q" value="*"/>
-          </ownedEnd>
         </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_vGbCAM_XEem0y513gQlC0Q" name="Events" memberEnd="_vGcQIs_XEem0y513gQlC0Q _vGeFUM_XEem0y513gQlC0Q" navigableOwnedEnd="_vGcQIs_XEem0y513gQlC0Q">
+        <packagedElement xmi:type="uml:Association" xmi:id="_vGbCAM_XEem0y513gQlC0Q" name="Events" memberEnd="_vGcQIs_XEem0y513gQlC0Q _vGeFUM_XEem0y513gQlC0Q">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vGcQIM_XEem0y513gQlC0Q" source="org.eclipse.papyrus">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vGcQIc_XEem0y513gQlC0Q" key="nature" value="UML_Nature"/>
           </eAnnotations>
           <ownedEnd xmi:type="uml:Property" xmi:id="_vGeFUM_XEem0y513gQlC0Q" name="exposurecontext" type="_5LsaEFY2EeiyzdV8zVsJ_w" association="_vGbCAM_XEem0y513gQlC0Q"/>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_vGcQIs_XEem0y513gQlC0Q" name="_filter" type="_VR6iIM_XEem0y513gQlC0Q" association="_vGbCAM_XEem0y513gQlC0Q">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vGdeQM_XEem0y513gQlC0Q"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vGdeQc_XEem0y513gQlC0Q" value="*"/>
-          </ownedEnd>
         </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_dQERMM_nEem0y513gQlC0Q" name="GetNext" memberEnd="_dQGtcM_nEem0y513gQlC0Q _dQJJsM_nEem0y513gQlC0Q">
+        <packagedElement xmi:type="uml:Association" xmi:id="_dQERMM_nEem0y513gQlC0Q" name="GetNextOrSpecific" memberEnd="_dQGtcM_nEem0y513gQlC0Q _dQJJsM_nEem0y513gQlC0Q">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dQGGYM_nEem0y513gQlC0Q" source="org.eclipse.papyrus">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dQGGYc_nEem0y513gQlC0Q" key="nature" value="UML_Nature"/>
           </eAnnotations>
@@ -7441,46 +7476,874 @@ The referenced Class may:&#xD;
           </eAnnotations>
           <ownedEnd xmi:type="uml:Property" xmi:id="_ws4pgs_XEem0y513gQlC0Q" name="filter" type="_VR6iIM_XEem0y513gQlC0Q" association="_ws2NQM_XEem0y513gQlC0Q"/>
         </packagedElement>
-        <packagedElement xmi:type="uml:Package" xmi:id="_GDyegBo7EeqAktXlUG_iEw" name="Diagrams"/>
-        <packagedElement xmi:type="uml:Association" xmi:id="_Jt0TMH02EeqhQsSsGiMOkA" name="ControlConstructHasStreamPipeline" memberEnd="_Jt1hUX02EeqhQsSsGiMOkA _Jt2IYn02EeqhQsSsGiMOkA" navigableOwnedEnd="_Jt1hUX02EeqhQsSsGiMOkA">
+        <packagedElement xmi:type="uml:Package" xmi:id="_GDyegBo7EeqAktXlUG_iEw" name="Diagrams">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_wU7fwBbvEe2NeYxRC236WA">
+            <body>May want to change to client role etc. (not user).</body>
+          </ownedComment>
+          <packagedElement xmi:type="uml:Component" xmi:id="_qV42sBhpEe2NeYxRC236WA" name="Client">
+            <packagedElement xmi:type="uml:Usage" xmi:id="_y-qqYBhpEe2NeYxRC236WA" name="RequestFromClient" client="_qV42sBhpEe2NeYxRC236WA" supplier="_D5kTMJmiEeWTOvbfd7_4-A"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Component" xmi:id="_jdV1EBhqEe2NeYxRC236WA" name="Provider">
+            <packagedElement xmi:type="uml:Usage" xmi:id="_CuKzsBhrEe2NeYxRC236WA" name="StreamFromProvider" client="_jdV1EBhqEe2NeYxRC236WA" supplier="_D5kTMJmiEeWTOvbfd7_4-A"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_Jt0TMH02EeqhQsSsGiMOkA" name="ControlConstructHasTransmitStreamPipeline" memberEnd="_Jt1hUX02EeqhQsSsGiMOkA _Jt2IYn02EeqhQsSsGiMOkA">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Jt06QH02EeqhQsSsGiMOkA" source="org.eclipse.papyrus">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Jt1hUH02EeqhQsSsGiMOkA" key="nature" value="UML_Nature"/>
           </eAnnotations>
           <ownedEnd xmi:type="uml:Property" xmi:id="_Jt2IYn02EeqhQsSsGiMOkA" name="controlconstruct" type="_Vuh_EJmhEeWTOvbfd7_4-A" association="_Jt0TMH02EeqhQsSsGiMOkA"/>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_Jt1hUX02EeqhQsSsGiMOkA" name="_streamPipeline" type="__y5TQCECEey5mun8Wbck9w" aggregation="composite" association="_Jt0TMH02EeqhQsSsGiMOkA">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Jt2IYH02EeqhQsSsGiMOkA"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Jt2IYX02EeqhQsSsGiMOkA" value="*"/>
-          </ownedEnd>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="__y5TQCECEey5mun8Wbck9w" name="StreamPipeline">
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_kPgvYCEFEey5mun8Wbck9w" name="_filter" type="_VR6iIM_XEem0y513gQlC0Q" aggregation="composite" association="_kPcd8CEFEey5mun8Wbck9w"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="__y5TQCECEey5mun8Wbck9w" name="TransmitStreamPipeline">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_91HkEMncEeyRHaEo8DHwog" annotatedElement="__y5TQCECEey5mun8Wbck9w">
+            <body>Set up by ControlConstruct. Relates to a particular flow of information from the ExposureContext&#xD;
+Controls a specific stream intergrity (using sequence numbers etc.)&#xD;
+Coordinates the TransmitFilter settings for the stream.&#xD;
+Coordinates the StreamHandler.</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_kPgvYCEFEey5mun8Wbck9w" name="_TransmitFilter" type="_VR6iIM_XEem0y513gQlC0Q" aggregation="composite" association="_kPcd8CEFEey5mun8Wbck9w"/>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_tk24siEGEey5mun8Wbck9w" name="_streamHandler" type="_1sea4M_VEem0y513gQlC0Q" aggregation="composite" association="_tk1DgCEGEey5mun8Wbck9w"/>
         </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_kPcd8CEFEey5mun8Wbck9w" name="StreamPipelineHasFilteredLog" memberEnd="_kPgvYCEFEey5mun8Wbck9w _kPmO8CEFEey5mun8Wbck9w">
+        <packagedElement xmi:type="uml:Association" xmi:id="_kPcd8CEFEey5mun8Wbck9w" name="TransmitStreamPipelineHasFilteredLog" memberEnd="_kPgvYCEFEey5mun8Wbck9w _kPmO8CEFEey5mun8Wbck9w">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kPfhQCEFEey5mun8Wbck9w" source="org.eclipse.papyrus">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kPfhQSEFEey5mun8Wbck9w" key="nature" value="UML_Nature"/>
           </eAnnotations>
           <ownedEnd xmi:type="uml:Property" xmi:id="_kPmO8CEFEey5mun8Wbck9w" name="streampipeline" type="__y5TQCECEey5mun8Wbck9w" association="_kPcd8CEFEey5mun8Wbck9w"/>
         </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_tk1DgCEGEey5mun8Wbck9w" name="PipelineHasStreamHandler" memberEnd="_tk24siEGEey5mun8Wbck9w _tk7xMiEGEey5mun8Wbck9w">
+        <packagedElement xmi:type="uml:Association" xmi:id="_tk1DgCEGEey5mun8Wbck9w" name="TransmitStreamPipelineHasStreamHandler" memberEnd="_tk24siEGEey5mun8Wbck9w _tk7xMiEGEey5mun8Wbck9w">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tk24sCEGEey5mun8Wbck9w" source="org.eclipse.papyrus">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tk24sSEGEey5mun8Wbck9w" key="nature" value="UML_Nature"/>
           </eAnnotations>
           <ownedEnd xmi:type="uml:Property" xmi:id="_tk7xMiEGEey5mun8Wbck9w" name="streampipeline" type="__y5TQCECEey5mun8Wbck9w" association="_tk1DgCEGEey5mun8Wbck9w"/>
         </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_IjU9YCEfEey5mun8Wbck9w" name="ControlConstructHasLogStreamControl" memberEnd="_IjYAsiEfEey5mun8Wbck9w _IjdgQSEfEey5mun8Wbck9w" navigableOwnedEnd="_IjYAsiEfEey5mun8Wbck9w">
+        <packagedElement xmi:type="uml:Association" xmi:id="_IjU9YCEfEey5mun8Wbck9w" name="ControlConstructHasLogStreamControl" memberEnd="_IjYAsiEfEey5mun8Wbck9w _IjdgQSEfEey5mun8Wbck9w">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_IjYAsCEfEey5mun8Wbck9w" source="org.eclipse.papyrus">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_IjYAsSEfEey5mun8Wbck9w" key="nature" value="UML_Nature"/>
           </eAnnotations>
           <ownedEnd xmi:type="uml:Property" xmi:id="_IjdgQSEfEey5mun8Wbck9w" name="controlconstruct" type="_Vuh_EJmhEeWTOvbfd7_4-A" association="_IjU9YCEfEey5mun8Wbck9w"/>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_IjYAsiEfEey5mun8Wbck9w" name="_logStreamControl" type="_iaPVMM_VEem0y513gQlC0Q" aggregation="composite" association="_IjU9YCEfEey5mun8Wbck9w">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ijc5MCEfEey5mun8Wbck9w"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IjdgQCEfEey5mun8Wbck9w" value="*"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_Vq0FULsgEey15NKF0wAXwA" informationSource="_VR6iIM_XEem0y513gQlC0Q" informationTarget="_q3tGMM_UEem0y513gQlC0Q"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_TCJEUKtFEey15NKF0wAXwA" name="AvailableStream">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_f7ICoBN0Ee2NeYxRC236WA" annotatedElement="_TCJEUKtFEey15NKF0wAXwA">
+            <body>Details of a stream that can be connected to by a client application.</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_OFJ7AqtHEey15NKF0wAXwA" name="_supportedStreamType" type="_WV2QwKtFEey15NKF0wAXwA" association="_OFIF0KtHEey15NKF0wAXwA"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_kLCzwCktEe2juI-ggmBSIQ" name="connectionAddress" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_kLCzwSktEe2juI-ggmBSIQ" annotatedElement="_kLCzwCktEe2juI-ggmBSIQ">
+              <body>Provides the address for the connection. &#xD;
+The format of the address and attachment mechanism will depend on the connection protocol defined in another attribute of this class.&#xD;
+There may be a sequence of operations required, in which case, these should be listed as separate strings.&#xD;
+A string may include wildcard substatements.&#xD;
+A single string may list alternatives separated by an appropriate delimiter.</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kLCzwiktEe2juI-ggmBSIQ" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_kLNL0CktEe2juI-ggmBSIQ" name="streamState" type="_tI6GoCktEe2juI-ggmBSIQ" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_kLNL0SktEe2juI-ggmBSIQ" annotatedElement="_kLNL0CktEe2juI-ggmBSIQ">
+              <body>The state of the stream.</body>
+            </ownedComment>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kLNL0iktEe2juI-ggmBSIQ"/>
+            <defaultValue xmi:type="uml:InstanceValue" xmi:id="_kLNL0yktEe2juI-ggmBSIQ">
+              <instance xmi:type="uml:EnumerationLiteral" href="../TAPI/UML/TapiStreaming.uml#_QMl_cPsLEemCAts4PegeWw"/>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_kLPBACktEe2juI-ggmBSIQ" name="streamId" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_kLPBASktEe2juI-ggmBSIQ" annotatedElement="_kLPBACktEe2juI-ggmBSIQ">
+              <body>The id of the stream (alternative to the uuid).</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kLPBAiktEe2juI-ggmBSIQ"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_kLQ2MCktEe2juI-ggmBSIQ" name="connectionProtocol" visibility="public" type="_tI6tsCktEe2juI-ggmBSIQ" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_kLQ2MSktEe2juI-ggmBSIQ" annotatedElement="_kLQ2MCktEe2juI-ggmBSIQ">
+              <body>Names the connection protocol for this particular available stream.&#xD;
+The connection protocol is chosen from the list of connection protocols identified in the referenced SupportedStreamType.</body>
+            </ownedComment>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kLQ2MiktEe2juI-ggmBSIQ"/>
+            <defaultValue xmi:type="uml:InstanceValue" xmi:id="_kLQ2MyktEe2juI-ggmBSIQ">
+              <instance xmi:type="uml:EnumerationLiteral" href="../TAPI/UML/TapiStreaming.uml#_iZ_r4N_6EeyisriSvKT5Lw"/>
+            </defaultValue>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_shKRoLw2Eey15NKF0wAXwA" name="ChangeUpdater">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_O8eUUMniEeyRHaEo8DHwog" annotatedElement="_shKRoLw2Eey15NKF0wAXwA">
+            <body>Function that recognizes difference between the current state of an Aggregate (in the related ConstraintDomain) and the Aggregate details in the record received and causes necessary updates to the Aggregates in the related ConstraintDomain.&#xD;
+This function deals with Idempotent behavior.&#xD;
+Deals with properties the client is not interest in.</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_eUh-Yrw3Eey15NKF0wAXwA" name="_constraintDomain" type="_RcjQAOksEea0ZYSsp-EUkw" association="_eUgJMLw3Eey15NKF0wAXwA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_TuNYwKtIEey15NKF0wAXwA" name="ConnectionProtocolDetails">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_fGnnEBN1Ee2NeYxRC236WA" annotatedElement="_TuNYwKtIEey15NKF0wAXwA">
+            <body>Details of the connection protocols and encoding formats available for the specific stream type.</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_KuKCoqtKEey15NKF0wAXwA" name="_controlPort" type="_D5kTMJmiEeWTOvbfd7_4-A" association="_KuINcKtKEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KuQJQKtKEey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KuQJQatKEey15NKF0wAXwA" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_2LiIQCkuEe2juI-ggmBSIQ" name="allowedConnectionProtocols" type="_tI6tsCktEe2juI-ggmBSIQ" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_2LiIQSkuEe2juI-ggmBSIQ" annotatedElement="_2LiIQCkuEe2juI-ggmBSIQ">
+              <body>Name of the allowed protocol(s).&#xD;
+Where there is a list:&#xD;
+- all protocols must use the same encoding format&#xD;
+- there will be one or more available streams per connection protocol&#xD;
+CONDITION: Mandatory where not default.</body>
+            </ownedComment>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2LiIQikuEe2juI-ggmBSIQ"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2LiIQykuEe2juI-ggmBSIQ" value="*"/>
+            <defaultValue xmi:type="uml:InstanceValue" xmi:id="_2LiIRCkuEe2juI-ggmBSIQ" instance="_tI6tsiktEe2juI-ggmBSIQ"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_2Lr5QCkuEe2juI-ggmBSIQ" name="encodingFormat" type="_2LhhMCkuEe2juI-ggmBSIQ" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_2Lr5QSkuEe2juI-ggmBSIQ" annotatedElement="_2Lr5QCkuEe2juI-ggmBSIQ">
+              <body>The encoding format of the streamed records.&#xD;
+CONDITION: Mandatory where not default.</body>
+            </ownedComment>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2Lr5QikuEe2juI-ggmBSIQ"/>
+            <defaultValue xmi:type="uml:InstanceValue" xmi:id="_2Lr5QykuEe2juI-ggmBSIQ" instance="_2LhhMikuEe2juI-ggmBSIQ"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_asy0IKtLEey15NKF0wAXwA" name="ControlInteraction">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_xgkZ4BN1Ee2NeYxRC236WA" annotatedElement="_asy0IKtLEey15NKF0wAXwA">
+            <body>Details of specific controller interaction opportunities.</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_pmxgIqtLEey15NKF0wAXwA" name="_connectionProtocolDetails" type="_TuNYwKtIEey15NKF0wAXwA" aggregation="composite" association="_pmw5EKtLEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pm6DAKtLEey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pm6qEKtLEey15NKF0wAXwA" value="*"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_HbSOkKtIEey15NKF0wAXwA" name="LogDetails">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_k5HKIBN1Ee2NeYxRC236WA" annotatedElement="_HbSOkKtIEey15NKF0wAXwA">
+            <body>Details of the log methods available for the specific stream type.&#xD;
+Property examples given for a compacted log.</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_DHDHUqtKEey15NKF0wAXwA" name="_streamLog" type="_q3tGMM_UEem0y513gQlC0Q" association="_DHAEAKtKEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uZCxwKtKEey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uZQNIKtKEey15NKF0wAXwA" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_XxCUsCkuEe2juI-ggmBSIQ" name="tombstoneRetention" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_XxCUsSkuEe2juI-ggmBSIQ" annotatedElement="_XxCUsCkuEe2juI-ggmBSIQ">
+              <body>Time in minutes.&#xD;
+The time period for which a Tombstone record will be held in the log from when it was logged. &#xD;
+This provides an adjustment to the essential Compaction strategy such that after the tombstoneRetention period there will be no records about a particular thing that existed but no longer exists.&#xD;
+Tombstone retention overrides recordRetention for Tombstones.&#xD;
+Key word &quot;FOREVER&quot; means that Tombstone records will never be removed from the log.&#xD;
+Can be adjusted by an administrator (via a separate view) through the life of the stream.</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XxCUsikuEe2juI-ggmBSIQ"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_XxCUsykuEe2juI-ggmBSIQ" value="FOREVER"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_XxOh8CkuEe2juI-ggmBSIQ" name="compactionDelay" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_XxOh8SkuEe2juI-ggmBSIQ" annotatedElement="_XxOh8CkuEe2juI-ggmBSIQ">
+              <body>Time in minutes. &#xD;
+The delay between logging the record and making the record available for compaction.&#xD;
+This provides an adjustment to the essential Compaction strategy such that there may be several distinct records for the same thing in the where those records are not older than the Compaction Delay.&#xD;
+Can be adjusted by an administrator (via a separate view) through the life of the stream.</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XxOh8ikuEe2juI-ggmBSIQ"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_XxOh8ykuEe2juI-ggmBSIQ" value="0"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_XxQ-MCkuEe2juI-ggmBSIQ" name="maxAllowedSegmentRollDelay" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_XxQ-MSkuEe2juI-ggmBSIQ" annotatedElement="_XxQ-MCkuEe2juI-ggmBSIQ">
+              <body>The maximum time the log head segement can be allowed to be not made available for compaction.&#xD;
+Applicable where the log is segmented and the head segment is not available for compaction.&#xD;
+The setting influences the compaction behavior and may cause a delay before compaction that is much greater than the defined compaction delay.&#xD;
+Time in seconds.&#xD;
+Can be &quot;FOREVER&quot;. &#xD;
+Can be &quot;NOT_APPLICABLE&quot; (which indicates that compaction can act on the head segment).</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XxQ-MikuEe2juI-ggmBSIQ"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_XxQ-MykuEe2juI-ggmBSIQ" value="NOT_APPLICABLE"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_XxTacCkuEe2juI-ggmBSIQ" name="maxCompactionLag" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_XxTacSkuEe2juI-ggmBSIQ" annotatedElement="_XxTacCkuEe2juI-ggmBSIQ">
+              <body>The maximum delay, in seconds, beyond the defined compaction delay for compaction processing to take place.&#xD;
+May be &quot;NOT_APPLICABLE&quot; if compaction is essentially immediate (i.e., there is negligible delay).</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XxTacikuEe2juI-ggmBSIQ"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_XxTacykuEe2juI-ggmBSIQ" value="NOT_APPLICABLE"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_0oGNoKtNEey15NKF0wAXwA" name="LogRecordBody">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_GyoxUMngEeyRHaEo8DHwog" annotatedElement="_0oGNoKtNEey15NKF0wAXwA">
+            <body>The key contents of the log record. Details for one Aggregate instance.&#xD;
+- event time (allowing for time inaccuracy)&#xD;
+- aggregate type&#xD;
+- identifier of the containing parent aggregate&#xD;
+Note that the Aggregate will reference other Aggregate instances some of which may be &quot;behind&quot; this record in the log.</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_JmOJ4CkwEe2juI-ggmBSIQ" name="eventTimeStamp" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_JmOJ4SkwEe2juI-ggmBSIQ" annotatedElement="_JmOJ4CkwEe2juI-ggmBSIQ">
+              <body>Time of the event at the origin of the event that triggered the generation of the record. &#xD;
+The structure allows for time uncertainty.</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JmOJ4ikwEe2juI-ggmBSIQ"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_JmZJACkwEe2juI-ggmBSIQ" name="parentAddress" isOrdered="true" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_JmZJASkwEe2juI-ggmBSIQ" annotatedElement="_JmZJACkwEe2juI-ggmBSIQ">
+              <body>Where the entity is a local class this provides the ordered list of ids from the closest global class (a UUID cast as a string) to the direct parent (which may be the global class).&#xD;
+The field can include all entities back to the Context and hence can be used for global classes where the tree is being represented in full.&#xD;
+Gives the position of the entity in the address tree (usually containment) that is raising the event by providing the name/id values in the address of the parent.&#xD;
+Is the sequence of named levels in the tree up to but excluding the entity of the notification. </body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JmZJAikwEe2juI-ggmBSIQ"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JmZJAykwEe2juI-ggmBSIQ" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_JmblQCkwEe2juI-ggmBSIQ" name="recordContent" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_JmblQSkwEe2juI-ggmBSIQ" annotatedElement="_JmblQCkwEe2juI-ggmBSIQ">
+              <body>The identifier of the object class in the record body detail.&#xD;
+This property is used to control the conditional augmentation of the body with detail.</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JmblQikwEe2juI-ggmBSIQ"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_kRvu4LvjEey15NKF0wAXwA" name="ReceiveFilter">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_6WYaEMnhEeyRHaEo8DHwog" annotatedElement="_kRvu4LvjEey15NKF0wAXwA">
+            <body>Filter that removes stream records that are not relevant to a specific receive ExposureContext or ControlConstruct (for control messages).</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_KOyG0LvkEey15NKF0wAXwA" name="_exposureContext" type="_5LsaEFY2EeiyzdV8zVsJ_w" association="_KOvDgLvkEey15NKF0wAXwA"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_iiDeIMviEeyRHaEo8DHwog" name="_controlConstruct" type="_Vuh_EJmhEeWTOvbfd7_4-A" association="_ihxKQMviEeyRHaEo8DHwog">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iiTVwMviEeyRHaEo8DHwog"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iiT80MviEeyRHaEo8DHwog" value="1"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Wx9TULu_Eey15NKF0wAXwA" name="ReceiveStreamPipelineBuffer">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_0e_I4MnhEeyRHaEo8DHwog" annotatedElement="_Wx9TULu_Eey15NKF0wAXwA">
+            <body>Buffer that balances flow from the communications and storage rate differences.&#xD;
+Applies backpressure on the communications system. Forms part of the overall stream pipeline. </body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_LzDgUbvAEey15NKF0wAXwA" name="_receiveFilter" type="_kRvu4LvjEey15NKF0wAXwA" aggregation="composite" association="_LzBEELvAEey15NKF0wAXwA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Q25fwLvjEey15NKF0wAXwA" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_CXmMgLwCEey15NKF0wAXwA" name="_storedInformation" type="_x5b3MLsgEey15NKF0wAXwA" aggregation="composite" association="_CXVGwLwCEey15NKF0wAXwA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_ghruQLw-Eey15NKF0wAXwA" name="RequestConstructor">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_b30wcMniEeyRHaEo8DHwog" annotatedElement="_ghruQLw-Eey15NKF0wAXwA">
+            <body>Function that coordinates requests originating from the ControlConstruct relates to specific contents of an ExposureContext and sends the request to the appropriate ControlPort.</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_-xqT4rw-Eey15NKF0wAXwA" name="_controlPort" type="_D5kTMJmiEeWTOvbfd7_4-A" association="_-xpFwLw-Eey15NKF0wAXwA"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_6tc3kLw-Eey15NKF0wAXwA" name="_exposureContext" type="_5LsaEFY2EeiyzdV8zVsJ_w" association="_6tU7wLw-Eey15NKF0wAXwA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_r0wvwKtNEey15NKF0wAXwA" name="StreamLogRecord">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_tbTLEMneEeyRHaEo8DHwog" annotatedElement="_r0wvwKtNEey15NKF0wAXwA">
+            <body>Definition of a record in a StreamLog.&#xD;
+These records are immutable. Once logged they will never change (but can be removed from the log as appropriate).&#xD;
+Includes log record header information.&#xD;
+- record type (create, delete etc.)&#xD;
+- record token and record sequence number&#xD;
+- time the record was captured in the log&#xD;
+- source authenticity token&#xD;
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_jYvRErskEey15NKF0wAXwA" name="_logReocrdBody" type="_0oGNoKtNEey15NKF0wAXwA" aggregation="composite" association="_jYs00LskEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jY3z8LskEey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jY3z8bskEey15NKF0wAXwA" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_-6SWQCkwEe2juI-ggmBSIQ" name="token" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_-6SWQSkwEe2juI-ggmBSIQ" annotatedElement="_-6SWQCkwEe2juI-ggmBSIQ">
+              <body>A coded (and compact) form of the fullLogRecordOffsetId.&#xD;
+This property is used to request streaming from a particular point (e.g., the last correctly handled record).&#xD;
+For a basic log solution this may simply be the sequence number.</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-6SWQikwEe2juI-ggmBSIQ"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_-6bgICkwEe2juI-ggmBSIQ" name="fullLogRecordOffsetId" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_-6bgISkwEe2juI-ggmBSIQ" annotatedElement="_-6bgICkwEe2juI-ggmBSIQ">
+              <body>This property must minimally provide a logging sequence number.&#xD;
+Note that when compaction is active, the streamed sequence may not have sequence numbers that simply increment by one.&#xD;
+In a complex log solution there may be various parts to the log.&#xD;
+The record token is a compressed form of log record reference.&#xD;
+This property provides the verbose form &#xD;
+For example, it may include:&#xD;
+- stream id&#xD;
+- topic&#xD;
+- partition&#xD;
+- partition offset&#xD;
+- sequence number (the offset is essentially the sequence number associated with the partition)</body>
+            </ownedComment>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-6bgIikwEe2juI-ggmBSIQ" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-6bgIykwEe2juI-ggmBSIQ" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_-6cuQCkwEe2juI-ggmBSIQ" name="logAppendTimeStamp" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_-6cuQSkwEe2juI-ggmBSIQ" annotatedElement="_-6cuQCkwEe2juI-ggmBSIQ">
+              <body>The time when the record was appended to the log.</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-6cuQikwEe2juI-ggmBSIQ"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_-6ejcCkwEe2juI-ggmBSIQ" name="entityKey" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_-6ejcSkwEe2juI-ggmBSIQ" annotatedElement="_-6ejcCkwEe2juI-ggmBSIQ">
+              <body>The identifier of the entity that is used in a Compacted log as the compaction key.&#xD;
+The entityKey value, where appropriate, may be based upon the identifiers from the event source.&#xD;
+It can be built from some specific detail combination that meets the necessary uniqueness and durability requirements.&#xD;
+entityKey is the value used during compaction.&#xD;
+Ideally it is a UUID format, if this can be formed from the source identifier.</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-6ejcikwEe2juI-ggmBSIQ"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_-6jb8CkwEe2juI-ggmBSIQ" name="recordType" type="_-6SWMCkwEe2juI-ggmBSIQ" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_-6jb8SkwEe2juI-ggmBSIQ" annotatedElement="_-6jb8CkwEe2juI-ggmBSIQ">
+              <body>The type of the record.&#xD;
+Can be used to understand which elements of the record will be present.</body>
+            </ownedComment>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-6jb8ikwEe2juI-ggmBSIQ"/>
+            <defaultValue xmi:type="uml:InstanceValue" xmi:id="_-6jb8ykwEe2juI-ggmBSIQ" instance="_-6SWPikwEe2juI-ggmBSIQ"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_-6lRICkwEe2juI-ggmBSIQ" name="recordAuthenticityToken" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_-6lRISkwEe2juI-ggmBSIQ" annotatedElement="_-6lRICkwEe2juI-ggmBSIQ">
+              <body>A token generated using a method that allows the client to validate that the record came from the expected provider.</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-6lRIikwEe2juI-ggmBSIQ"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_ODG-gKtFEey15NKF0wAXwA" name="StreamProvider">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_UwogIBN0Ee2NeYxRC236WA" annotatedElement="_ODG-gKtFEey15NKF0wAXwA">
+            <body>The entity that provides access to stream capability information.</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_igVbMatGEey15NKF0wAXwA" name="_availableStream" type="_TCJEUKtFEey15NKF0wAXwA" aggregation="composite" association="_igTmAKtGEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_igZFkKtGEey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_igZFkatGEey15NKF0wAXwA" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_jd_9UqtGEey15NKF0wAXwA" name="_supportedStreamType" type="_WV2QwKtFEey15NKF0wAXwA" aggregation="composite" association="_jd-vMKtGEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jeAkYKtGEey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jeAkYatGEey15NKF0wAXwA" value="*"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_nrks0KtNEey15NKF0wAXwA" name="StreamRecord">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_1TmHkMnfEeyRHaEo8DHwog" annotatedElement="_nrks0KtNEey15NKF0wAXwA">
+            <body>The record sent in the stream. &#xD;
+Includes:&#xD;
+- record identifier&#xD;
+- time the record was formed&#xD;
+Note that this record may contain records for multiple Aggregate instances of mixed Aggregate types.</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_RK5Y4bsqEey15NKF0wAXwA" name="_streamLogRecord" type="_r0wvwKtNEey15NKF0wAXwA" aggregation="composite" association="_RK3jsLsqEey15NKF0wAXwA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RK9qULsqEey15NKF0wAXwA" value="*"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_WV2QwKtFEey15NKF0wAXwA" name="SupportedStreamType">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_nu0ocBN0Ee2NeYxRC236WA" annotatedElement="_WV2QwKtFEey15NKF0wAXwA">
+            <body>Definition of a type of stream that is supported by the provider.</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_aaviMqtIEey15NKF0wAXwA" name="_logDetails" type="_HbSOkKtIEey15NKF0wAXwA" aggregation="composite" association="_aauUEKtIEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aazMkKtIEey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aazzoKtIEey15NKF0wAXwA" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_cuwMMqtIEey15NKF0wAXwA" name="_connectionProtocolDetails" type="_TuNYwKtIEey15NKF0wAXwA" aggregation="composite" association="_cuu-EKtIEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cuz2kKtIEey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cuz2katIEey15NKF0wAXwA" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_-fCeQCkoEe2juI-ggmBSIQ" name="streamTypeName" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_-fCeQSkoEe2juI-ggmBSIQ" annotatedElement="_-fCeQCkoEe2juI-ggmBSIQ">
+              <body>Name of the stream type.</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-fCeQikoEe2juI-ggmBSIQ"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-fCeQykoEe2juI-ggmBSIQ" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_HXzOsCkpEe2juI-ggmBSIQ" name="recordRetention" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_HXzOsSkpEe2juI-ggmBSIQ" annotatedElement="_HXzOsCkpEe2juI-ggmBSIQ">
+              <body>Time in minutes.&#xD;
+Statement of retention time and/or retention capacity in bytes.&#xD;
+Key word &quot;FOREVER&quot; means that records will never be removed from the log.&#xD;
+May be overridden for particular cases of specific LogStorageStrategy (via augment).&#xD;
+Applies to all record types in the stream unless overridden by another parameter (such as tombstone retention for a compacted log).</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HXzOsikpEe2juI-ggmBSIQ"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_HXzOsykpEe2juI-ggmBSIQ" value="FOREVER"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_HX9mwCkpEe2juI-ggmBSIQ" name="segmentSize" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_HX9mwSkpEe2juI-ggmBSIQ" annotatedElement="_HX9mwCkpEe2juI-ggmBSIQ">
+              <body>Size of sub-structuring of the log.</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HX9mwikpEe2juI-ggmBSIQ"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HX9mwykpEe2juI-ggmBSIQ" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_n9JwSCkpEe2juI-ggmBSIQ" name="logStorageStrategy" type="_n9IiICkpEe2juI-ggmBSIQ" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_n9JwSSkpEe2juI-ggmBSIQ" annotatedElement="_n9JwSCkpEe2juI-ggmBSIQ">
+              <body>Indicates the storage characteristics of the log supporting the stream.</body>
+            </ownedComment>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_n9JwSikpEe2juI-ggmBSIQ"/>
+            <defaultValue xmi:type="uml:InstanceValue" xmi:id="_n9JwSykpEe2juI-ggmBSIQ" instance="_n9IiIikpEe2juI-ggmBSIQ"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_n9WkkCkpEe2juI-ggmBSIQ" name="logRecordStrategy" type="_n9H7ECkpEe2juI-ggmBSIQ" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_n9WkkSkpEe2juI-ggmBSIQ" annotatedElement="_n9WkkCkpEe2juI-ggmBSIQ">
+              <body>Indicates the type of content of each log record.</body>
+            </ownedComment>
+            <ownedComment xmi:type="uml:Comment" xmi:id="_n9WkkikpEe2juI-ggmBSIQ">
+              <body></body>
+            </ownedComment>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_n9WkkykpEe2juI-ggmBSIQ"/>
+            <defaultValue xmi:type="uml:InstanceValue" xmi:id="_n9WklCkpEe2juI-ggmBSIQ" instance="_n9H7GCkpEe2juI-ggmBSIQ"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_n9Zn4CkpEe2juI-ggmBSIQ" name="recordTrigger" type="_n9JwQCkpEe2juI-ggmBSIQ" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_n9Zn4SkpEe2juI-ggmBSIQ" annotatedElement="_n9Zn4CkpEe2juI-ggmBSIQ">
+              <body>Defines the trigger to log a record.</body>
+            </ownedComment>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_n9Zn4ikpEe2juI-ggmBSIQ"/>
+            <defaultValue xmi:type="uml:InstanceValue" xmi:id="_n9Zn4ykpEe2juI-ggmBSIQ" instance="_n9JwQikpEe2juI-ggmBSIQ"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_IJgjACkqEe2juI-ggmBSIQ" name="streamTypeContent" isReadOnly="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_IJgjASkqEe2juI-ggmBSIQ" annotatedElement="_IJgjACkqEe2juI-ggmBSIQ">
+              <body>Identifies the classes that are supported through the stream. &#xD;
+The list may be a subset of the classes within the context.</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IJgjAikqEe2juI-ggmBSIQ"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IJgjAykqEe2juI-ggmBSIQ" value="*"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InformationFlow" xmi:id="_Y05JsLvmEey15NKF0wAXwA" informationSource="_Wx9TULu_Eey15NKF0wAXwA" informationTarget="_kRvu4LvjEey15NKF0wAXwA"/>
+        <packagedElement xmi:type="uml:Association" xmi:id="_CXVGwLwCEey15NKF0wAXwA" name="ReceiveStreamBufferBuffersInformation" memberEnd="_CXmMgLwCEey15NKF0wAXwA _CXzn4LwCEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CXllcLwCEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CXllcbwCEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_CXzn4LwCEey15NKF0wAXwA" name="streambuffer" type="_Wx9TULu_Eey15NKF0wAXwA" association="_CXVGwLwCEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bmDZALwCEey15NKF0wAXwA"/>
           </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_OFIF0KtHEey15NKF0wAXwA" name="AvailableStreamIsTypeSyupportedStream" memberEnd="_OFJ7AqtHEey15NKF0wAXwA _OFNlYqtHEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OFJ7AKtHEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OFJ7AatHEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_OFNlYqtHEey15NKF0wAXwA" name="availablestream" type="_TCJEUKtFEey15NKF0wAXwA" association="_OFIF0KtHEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Z2fbEKtHEey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Z2jsgKtHEey15NKF0wAXwA" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_cMEdQKtFEey15NKF0wAXwA" name="CdConstrainsAvailableStream" memberEnd="_cMGScqtFEey15NKF0wAXwA _cMG5gKtFEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cMGScKtFEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cMGScatFEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_cMG5gKtFEey15NKF0wAXwA" name="constraintdomain" type="_RcjQAOksEea0ZYSsp-EUkw" association="_cMEdQKtFEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oc3ggKtFEey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oc58wKtFEey15NKF0wAXwA" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_dLyN0KtFEey15NKF0wAXwA" name="CdConstrainsStreamServer" memberEnd="_dL0DAqtFEey15NKF0wAXwA _dL0qEKtFEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dL0DAKtFEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dL0DAatFEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_dL0qEKtFEey15NKF0wAXwA" name="constraintdomain" type="_RcjQAOksEea0ZYSsp-EUkw" association="_dLyN0KtFEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kO5EMKtFEey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kO8ukKtFEey15NKF0wAXwA" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_bM3qEKtFEey15NKF0wAXwA" name="CdConstrainsSupportedStream" memberEnd="_bM8ikKtFEey15NKF0wAXwA _bNA0AqtFEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bM7UcKtFEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bM7UcatFEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_bNA0AqtFEey15NKF0wAXwA" name="constraintdomain" type="_RcjQAOksEea0ZYSsp-EUkw" association="_bM3qEKtFEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pxRusKtFEey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pxTj4KtFEey15NKF0wAXwA" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_cBvcYLw3Eey15NKF0wAXwA" name="ChangeUpdaterComparesConstraintDomain" memberEnd="_cBwqgrw3Eey15NKF0wAXwA _cB2KEbw3Eey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cBwqgLw3Eey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cBwqgbw3Eey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_cB2KEbw3Eey15NKF0wAXwA" name="constraintdomain" type="_RcjQAOksEea0ZYSsp-EUkw" association="_cBvcYLw3Eey15NKF0wAXwA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_eUgJMLw3Eey15NKF0wAXwA" name="ChangeUpdaterUpdatesConstraintDomain" memberEnd="_eUh-Yrw3Eey15NKF0wAXwA _eUilcbw3Eey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eUh-YLw3Eey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eUh-Ybw3Eey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_eUilcbw3Eey15NKF0wAXwA" name="changeupdater" type="_shKRoLw2Eey15NKF0wAXwA" association="_eUgJMLw3Eey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CrBZ0Lw5Eey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CrKjwLw5Eey15NKF0wAXwA" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_KuINcKtKEey15NKF0wAXwA" name="ConnectionProtocolDetailsControlConnectionProtocols" memberEnd="_KuKCoqtKEey15NKF0wAXwA _KuQJQqtKEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KuKCoKtKEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KuKCoatKEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_KuQJQqtKEey15NKF0wAXwA" name="connectionprotocoldetails" type="_TuNYwKtIEey15NKF0wAXwA" association="_KuINcKtKEey15NKF0wAXwA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_mb-qQLvBEey15NKF0wAXwA" name="ControlConstructHasReceiveStreamPipelineBuffer" memberEnd="_mcBtkrvBEey15NKF0wAXwA _mcJCUbvBEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mcBtkLvBEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mcBtkbvBEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_mcJCUbvBEey15NKF0wAXwA" name="controlconstruct" type="_Vuh_EJmhEeWTOvbfd7_4-A" association="_mb-qQLvBEey15NKF0wAXwA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_3_YHwLw-Eey15NKF0wAXwA" name="ControlConstructTriggersRequest" memberEnd="_3_ZV4rw-Eey15NKF0wAXwA _3_dnUrw-Eey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3_ZV4Lw-Eey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3_ZV4bw-Eey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_3_dnUrw-Eey15NKF0wAXwA" name="controlconstruct" type="_Vuh_EJmhEeWTOvbfd7_4-A" association="_3_YHwLw-Eey15NKF0wAXwA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_pmw5EKtLEey15NKF0wAXwA" name="ControlInteractionHasConnectionProtocolDetails" memberEnd="_pmxgIqtLEey15NKF0wAXwA _pm74MKtLEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pmxgIKtLEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pmxgIatLEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_pm74MKtLEey15NKF0wAXwA" name="controlinteraction" type="_asy0IKtLEey15NKF0wAXwA" association="_pmw5EKtLEey15NKF0wAXwA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_HlIHULvAEey15NKF0wAXwA" name="ControlPortHasReceiveStreamPipelineBuffer" memberEnd="_HlLKobvAEey15NKF0wAXwA _HlR4UrvAEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HlKjkLvAEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_HlLKoLvAEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_HlR4UrvAEey15NKF0wAXwA" name="controlport" type="_D5kTMJmiEeWTOvbfd7_4-A" association="_HlIHULvAEey15NKF0wAXwA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InformationItem" xmi:id="_Do7BoLsqEey15NKF0wAXwA" name="ConveyedInformation">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_i2IjMMneEeyRHaEo8DHwog" annotatedElement="_Do7BoLsqEey15NKF0wAXwA">
+            <body>Information conveyed by the StreamHandler.</body>
+          </ownedComment>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_M7MeQLsqEey15NKF0wAXwA" name="ConveyedInformationComposedOfStreamRecords" memberEnd="_M7NsYLsqEey15NKF0wAXwA _M7RWwLsqEey15NKF0wAXwA" navigableOwnedEnd="_M7NsYLsqEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_M7NFULsqEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_M7NFUbsqEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_M7NsYLsqEey15NKF0wAXwA" name="_streamRecord" type="_nrks0KtNEey15NKF0wAXwA" aggregation="composite" association="_M7MeQLsqEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_M7QvsLsqEey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_M7QvsbsqEey15NKF0wAXwA" value="1"/>
+          </ownedEnd>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_M7RWwLsqEey15NKF0wAXwA" name="conveyedinformation" type="_Do7BoLsqEey15NKF0wAXwA" association="_M7MeQLsqEey15NKF0wAXwA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_JGeFMLw3Eey15NKF0wAXwA" name="ExposureContextFeedsChangeUpdater" memberEnd="_JGghcLw3Eey15NKF0wAXwA _JGmoErw3Eey15NKF0wAXwA" navigableOwnedEnd="_JGghcLw3Eey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JGf6YLw3Eey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JGf6Ybw3Eey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_JGmoErw3Eey15NKF0wAXwA" name="exposurecontext" type="_5LsaEFY2EeiyzdV8zVsJ_w" association="_JGeFMLw3Eey15NKF0wAXwA"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_JGghcLw3Eey15NKF0wAXwA" name="_changeUpdater" type="_shKRoLw2Eey15NKF0wAXwA" aggregation="composite" association="_JGeFMLw3Eey15NKF0wAXwA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_GhjpsLw9Eey15NKF0wAXwA" name="ControlPortFeedsResponseToReceiveFilter" memberEnd="_Ghle4rw9Eey15NKF0wAXwA _GhpwUrw9Eey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Ghle4Lw9Eey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ghle4bw9Eey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_GhpwUrw9Eey15NKF0wAXwA" name="controlport" type="_D5kTMJmiEeWTOvbfd7_4-A" association="_GhjpsLw9Eey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uIjCALw9Eey15NKF0wAXwA"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_DHAEAKtKEey15NKF0wAXwA" name="LogDetailsControlsStreamLogBehavior" memberEnd="_DHDHUqtKEey15NKF0wAXwA _DHLqMKtKEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DHDHUKtKEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DHDHUatKEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_DHLqMKtKEey15NKF0wAXwA" name="logdetails" type="_HbSOkKtIEey15NKF0wAXwA" association="_DHAEAKtKEey15NKF0wAXwA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_V0PRkLvlEey15NKF0wAXwA" name="MonitorsReceiveStreamPipelineBuffer" memberEnd="_V0QfsrvlEey15NKF0wAXwA _V0UxIrvlEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_V0QfsLvlEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_V0QfsbvlEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_V0UxIrvlEey15NKF0wAXwA" name="logstreamcontrol" type="_iaPVMM_VEem0y513gQlC0Q" association="_V0PRkLvlEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0X3L8LvlEey15NKF0wAXwA"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_KnyF8LxCEey15NKF0wAXwA" name="ControlPortFeedsRequestsToReceiveFilter" memberEnd="_KnzUErxCEey15NKF0wAXwA _Kn4MkrxCEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KnzUELxCEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KnzUEbxCEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_Kn4MkrxCEey15NKF0wAXwA" name="controlport" type="_D5kTMJmiEeWTOvbfd7_4-A" association="_KnyF8LxCEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_h2Ib4LxCEey15NKF0wAXwA"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_KOvDgLvkEey15NKF0wAXwA" name="ReceiveFilterFeedsExposureContext" memberEnd="_KOyG0LvkEey15NKF0wAXwA _KO40gbvkEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KOxfwLvkEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KOxfwbvkEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_KO40gbvkEey15NKF0wAXwA" name="receivefilter" type="_kRvu4LvjEey15NKF0wAXwA" association="_KOvDgLvkEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gmZpELvkEey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_r74U0CkXEe2juI-ggmBSIQ" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_-xpFwLw-Eey15NKF0wAXwA" name="RequestConstructorIssuesGet" memberEnd="_-xqT4rw-Eey15NKF0wAXwA _-xxBkrw-Eey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-xqT4Lw-Eey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-xqT4bw-Eey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_-xxBkrw-Eey15NKF0wAXwA" name="getconstructor" type="_ghruQLw-Eey15NKF0wAXwA" association="_-xpFwLw-Eey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_t-5E0Lw_Eey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_t_C10Lw_Eey15NKF0wAXwA" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_6tU7wLw-Eey15NKF0wAXwA" name="RequestConstructorUsesExposureContext" memberEnd="_6tWw8rw-Eey15NKF0wAXwA _6tc3kLw-Eey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6tWw8Lw-Eey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6tWw8bw-Eey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_6tWw8rw-Eey15NKF0wAXwA" name="_getconstructor" type="_ghruQLw-Eey15NKF0wAXwA" association="_6tU7wLw-Eey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6tcQgLw-Eey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6tcQgbw-Eey15NKF0wAXwA" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InformationItem" xmi:id="_x5b3MLsgEey15NKF0wAXwA" name="StoredInformation">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_fkPUoMneEeyRHaEo8DHwog" annotatedElement="_x5b3MLsgEey15NKF0wAXwA">
+            <body>Information stored in the StreamLog.&#xD;
+Defines information storage type etc.</body>
+          </ownedComment>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_S9u-kLshEey15NKF0wAXwA" name="StoredInformationComposedOfStreamLogRecords" memberEnd="_S9wMsbshEey15NKF0wAXwA _S91sQrshEey15NKF0wAXwA" navigableOwnedEnd="_S9wMsbshEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_S9vloLshEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_S9wMsLshEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_S9wMsbshEey15NKF0wAXwA" name="_streamLogRecord" type="_r0wvwKtNEey15NKF0wAXwA" isOrdered="true" aggregation="composite" association="_S9u-kLshEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_S91sQLshEey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_S91sQbshEey15NKF0wAXwA" value="*"/>
+          </ownedEnd>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_S91sQrshEey15NKF0wAXwA" name="storedinformation" type="_x5b3MLsgEey15NKF0wAXwA" association="_S9u-kLshEey15NKF0wAXwA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_LzBEELvAEey15NKF0wAXwA" name="ReceiveStreamPipelineBufferFeedsReceiveFilter" memberEnd="_LzDgUbvAEey15NKF0wAXwA _LzKOAbvAEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LzC5QLvAEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LzDgULvAEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_LzKOAbvAEey15NKF0wAXwA" name="buffer" type="_Wx9TULu_Eey15NKF0wAXwA" association="_LzBEELvAEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5QjZALvAEey15NKF0wAXwA"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_O3hoELsqEey15NKF0wAXwA" name="StreamHandlerConveysInformation" memberEnd="_O3i2MrsqEey15NKF0wAXwA _O3mgkrsqEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_O3i2MLsqEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_O3i2MbsqEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_O3mgkrsqEey15NKF0wAXwA" name="streamhandler" type="_1sea4M_VEem0y513gQlC0Q" association="_O3hoELsqEey15NKF0wAXwA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_cuu-EKtIEey15NKF0wAXwA" name="StreamHasConnectionDetails" memberEnd="_cuwMMqtIEey15NKF0wAXwA _cuz2kqtIEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cuwMMKtIEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cuwMMatIEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_cuz2kqtIEey15NKF0wAXwA" name="supportedstreamtype" type="_WV2QwKtFEey15NKF0wAXwA" association="_cuu-EKtIEey15NKF0wAXwA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_aauUEKtIEey15NKF0wAXwA" name="StreamHasLogDetails" memberEnd="_aaviMqtIEey15NKF0wAXwA _aazzoatIEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_aaviMKtIEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_aaviMatIEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_aazzoatIEey15NKF0wAXwA" name="supportedstreamtype" type="_WV2QwKtFEey15NKF0wAXwA" association="_aauUEKtIEey15NKF0wAXwA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_jYs00LskEey15NKF0wAXwA" name="StreamLogRecordHasLogRecordBody" memberEnd="_jYvRErskEey15NKF0wAXwA _jY4bALskEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jYvRELskEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jYvREbskEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_jY4bALskEey15NKF0wAXwA" name="streamlogrecord" type="_r0wvwKtNEey15NKF0wAXwA" association="_jYs00LskEey15NKF0wAXwA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_j7jtcLsoEey15NKF0wAXwA" name="StreamLogStoresInformation" memberEnd="_j7kUgrsoEey15NKF0wAXwA _j7ol8bsoEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_j7kUgLsoEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_j7kUgbsoEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_j7ol8bsoEey15NKF0wAXwA" name="streamlog" type="_q3tGMM_UEem0y513gQlC0Q" association="_j7jtcLsoEey15NKF0wAXwA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_igTmAKtGEey15NKF0wAXwA" name="StreamProviderHasAvailableStream" memberEnd="_igVbMatGEey15NKF0wAXwA _igZFkqtGEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_igU0IKtGEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_igVbMKtGEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_igZFkqtGEey15NKF0wAXwA" name="streamserver" type="_ODG-gKtFEey15NKF0wAXwA" association="_igTmAKtGEey15NKF0wAXwA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_jd-vMKtGEey15NKF0wAXwA" name="StreamProviderHasSupportedStream" memberEnd="_jd_9UqtGEey15NKF0wAXwA _jeAkYqtGEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jd_9UKtGEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jd_9UatGEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_jeAkYqtGEey15NKF0wAXwA" name="streamserver" type="_ODG-gKtFEey15NKF0wAXwA" association="_jd-vMKtGEey15NKF0wAXwA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_RK3jsLsqEey15NKF0wAXwA" name="StreamRecordComposedOfStreamLogRecords" memberEnd="_RK5Y4bsqEey15NKF0wAXwA _RK9qUbsqEey15NKF0wAXwA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RK4x0LsqEey15NKF0wAXwA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RK5Y4LsqEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_RK9qUbsqEey15NKF0wAXwA" name="streamrecord" type="_nrks0KtNEey15NKF0wAXwA" association="_RK3jsLsqEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YTRJwLsqEey15NKF0wAXwA"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_Z_ZzEMxPEeyRHaEo8DHwog" name="ExposureContextSendsResponseThroughControlPort" memberEnd="_Z_boQsxPEeyRHaEo8DHwog _Z_mAUMxPEeyRHaEo8DHwog">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Z_boQMxPEeyRHaEo8DHwog" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Z_boQcxPEeyRHaEo8DHwog" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_Z_mAUMxPEeyRHaEo8DHwog" name="exposurecontext" type="_5LsaEFY2EeiyzdV8zVsJ_w" association="_Z_ZzEMxPEeyRHaEo8DHwog">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_44r0YMxPEeyRHaEo8DHwog"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_447E8MxPEeyRHaEo8DHwog" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_ihxKQMviEeyRHaEo8DHwog" name="ReceiveFilterRoutesToControlConstruct" memberEnd="_iiDeIMviEeyRHaEo8DHwog _iiVK8MviEeyRHaEo8DHwog">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iiBo8MviEeyRHaEo8DHwog" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iiCQAMviEeyRHaEo8DHwog" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_iiVK8MviEeyRHaEo8DHwog" name="receivefilter" type="_kRvu4LvjEey15NKF0wAXwA" association="_ihxKQMviEeyRHaEo8DHwog"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_n9H7ECkpEe2juI-ggmBSIQ" name="LogRecordStrategy">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_n9H7ESkpEe2juI-ggmBSIQ" annotatedElement="_n9H7ECkpEe2juI-ggmBSIQ">
+            <body>Defines the different approaches for logging information about an event covering the log trigger and the log content.</body>
+          </ownedComment>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_n9H7FCkpEe2juI-ggmBSIQ" name="CHANGE_ONLY">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_n9H7FSkpEe2juI-ggmBSIQ" annotatedElement="_n9H7FCkpEe2juI-ggmBSIQ">
+              <body>Each record only provides a view of the changes that have occurred (on a per entity change basis).&#xD;
+E.g., the log only includes the attribute that has changed and not other attributes that have not changed.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_n9H7GCkpEe2juI-ggmBSIQ" name="WHOLE_ENTITY">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_n9H7GSkpEe2juI-ggmBSIQ" annotatedElement="_n9H7GCkpEe2juI-ggmBSIQ">
+              <body>A record provides a snapshot of a whole entity.&#xD;
+The record includes all properties and values whether they have changed or not.</body>
+            </ownedComment>
+          </ownedLiteral>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_n9IiICkpEe2juI-ggmBSIQ" name="LogStorageStrategy">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_n9IiISkpEe2juI-ggmBSIQ" annotatedElement="_n9IiICkpEe2juI-ggmBSIQ">
+            <body>Defines the storage (record retention) approach.</body>
+          </ownedComment>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_n9IiIikpEe2juI-ggmBSIQ" name="COMPACTED">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_n9IiIykpEe2juI-ggmBSIQ" annotatedElement="_n9IiIikpEe2juI-ggmBSIQ">
+              <body>The log uses some mechanism to remove noisy detail whilst enabling the client to achieve eventual consistency (alignment) with current state.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_n9IiJCkpEe2juI-ggmBSIQ" name="TRUNCATED">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_n9IiJSkpEe2juI-ggmBSIQ" annotatedElement="_n9IiJCkpEe2juI-ggmBSIQ">
+              <body>The log only maintains recent records and disposes of old records. &#xD;
+This log does not alone enable the client to achieve alignment with current state.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_n9IiJikpEe2juI-ggmBSIQ" name="FULL_HISTORY">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_n9IiJykpEe2juI-ggmBSIQ" annotatedElement="_n9IiJikpEe2juI-ggmBSIQ">
+              <body>Maintains a history from system initiation with no missing records. &#xD;
+Provides initial state at the beginning of the history</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_n9IiKCkpEe2juI-ggmBSIQ" name="FULL_HISTORY_WITH_PERIODIC_BASELINE">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_n9IiKSkpEe2juI-ggmBSIQ" annotatedElement="_n9IiKCkpEe2juI-ggmBSIQ">
+              <body>Provides a history with initial state and periodic/occasional statements of current state at a particular point in time.</body>
+            </ownedComment>
+          </ownedLiteral>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_n9JwQCkpEe2juI-ggmBSIQ" name="RecordTrigger">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_n9JwQSkpEe2juI-ggmBSIQ" annotatedElement="_n9JwQCkpEe2juI-ggmBSIQ">
+            <body>The trigger for logging a record.</body>
+          </ownedComment>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_n9JwQikpEe2juI-ggmBSIQ" name="ON_CHANGE">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_n9JwQykpEe2juI-ggmBSIQ" annotatedElement="_n9JwQikpEe2juI-ggmBSIQ">
+              <body>A record is logged each time the value of the item to be reocorded changes.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_n9JwRCkpEe2juI-ggmBSIQ" name="PERIODIC">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_n9JwRSkpEe2juI-ggmBSIQ" annotatedElement="_n9JwRCkpEe2juI-ggmBSIQ">
+              <body>A record is logged for the item on a periodic basis (independent of whether the values have changed or not).</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_n9JwRikpEe2juI-ggmBSIQ" name="DEFINED_TRIGGER">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_n9JwRykpEe2juI-ggmBSIQ" annotatedElement="_n9JwRikpEe2juI-ggmBSIQ">
+              <body>The trigger will follow a strategy that is complex and specified via additional detail.</body>
+            </ownedComment>
+          </ownedLiteral>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_tI6GoCktEe2juI-ggmBSIQ" name="StreamState">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_tI6GoSktEe2juI-ggmBSIQ" annotatedElement="_tI6GoCktEe2juI-ggmBSIQ">
+            <body>The state of the available stream.</body>
+          </ownedComment>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_tI6GoiktEe2juI-ggmBSIQ" name="ALIGNING">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_tI6GoyktEe2juI-ggmBSIQ" annotatedElement="_tI6GoiktEe2juI-ggmBSIQ">
+              <body>The log that underpins the stream is aligning with other backend services and hence may not be providing full service.&#xD;
+If events are provided, they will be completely valid.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_tI6GpCktEe2juI-ggmBSIQ" name="ACTIVE">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_tI6GpSktEe2juI-ggmBSIQ" annotatedElement="_tI6GpCktEe2juI-ggmBSIQ">
+              <body>The stream is operating such that if a client connects records will be provided as per back pressure etc.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_tI6GpiktEe2juI-ggmBSIQ" name="PAUSED">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_tI6GpyktEe2juI-ggmBSIQ" annotatedElement="_tI6GpiktEe2juI-ggmBSIQ">
+              <body>Although the stream is available it has been paused by the administrator such that the records are being appended to the log but a new client will not receive any events whilst the stream is paused.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_tI6GqCktEe2juI-ggmBSIQ" name="TERMINATED">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_tI6GqSktEe2juI-ggmBSIQ" annotatedElement="_tI6GqCktEe2juI-ggmBSIQ">
+              <body>The stream is essentially no longer available. It will be removed from the AvailableStreams list shortly.</body>
+            </ownedComment>
+          </ownedLiteral>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_tI6tsCktEe2juI-ggmBSIQ" name="ConnectionProtocol">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_tI6tsSktEe2juI-ggmBSIQ" annotatedElement="_tI6tsCktEe2juI-ggmBSIQ">
+            <body>The connection protocols.</body>
+          </ownedComment>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_tI6tsiktEe2juI-ggmBSIQ" name="WEBSOCKETS">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_tI6tsyktEe2juI-ggmBSIQ" annotatedElement="_tI6tsiktEe2juI-ggmBSIQ">
+              <body>WebSockets as defined at https://datatracker.ietf.org/doc/html/rfc6455.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_tI6ttCktEe2juI-ggmBSIQ" name="SSE">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_tI6ttSktEe2juI-ggmBSIQ" annotatedElement="_tI6ttCktEe2juI-ggmBSIQ">
+              <body>Server Sent Events as defined at https://www.w3.org/TR/2015/REC-eventsource-20150203/.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_tI6ttiktEe2juI-ggmBSIQ" name="GNMI">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_tI6ttyktEe2juI-ggmBSIQ" annotatedElement="_tI6ttiktEe2juI-ggmBSIQ">
+              <body>Google network Management Interface as specified at https://github.com/openconfig/reference/tree/master/rpc/gnmi.</body>
+            </ownedComment>
+          </ownedLiteral>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_2LhhMCkuEe2juI-ggmBSIQ" name="EncodingFormat">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_2LhhMSkuEe2juI-ggmBSIQ" annotatedElement="_2LhhMCkuEe2juI-ggmBSIQ">
+            <body>The list of possible encoding formats.</body>
+          </ownedComment>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_2LhhMikuEe2juI-ggmBSIQ" name="JSON">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_2LhhMykuEe2juI-ggmBSIQ" annotatedElement="_2LhhMikuEe2juI-ggmBSIQ">
+              <body>JavaScript Object Notation as defined at https://www.json.org/json-en.html.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_2LhhNCkuEe2juI-ggmBSIQ" name="PROTOBUF">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_2LhhNSkuEe2juI-ggmBSIQ" annotatedElement="_2LhhNCkuEe2juI-ggmBSIQ">
+              <body>Protocol Buffers as defined at github.com/protocolbuffers/protobuf.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_2LhhNikuEe2juI-ggmBSIQ" name="XML">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_2LhhNykuEe2juI-ggmBSIQ" annotatedElement="_2LhhNikuEe2juI-ggmBSIQ">
+              <body>eXtensible Markup Language as defined at https://www.w3.org/standards/xml/.</body>
+            </ownedComment>
+          </ownedLiteral>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_-6SWMCkwEe2juI-ggmBSIQ" name="RecordType">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_-6SWMSkwEe2juI-ggmBSIQ" annotatedElement="_-6SWMCkwEe2juI-ggmBSIQ">
+            <body>The type of the record.&#xD;
+Used to understand what log content will be present and how to interpret it.&#xD;
+For some record types there is special encoding.&#xD;
+A ACTIVE alarm and an INTERMITTENT alarm are CREATE_UPDATE.&#xD;
+A CLEAR alarm is DELETE with an adjacent TOMBSTONE record.</body>
+          </ownedComment>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_-6SWMikwEe2juI-ggmBSIQ" name="CREATE_UPDATE">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_-6SWMykwEe2juI-ggmBSIQ" annotatedElement="_-6SWMikwEe2juI-ggmBSIQ">
+              <body>The record includes a create or update.&#xD;
+Where there is an update in a non-compacted log the information with be sparse (e.g., a single attribute) and about an entity that is already known.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_-6SWNCkwEe2juI-ggmBSIQ" name="DELETE">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_-6SWNSkwEe2juI-ggmBSIQ" annotatedElement="_-6SWNCkwEe2juI-ggmBSIQ">
+              <body>The record is about a delete.&#xD;
+The record may have a LogRecordHeader and a LogRecordBody but no augmented content.&#xD;
+The entityKey should be sufficient to identify the entity to be deleted.&#xD;
+Under certain circumstances there may be class content in the LogRecordBody.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_-6SWNikwEe2juI-ggmBSIQ" name="TOMBSTONE">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_-6SWNykwEe2juI-ggmBSIQ" annotatedElement="_-6SWNikwEe2juI-ggmBSIQ">
+              <body>Used in a Compacted log to remove old records and truncate deletion history.&#xD;
+Is only a LogRecordHeader with no LogRecordBody.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_-6SWOCkwEe2juI-ggmBSIQ" name="CHANGE">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_-6SWOSkwEe2juI-ggmBSIQ" annotatedElement="_-6SWOCkwEe2juI-ggmBSIQ">
+              <body>The record includes necessary ids and only the changed parameter/parameters.&#xD;
+</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_-6SWOikwEe2juI-ggmBSIQ" name="UPDATE">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_-6SWOykwEe2juI-ggmBSIQ" annotatedElement="_-6SWOikwEe2juI-ggmBSIQ">
+              <body>The record is of the whole entity where it is known to have existed before.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_-6SWPCkwEe2juI-ggmBSIQ" name="CREATE">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_-6SWPSkwEe2juI-ggmBSIQ" annotatedElement="_-6SWPCkwEe2juI-ggmBSIQ">
+              <body>The record is of the whole entity where it is known to have not existed before or not known to have existed before (it may have existed but the record has been lost and hence it appears to be new).</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_-6SWPikwEe2juI-ggmBSIQ" name="INFORMATION">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_-6SWPykwEe2juI-ggmBSIQ" annotatedElement="_-6SWPikwEe2juI-ggmBSIQ">
+              <body>The record contains some information.</body>
+            </ownedComment>
+          </ownedLiteral>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_sHHAcBpCEeqAktXlUG_iEw" name="ControlConstruct">
-        <packagedElement xmi:type="uml:Package" xmi:id="_L7QHgBpDEeqAktXlUG_iEw" name="diagrams"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_Vuh_EJmhEeWTOvbfd7_4-A" name="ControlConstruct">
           <ownedComment xmi:type="uml:Comment" xmi:id="_9HvbkGpOEeaBUOurxzA2sw" annotatedElement="_Vuh_EJmhEeWTOvbfd7_4-A">
             <body>Represents control capability/functionality.&#xD;
@@ -7536,6 +8399,22 @@ This specific model follows a subset of the Component-System Pattern. &#xD;
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XFoS_BbsEeitqc-Dc8Gf8A"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XFoS_RbsEeitqc-Dc8Gf8A" value="*"/>
           </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_3_ZV4rw-Eey15NKF0wAXwA" name="_requestConstructor" type="_ghruQLw-Eey15NKF0wAXwA" aggregation="composite" association="_3_YHwLw-Eey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3_dnULw-Eey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3_dnUbw-Eey15NKF0wAXwA" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_mcBtkrvBEey15NKF0wAXwA" name="_receiveStreamPipelineBuffer" type="_Wx9TULu_Eey15NKF0wAXwA" aggregation="composite" association="_mb-qQLvBEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mcIbQLvBEey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mcJCULvBEey15NKF0wAXwA" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_IjYAsiEfEey5mun8Wbck9w" name="_logStreamControl" type="_iaPVMM_VEem0y513gQlC0Q" aggregation="composite" association="_IjU9YCEfEey5mun8Wbck9w">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ijc5MCEfEey5mun8Wbck9w"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IjdgQCEfEey5mun8Wbck9w" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Jt1hUX02EeqhQsSsGiMOkA" name="_transmitStreamPipeline" type="__y5TQCECEey5mun8Wbck9w" aggregation="composite" association="_Jt0TMH02EeqhQsSsGiMOkA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Jt2IYH02EeqhQsSsGiMOkA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Jt2IYX02EeqhQsSsGiMOkA" value="*"/>
+          </ownedAttribute>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_D5kTMJmiEeWTOvbfd7_4-A" name="ControlPort">
           <ownedComment xmi:type="uml:Comment" xmi:id="_Poh2MGpPEeaBUOurxzA2sw" annotatedElement="_D5kTMJmiEeWTOvbfd7_4-A">
@@ -7585,39 +8464,19 @@ Peer controllers are assumed to both the subordinate of each other.</body>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OXI0EFdSEeev6YvG59B3Sg"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OXOToFdSEeev6YvG59B3Sg" value="*"/>
           </ownedAttribute>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_XFoTTxbsEeitqc-Dc8Gf8A" name="ControlTask">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_ZSejcJS4Eei_9c44xHCpzQ" annotatedElement="_XFoTTxbsEeitqc-Dc8Gf8A">
-            <body>The representation of the task related to some request for activity or some spontaneous activity.</body>
-          </ownedComment>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_XFoTUBbsEeitqc-Dc8Gf8A" name="problemsAndWarnings" type="_aL8EoGnNEeaBUOurxzA2sw">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_1OuBUJS3Eei_9c44xHCpzQ" annotatedElement="_XFoTUBbsEeitqc-Dc8Gf8A">
-              <body>A list or problems and warnings related to the task.</body>
-            </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Ghle4rw9Eey15NKF0wAXwA" name="_receiveFilter" type="_kRvu4LvjEey15NKF0wAXwA" aggregation="composite" association="_GhjpsLw9Eey15NKF0wAXwA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GhpwUbw9Eey15NKF0wAXwA" value="*"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_XFoTURbsEeitqc-Dc8Gf8A" name="timeToCompletion" type="_aL8EoGnNEeaBUOurxzA2sw">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_8630sJS3Eei_9c44xHCpzQ" annotatedElement="_XFoTURbsEeitqc-Dc8Gf8A">
-              <body>The estimated time to completion of the task.</body>
-            </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_HlLKobvAEey15NKF0wAXwA" name="_receiveStreamPipelineBuffer" type="_Wx9TULu_Eey15NKF0wAXwA" association="_HlIHULvAEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HlR4ULvAEey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HlR4UbvAEey15NKF0wAXwA" value="1"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_XFoTUhbsEeitqc-Dc8Gf8A" name="taskLifecycleState" type="_XFoTFBbsEeitqc-Dc8Gf8A">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_BCQg0JS4Eei_9c44xHCpzQ" annotatedElement="_XFoTUhbsEeitqc-Dc8Gf8A">
-              <body>The state of the task (progress etc.).</body>
-            </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_KnzUErxCEey15NKF0wAXwA" name="_receiveFilter" type="_kRvu4LvjEey15NKF0wAXwA" aggregation="composite" association="_KnyF8LxCEey15NKF0wAXwA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Kn4MkbxCEey15NKF0wAXwA" value="*"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_XFoTUxbsEeitqc-Dc8Gf8A" name="activityLiveLog" visibility="public" type="_aL8EoGnNEeaBUOurxzA2sw">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_GsW84JS4Eei_9c44xHCpzQ" annotatedElement="_XFoTUxbsEeitqc-Dc8Gf8A">
-              <body>A log of activities.</body>
-            </ownedComment>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_XFoTVBbsEeitqc-Dc8Gf8A" name="requestContext" type="_XFoTLBbsEeitqc-Dc8Gf8A">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_LbovcJS4Eei_9c44xHCpzQ" annotatedElement="_XFoTVBbsEeitqc-Dc8Gf8A">
-              <body>All details from the request.</body>
-            </ownedComment>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_XFoTVRbsEeitqc-Dc8Gf8A" name="_controlTask" type="_XFoTTxbsEeitqc-Dc8Gf8A" association="_XFoS5RbsEeitqc-Dc8Gf8A">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XFoTVhbsEeitqc-Dc8Gf8A"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XFoTVxbsEeitqc-Dc8Gf8A" value="*"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_FPLTwM_WEem0y513gQlC0Q" name="_streamServer" type="_1sea4M_VEem0y513gQlC0Q" association="_FPJekM_WEem0y513gQlC0Q">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FPL60M_WEem0y513gQlC0Q"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FPMh4M_WEem0y513gQlC0Q" value="*"/>
           </ownedAttribute>
         </packagedElement>
         <packagedElement xmi:type="uml:Association" xmi:id="_Byn0EMAeEeWbqPZwR-Ot6A" name="ControlConstructHasPorts" memberEnd="_ByobIsAeEeWbqPZwR-Ot6A _ByppQMAeEeWbqPZwR-Ot6A">
@@ -7652,80 +8511,6 @@ Peer controllers are assumed to both the subordinate of each other.</body>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_84doUO-3Eea2l9FuDSKfDQ"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_84ju8O-3Eea2l9FuDSKfDQ" value="1"/>
           </ownedEnd>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_XFoS5RbsEeitqc-Dc8Gf8A" name="ControlTaskDependsOnControlTask" memberEnd="_XFoTVRbsEeitqc-Dc8Gf8A _XFoS6BbsEeitqc-Dc8Gf8A">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XFoS5hbsEeitqc-Dc8Gf8A" source="org.eclipse.papyrus">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XFoS5xbsEeitqc-Dc8Gf8A" key="nature" value="UML_Nature"/>
-          </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_XFoS6BbsEeitqc-Dc8Gf8A" name="controltask" type="_XFoTTxbsEeitqc-Dc8Gf8A" association="_XFoS5RbsEeitqc-Dc8Gf8A">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XFoS6RbsEeitqc-Dc8Gf8A"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XFoS6hbsEeitqc-Dc8Gf8A" value="*"/>
-          </ownedEnd>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Enumeration" xmi:id="_XFoTFBbsEeitqc-Dc8Gf8A" name="TaskLifecycleState">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_YpzvAJS6Eei_9c44xHCpzQ" annotatedElement="_XFoTFBbsEeitqc-Dc8Gf8A">
-            <body>The potential states of the task.</body>
-          </ownedComment>
-          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTFRbsEeitqc-Dc8Gf8A" name="RUNNING">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_OKrBMJS7Eei_9c44xHCpzQ" annotatedElement="_XFoTFRbsEeitqc-Dc8Gf8A">
-              <body>The task is running.</body>
-            </ownedComment>
-          </ownedLiteral>
-          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTFhbsEeitqc-Dc8Gf8A" name="PAUSED">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_JfN-sJS7Eei_9c44xHCpzQ" annotatedElement="_XFoTFhbsEeitqc-Dc8Gf8A">
-              <body>The task has been paused.</body>
-            </ownedComment>
-          </ownedLiteral>
-          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTFxbsEeitqc-Dc8Gf8A" name="WAITING">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_RbLvsJS7Eei_9c44xHCpzQ" annotatedElement="_XFoTFxbsEeitqc-Dc8Gf8A">
-              <body>The task is waiting for input etc.</body>
-            </ownedComment>
-          </ownedLiteral>
-          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTGBbsEeitqc-Dc8Gf8A" name="ABORTING">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_omnJ8JS6Eei_9c44xHCpzQ" annotatedElement="_XFoTGBbsEeitqc-Dc8Gf8A">
-              <body>The task is aborting.</body>
-            </ownedComment>
-          </ownedLiteral>
-          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTGRbsEeitqc-Dc8Gf8A" name="COMPLETED">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_58sE8JS6Eei_9c44xHCpzQ" annotatedElement="_XFoTGRbsEeitqc-Dc8Gf8A">
-              <body>The task has been completed successfully.</body>
-            </ownedComment>
-          </ownedLiteral>
-          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTGhbsEeitqc-Dc8Gf8A" name="ABORTED">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_ijei0JS6Eei_9c44xHCpzQ" annotatedElement="_XFoTGhbsEeitqc-Dc8Gf8A">
-              <body>The task has been aborted.</body>
-            </ownedComment>
-          </ownedLiteral>
-          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTGxbsEeitqc-Dc8Gf8A" name="ATTEMPTING_ROLLBACK">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_12wKUJS6Eei_9c44xHCpzQ" annotatedElement="_XFoTGxbsEeitqc-Dc8Gf8A">
-              <body>The task is attempting to return the controlled system to a previous state.</body>
-            </ownedComment>
-          </ownedLiteral>
-          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTHBbsEeitqc-Dc8Gf8A" name="ROLLBACK_COMPLETE">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_MSfXkJS7Eei_9c44xHCpzQ" annotatedElement="_XFoTHBbsEeitqc-Dc8Gf8A">
-              <body>The task has completed a roll back action.</body>
-            </ownedComment>
-          </ownedLiteral>
-          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTHRbsEeitqc-Dc8Gf8A" name="ABANDONING">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_bRrwMJS6Eei_9c44xHCpzQ" annotatedElement="_XFoTHRbsEeitqc-Dc8Gf8A">
-              <body>Task is abandoning.</body>
-            </ownedComment>
-          </ownedLiteral>
-          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTHhbsEeitqc-Dc8Gf8A" name="ABANDONED">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_giCPgJS6Eei_9c44xHCpzQ" annotatedElement="_XFoTHhbsEeitqc-Dc8Gf8A">
-              <body>The task has been abandoned and is no longer running.</body>
-            </ownedComment>
-          </ownedLiteral>
-          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTHxbsEeitqc-Dc8Gf8A" name="FAILED">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_H3krcJS7Eei_9c44xHCpzQ" annotatedElement="_XFoTHxbsEeitqc-Dc8Gf8A">
-              <body>The task has failed.</body>
-            </ownedComment>
-          </ownedLiteral>
-          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTIBbsEeitqc-Dc8Gf8A" name="ARCHIVED">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_vivOkJS6Eei_9c44xHCpzQ" annotatedElement="_XFoTIBbsEeitqc-Dc8Gf8A">
-              <body>The task has been archived (and is no longer running).</body>
-            </ownedComment>
-          </ownedLiteral>
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="_npYzsGrsEeiRh-lc79MSRw" name="controlPortInterfacing">
           <packagedElement xmi:type="uml:Class" xmi:id="_XFoTMRbsEeitqc-Dc8Gf8A" name="ProviderRole">
@@ -7968,11 +8753,6 @@ A user has needs that are satisfied by a provider.</body>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XFoTCRbsEeitqc-Dc8Gf8A" value="*"/>
           </ownedEnd>
         </packagedElement>
-        <packagedElement xmi:type="uml:Enumeration" xmi:id="_XFoTChbsEeitqc-Dc8Gf8A" name="ProgressStatus">
-          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTCxbsEeitqc-Dc8Gf8A" name="COMPLETE"/>
-          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTDBbsEeitqc-Dc8Gf8A" name="IN_PROGRESS"/>
-          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTDRbsEeitqc-Dc8Gf8A" name="FAILED"/>
-        </packagedElement>
         <packagedElement xmi:type="uml:DataType" xmi:id="_XFoTIRbsEeitqc-Dc8Gf8A" name="UniversalOutputConstraintStructure">
           <ownedComment xmi:type="uml:Comment" xmi:id="_hTpIEJS5Eei_9c44xHCpzQ" annotatedElement="_XFoTIRbsEeitqc-Dc8Gf8A">
             <body>A universal structure for representation of output from a task.</body>
@@ -8045,6 +8825,8 @@ A user has needs that are satisfied by a provider.</body>
             <ownedEnd xmi:type="uml:Property" xmi:id="_XFoThBbsEeitqc-Dc8Gf8A" name="controlport" type="_D5kTMJmiEeWTOvbfd7_4-A" association="_XFoTgRbsEeitqc-Dc8Gf8A"/>
           </packagedElement>
         </packagedElement>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_LtHhIBhqEe2NeYxRC236WA" name="ResponseToClient" client="_D5kTMJmiEeWTOvbfd7_4-A" supplier="_qV42sBhpEe2NeYxRC236WA"/>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_cyROwBhrEe2NeYxRC236WA" name="StreamToClient" client="_D5kTMJmiEeWTOvbfd7_4-A" supplier="_qV42sBhpEe2NeYxRC236WA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_vGW_0BpCEeqAktXlUG_iEw" name="ExposureContext">
         <packagedElement xmi:type="uml:Class" xmi:id="_5LsaEFY2EeiyzdV8zVsJ_w" name="ExposureContext">
@@ -8064,6 +8846,14 @@ Represents the domain of control available to the viewer.</body>
             <ownedComment xmi:type="uml:Comment" xmi:id="_FsVpkGqjEeiRh-lc79MSRw" annotatedElement="_gAhgMFY4EeiyzdV8zVsJ_w">
               <body>The ConstraintDomain that defines the view to be exposed.</body>
             </ownedComment>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Z_boQsxPEeyRHaEo8DHwog" name="_controlPort" type="_D5kTMJmiEeWTOvbfd7_4-A" association="_Z_ZzEMxPEeyRHaEo8DHwog">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Z_jkEMxPEeyRHaEo8DHwog"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Z_kyMMxPEeyRHaEo8DHwog" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_vGcQIs_XEem0y513gQlC0Q" name="_TransmitFilter" type="_VR6iIM_XEem0y513gQlC0Q" association="_vGbCAM_XEem0y513gQlC0Q">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vGdeQM_XEem0y513gQlC0Q"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vGdeQc_XEem0y513gQlC0Q" value="*"/>
           </ownedAttribute>
         </packagedElement>
         <packagedElement xmi:type="uml:Association" xmi:id="_gAg5IFY4EeiyzdV8zVsJ_w" name="ExposureContextDefinedByCd" memberEnd="_gAhgMFY4EeiyzdV8zVsJ_w _gAhgMlY4EeiyzdV8zVsJ_w">
@@ -8236,9 +9026,6 @@ No equivalent in v1.2.&#xD;
 This class should not be implemented.</body>
               </ownedComment>
             </packagedElement>
-            <packagedElement xmi:type="uml:Realization" xmi:id="_l_cGMPiLEeaAw4wsR4LIsQ" supplier="_Vuh_EJmhEeWTOvbfd7_4-A">
-              <client xmi:type="uml:Package" href="ExplanatoryFiguresUsedInDocumentsAndSlides.uml#_kr10UEDrEeWHCPNn7aoIVw"/>
-            </packagedElement>
             <packagedElement xmi:type="uml:Realization" xmi:id="_nD7CAPiLEeaAw4wsR4LIsQ" client="_L3gJYPH7Eea2l9FuDSKfDQ" supplier="_Vuh_EJmhEeWTOvbfd7_4-A"/>
             <packagedElement xmi:type="uml:Realization" xmi:id="_k5Uu8CQKEee9I5wuRX6wwQ" client="_HiXxoPH6Eea2l9FuDSKfDQ" supplier="_Vuh_EJmhEeWTOvbfd7_4-A"/>
             <packagedElement xmi:type="uml:Realization" xmi:id="_mYOQoFglEeebX_1HG4orRg" client="_KXePoCQEEee9I5wuRX6wwQ" supplier="_Vuh_EJmhEeWTOvbfd7_4-A"/>
@@ -8246,9 +9033,6 @@ This class should not be implemented.</body>
             <packagedElement xmi:type="uml:Realization" xmi:id="_lEZgcBiEEeitqc-Dc8Gf8A" client="_HiXxoPH6Eea2l9FuDSKfDQ" supplier="_NHEmAMAtEeWbqPZwR-Ot6A"/>
             <packagedElement xmi:type="uml:Realization" xmi:id="_86ihsCQJEee9I5wuRX6wwQ" client="_oGqneFLNEeO75dO39GbF8Q" supplier="_5LsaEFY2EeiyzdV8zVsJ_w"/>
             <packagedElement xmi:type="uml:Realization" xmi:id="_fvfAcPH7Eea2l9FuDSKfDQ" client="_FUrVkPH7Eea2l9FuDSKfDQ" supplier="_5LsaEFY2EeiyzdV8zVsJ_w"/>
-            <packagedElement xmi:type="uml:Realization" xmi:id="_NMjicOmGEeia2eVpRwAxNw" supplier="_5LsaEFY2EeiyzdV8zVsJ_w">
-              <client xmi:type="uml:Package" href="ExplanatoryFiguresUsedInDocumentsAndSlides.uml#_kr10UEDrEeWHCPNn7aoIVw"/>
-            </packagedElement>
             <packagedElement xmi:type="uml:Realization" xmi:id="_fgJgQCQJEee9I5wuRX6wwQ" client="_oGqnr1LNEeO75dO39GbF8Q" supplier="_FUrVkPH7Eea2l9FuDSKfDQ"/>
             <packagedElement xmi:type="uml:Realization" xmi:id="_mH9lcPH7Eea2l9FuDSKfDQ" client="_HiXxoPH6Eea2l9FuDSKfDQ" supplier="_FUrVkPH7Eea2l9FuDSKfDQ"/>
             <packagedElement xmi:type="uml:Realization" xmi:id="_guLZoCQJEee9I5wuRX6wwQ" client="_oGqoB1LNEeO75dO39GbF8Q" supplier="_L3gJYPH7Eea2l9FuDSKfDQ"/>
@@ -8256,6 +9040,332 @@ This class should not be implemented.</body>
             <packagedElement xmi:type="uml:Realization" xmi:id="_eOAi8CQJEee9I5wuRX6wwQ" client="_oGqnr1LNEeO75dO39GbF8Q" supplier="_HiXxoPH6Eea2l9FuDSKfDQ"/>
             <packagedElement xmi:type="uml:Realization" xmi:id="_WuooAC8lEeexxefg2F1i1Q" client="_oGqoB1LNEeO75dO39GbF8Q" supplier="_KXePoCQEEee9I5wuRX6wwQ"/>
           </packagedElement>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_Sz-1UC6TEe2juI-ggmBSIQ" name="ControlTask">
+        <packagedElement xmi:type="uml:Class" xmi:id="_XFoTTxbsEeitqc-Dc8Gf8A" name="ControlTask">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_ZSejcJS4Eei_9c44xHCpzQ" annotatedElement="_XFoTTxbsEeitqc-Dc8Gf8A">
+            <body>The representation of the task related to some request for control activity or some spontaneous control activity.&#xD;
+&#xD;
+The ControlTask represents... An apparent/emergent functional Component that provides management-control capability where that capability is defined in terms of a ControlTaskTransferFunction.&#xD;
+The whole defined ControlTaskTransferFunction is available and active in an instance.&#xD;
+- Note that the ControlTask exposes a specific purposeful ControlTaskTransferFunction where the underlying componentry may be far more capable. It has architected behavior.&#xD;
+The use of “apparent” emphasizes that this is NOT the underlying/implementation component. &#xD;
+- The behaviour defined by the ControlTaskTransferFunction is emergent from a set of underlying implementation components that have been constrained to behave in a particular way.&#xD;
+&#xD;
+Achieves outcomes/goals etc.&#xD;
+Covers all success and failure behaviors&#xD;
+ControlTask capability definition and instance of running ControlTask with state&#xD;
+ControlTask capability is defined from the outside and hence its description does not vary due to internal hidden control&#xD;
+- Other components expose capability that is defined from the inside.&#xD;
+&#xD;
+Related terms:&#xD;
+- Task: A piece of work to be done&#xD;
+- Job: A task or piece of work&#xD;
+- Activity: A thing that is done&#xD;
+- Function: An activity that is natural to or the purpose of a thing&#xD;
+- Action: A thing done&#xD;
+- Runnable Task: Used to handle any computational work&#xD;
+</body>
+          </ownedComment>
+          <generalization xmi:type="uml:Generalization" xmi:id="_1h88EC9KEe22jbMp3BDUaA" general="_iVJ1kI2wEeO38ZmbECnvbg"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_XFoTUBbsEeitqc-Dc8Gf8A" name="problemsAndWarnings" type="_aL8EoGnNEeaBUOurxzA2sw">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_1OuBUJS3Eei_9c44xHCpzQ" annotatedElement="_XFoTUBbsEeitqc-Dc8Gf8A">
+              <body>A list or problems and warnings related to the task.</body>
+            </ownedComment>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_h7L7YC9LEe22jbMp3BDUaA"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_XFoTURbsEeitqc-Dc8Gf8A" name="timeToCompletion" type="_aL8EoGnNEeaBUOurxzA2sw">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_8630sJS3Eei_9c44xHCpzQ" annotatedElement="_XFoTURbsEeitqc-Dc8Gf8A">
+              <body>The estimated time to completion of the task.</body>
+            </ownedComment>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Jxv2MC9LEe22jbMp3BDUaA"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_XFoTUhbsEeitqc-Dc8Gf8A" name="taskLifecycleState" type="_XFoTFBbsEeitqc-Dc8Gf8A">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_BCQg0JS4Eei_9c44xHCpzQ" annotatedElement="_XFoTUhbsEeitqc-Dc8Gf8A">
+              <body>The state of the task (progress etc.).</body>
+            </ownedComment>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Hs4bcC9LEe22jbMp3BDUaA"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_XFoTUxbsEeitqc-Dc8Gf8A" name="activityLiveLog" visibility="public" type="_aL8EoGnNEeaBUOurxzA2sw">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_GsW84JS4Eei_9c44xHCpzQ" annotatedElement="_XFoTUxbsEeitqc-Dc8Gf8A">
+              <body>A log of activities.</body>
+            </ownedComment>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MEsJMC9LEe22jbMp3BDUaA"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_XFoTVBbsEeitqc-Dc8Gf8A" name="requestContext" type="_XFoTLBbsEeitqc-Dc8Gf8A">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_LbovcJS4Eei_9c44xHCpzQ" annotatedElement="_XFoTVBbsEeitqc-Dc8Gf8A">
+              <body>All details from the request.</body>
+            </ownedComment>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_figz0C9LEe22jbMp3BDUaA"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_XFoTVRbsEeitqc-Dc8Gf8A" name="_controlTask" type="_XFoTTxbsEeitqc-Dc8Gf8A" association="_XFoS5RbsEeitqc-Dc8Gf8A">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XFoTVhbsEeitqc-Dc8Gf8A"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XFoTVxbsEeitqc-Dc8Gf8A" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_HYZGgC65Ee22jbMp3BDUaA" name="_exposedCtTransferFunction" type="_fCEywC6nEe2juI-ggmBSIQ" aggregation="composite" association="_HYVcIC65Ee22jbMp3BDUaA">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_xaTmsC9JEe22jbMp3BDUaA" annotatedElement="_HYZGgC65Ee22jbMp3BDUaA">
+              <body>The exposed behaviour of the ControlTask.</body>
+            </ownedComment>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HYhCUC65Ee22jbMp3BDUaA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HYhCUS65Ee22jbMp3BDUaA" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_KdTpAi65Ee22jbMp3BDUaA" name="_ctPort" type="_auSpYC6nEe2juI-ggmBSIQ" aggregation="composite" association="_KdTB8C65Ee22jbMp3BDUaA">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_k6IngC9FEe22jbMp3BDUaA" annotatedElement="_KdTpAi65Ee22jbMp3BDUaA">
+              <body>Provides a specific access. &#xD;
+ControlTasks can only be connected by ports.&#xD;
+A ControlTask may have no ports when it is not explicitly in some ControlTaskFlowGraph, i.e., where there is no explicitly stated trigger and no explicityly stated output to cause flow progression.</body>
+            </ownedComment>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KdaWsC65Ee22jbMp3BDUaA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KdaWsS65Ee22jbMp3BDUaA" value="*"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_XFoS5RbsEeitqc-Dc8Gf8A" name="ControlTaskDependsOnControlTask" memberEnd="_XFoTVRbsEeitqc-Dc8Gf8A _XFoS6BbsEeitqc-Dc8Gf8A">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XFoS5hbsEeitqc-Dc8Gf8A" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XFoS5xbsEeitqc-Dc8Gf8A" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_XFoS6BbsEeitqc-Dc8Gf8A" name="controltask" type="_XFoTTxbsEeitqc-Dc8Gf8A" association="_XFoS5RbsEeitqc-Dc8Gf8A">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XFoS6RbsEeitqc-Dc8Gf8A"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XFoS6hbsEeitqc-Dc8Gf8A" value="*"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_L7QHgBpDEeqAktXlUG_iEw" name="diagrams"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_auSpYC6nEe2juI-ggmBSIQ" name="CtPort">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_g9lPMC9BEe22jbMp3BDUaA" annotatedElement="_auSpYC6nEe2juI-ggmBSIQ">
+            <body>An access to a ControlTask.</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_we_3ci65Ee22jbMp3BDUaA" name="_cctfPort" type="_OoyasC6oEe2juI-ggmBSIQ" association="_we_QYC65Ee22jbMp3BDUaA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wfJBYC65Ee22jbMp3BDUaA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wfJBYS65Ee22jbMp3BDUaA" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_kWivEC9BEe22jbMp3BDUaA" name="PortInternalRole">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_wcQjsC9BEe22jbMp3BDUaA" annotatedElement="_kWivEC9BEe22jbMp3BDUaA">
+              <body>The aspect of the ControlTask functionality accessed via the port.</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_xmVKIC9BEe22jbMp3BDUaA" name="PortFlowDirection" type="_FZZsAC9CEe22jbMp3BDUaA">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_-CskMC9BEe22jbMp3BDUaA" annotatedElement="_xmVKIC9BEe22jbMp3BDUaA">
+              <body>The direction of flow (in or out).</body>
+            </ownedComment>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_MNG_AC9DEe22jbMp3BDUaA" name="_flowSendToCtPort" type="_auSpYC6nEe2juI-ggmBSIQ" association="_MNFw4C9DEe22jbMp3BDUaA">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_Rm7NQC9MEe22jbMp3BDUaA" annotatedElement="_MNG_AC9DEe22jbMp3BDUaA">
+              <body>This SEND control port is explicitly DIRECT connected to the referenced (RECEIVE_LISTEN) ControlPort.&#xD;
+There may be a DIRECT connection but it may not be known at the SEND end (hence this attribute may be not present).</body>
+            </ownedComment>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MNNssC9DEe22jbMp3BDUaA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MNNssS9DEe22jbMp3BDUaA" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_UPOl4C9EEe22jbMp3BDUaA" name="_flowReceiveFromCtPort" type="_auSpYC6nEe2juI-ggmBSIQ" association="_UPNXwC9EEe22jbMp3BDUaA">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_d0IxAC9MEe22jbMp3BDUaA" annotatedElement="_UPOl4C9EEe22jbMp3BDUaA">
+              <body>This RECEIVE_LISTEN control port is explicitly DIRECT connected to the referenced SEND ControlPort.&#xD;
+There may be a DIRECT connection but it may not be known at the RECEIVE_LISTEN end (hence this attribute may be not present).</body>
+            </ownedComment>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UPdPYC9EEe22jbMp3BDUaA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UPd2cC9EEe22jbMp3BDUaA" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_zD_BoC9GEe22jbMp3BDUaA" name="PortAccessMode" type="_ocn20C9FEe22jbMp3BDUaA">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_LUxE8C9HEe22jbMp3BDUaA" annotatedElement="_zD_BoC9GEe22jbMp3BDUaA">
+              <body>The mode of access to the port.</body>
+            </ownedComment>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_fCEywC6nEe2juI-ggmBSIQ" name="CtTransferFunction">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_MooIQC9BEe22jbMp3BDUaA" annotatedElement="_fCEywC6nEe2juI-ggmBSIQ">
+            <body>A statement of the capability of the ControlTask in necessary detail to enable a client to fully understand the externally visible characteristics of the ControlTask (i.e., how the outputs are generated from the inputs, or from any other relevant internal behavior) &#xD;
+It may be expressed in terms of: &#xD;
+- an apparent ControlTaskFlowGraph that explains, in abstract, how the outputs are generated from the inputs&#xD;
+- a logic function, arithmetic function or some other structure that is not in a ControlTaskFlowGraph form&#xD;
+Related Terms&#xD;
+- Behaviour: The way in which a thing works&#xD;
+- Transfer Function: The relationship between the output signal of a control system and the input signal&#xD;
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_JcGqsi65Ee22jbMp3BDUaA" name="_cctfPort" type="_OoyasC6oEe2juI-ggmBSIQ" aggregation="composite" association="_JcGDoC65Ee22jbMp3BDUaA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JcNYYC65Ee22jbMp3BDUaA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JcN_cC65Ee22jbMp3BDUaA" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rj3aMS65Ee22jbMp3BDUaA" name="_controlTaskOfCtFlowGraph" type="_XFoTTxbsEeitqc-Dc8Gf8A" aggregation="shared" association="_rj2zIC65Ee22jbMp3BDUaA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rj-H4C65Ee22jbMp3BDUaA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rj-u8C65Ee22jbMp3BDUaA" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_i37vYy66Ee22jbMp3BDUaA" name="abstractfunctionstructure" type="_9O-KAC65Ee22jbMp3BDUaA" aggregation="composite" association="_i37vYC66Ee22jbMp3BDUaA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_i4CdEC66Ee22jbMp3BDUaA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_i4CdES66Ee22jbMp3BDUaA" value="1"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_OoyasC6oEe2juI-ggmBSIQ" name="CttfPort">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_zYAr8i65Ee22jbMp3BDUaA" name="_ctPort" type="_auSpYC6nEe2juI-ggmBSIQ" aggregation="shared" association="_zYAE4C65Ee22jbMp3BDUaA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zYHZoC65Ee22jbMp3BDUaA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zYHZoS65Ee22jbMp3BDUaA" value="1"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_HYVcIC65Ee22jbMp3BDUaA" name="ControlTaskHasExposedTransferFunction" memberEnd="_HYZGgC65Ee22jbMp3BDUaA _HYhCUi65Ee22jbMp3BDUaA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HYXRUC65Ee22jbMp3BDUaA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_HYX4YC65Ee22jbMp3BDUaA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_HYhCUi65Ee22jbMp3BDUaA" name="controltask" type="_XFoTTxbsEeitqc-Dc8Gf8A" association="_HYVcIC65Ee22jbMp3BDUaA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_JcGDoC65Ee22jbMp3BDUaA" memberEnd="_JcGqsi65Ee22jbMp3BDUaA _JcN_cS65Ee22jbMp3BDUaA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JcGqsC65Ee22jbMp3BDUaA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JcGqsS65Ee22jbMp3BDUaA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_JcN_cS65Ee22jbMp3BDUaA" name="controltasktransferfunction" type="_fCEywC6nEe2juI-ggmBSIQ" association="_JcGDoC65Ee22jbMp3BDUaA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_KdTB8C65Ee22jbMp3BDUaA" name="ControlTaskHasCtPorts" memberEnd="_KdTpAi65Ee22jbMp3BDUaA _KdaWsi65Ee22jbMp3BDUaA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KdTpAC65Ee22jbMp3BDUaA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KdTpAS65Ee22jbMp3BDUaA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_KdaWsi65Ee22jbMp3BDUaA" name="controltask" type="_XFoTTxbsEeitqc-Dc8Gf8A" association="_KdTB8C65Ee22jbMp3BDUaA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_rj2zIC65Ee22jbMp3BDUaA" name="CtTransferFunctionHasCtFlowGraph" memberEnd="_rj3aMS65Ee22jbMp3BDUaA _rj-u8S65Ee22jbMp3BDUaA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rj2zIS65Ee22jbMp3BDUaA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rj3aMC65Ee22jbMp3BDUaA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_rj-u8S65Ee22jbMp3BDUaA" name="controltasktransferfunction" type="_fCEywC6nEe2juI-ggmBSIQ" association="_rj2zIC65Ee22jbMp3BDUaA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6QzGQC9JEe22jbMp3BDUaA"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_we_QYC65Ee22jbMp3BDUaA" memberEnd="_we_3ci65Ee22jbMp3BDUaA _wfJBYi65Ee22jbMp3BDUaA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_we_3cC65Ee22jbMp3BDUaA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_we_3cS65Ee22jbMp3BDUaA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_wfJBYi65Ee22jbMp3BDUaA" name="controltaskport" type="_auSpYC6nEe2juI-ggmBSIQ" association="_we_QYC65Ee22jbMp3BDUaA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_zYAE4C65Ee22jbMp3BDUaA" memberEnd="_zYAr8i65Ee22jbMp3BDUaA _zYIAsC65Ee22jbMp3BDUaA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zYAr8C65Ee22jbMp3BDUaA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zYAr8S65Ee22jbMp3BDUaA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_zYIAsC65Ee22jbMp3BDUaA" name="controltasktransferfunctionport" type="_OoyasC6oEe2juI-ggmBSIQ" association="_zYAE4C65Ee22jbMp3BDUaA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_9O-KAC65Ee22jbMp3BDUaA" name="CttfAbstractFunctionStructure">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_b9YYEC66Ee22jbMp3BDUaA" annotatedElement="_9O-KAC65Ee22jbMp3BDUaA">
+            <body>Expression of a ControlTaskTransferFunction in terms of a logic function, arithmetic function or some other structure that is not in a ControlTaskFlowGraph form.</body>
+          </ownedComment>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_i37vYC66Ee22jbMp3BDUaA" memberEnd="_i37vYy66Ee22jbMp3BDUaA _i4CdEi66Ee22jbMp3BDUaA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_i37vYS66Ee22jbMp3BDUaA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_i37vYi66Ee22jbMp3BDUaA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_i4CdEi66Ee22jbMp3BDUaA" name="controltasktransferfunction" type="_fCEywC6nEe2juI-ggmBSIQ" association="_i37vYC66Ee22jbMp3BDUaA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_FZZsAC9CEe22jbMp3BDUaA" name="CtPortFlow">
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_HrXHkC9CEe22jbMp3BDUaA" name="RECEIVE_LISTEN">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_8NCiwC9EEe22jbMp3BDUaA" annotatedElement="_HrXHkC9CEe22jbMp3BDUaA">
+              <body>An input port to the ControlTask.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_JZ0NcC9CEe22jbMp3BDUaA" name="SEND">
+            <ownedComment xmi:type="uml:Comment" xmi:id="__bElAC9EEe22jbMp3BDUaA" annotatedElement="_JZ0NcC9CEe22jbMp3BDUaA">
+              <body>An output from the ControlTask</body>
+            </ownedComment>
+          </ownedLiteral>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_XFoTChbsEeitqc-Dc8Gf8A" name="ProgressStatus">
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTCxbsEeitqc-Dc8Gf8A" name="COMPLETE"/>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTDBbsEeitqc-Dc8Gf8A" name="IN_PROGRESS"/>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTDRbsEeitqc-Dc8Gf8A" name="FAILED"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_XFoTFBbsEeitqc-Dc8Gf8A" name="TaskLifecycleState">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_YpzvAJS6Eei_9c44xHCpzQ" annotatedElement="_XFoTFBbsEeitqc-Dc8Gf8A">
+            <body>The potential states of the task.</body>
+          </ownedComment>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTFRbsEeitqc-Dc8Gf8A" name="RUNNING">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_OKrBMJS7Eei_9c44xHCpzQ" annotatedElement="_XFoTFRbsEeitqc-Dc8Gf8A">
+              <body>The task is running.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTFhbsEeitqc-Dc8Gf8A" name="PAUSED">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_JfN-sJS7Eei_9c44xHCpzQ" annotatedElement="_XFoTFhbsEeitqc-Dc8Gf8A">
+              <body>The task has been paused.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTFxbsEeitqc-Dc8Gf8A" name="WAITING">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_RbLvsJS7Eei_9c44xHCpzQ" annotatedElement="_XFoTFxbsEeitqc-Dc8Gf8A">
+              <body>The task is waiting for input etc.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTGBbsEeitqc-Dc8Gf8A" name="ABORTING">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_omnJ8JS6Eei_9c44xHCpzQ" annotatedElement="_XFoTGBbsEeitqc-Dc8Gf8A">
+              <body>The task is aborting.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTGRbsEeitqc-Dc8Gf8A" name="COMPLETED">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_58sE8JS6Eei_9c44xHCpzQ" annotatedElement="_XFoTGRbsEeitqc-Dc8Gf8A">
+              <body>The task has been completed successfully.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTGhbsEeitqc-Dc8Gf8A" name="ABORTED">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_ijei0JS6Eei_9c44xHCpzQ" annotatedElement="_XFoTGhbsEeitqc-Dc8Gf8A">
+              <body>The task has been aborted.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTGxbsEeitqc-Dc8Gf8A" name="ATTEMPTING_ROLLBACK">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_12wKUJS6Eei_9c44xHCpzQ" annotatedElement="_XFoTGxbsEeitqc-Dc8Gf8A">
+              <body>The task is attempting to return the controlled system to a previous state.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTHBbsEeitqc-Dc8Gf8A" name="ROLLBACK_COMPLETE">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_MSfXkJS7Eei_9c44xHCpzQ" annotatedElement="_XFoTHBbsEeitqc-Dc8Gf8A">
+              <body>The task has completed a roll back action.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTHRbsEeitqc-Dc8Gf8A" name="ABANDONING">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_bRrwMJS6Eei_9c44xHCpzQ" annotatedElement="_XFoTHRbsEeitqc-Dc8Gf8A">
+              <body>Task is abandoning.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTHhbsEeitqc-Dc8Gf8A" name="ABANDONED">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_giCPgJS6Eei_9c44xHCpzQ" annotatedElement="_XFoTHhbsEeitqc-Dc8Gf8A">
+              <body>The task has been abandoned and is no longer running.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTHxbsEeitqc-Dc8Gf8A" name="FAILED">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_H3krcJS7Eei_9c44xHCpzQ" annotatedElement="_XFoTHxbsEeitqc-Dc8Gf8A">
+              <body>The task has failed.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTIBbsEeitqc-Dc8Gf8A" name="ARCHIVED">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_vivOkJS6Eei_9c44xHCpzQ" annotatedElement="_XFoTIBbsEeitqc-Dc8Gf8A">
+              <body>The task has been archived (and is no longer running).</body>
+            </ownedComment>
+          </ownedLiteral>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_MNFw4C9DEe22jbMp3BDUaA" name="CtPortDirectFlowTo" memberEnd="_MNG_AC9DEe22jbMp3BDUaA _MNNssi9DEe22jbMp3BDUaA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MNGX8C9DEe22jbMp3BDUaA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MNGX8S9DEe22jbMp3BDUaA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_MNNssi9DEe22jbMp3BDUaA" name="controltaskport" type="_auSpYC6nEe2juI-ggmBSIQ" association="_MNFw4C9DEe22jbMp3BDUaA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_u5NxsC9DEe22jbMp3BDUaA"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_UPNXwC9EEe22jbMp3BDUaA" name="CtPortDirectFlowFrom" memberEnd="_UPOl4C9EEe22jbMp3BDUaA _UPd2cS9EEe22jbMp3BDUaA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UPN-0C9EEe22jbMp3BDUaA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UPN-0S9EEe22jbMp3BDUaA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_UPd2cS9EEe22jbMp3BDUaA" name="controltaskport" type="_auSpYC6nEe2juI-ggmBSIQ" association="_UPNXwC9EEe22jbMp3BDUaA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_k38EkC9EEe22jbMp3BDUaA"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_ocn20C9FEe22jbMp3BDUaA" name="CtPortAccessMode">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_vH-poC9HEe22jbMp3BDUaA" annotatedElement="_ocn20C9FEe22jbMp3BDUaA">
+            <body>The form of access.</body>
+          </ownedComment>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_PRvtUC9GEe22jbMp3BDUaA" name="ENVIRONMENT">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_R0XJIC9IEe22jbMp3BDUaA" annotatedElement="_PRvtUC9GEe22jbMp3BDUaA">
+              <body>The port accesses the general environment. There is no explicit connection.&#xD;
+A RECEIVE_LISTEN port takes input from anywhere and examines for appropriatness. There is no expected source.&#xD;
+A SEND port broadcasts into the environment. There is no expected recipient.&#xD;
+Analogue: An antenna.</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_RBgawC9GEe22jbMp3BDUaA" name="DIRECT">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_c8JV4C9IEe22jbMp3BDUaA" annotatedElement="_RBgawC9GEe22jbMp3BDUaA">
+              <body>There is a connection.&#xD;
+The connected port may be known and/or may know of this port.</body>
+            </ownedComment>
+          </ownedLiteral>
         </packagedElement>
       </packagedElement>
     </packagedElement>
@@ -8555,7 +9665,24 @@ A constrained Link connects LTPs that are on the CD boundary.</body>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yIYhQBwBEeqCeNa5GcKdyg" value="*"/>
             <association xmi:type="uml:Association" href="Party.uml#_yIVd8BwBEeqCeNa5GcKdyg"/>
           </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_bM8ikKtFEey15NKF0wAXwA" name="_supportedStreamType" type="_WV2QwKtFEey15NKF0wAXwA" aggregation="shared" association="_bM3qEKtFEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bNA0AKtFEey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bNA0AatFEey15NKF0wAXwA" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_cMGScqtFEey15NKF0wAXwA" name="_availableStream" type="_TCJEUKtFEey15NKF0wAXwA" aggregation="shared" association="_cMEdQKtFEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cMGSdKtFEey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cMGSdatFEey15NKF0wAXwA" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_dL0DAqtFEey15NKF0wAXwA" name="_streamServer" type="_ODG-gKtFEey15NKF0wAXwA" aggregation="shared" association="_dLyN0KtFEey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dL0DBKtFEey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dL0DBatFEey15NKF0wAXwA" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_cBwqgrw3Eey15NKF0wAXwA" name="_changeUpdater" type="_shKRoLw2Eey15NKF0wAXwA" association="_cBvcYLw3Eey15NKF0wAXwA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cB1jALw3Eey15NKF0wAXwA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cB2KELw3Eey15NKF0wAXwA" value="*"/>
+          </ownedAttribute>
         </packagedElement>
+        <packagedElement xmi:type="uml:Realization" xmi:id="_IXLV8LspEey15NKF0wAXwA" client="_P1YSAKFbEea-zNDndPZCDg" supplier="_0oGNoKtNEey15NKF0wAXwA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_AjFJ8PpuEea2KOb10ZFHOw" name="Associations">
         <packagedElement xmi:type="uml:Association" xmi:id="_s-6LMPPUEea2l9FuDSKfDQ" name="CdBoundedByLtp" memberEnd="_s-8AYPPUEea2l9FuDSKfDQ _s-9OgPPUEea2l9FuDSKfDQ">
@@ -13886,7 +15013,6 @@ This class should not be implemented.</body>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_Q3uBhVN3EeaDuo8VlVeg_g" base_StructuralFeature="_gfKX0kc_EeasL6dcjI1vEA"/>
   <OpenModel_Profile:Experimental xmi:id="_J6Q-gFJ3EeaDuo8VlVeg_g" base_Element="_TsDsQEQfEeasL6dcjI1vEA"/>
   <OpenModel_Profile:OpenModelClass xmi:id="_Q3uolFN3EeaDuo8VlVeg_g" base_Class="_TsDsQEQfEeasL6dcjI1vEA"/>
-  <OpenModel_Profile:Experimental xmi:id="_1RlEMGuZEeaBUOurxzA2sw" base_Element="_dE5dIEdPEeasL6dcjI1vEA"/>
   <OpenModel_Profile:Experimental xmi:id="_Q6SI0FJwEeaDuo8VlVeg_g" base_Element="_sTeXwEddEeasL6dcjI1vEA"/>
   <OpenModel_Profile:Experimental xmi:id="_IA--IFJ2EeaDuo8VlVeg_g" base_Element="_pGQEgERBEeasL6dcjI1vEA"/>
   <OpenModel_Profile:Experimental xmi:id="_k5BV4FJ1EeaDuo8VlVeg_g" base_Element="_1KerYERBEeasL6dcjI1vEA"/>
@@ -14466,4 +15592,258 @@ This class should not be implemented.</body>
   <OpenModel_Profile:Experimental xmi:id="_NiUl8CEqEeyP2pyYq716Ow" base_Element="_yIXTIhwBEeqCeNa5GcKdyg"/>
   <OpenModel_Profile:Experimental xmi:id="_tRMLoCFPEeyrZobZlRYpDg" base_Element="_W_WNomVtEeiITeAcFBk32A"/>
   <OpenModel_Profile:Experimental xmi:id="_A9RJ8GhSEeaD1OSapW1qFw" base_Element="_x-uHAGhREeaD1OSapW1qFw"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_ODLP8KtFEey15NKF0wAXwA" base_Class="_ODG-gKtFEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_TCJEUatFEey15NKF0wAXwA" base_Class="_TCJEUKtFEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_WV2QwatFEey15NKF0wAXwA" base_Class="_WV2QwKtFEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_bM8ikatFEey15NKF0wAXwA" base_StructuralFeature="_bM8ikKtFEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_bNA0A6tFEey15NKF0wAXwA" base_StructuralFeature="_bNA0AqtFEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_cMGSc6tFEey15NKF0wAXwA" base_StructuralFeature="_cMGScqtFEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_cMG5gatFEey15NKF0wAXwA" base_StructuralFeature="_cMG5gKtFEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_dL0DA6tFEey15NKF0wAXwA" base_StructuralFeature="_dL0DAqtFEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_dL0qEatFEey15NKF0wAXwA" base_StructuralFeature="_dL0qEKtFEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_igVbMqtGEey15NKF0wAXwA" base_StructuralFeature="_igVbMatGEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_igZsoKtGEey15NKF0wAXwA" base_StructuralFeature="_igZFkqtGEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_jd_9U6tGEey15NKF0wAXwA" base_StructuralFeature="_jd_9UqtGEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_jeAkY6tGEey15NKF0wAXwA" base_StructuralFeature="_jeAkYqtGEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_OFJ7A6tHEey15NKF0wAXwA" base_StructuralFeature="_OFJ7AqtHEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_OFNlY6tHEey15NKF0wAXwA" base_StructuralFeature="_OFNlYqtHEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_HbSOkatIEey15NKF0wAXwA" base_Class="_HbSOkKtIEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_TuNYwatIEey15NKF0wAXwA" base_Class="_TuNYwKtIEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_aawJQKtIEey15NKF0wAXwA" base_StructuralFeature="_aaviMqtIEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_aazzoqtIEey15NKF0wAXwA" base_StructuralFeature="_aazzoatIEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_cuwMM6tIEey15NKF0wAXwA" base_StructuralFeature="_cuwMMqtIEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_cu0doKtIEey15NKF0wAXwA" base_StructuralFeature="_cuz2kqtIEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_DHDuYKtKEey15NKF0wAXwA" base_StructuralFeature="_DHDHUqtKEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_DHLqMatKEey15NKF0wAXwA" base_StructuralFeature="_DHLqMKtKEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_KuKCo6tKEey15NKF0wAXwA" base_StructuralFeature="_KuKCoqtKEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_KuQJQ6tKEey15NKF0wAXwA" base_StructuralFeature="_KuQJQqtKEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_aszbMKtLEey15NKF0wAXwA" base_Class="_asy0IKtLEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_pmyHMKtLEey15NKF0wAXwA" base_StructuralFeature="_pmxgIqtLEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_pm74MatLEey15NKF0wAXwA" base_StructuralFeature="_pm74MKtLEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_nrks0atNEey15NKF0wAXwA" base_Class="_nrks0KtNEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_r0xW0KtNEey15NKF0wAXwA" base_Class="_r0wvwKtNEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_0oG0sKtNEey15NKF0wAXwA" base_Class="_0oGNoKtNEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_S9wMsrshEey15NKF0wAXwA" base_StructuralFeature="_S9wMsbshEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_S92TULshEey15NKF0wAXwA" base_StructuralFeature="_S91sQrshEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_AcbxILsiEey15NKF0wAXwA" base_StructuralFeature="_S9wMsbshEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_jYvRE7skEey15NKF0wAXwA" base_StructuralFeature="_jYvRErskEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_jY4bAbskEey15NKF0wAXwA" base_StructuralFeature="_jY4bALskEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_j7k7kLsoEey15NKF0wAXwA" base_StructuralFeature="_j7kUgrsoEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_j7ol8rsoEey15NKF0wAXwA" base_StructuralFeature="_j7ol8bsoEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Specify xmi:id="_VyfEgLspEey15NKF0wAXwA" base_Abstraction="_87qU4LsoEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Specify xmi:id="_bPLWsLspEey15NKF0wAXwA" base_Abstraction="_DDOwELspEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Specify xmi:id="_fEXfkLspEey15NKF0wAXwA" base_Abstraction="_GUj98LspEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Specify xmi:id="_jOKmgLspEey15NKF0wAXwA" base_Abstraction="_FJ6vwLspEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Specify xmi:id="_mxSH8LspEey15NKF0wAXwA" base_Abstraction="_IXLV8LspEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Specify xmi:id="_qfamkLspEey15NKF0wAXwA" base_Abstraction="_KgWB4LspEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Specify xmi:id="_wGSvgLspEey15NKF0wAXwA" base_Abstraction="_NEYr8LspEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_M7NsYbsqEey15NKF0wAXwA" base_StructuralFeature="_M7NsYLsqEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_M7RWwbsqEey15NKF0wAXwA" base_StructuralFeature="_M7RWwLsqEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_O3i2M7sqEey15NKF0wAXwA" base_StructuralFeature="_O3i2MrsqEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_O3mgk7sqEey15NKF0wAXwA" base_StructuralFeature="_O3mgkrsqEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_RK5Y4rsqEey15NKF0wAXwA" base_StructuralFeature="_RK5Y4bsqEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_RK9qUrsqEey15NKF0wAXwA" base_StructuralFeature="_RK9qUbsqEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_Wx_IgLu_Eey15NKF0wAXwA" base_Class="_Wx9TULu_Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_HlLKorvAEey15NKF0wAXwA" base_StructuralFeature="_HlLKobvAEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_HlSfYLvAEey15NKF0wAXwA" base_StructuralFeature="_HlR4UrvAEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_LzDgUrvAEey15NKF0wAXwA" base_StructuralFeature="_LzDgUbvAEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_LzKOArvAEey15NKF0wAXwA" base_StructuralFeature="_LzKOAbvAEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_mcBtk7vBEey15NKF0wAXwA" base_StructuralFeature="_mcBtkrvBEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_mcJCUrvBEey15NKF0wAXwA" base_StructuralFeature="_mcJCUbvBEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_kRvu4bvjEey15NKF0wAXwA" base_Class="_kRvu4LvjEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_KOyG0bvkEey15NKF0wAXwA" base_StructuralFeature="_KOyG0LvkEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_KO40grvkEey15NKF0wAXwA" base_StructuralFeature="_KO40gbvkEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_V0Qfs7vlEey15NKF0wAXwA" base_StructuralFeature="_V0QfsrvlEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_V0UxI7vlEey15NKF0wAXwA" base_StructuralFeature="_V0UxIrvlEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_CXmzkLwCEey15NKF0wAXwA" base_StructuralFeature="_CXmMgLwCEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_CXzn4bwCEey15NKF0wAXwA" base_StructuralFeature="_CXzn4LwCEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_shK4sLw2Eey15NKF0wAXwA" base_Class="_shKRoLw2Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_JGghcbw3Eey15NKF0wAXwA" base_StructuralFeature="_JGghcLw3Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_JGnPILw3Eey15NKF0wAXwA" base_StructuralFeature="_JGmoErw3Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_cBwqg7w3Eey15NKF0wAXwA" base_StructuralFeature="_cBwqgrw3Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_cB2KErw3Eey15NKF0wAXwA" base_StructuralFeature="_cB2KEbw3Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_eUh-Y7w3Eey15NKF0wAXwA" base_StructuralFeature="_eUh-Yrw3Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_eUilcrw3Eey15NKF0wAXwA" base_StructuralFeature="_eUilcbw3Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_Ghle47w9Eey15NKF0wAXwA" base_StructuralFeature="_Ghle4rw9Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_GhpwU7w9Eey15NKF0wAXwA" base_StructuralFeature="_GhpwUrw9Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_ghsVULw-Eey15NKF0wAXwA" base_Class="_ghruQLw-Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3_ZV47w-Eey15NKF0wAXwA" base_StructuralFeature="_3_ZV4rw-Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3_eOYLw-Eey15NKF0wAXwA" base_StructuralFeature="_3_dnUrw-Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_6tWw87w-Eey15NKF0wAXwA" base_StructuralFeature="_6tWw8rw-Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_6tc3kbw-Eey15NKF0wAXwA" base_StructuralFeature="_6tc3kLw-Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_-xq68Lw-Eey15NKF0wAXwA" base_StructuralFeature="_-xqT4rw-Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_-xxooLw-Eey15NKF0wAXwA" base_StructuralFeature="_-xxBkrw-Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_Knz7ILxCEey15NKF0wAXwA" base_StructuralFeature="_KnzUErxCEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_Kn4Mk7xCEey15NKF0wAXwA" base_StructuralFeature="_Kn4MkrxCEey15NKF0wAXwA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_iiEsQMviEeyRHaEo8DHwog" base_StructuralFeature="_iiDeIMviEeyRHaEo8DHwog"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_iiVK8cviEeyRHaEo8DHwog" base_StructuralFeature="_iiVK8MviEeyRHaEo8DHwog"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_Z_cPUMxPEeyRHaEo8DHwog" base_StructuralFeature="_Z_boQsxPEeyRHaEo8DHwog"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_Z_mAUcxPEeyRHaEo8DHwog" base_StructuralFeature="_Z_mAUMxPEeyRHaEo8DHwog"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_qV5dwBhpEe2NeYxRC236WA" base_Class="_qV42sBhpEe2NeYxRC236WA"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_jdV1ERhqEe2NeYxRC236WA" base_Class="_jdV1EBhqEe2NeYxRC236WA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_-fDFUCkoEe2juI-ggmBSIQ" base_StructuralFeature="_-fCeQCkoEe2juI-ggmBSIQ" isInvariant="true" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_HXz1wCkpEe2juI-ggmBSIQ" base_StructuralFeature="_HXzOsCkpEe2juI-ggmBSIQ" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_HX9mxCkpEe2juI-ggmBSIQ" base_StructuralFeature="_HX9mwCkpEe2juI-ggmBSIQ" isInvariant="true" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_n9JwTCkpEe2juI-ggmBSIQ" base_StructuralFeature="_n9JwSCkpEe2juI-ggmBSIQ" isInvariant="true" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_n9WklSkpEe2juI-ggmBSIQ" base_StructuralFeature="_n9WkkCkpEe2juI-ggmBSIQ" isInvariant="true" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_n9Zn5CkpEe2juI-ggmBSIQ" base_StructuralFeature="_n9Zn4CkpEe2juI-ggmBSIQ" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_IJgjBCkqEe2juI-ggmBSIQ" base_StructuralFeature="_IJgjACkqEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_kLCzwyktEe2juI-ggmBSIQ" base_StructuralFeature="_kLCzwCktEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_kLNL1CktEe2juI-ggmBSIQ" base_StructuralFeature="_kLNL0CktEe2juI-ggmBSIQ" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_kLPBAyktEe2juI-ggmBSIQ" base_StructuralFeature="_kLPBACktEe2juI-ggmBSIQ" isInvariant="true" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_kLQ2NCktEe2juI-ggmBSIQ" base_StructuralFeature="_kLQ2MCktEe2juI-ggmBSIQ" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_XxCUtCkuEe2juI-ggmBSIQ" base_StructuralFeature="_XxCUsCkuEe2juI-ggmBSIQ" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_XxOh9CkuEe2juI-ggmBSIQ" base_StructuralFeature="_XxOh8CkuEe2juI-ggmBSIQ" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_XxQ-NCkuEe2juI-ggmBSIQ" base_StructuralFeature="_XxQ-MCkuEe2juI-ggmBSIQ" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_XxUBgCkuEe2juI-ggmBSIQ" base_StructuralFeature="_XxTacCkuEe2juI-ggmBSIQ" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_2LiIRSkuEe2juI-ggmBSIQ" base_StructuralFeature="_2LiIQCkuEe2juI-ggmBSIQ" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_2Lr5RCkuEe2juI-ggmBSIQ" base_StructuralFeature="_2Lr5QCkuEe2juI-ggmBSIQ" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_JmOJ4ykwEe2juI-ggmBSIQ" base_StructuralFeature="_JmOJ4CkwEe2juI-ggmBSIQ" isInvariant="true" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_JmZJBCkwEe2juI-ggmBSIQ" base_StructuralFeature="_JmZJACkwEe2juI-ggmBSIQ" isInvariant="true" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_JmblQykwEe2juI-ggmBSIQ" base_StructuralFeature="_JmblQCkwEe2juI-ggmBSIQ" isInvariant="true" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_-6S9QCkwEe2juI-ggmBSIQ" base_StructuralFeature="_-6SWQCkwEe2juI-ggmBSIQ" isInvariant="true" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_-6bgJCkwEe2juI-ggmBSIQ" base_StructuralFeature="_-6bgICkwEe2juI-ggmBSIQ" isInvariant="true"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_-6cuQykwEe2juI-ggmBSIQ" base_StructuralFeature="_-6cuQCkwEe2juI-ggmBSIQ" isInvariant="true" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_-6ejcykwEe2juI-ggmBSIQ" base_StructuralFeature="_-6ejcCkwEe2juI-ggmBSIQ" isInvariant="true" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_-6jb9CkwEe2juI-ggmBSIQ" base_StructuralFeature="_-6jb8CkwEe2juI-ggmBSIQ" isInvariant="true" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_-6lRIykwEe2juI-ggmBSIQ" base_StructuralFeature="_-6lRICkwEe2juI-ggmBSIQ" isInvariant="true" support="CONDITIONAL_MANDATORY" condition=""/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_auUekC6nEe2juI-ggmBSIQ" base_Class="_auSpYC6nEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_fCEywS6nEe2juI-ggmBSIQ" base_Class="_fCEywC6nEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_OoyasS6oEe2juI-ggmBSIQ" base_Class="_OoyasC6oEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_HYZtkC65Ee22jbMp3BDUaA" base_StructuralFeature="_HYZGgC65Ee22jbMp3BDUaA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_HYhCUy65Ee22jbMp3BDUaA" base_StructuralFeature="_HYhCUi65Ee22jbMp3BDUaA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_JcGqsy65Ee22jbMp3BDUaA" base_StructuralFeature="_JcGqsi65Ee22jbMp3BDUaA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_JcN_ci65Ee22jbMp3BDUaA" base_StructuralFeature="_JcN_cS65Ee22jbMp3BDUaA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_KdTpAy65Ee22jbMp3BDUaA" base_StructuralFeature="_KdTpAi65Ee22jbMp3BDUaA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_Kda9wC65Ee22jbMp3BDUaA" base_StructuralFeature="_KdaWsi65Ee22jbMp3BDUaA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_rj3aMi65Ee22jbMp3BDUaA" base_StructuralFeature="_rj3aMS65Ee22jbMp3BDUaA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_rj-u8i65Ee22jbMp3BDUaA" base_StructuralFeature="_rj-u8S65Ee22jbMp3BDUaA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_we_3cy65Ee22jbMp3BDUaA" base_StructuralFeature="_we_3ci65Ee22jbMp3BDUaA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_wfJBYy65Ee22jbMp3BDUaA" base_StructuralFeature="_wfJBYi65Ee22jbMp3BDUaA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_zYAr8y65Ee22jbMp3BDUaA" base_StructuralFeature="_zYAr8i65Ee22jbMp3BDUaA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_zYIAsS65Ee22jbMp3BDUaA" base_StructuralFeature="_zYIAsC65Ee22jbMp3BDUaA"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_9O-KAS65Ee22jbMp3BDUaA" base_Class="_9O-KAC65Ee22jbMp3BDUaA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_i37vZC66Ee22jbMp3BDUaA" base_StructuralFeature="_i37vYy66Ee22jbMp3BDUaA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_i4CdEy66Ee22jbMp3BDUaA" base_StructuralFeature="_i4CdEi66Ee22jbMp3BDUaA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_kWjWIC9BEe22jbMp3BDUaA" base_StructuralFeature="_kWivEC9BEe22jbMp3BDUaA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_xmVxMC9BEe22jbMp3BDUaA" base_StructuralFeature="_xmVKIC9BEe22jbMp3BDUaA"/>
+  <OpenModel_Profile:Experimental xmi:id="_tx5ZwC9CEe22jbMp3BDUaA" base_Element="_kWivEC9BEe22jbMp3BDUaA"/>
+  <OpenModel_Profile:Experimental xmi:id="_vLlJgC9CEe22jbMp3BDUaA" base_Element="_xmVKIC9BEe22jbMp3BDUaA"/>
+  <OpenModel_Profile:Experimental xmi:id="_yhvNAC9CEe22jbMp3BDUaA" base_Element="_9O-KAC65Ee22jbMp3BDUaA"/>
+  <OpenModel_Profile:Experimental xmi:id="_0G6bEC9CEe22jbMp3BDUaA" base_Element="_fCEywC6nEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_2Z6_gC9CEe22jbMp3BDUaA" base_Element="_OoyasC6oEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_5iSeoC9CEe22jbMp3BDUaA" base_Element="_FZZsAC9CEe22jbMp3BDUaA"/>
+  <OpenModel_Profile:Experimental xmi:id="_80LGIC9CEe22jbMp3BDUaA" base_Element="_HrXHkC9CEe22jbMp3BDUaA"/>
+  <OpenModel_Profile:Experimental xmi:id="_-s9zwC9CEe22jbMp3BDUaA" base_Element="_JZ0NcC9CEe22jbMp3BDUaA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_MNG_AS9DEe22jbMp3BDUaA" base_StructuralFeature="_MNG_AC9DEe22jbMp3BDUaA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_MNNssy9DEe22jbMp3BDUaA" base_StructuralFeature="_MNNssi9DEe22jbMp3BDUaA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_UPOl4S9EEe22jbMp3BDUaA" base_StructuralFeature="_UPOl4C9EEe22jbMp3BDUaA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_UPedgC9EEe22jbMp3BDUaA" base_StructuralFeature="_UPd2cS9EEe22jbMp3BDUaA"/>
+  <OpenModel_Profile:Experimental xmi:id="_HZsocC9FEe22jbMp3BDUaA" base_Element="_KdTpAi65Ee22jbMp3BDUaA"/>
+  <OpenModel_Profile:Experimental xmi:id="_viIg8C9FEe22jbMp3BDUaA" base_Element="_ocn20C9FEe22jbMp3BDUaA"/>
+  <OpenModel_Profile:Experimental xmi:id="_Zd5YQC9GEe22jbMp3BDUaA" base_Element="_PRvtUC9GEe22jbMp3BDUaA"/>
+  <OpenModel_Profile:Experimental xmi:id="_eFTBMC9GEe22jbMp3BDUaA" base_Element="_RBgawC9GEe22jbMp3BDUaA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_zD_BoS9GEe22jbMp3BDUaA" base_StructuralFeature="_zD_BoC9GEe22jbMp3BDUaA"/>
+  <OpenModel_Profile:Experimental xmi:id="_FRO1MC9HEe22jbMp3BDUaA" base_Element="_zD_BoC9GEe22jbMp3BDUaA"/>
+  <OpenModel_Profile:Experimental xmi:id="_5uxMsC9IEe22jbMp3BDUaA" base_Element="_HYZGgC65Ee22jbMp3BDUaA"/>
+  <OpenModel_Profile:Experimental xmi:id="_qcxh8C9LEe22jbMp3BDUaA" base_Element="_HYVcIC65Ee22jbMp3BDUaA"/>
+  <OpenModel_Profile:Experimental xmi:id="_gFg9wC9MEe22jbMp3BDUaA" base_Element="_UPOl4C9EEe22jbMp3BDUaA"/>
+  <OpenModel_Profile:Experimental xmi:id="_iLqx8C9MEe22jbMp3BDUaA" base_Element="_MNG_AC9DEe22jbMp3BDUaA"/>
+  <OpenModel_Profile:Experimental xmi:id="_v6Ud0C9NEe22jbMp3BDUaA" base_Element="_rj2zIC65Ee22jbMp3BDUaA"/>
+  <OpenModel_Profile:Experimental xmi:id="_EFYzgC9PEe22jbMp3BDUaA" base_Element="_auSpYC6nEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_T5rvQDTMEe22jbMp3BDUaA" base_Element="_j7kUgrsoEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_V4e-QDTMEe22jbMp3BDUaA" base_Element="_I3eQIs_WEem0y513gQlC0Q"/>
+  <OpenModel_Profile:Experimental xmi:id="_XFI-oDTMEe22jbMp3BDUaA" base_Element="_V0QfsrvlEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_ZMUtkDTMEe22jbMp3BDUaA" base_Element="_O3i2MrsqEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_jke0MDTMEe22jbMp3BDUaA" base_Element="_TCJEUKtFEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_mLItYDTMEe22jbMp3BDUaA" base_Element="_OFJ7AqtHEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_nWz2UDTMEe22jbMp3BDUaA" base_Element="_kLCzwCktEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_omi_4DTMEe22jbMp3BDUaA" base_Element="_kLNL0CktEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_qStmwDTMEe22jbMp3BDUaA" base_Element="_kLPBACktEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_ralNwDTMEe22jbMp3BDUaA" base_Element="_kLQ2MCktEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_uQS2oDTMEe22jbMp3BDUaA" base_Element="_shKRoLw2Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_x4BLQDTMEe22jbMp3BDUaA" base_Element="_eUh-Yrw3Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_zxrbkDTMEe22jbMp3BDUaA" base_Element="_TuNYwKtIEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_1825sDTMEe22jbMp3BDUaA" base_Element="_KuKCoqtKEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_3mbfkDTMEe22jbMp3BDUaA" base_Element="_2LiIQCkuEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_5XOu0DTMEe22jbMp3BDUaA" base_Element="_2Lr5QCkuEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_8hvjADTMEe22jbMp3BDUaA" base_Element="_asy0IKtLEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_MpozoDTNEe22jbMp3BDUaA" base_Element="_ODG-gKtFEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_gyVnQDTNEe22jbMp3BDUaA" base_Element="_pmxgIqtLEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_yKF14DTQEe22jbMp3BDUaA" base_Element="_HbSOkKtIEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_kpQRoDTREe22jbMp3BDUaA" base_Element="_DHDHUqtKEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_l4sgQDTREe22jbMp3BDUaA" base_Element="_XxCUsCkuEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_nb9p0DTREe22jbMp3BDUaA" base_Element="_XxOh8CkuEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_ozjH0DTREe22jbMp3BDUaA" base_Element="_XxQ-MCkuEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_p9lSADTREe22jbMp3BDUaA" base_Element="_XxTacCkuEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_sEeGADTREe22jbMp3BDUaA" base_Element="_0oGNoKtNEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_2fIHADTREe22jbMp3BDUaA" base_Element="_JmOJ4CkwEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_3sIssDTREe22jbMp3BDUaA" base_Element="_JmZJACkwEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_5AP_8DTREe22jbMp3BDUaA" base_Element="_JmblQCkwEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_72PVoDTREe22jbMp3BDUaA" base_Element="_kRvu4LvjEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_HZad4DTSEe22jbMp3BDUaA" base_Element="_KOyG0LvkEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_IjE0oDTSEe22jbMp3BDUaA" base_Element="_iiDeIMviEeyRHaEo8DHwog"/>
+  <OpenModel_Profile:Experimental xmi:id="_LYZb8DTSEe22jbMp3BDUaA" base_Element="_Wx9TULu_Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_WyPpEDTSEe22jbMp3BDUaA" base_Element="_LzDgUbvAEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_YFojkDTSEe22jbMp3BDUaA" base_Element="_CXmMgLwCEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_bTIaUDTSEe22jbMp3BDUaA" base_Element="_ghruQLw-Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_sD7eADTSEe22jbMp3BDUaA" base_Element="_-xqT4rw-Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_tkza4DTSEe22jbMp3BDUaA" base_Element="_6tc3kLw-Eey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_7B2O0DTSEe22jbMp3BDUaA" base_Element="_r0wvwKtNEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_CZ_hEDTTEe22jbMp3BDUaA" base_Element="_jYvRErskEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_DknhIDTTEe22jbMp3BDUaA" base_Element="_-6SWQCkwEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_E9zhoDTTEe22jbMp3BDUaA" base_Element="_-6bgICkwEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_GO0dkDTTEe22jbMp3BDUaA" base_Element="_-6cuQCkwEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_HW8jQDTTEe22jbMp3BDUaA" base_Element="_-6ejcCkwEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_I6xtgDTTEe22jbMp3BDUaA" base_Element="_-6jb8CkwEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_KGG4MDTTEe22jbMp3BDUaA" base_Element="_-6lRICkwEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_UGxE0DTTEe22jbMp3BDUaA" base_Element="_igVbMatGEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_VJQckDTTEe22jbMp3BDUaA" base_Element="_jd_9UqtGEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_YuSpkDTTEe22jbMp3BDUaA" base_Element="_nrks0KtNEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_hE69UDTTEe22jbMp3BDUaA" base_Element="_RK5Y4bsqEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_i2C8sDTTEe22jbMp3BDUaA" base_Element="_WV2QwKtFEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_rX7eMDTTEe22jbMp3BDUaA" base_Element="_aaviMqtIEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_sS7G0DTTEe22jbMp3BDUaA" base_Element="_cuwMMqtIEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_tUnNUDTTEe22jbMp3BDUaA" base_Element="_-fCeQCkoEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_uMi64DTTEe22jbMp3BDUaA" base_Element="_HXzOsCkpEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_vWLccDTTEe22jbMp3BDUaA" base_Element="_HX9mwCkpEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_wWRngDTTEe22jbMp3BDUaA" base_Element="_n9JwSCkpEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_xN_5sDTTEe22jbMp3BDUaA" base_Element="_n9WkkCkpEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_yEZWMDTTEe22jbMp3BDUaA" base_Element="_n9Zn4CkpEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_zEHGwDTTEe22jbMp3BDUaA" base_Element="_IJgjACkqEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_1uBvUDTTEe22jbMp3BDUaA" base_Element="_Do7BoLsqEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_-F0gsDTTEe22jbMp3BDUaA" base_Element="_x5b3MLsgEey15NKF0wAXwA"/>
+  <OpenModel_Profile:Experimental xmi:id="_EGtsIDTUEe22jbMp3BDUaA" base_Element="_n9H7ECkpEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_Kd5QoDTUEe22jbMp3BDUaA" base_Element="_n9H7FCkpEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_L5E1MDTUEe22jbMp3BDUaA" base_Element="_n9H7GCkpEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_RKAjUDTUEe22jbMp3BDUaA" base_Element="_n9IiICkpEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_SoMYkDTUEe22jbMp3BDUaA" base_Element="_n9IiIikpEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_T2FvEDTUEe22jbMp3BDUaA" base_Element="_n9IiJCkpEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_VHgToDTUEe22jbMp3BDUaA" base_Element="_n9IiJikpEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_WCDQUDTUEe22jbMp3BDUaA" base_Element="_n9IiKCkpEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_XYb0cDTUEe22jbMp3BDUaA" base_Element="_n9JwQCkpEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_YlA8UDTUEe22jbMp3BDUaA" base_Element="_n9JwQikpEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_ZcpH4DTUEe22jbMp3BDUaA" base_Element="_n9JwRCkpEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_aS9E0DTUEe22jbMp3BDUaA" base_Element="_n9JwRikpEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_b9nP0DTUEe22jbMp3BDUaA" base_Element="_tI6GoCktEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_dMonsDTUEe22jbMp3BDUaA" base_Element="_tI6GoiktEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_eO1rkDTUEe22jbMp3BDUaA" base_Element="_tI6GpCktEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_fHi1MDTUEe22jbMp3BDUaA" base_Element="_tI6GpiktEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_gGLnsDTUEe22jbMp3BDUaA" base_Element="_tI6GqCktEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_hnLgYDTUEe22jbMp3BDUaA" base_Element="_tI6tsCktEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_icpv0DTUEe22jbMp3BDUaA" base_Element="_tI6tsiktEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_jcuFsDTUEe22jbMp3BDUaA" base_Element="_tI6ttCktEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_kY2WwDTUEe22jbMp3BDUaA" base_Element="_tI6ttiktEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_mOMu0DTUEe22jbMp3BDUaA" base_Element="_2LhhMCkuEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_nPw5gDTUEe22jbMp3BDUaA" base_Element="_2LhhMikuEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_oJnSoDTUEe22jbMp3BDUaA" base_Element="_2LhhNCkuEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_pCOVoDTUEe22jbMp3BDUaA" base_Element="_2LhhNikuEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_qbaWIDTUEe22jbMp3BDUaA" base_Element="_-6SWMCkwEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_rkQNgDTUEe22jbMp3BDUaA" base_Element="_-6SWMikwEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_smg7wDTUEe22jbMp3BDUaA" base_Element="_-6SWNCkwEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_tcEqwDTUEe22jbMp3BDUaA" base_Element="_-6SWNikwEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_uY2cEDTUEe22jbMp3BDUaA" base_Element="_-6SWOCkwEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_vwF70DTUEe22jbMp3BDUaA" base_Element="_-6SWOikwEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_yC0zcDTUEe22jbMp3BDUaA" base_Element="_-6SWPikwEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_zP31YDTUEe22jbMp3BDUaA" base_Element="_-6SWPCkwEe2juI-ggmBSIQ"/>
 </xmi:XMI>

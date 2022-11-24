@@ -3,9 +3,12 @@
   <uml:Model xmi:id="_KV4S4HLeEeyyQZoR1M2guQ" name="TemporalExpression">
     <packagedElement xmi:type="uml:Package" xmi:id="_WlMvcHLeEeyyQZoR1M2guQ" name="Diagrams">
       <ownedComment xmi:type="uml:Comment" xmi:id="_uGnp4HlWEeygLpMY3b1PCQ">
-        <body>Intersection within each green class&#xD;
-Union of each multiplicity.&#xD;
-Intersection between each green class.</body>
+        <body>Forming a TemporalExpression statement&#xD;
+For each list property (multiplicity >1) within an augmenting Te (green class) form the union of that list.&#xD;
+Then take all properties (of green classes) augmenting a single TeElement and form the intersection.&#xD;
+Then take the result in the TeElement and process any IncorporatedTe actions, all unions first then each intersection.&#xD;
+Then take all processed TeElements in a TemporalExpression and form the Union.&#xD;
+This forms the TemproalExpression statement.</body>
       </ownedComment>
       <ownedComment xmi:type="uml:Comment" xmi:id="_cIy7YHtkEey4cMhm9-6ddw" annotatedElement="_phOk4H0AEey4cMhm9-6ddw">
         <body>Each exclusion probably needs a dedicated action, although these may spread across several specific exclusions. &#xD;
@@ -51,7 +54,7 @@ For example, if the exclusion is exclude bank holidays then the choice may be ne
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_DybNcHtkEey4cMhm9-6ddw" name="teelement" type="_6edRwHLeEeyyQZoR1M2guQ" association="_DyNyEHtkEey4cMhm9-6ddw"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_Xa06cHLfEeyyQZoR1M2guQ" name="TeHasPeerElements" memberEnd="_Xa7BEHLfEeyyQZoR1M2guQ _XbBHsHLfEeyyQZoR1M2guQ">
+      <packagedElement xmi:type="uml:Association" xmi:id="_Xa06cHLfEeyyQZoR1M2guQ" name="TeHasUnionOfPeerElements" memberEnd="_Xa7BEHLfEeyyQZoR1M2guQ _XbBHsHLfEeyyQZoR1M2guQ">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Xa5L4HLfEeyyQZoR1M2guQ" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Xa5y8HLfEeyyQZoR1M2guQ" key="nature" value="UML_Nature"/>
         </eAnnotations>
@@ -60,7 +63,8 @@ For example, if the exclusion is exclude bank holidays then the choice may be ne
       <packagedElement xmi:type="uml:Class" xmi:id="_6edRwHLeEeyyQZoR1M2guQ" name="TeElement">
         <ownedComment xmi:type="uml:Comment" xmi:id="_jBIQsAQSEe2V3aJvQ3vT5A" annotatedElement="_6edRwHLeEeyyQZoR1M2guQ">
           <body>The definition of the time constraints of the temporal expression.&#xD;
-The temporal expression definition is formed by taking the intersection of all augmenting temporal expressions.</body>
+The temporal expression definition is formed by taking the intersection of all augmenting temporal expressions.&#xD;
+Note that the augmenting temporal expression has &quot;intersection&quot; in its name.</body>
         </ownedComment>
         <generalization xmi:type="uml:Generalization" xmi:id="_fsrmcHLgEeyyQZoR1M2guQ">
           <general xmi:type="uml:Class" href="CoreModel.uml#_k5nWYI2wEeO38ZmbECnvbg"/>
@@ -163,7 +167,7 @@ An incorporated temporal expression is combinded with the temporal expression el
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0Y6gIX0AEey4cMhm9-6ddw" value="*"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_QL9FsHLvEeyyQZoR1M2guQ" name="IterativeTe">
+      <packagedElement xmi:type="uml:Class" xmi:id="_QL9FsHLvEeyyQZoR1M2guQ" name="IterativeIntersectionTe">
         <ownedComment xmi:type="uml:Comment" xmi:id="_4TVlsIUAEey4cMhm9-6ddw" annotatedElement="_QL9FsHLvEeyyQZoR1M2guQ">
           <body>Once all unions and intersections have been performed the result is in terms of active periods. &#xD;
 The IterativeTe defines the number of active periods that will be run.&#xD;
@@ -186,13 +190,14 @@ The number of iterations is the number of active periods that will be run.</body
           <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_NmgRAHl_EeygLpMY3b1PCQ"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_AQHQ8Hl6EeygLpMY3b1PCQ" name="ParticularDateTimePerPeriodTe">
+      <packagedElement xmi:type="uml:Class" xmi:id="_AQHQ8Hl6EeygLpMY3b1PCQ" name="ParticularDateTimePerPeriodIntersectionTe">
         <ownedComment xmi:type="uml:Comment" xmi:id="_mx8gAARLEe2fF6WcevVijA" annotatedElement="_AQHQ8Hl6EeygLpMY3b1PCQ">
           <body>Defines the period(s) of activity in a year.</body>
         </ownedComment>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_JntScHl6EeygLpMY3b1PCQ" name="sameDatesPerYear" type="_Ht8m0HtvEey4cMhm9-6ddw">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_JntScHl6EeygLpMY3b1PCQ" name="sameDatesPerYearUnion" type="_Ht8m0HtvEey4cMhm9-6ddw">
           <ownedComment xmi:type="uml:Comment" xmi:id="_fkmvkARLEe2fF6WcevVijA" annotatedElement="_JntScHl6EeygLpMY3b1PCQ">
-            <body>Defines a period of activity in a year.</body>
+            <body>Defines a period of activity in a year.&#xD;
+Is the union of all listed periods.</body>
           </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oAAuEHtxEey4cMhm9-6ddw"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oAFmkHtxEey4cMhm9-6ddw" value="*"/>
@@ -205,13 +210,13 @@ The number of iterations is the number of active periods that will be run.</body
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qK26IX6UEey4cMhm9-6ddw"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_uGOawHl2EeygLpMY3b1PCQ" name="PhasedPeriodTe">
+      <packagedElement xmi:type="uml:Class" xmi:id="_uGOawHl2EeygLpMY3b1PCQ" name="PhasedPeriodIntersectionTe">
         <ownedComment xmi:type="uml:Comment" xmi:id="_NreA8HzqEey4cMhm9-6ddw" annotatedElement="_uGOawHl2EeygLpMY3b1PCQ">
           <body>Applied from the beginning of each continuous period. The continuous period is defined by period, daysOfWeek, periodInDay, DayInMonth and RangeEachYear.&#xD;
 Phasing starts at the beginning of the continuous period for the stated duration then repeated after phasing value from the beginning of the previous phasing.&#xD;
 If there are no phasing statement then the active period is the whole of the continuous period (every hour of every day of every week of every year, duration 60 minutes).&#xD;
 If no continuous period statement then phasing is relative until applies to a specific period by intersection where the intersection is defined as starting at the beginning of the period of the other intersecting element(s).&#xD;
-The phasings can be accumulated.&#xD;
+The phasings can be accumulated (essentially formed by an intersection of the properties).&#xD;
 For example:&#xD;
 - hourPhasing of 0.5 and dayPhasing of 2.0 and duration of 15 minutes means 15 minutes for every 30 minutes for a whole day every other day.&#xD;
 - hourPhasing of 0.5 and dayPhasing of 2.5 and duratoin of 15 minutes meand 15 minutes for every 30 minutes for a whole day then the same for a day starting a day and a half after the end of the first period.</body>
@@ -301,7 +306,7 @@ A number of properties and/or entities may follow the same temporal expression.<
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_Ob6g4HLuEeyyQZoR1M2guQ" name="BoundingPeriodTe">
+      <packagedElement xmi:type="uml:Class" xmi:id="_Ob6g4HLuEeyyQZoR1M2guQ" name="BoundingPeriodIntersectionTe">
         <ownedComment xmi:type="uml:Comment" xmi:id="_ZhlAYAggEe2fF6WcevVijA" annotatedElement="_Ob6g4HLuEeyyQZoR1M2guQ">
           <body>This defines the time extent of the temporal expression element.&#xD;
 It covers both single shot reservations and complex reservations. &#xD;
@@ -309,40 +314,44 @@ This time takes precedence over periodInDay as it is the boundary of the overall
 May have various bounding periods for the same inner detail. &#xD;
 If more than one then only the last can be open ended etc.</body>
         </ownedComment>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_bDv-IHN9EeyyQZoR1M2guQ" name="period" type="_qOxigHk-EeygLpMY3b1PCQ">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_bDv-IHN9EeyyQZoR1M2guQ" name="periodUnion" type="_qOxigHk-EeygLpMY3b1PCQ">
           <ownedComment xmi:type="uml:Comment" xmi:id="_fYctIAggEe2fF6WcevVijA" annotatedElement="_bDv-IHN9EeyyQZoR1M2guQ">
             <body>The start time may be any time including start of a day. If the value is absent, there is no start.&#xD;
 The end time may be any time including the end of a day. If the value is absent there is no end.&#xD;
 If no time is provided then the reservation is forever.&#xD;
-If start ti,e is after end time then the period defined is null.</body>
+If start time is after end time then the period defined is null.&#xD;
+The effective period is the union of all listed periods.</body>
           </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__26v4ITUEey4cMhm9-6ddw"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__3dicITUEey4cMhm9-6ddw" value="*"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_s1_dsHLuEeyyQZoR1M2guQ" name="DaysOfWeekInMonthInYearTe">
+      <packagedElement xmi:type="uml:Class" xmi:id="_s1_dsHLuEeyyQZoR1M2guQ" name="DaysOfWeekInMonthInYearIntersectionTe">
         <ownedComment xmi:type="uml:Comment" xmi:id="_Vb8V0AgiEe2fF6WcevVijA" annotatedElement="_s1_dsHLuEeyyQZoR1M2guQ">
           <body>This expression collects together calendar and clock values.&#xD;
 The intersection of each stated property forms the temporal expression.&#xD;
+Note that some properties are unions withing the property.&#xD;
 This can be used to generate complex expressions such as..&#xD;
 15:00 - 16:00 and 17:00 - 18:00 on the first and third Monday and Wednesday of January and April.</body>
         </ownedComment>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_Nhr68HO3EeyyQZoR1M2guQ" name="dayOfWeek" type="_-YfZIHO0EeyyQZoR1M2guQ">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Nhr68HO3EeyyQZoR1M2guQ" name="dayOfWeekUnion" type="_-YfZIHO0EeyyQZoR1M2guQ">
           <ownedComment xmi:type="uml:Comment" xmi:id="_ag2aIAgiEe2fF6WcevVijA" annotatedElement="_Nhr68HO3EeyyQZoR1M2guQ">
-            <body>The days for which the expression applies.</body>
+            <body>The days for which the expression applies.&#xD;
+This is the union of all days listed.</body>
           </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_l8BAwHREEeyyQZoR1M2guQ"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_q-VmMHO3EeyyQZoR1M2guQ" value="7"/>
           <defaultValue xmi:type="uml:InstanceValue" xmi:id="_U7MIYHtoEey4cMhm9-6ddw" instance="_FHaIMHO1EeyyQZoR1M2guQ"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_xPrRYAzWEe2zlIat60rxqg" name="periodDurationInDays" visibility="public" type="_v0tX4HO6EeyyQZoR1M2guQ">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_xPrRYAzWEe2zlIat60rxqg" name="periodDurationInDaysUnion" visibility="public" type="_v0tX4HO6EeyyQZoR1M2guQ">
           <ownedComment xmi:type="uml:Comment" xmi:id="_6d9l4AzWEe2zlIat60rxqg" annotatedElement="_xPrRYAzWEe2zlIat60rxqg">
-            <body>Defines the start and end time within a day or across several days.</body>
+            <body>Defines the start and end time within a day or across several days.&#xD;
+This is the union of all periods listed.</body>
           </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_48YeYAzWEe2zlIat60rxqg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_48hBQAzWEe2zlIat60rxqg" value="*"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_HS7iIHRFEeyyQZoR1M2guQ" name="namedDayPositionInMonth" type="_F6EWYHPEEeyyQZoR1M2guQ">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_HS7iIHRFEeyyQZoR1M2guQ" name="namedDayPositionInMonthUnion" type="_F6EWYHPEEeyyQZoR1M2guQ">
           <ownedComment xmi:type="uml:Comment" xmi:id="_a3OtQAg3Ee2fF6WcevVijA" annotatedElement="_HS7iIHRFEeyyQZoR1M2guQ">
             <body>The position of each listed dayOfWeek in the month.&#xD;
 Is the union of all stated day positions.&#xD;
@@ -360,10 +369,12 @@ Interacts with specificMonth. The months chosen should be from the intersection 
           </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_imYPwHRGEeyyQZoR1M2guQ"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_kAAVIHRGEeyyQZoR1M2guQ" name="specificMonth" type="_3YPqQHRIEeyyQZoR1M2guQ">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_kAAVIHRGEeyyQZoR1M2guQ" name="specificMonthUnion" type="_3YPqQHRIEeyyQZoR1M2guQ">
           <ownedComment xmi:type="uml:Comment" xmi:id="_EcCjIAzYEe2zlIat60rxqg" annotatedElement="_kAAVIHRGEeyyQZoR1M2guQ">
             <body>Identifies specific months. &#xD;
-Interacts with monthPhasing. The months chosen should be from the intersection of monthPhasing and specificMonth.</body>
+This is the union of all stated months.&#xD;
+Note all properties in the Te grouping this property are combined by intersection.&#xD;
+For example, this property interacts with monthPhasing such that the months chosen should be from the intersection of monthPhasing and specificMonth.</body>
           </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_r03_oHRGEeyyQZoR1M2guQ"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_r0-tUHRGEeyyQZoR1M2guQ" value="12"/>
@@ -833,7 +844,7 @@ All days of the week are in the month.</body>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Abstraction" xmi:id="_fEWMsMIUEeyCO-OTTyuWTA" client="_uGOawHl2EeygLpMY3b1PCQ" supplier="_WlMvcHLeEeyyQZoR1M2guQ"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_TH_BAMIXEeyCO-OTTyuWTA" name="SimplePhasedPeriod">
+      <packagedElement xmi:type="uml:Class" xmi:id="_TH_BAMIXEeyCO-OTTyuWTA" name="SimplePhasedPeriodIntersectionTe">
         <ownedComment xmi:type="uml:Comment" xmi:id="_Dze5gMNGEeypn59zBr_fGw" annotatedElement="_TH_BAMIXEeyCO-OTTyuWTA">
           <body>There is a natural intersection of periods such that there is only activity if all stated periods indicate activity.&#xD;
 Hence if a second phasing indicates activity every other second and a minute phasing every other minute then thre is only activity every other second in every other minute.</body>
@@ -1294,4 +1305,21 @@ The repeatPeriod is an alternative to gap.</body>
   <OpenModel_Profile:Experimental xmi:id="_tDPM0AQoEe2V3aJvQ3vT5A" base_Element="_0Y1AkH0AEey4cMhm9-6ddw"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_xPr4cAzWEe2zlIat60rxqg" base_StructuralFeature="_xPrRYAzWEe2zlIat60rxqg"/>
   <OpenModel_Profile:Experimental xmi:id="_8gh6kAzWEe2zlIat60rxqg" base_Element="_xPrRYAzWEe2zlIat60rxqg"/>
+  <OpenModel_Profile:Experimental xmi:id="_LbAVwDSrEe22jbMp3BDUaA" base_Element="_TdOesHl9EeygLpMY3b1PCQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_No2GUDSrEe22jbMp3BDUaA" base_Element="_Zwl_0HtiEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Experimental xmi:id="_0dCIsDSrEe22jbMp3BDUaA" base_Element="_5uOcQHtxEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Experimental xmi:id="_-lQ88DSrEe22jbMp3BDUaA" base_Element="_DlanYH4xEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Preliminary xmi:id="_GOO5cDSsEe22jbMp3BDUaA" base_Element="_eZHv4H4wEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Preliminary xmi:id="_JIj8kDSsEe22jbMp3BDUaA" base_Element="_F7qlgHRLEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Preliminary xmi:id="_PlHwUDSsEe22jbMp3BDUaA" base_Element="_koUgEHRLEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Preliminary xmi:id="_SsCd8DSsEe22jbMp3BDUaA" base_Element="_JePDwHLfEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Preliminary xmi:id="_WEiDwDSsEe22jbMp3BDUaA" base_Element="_Xa7BEHLfEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Preliminary xmi:id="_ZS8ggDSsEe22jbMp3BDUaA" base_Element="_6edRwHLeEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_deAywDSsEe22jbMp3BDUaA" base_Element="_QL9FsHLvEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_fHAJ0DSsEe22jbMp3BDUaA" base_Element="_AQHQ8Hl6EeygLpMY3b1PCQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_hm4soDSsEe22jbMp3BDUaA" base_Element="_uGOawHl2EeygLpMY3b1PCQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_lHV7oDSsEe22jbMp3BDUaA" base_Element="_TH_BAMIXEeyCO-OTTyuWTA"/>
+  <OpenDddAggregateProfile:AggLeaf xmi:id="_lTEDcDSsEe22jbMp3BDUaA" base_Class="_TH_BAMIXEeyCO-OTTyuWTA"/>
+  <OpenModel_Profile:Experimental xmi:id="_r7IjoDSsEe22jbMp3BDUaA" base_Element="_DyRccHtkEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Experimental xmi:id="_yLxbQDSsEe22jbMp3BDUaA" base_Element="_mAgCEnl8EeygLpMY3b1PCQ"/>
 </xmi:XMI>
