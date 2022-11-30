@@ -1,0 +1,1325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:OpenDddAggregateProfile="http:///schemas/OpenDddAggregateProfile/_QImU4HLdEeyyQZoR1M2guQ/1" xmlns:OpenModel_Profile="http:///schemas/OpenModel_Profile/_S30WUD8HEeiIisB6uOvKFA/26" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/OpenDddAggregateProfile/_QImU4HLdEeyyQZoR1M2guQ/1 UmlProfiles/OpenDddAggregateProfile/OpenDddAggregateProfile.profile.uml#_QIm78HLdEeyyQZoR1M2guQ http:///schemas/OpenModel_Profile/_S30WUD8HEeiIisB6uOvKFA/26 UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_S32LgD8HEeiIisB6uOvKFA">
+  <uml:Model xmi:id="_KV4S4HLeEeyyQZoR1M2guQ" name="TemporalExpression">
+    <packagedElement xmi:type="uml:Package" xmi:id="_WlMvcHLeEeyyQZoR1M2guQ" name="Diagrams">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_uGnp4HlWEeygLpMY3b1PCQ">
+        <body>Forming a TemporalExpression statement&#xD;
+For each list property (multiplicity >1) within an augmenting Te (green class) form the union of that list.&#xD;
+Then take all properties (of green classes) augmenting a single TeElement and form the intersection.&#xD;
+Then take the result in the TeElement and process any IncorporatedTe actions, all unions first then each intersection.&#xD;
+Then take all processed TeElements in a TemporalExpression and form the Union.&#xD;
+This forms the TemproalExpression statement.</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_cIy7YHtkEey4cMhm9-6ddw" annotatedElement="_phOk4H0AEey4cMhm9-6ddw">
+        <body>Each exclusion probably needs a dedicated action, although these may spread across several specific exclusions. &#xD;
+For example, if the exclusion is exclude bank holidays then the choice may be next working day etc.</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_lMHBgAPFEe2V3aJvQ3vT5A" annotatedElement="_WlMvcHLeEeyyQZoR1M2guQ">
+        <body>The holder of a single temporal expression.</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_vUQ0wHLfEeyyQZoR1M2guQ" name="Imports">
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_KWhzIHLeEeyyQZoR1M2guQ">
+        <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+      </packageImport>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_y1opwHLfEeyyQZoR1M2guQ">
+        <importedPackage xmi:type="uml:Package" href="CoreModel.uml#_oGqilVLNEeO75dO39GbF8Q"/>
+      </packageImport>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_YQzqgHN_EeyyQZoR1M2guQ">
+        <importedPackage xmi:type="uml:Model" href="CoreCommonDataTypes.uml#_-lRh4FDNEeWpFusmeDrF3w"/>
+      </packageImport>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_lvZGUH6SEey4cMhm9-6ddw" name="Model">
+      <packagedElement xmi:type="uml:Association" xmi:id="_mAfbAHl8EeygLpMY3b1PCQ" name="TeElementIncorporatesTe" memberEnd="_mAgCEnl8EeygLpMY3b1PCQ _mAlhonl8EeygLpMY3b1PCQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mAgCEHl8EeygLpMY3b1PCQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mAgCEXl8EeygLpMY3b1PCQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_mAlhonl8EeygLpMY3b1PCQ" name="incorporatedte" type="_Zwl_0HtiEey4cMhm9-6ddw" association="_mAfbAHl8EeygLpMY3b1PCQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3MGycHl8EeygLpMY3b1PCQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BE2z8HtkEey4cMhm9-6ddw" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_MM55wH0BEey4cMhm9-6ddw" memberEnd="_MM6g0n0BEey4cMhm9-6ddw _MNAAYn0BEey4cMhm9-6ddw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MM6g0H0BEey4cMhm9-6ddw" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MM6g0X0BEey4cMhm9-6ddw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_MNAAYn0BEey4cMhm9-6ddw" name="exclusionconflictactionalternative" type="_phOk4H0AEey4cMhm9-6ddw" association="_MM55wH0BEey4cMhm9-6ddw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VUuZ4H0BEey4cMhm9-6ddw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VU5ZAH0BEey4cMhm9-6ddw" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_DyNyEHtkEey4cMhm9-6ddw" name="TeElementHasIncoporatedTe" memberEnd="_DyRccHtkEey4cMhm9-6ddw _DybNcHtkEey4cMhm9-6ddw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DyPnQHtkEey4cMhm9-6ddw" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DyQOUHtkEey4cMhm9-6ddw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_DybNcHtkEey4cMhm9-6ddw" name="teelement" type="_6edRwHLeEeyyQZoR1M2guQ" association="_DyNyEHtkEey4cMhm9-6ddw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Xa06cHLfEeyyQZoR1M2guQ" name="TeHasUnionOfPeerElements" memberEnd="_Xa7BEHLfEeyyQZoR1M2guQ _XbBHsHLfEeyyQZoR1M2guQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Xa5L4HLfEeyyQZoR1M2guQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Xa5y8HLfEeyyQZoR1M2guQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_XbBHsHLfEeyyQZoR1M2guQ" name="temporalexpression" type="_JePDwHLfEeyyQZoR1M2guQ" association="_Xa06cHLfEeyyQZoR1M2guQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_6edRwHLeEeyyQZoR1M2guQ" name="TeElement">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_jBIQsAQSEe2V3aJvQ3vT5A" annotatedElement="_6edRwHLeEeyyQZoR1M2guQ">
+          <body>The definition of the time constraints of the temporal expression.&#xD;
+The temporal expression definition is formed by taking the intersection of all augmenting temporal expressions.&#xD;
+Note that the augmenting temporal expression has &quot;intersection&quot; in its name.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_fsrmcHLgEeyyQZoR1M2guQ">
+          <general xmi:type="uml:Class" href="CoreModel.uml#_k5nWYI2wEeO38ZmbECnvbg"/>
+        </generalization>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_F7qlgHRLEeyyQZoR1M2guQ" name="description">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_pWuAwAPFEe2V3aJvQ3vT5A" annotatedElement="_F7qlgHRLEeyyQZoR1M2guQ">
+            <body>A description of the TeElement.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Y04HMHRLEeyyQZoR1M2guQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_DyRccHtkEey4cMhm9-6ddw" name="_incorporatedTeReference" type="_Zwl_0HtiEey4cMhm9-6ddw" aggregation="composite" association="_DyNyEHtkEey4cMhm9-6ddw">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_3ZDTEAPFEe2V3aJvQ3vT5A" annotatedElement="_DyRccHtkEey4cMhm9-6ddw">
+            <body>Referencing TeElements that are combined with this TeElement in a TemporalExpression.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DyamYHtkEey4cMhm9-6ddw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DyamYXtkEey4cMhm9-6ddw" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_5uOcQHtxEey4cMhm9-6ddw" name="relevance">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_qd2L0AQQEe2V3aJvQ3vT5A" annotatedElement="_5uOcQHtxEey4cMhm9-6ddw">
+            <body>The essence of the element. &#xD;
+For example it may represent a set of non-work days.&#xD;
+This is a free form string so relevance is not a formal parameter.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_A0mpEHtyEey4cMhm9-6ddw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_eZHv4H4wEey4cMhm9-6ddw" name="timeZone" type="_r9c3kH4wEey4cMhm9-6ddw">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_-JAH0AQQEe2V3aJvQ3vT5A" annotatedElement="_eZHv4H4wEey4cMhm9-6ddw">
+            <body>Identifies the timezone that was used to construct the element. &#xD;
+This is especially relevant when considering periods related to days as the day boundary in one timezone is in the middle of the day in another.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BahAoH4yEey4cMhm9-6ddw"/>
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_6v3jAH4wEey4cMhm9-6ddw" instance="_xkxFYH4wEey4cMhm9-6ddw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_DlanYH4xEey4cMhm9-6ddw" name="dstDates" type="_Ht8m0HtvEey4cMhm9-6ddw">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_OyS1UAQREe2V3aJvQ3vT5A" annotatedElement="_DlanYH4xEey4cMhm9-6ddw">
+            <body>Indicates whether the time sone has leap years and provides the relevant detail.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_91eMkH4xEey4cMhm9-6ddw"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_phOk4H0AEey4cMhm9-6ddw" name="ExclusionConflictActionAlternative">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_7e8DYAQSEe2V3aJvQ3vT5A" annotatedElement="_phOk4H0AEey4cMhm9-6ddw">
+          <body>The rules that apply when an exclusion from one part of a temporal expression causes disruption to a fundamental sequence from another part of the temproal expression.</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_MM6g0n0BEey4cMhm9-6ddw" name="_temporalExpression" type="_JePDwHLfEeyyQZoR1M2guQ" association="_MM55wH0BEey4cMhm9-6ddw">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_Gzp44AQTEe2V3aJvQ3vT5A" annotatedElement="_MM6g0n0BEey4cMhm9-6ddw">
+            <body>The temporal expression that deals with the conflict providing an alternative to the necessary regular cycle that was disrupted.</body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_a7rbUH0BEey4cMhm9-6ddw" name="preference">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_9N-l0AQXEe2V3aJvQ3vT5A" annotatedElement="_a7rbUH0BEey4cMhm9-6ddw">
+            <body>It is possible that a specific conflict action cannot overcome the conflict.&#xD;
+There may be several alternative conflict actions.&#xD;
+The conflict actions should be run in preference order with the lowest value integer being the most preferred and hence the first to runm.&#xD;
+Same preference value actions will be run in an arbitrary order.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_kzktgH0BEey4cMhm9-6ddw" name="opportunities">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_XMHWoH4wEey4cMhm9-6ddw" annotatedElement="_kzktgH0BEey4cMhm9-6ddw">
+            <body>Indicates how many alternatives in the temporal direction can be tried. &#xD;
+For example, if the exclusion is of a public holiday Monday and the normal occurrence is Monday then the alternative action will activate.&#xD;
+If the the referenced TemporalExpression offers every week day and temporal direction is NEXT, then the first opportunity will be Tuesday. &#xD;
+If the opportunities is set to 1 then that is all that may be tried. But it may not be available for some other exclusion reason and hence no alternative will be available and the period will be skiped.&#xD;
+However, if the opportunuties is set to 2 then the next but one day can also be tried (i.e., Wedneday in the example) and that may be available.&#xD;
+And so on...</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_u3zLgH0BEey4cMhm9-6ddw" name="direction" type="_zZU18H0BEey4cMhm9-6ddw">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_X0xkoAQgEe2V3aJvQ3vT5A" annotatedElement="_u3zLgH0BEey4cMhm9-6ddw">
+            <body>Indicates in which temporal direction the conflict action applies.</body>
+          </ownedComment>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Zwl_0HtiEey4cMhm9-6ddw" name="IncorporatedTe">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_0OceAAQiEe2V3aJvQ3vT5A" annotatedElement="_Zwl_0HtiEey4cMhm9-6ddw">
+          <body>Provides rules for incorporation of a referenced temporal expression.&#xD;
+An incorporated temporal expression is combinded with the temporal expression element that owns the incorporated te. </body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_TdOesHl9EeygLpMY3b1PCQ" name="incorporationMethod" type="_nZPhMHl9EeygLpMY3b1PCQ">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_ellpwAQjEe2V3aJvQ3vT5A" annotatedElement="_TdOesHl9EeygLpMY3b1PCQ">
+            <body>The method for incorproation of the temporal expression.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GsTUcHl-EeygLpMY3b1PCQ"/>
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_CZxvUHl-EeygLpMY3b1PCQ" instance="_rjO1YHl9EeygLpMY3b1PCQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_mAgCEnl8EeygLpMY3b1PCQ" name="_incorporatedTe" type="_JePDwHLfEeyyQZoR1M2guQ" association="_mAfbAHl8EeygLpMY3b1PCQ">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_mzee8AQoEe2V3aJvQ3vT5A" annotatedElement="_mAgCEnl8EeygLpMY3b1PCQ">
+            <body>The temporal expression to be incorporated.</body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_0Y1AkH0AEey4cMhm9-6ddw" name="_exclusionConflictActionAlternative" type="_phOk4H0AEey4cMhm9-6ddw" aggregation="composite" association="_0Y0ZgH0AEey4cMhm9-6ddw">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_x3b0QAQrEe2V3aJvQ3vT5A" annotatedElement="_0Y1AkH0AEey4cMhm9-6ddw">
+            <body>Any relevant conflict actions.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0Y6gIH0AEey4cMhm9-6ddw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0Y6gIX0AEey4cMhm9-6ddw" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_QL9FsHLvEeyyQZoR1M2guQ" name="IterativeIntersectionTe">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_4TVlsIUAEey4cMhm9-6ddw" annotatedElement="_QL9FsHLvEeyyQZoR1M2guQ">
+          <body>Once all unions and intersections have been performed the result is in terms of active periods. &#xD;
+The IterativeTe defines the number of active periods that will be run.&#xD;
+This is bounded by the boundingPeriodTe.</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_8INxoHROEeyyQZoR1M2guQ" name="numberOfIterations">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_10vFQHz9Eey4cMhm9-6ddw" annotatedElement="_8INxoHROEeyyQZoR1M2guQ">
+            <body>Once all unions and intersections have been performed the result is in terms of active periods. &#xD;
+The number of iterations is the number of active periods that will be run.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_N229oHRPEeyyQZoR1M2guQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_9uKmUHRPEeyyQZoR1M2guQ" name="iterationDelay">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_LF7dAAQsEe2V3aJvQ3vT5A" annotatedElement="_9uKmUHRPEeyyQZoR1M2guQ">
+            <body>Number of defined iterations of period that must occur prior to a period being considered active.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LhQbwHl_EeygLpMY3b1PCQ"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_NmgRAHl_EeygLpMY3b1PCQ"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_AQHQ8Hl6EeygLpMY3b1PCQ" name="ParticularDateTimePerPeriodIntersectionTe">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_mx8gAARLEe2fF6WcevVijA" annotatedElement="_AQHQ8Hl6EeygLpMY3b1PCQ">
+          <body>Defines the period(s) of activity in a year.</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_JntScHl6EeygLpMY3b1PCQ" name="sameDatesPerYearUnion" type="_Ht8m0HtvEey4cMhm9-6ddw">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_fkmvkARLEe2fF6WcevVijA" annotatedElement="_JntScHl6EeygLpMY3b1PCQ">
+            <body>Defines a period of activity in a year.&#xD;
+Is the union of all listed periods.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oAAuEHtxEey4cMhm9-6ddw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oAFmkHtxEey4cMhm9-6ddw" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qK26IH6UEey4cMhm9-6ddw" name="description">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_tVUtcARLEe2fF6WcevVijA" annotatedElement="_qK26IH6UEey4cMhm9-6ddw">
+            <body>States the purpose of the period.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qK26IX6UEey4cMhm9-6ddw"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_uGOawHl2EeygLpMY3b1PCQ" name="PhasedPeriodIntersectionTe">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_NreA8HzqEey4cMhm9-6ddw" annotatedElement="_uGOawHl2EeygLpMY3b1PCQ">
+          <body>Applied from the beginning of each continuous period. The continuous period is defined by period, daysOfWeek, periodInDay, DayInMonth and RangeEachYear.&#xD;
+Phasing starts at the beginning of the continuous period for the stated duration then repeated after phasing value from the beginning of the previous phasing.&#xD;
+If there are no phasing statement then the active period is the whole of the continuous period (every hour of every day of every week of every year, duration 60 minutes).&#xD;
+If no continuous period statement then phasing is relative until applies to a specific period by intersection where the intersection is defined as starting at the beginning of the period of the other intersecting element(s).&#xD;
+The phasings can be accumulated (essentially formed by an intersection of the properties).&#xD;
+For example:&#xD;
+- hourPhasing of 0.5 and dayPhasing of 2.0 and duration of 15 minutes means 15 minutes for every 30 minutes for a whole day every other day.&#xD;
+- hourPhasing of 0.5 and dayPhasing of 2.5 and duratoin of 15 minutes meand 15 minutes for every 30 minutes for a whole day then the same for a day starting a day and a half after the end of the first period.</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_dOPUgHl3EeygLpMY3b1PCQ" name="hourPhasing">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_FVafgHzrEey4cMhm9-6ddw" annotatedElement="_dOPUgHl3EeygLpMY3b1PCQ">
+            <body>Phasing starts at the beginning of the continuous period for the stated duration then repeated after hourPhasing hours from the beginning of the previous phasing.&#xD;
+A value of 1.0 means every hour.&#xD;
+For example if the continuous period starts at 15:03 on a particular day, the duration is 90 minutes and the hourPhasing is 2.5, then &#xD;
+- the first phase period will start at 15:03 and last to 16:33&#xD;
+- the second phase period will start at 17:33 and will last to 19:03&#xD;
+- the third phase period will start at 20:03 an last to 21:33 &#xD;
+- etc. &#xD;
+until the end of the continuous period.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_q0qvgHnbEeygLpMY3b1PCQ"/>
+          <defaultValue xmi:type="uml:LiteralReal" xmi:id="_8ytTEHz0Eey4cMhm9-6ddw" value="1.0"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_wVVhMHl3EeygLpMY3b1PCQ" name="dayPhasing">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_OWkjsHz7Eey4cMhm9-6ddw" annotatedElement="_wVVhMHl3EeygLpMY3b1PCQ">
+            <body>Phasing starts at the beginning of the continuous period for the stated duration then repeated after dayPhasing days from the beginning of the previous phasing.&#xD;
+A value of 1.0 means every day.&#xD;
+For example if the continuous period starts at 15:03 on a particular day which happens to be a Monday, the duration is 90 minutes and the dayPhasing is 2.5, then &#xD;
+- the first phase period will start at 15:03 and last to 16:33 on that Monday&#xD;
+- the second phase period will start at 3:03 on Wednesday and will last to 4:33 on that Wednesday&#xD;
+- the third phase period will start at 15:03 on Friday and  last to 16:33 on that Friday &#xD;
+- etc. &#xD;
+until the end of the continuous period.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWZA8HnbEeygLpMY3b1PCQ"/>
+          <defaultValue xmi:type="uml:LiteralReal" xmi:id="_42G6oHz0Eey4cMhm9-6ddw" value="1.0"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_2bws4Hl3EeygLpMY3b1PCQ" name="weekPhasing">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_zooE8Hz7Eey4cMhm9-6ddw" annotatedElement="_2bws4Hl3EeygLpMY3b1PCQ">
+            <body>Phasing starts at the beginning of the continuous period for the stated duration then repeated after weekPhasing weeks from the beginning of the previous phasing.&#xD;
+A value of 1.0 means every week.&#xD;
+For example if the continuous period starts at 15:03 on a particular day which happens to be a Monday, the duration is 90 minutes and the weekPhasing is 2.5, then &#xD;
+- the first phase period will start at 15:03 and last to 16:33 on that Monday&#xD;
+- the second phase period will start at 3:03 on Friday and will last to 4:33 on that Friday two weeks later&#xD;
+- the third phase period will start at 15:03 on Monday 5 weeks after the first Monday and  last to 16:33 on that Monday&#xD;
+- etc. &#xD;
+until the end of the continuous period.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tv1gIHnbEeygLpMY3b1PCQ"/>
+          <defaultValue xmi:type="uml:LiteralReal" xmi:id="__o75UHz0Eey4cMhm9-6ddw" value="1.0"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_X4FP0HzzEey4cMhm9-6ddw" name="yearPhasing">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_EJ10gHz8Eey4cMhm9-6ddw" annotatedElement="_X4FP0HzzEey4cMhm9-6ddw">
+            <body>Phasing starts at the beginning of the continuous period for the stated duration then repeated after yearPhasing days from the beginning of the previous phasing.&#xD;
+A value of 1.0 means every year.&#xD;
+Note the challenge with leap years where the fraction of one year may not be equal to the fraction of the next.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OWjkUHz1Eey4cMhm9-6ddw"/>
+          <defaultValue xmi:type="uml:LiteralReal" xmi:id="_CNFREHz1Eey4cMhm9-6ddw" value="1.0"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Qd7OkHz3Eey4cMhm9-6ddw" name="periodDurationInMinutes">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_Qd7OkXz3Eey4cMhm9-6ddw" annotatedElement="_Qd7OkHz3Eey4cMhm9-6ddw">
+            <body>Duration in minutes.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_z1PmEMNDEeypn59zBr_fGw"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_aItxgHz6Eey4cMhm9-6ddw" value="60"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_JePDwHLfEeyyQZoR1M2guQ" name="TemporalExpression">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_UPTvEAZrEe2fF6WcevVijA" annotatedElement="_JePDwHLfEeyyQZoR1M2guQ">
+          <body>The temporal expression defines the existence or operation of some entity or duration of some state, value, range, etc. of some property.&#xD;
+A number of properties and/or entities may follow the same temporal expression.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_bhNrkHLgEeyyQZoR1M2guQ">
+          <general xmi:type="uml:Class" href="CoreModel.uml#_iVJ1kI2wEeO38ZmbECnvbg"/>
+        </generalization>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Xa7BEHLfEeyyQZoR1M2guQ" name="_teElement" type="_6edRwHLeEeyyQZoR1M2guQ" aggregation="composite" association="_Xa06cHLfEeyyQZoR1M2guQ">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_GKaQ8AZrEe2fF6WcevVijA" annotatedElement="_Xa7BEHLfEeyyQZoR1M2guQ">
+            <body>An expression representing some periods of time as part of the temporal expression.</body>
+          </ownedComment>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-MO4MHl6EeygLpMY3b1PCQ" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_koUgEHRLEeyyQZoR1M2guQ" name="description">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_L1DfkAZrEe2fF6WcevVijA" annotatedElement="_koUgEHRLEeyyQZoR1M2guQ">
+            <body>A human readable summary of the temporal expression.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Ob6g4HLuEeyyQZoR1M2guQ" name="BoundingPeriodIntersectionTe">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_ZhlAYAggEe2fF6WcevVijA" annotatedElement="_Ob6g4HLuEeyyQZoR1M2guQ">
+          <body>This defines the time extent of the temporal expression element.&#xD;
+It covers both single shot reservations and complex reservations. &#xD;
+This time takes precedence over periodInDay as it is the boundary of the overall reservation.&#xD;
+May have various bounding periods for the same inner detail. &#xD;
+If more than one then only the last can be open ended etc.</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_bDv-IHN9EeyyQZoR1M2guQ" name="periodUnion" type="_qOxigHk-EeygLpMY3b1PCQ">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_fYctIAggEe2fF6WcevVijA" annotatedElement="_bDv-IHN9EeyyQZoR1M2guQ">
+            <body>The start time may be any time including start of a day. If the value is absent, there is no start.&#xD;
+The end time may be any time including the end of a day. If the value is absent there is no end.&#xD;
+If no time is provided then the reservation is forever.&#xD;
+If start time is after end time then the period defined is null.&#xD;
+The effective period is the union of all listed periods.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__26v4ITUEey4cMhm9-6ddw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__3dicITUEey4cMhm9-6ddw" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_s1_dsHLuEeyyQZoR1M2guQ" name="DaysOfWeekInMonthInYearIntersectionTe">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_Vb8V0AgiEe2fF6WcevVijA" annotatedElement="_s1_dsHLuEeyyQZoR1M2guQ">
+          <body>This expression collects together calendar and clock values.&#xD;
+The intersection of each stated property forms the temporal expression.&#xD;
+Note that some properties are unions withing the property.&#xD;
+This can be used to generate complex expressions such as..&#xD;
+15:00 - 16:00 and 17:00 - 18:00 on the first and third Monday and Wednesday of January and April.</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Nhr68HO3EeyyQZoR1M2guQ" name="dayOfWeekUnion" type="_-YfZIHO0EeyyQZoR1M2guQ">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_ag2aIAgiEe2fF6WcevVijA" annotatedElement="_Nhr68HO3EeyyQZoR1M2guQ">
+            <body>The days for which the expression applies.&#xD;
+This is the union of all days listed.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_l8BAwHREEeyyQZoR1M2guQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_q-VmMHO3EeyyQZoR1M2guQ" value="7"/>
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_U7MIYHtoEey4cMhm9-6ddw" instance="_FHaIMHO1EeyyQZoR1M2guQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_xPrRYAzWEe2zlIat60rxqg" name="periodDurationInDaysUnion" visibility="public" type="_v0tX4HO6EeyyQZoR1M2guQ">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_6d9l4AzWEe2zlIat60rxqg" annotatedElement="_xPrRYAzWEe2zlIat60rxqg">
+            <body>Defines the start and end time within a day or across several days.&#xD;
+This is the union of all periods listed.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_48YeYAzWEe2zlIat60rxqg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_48hBQAzWEe2zlIat60rxqg" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_HS7iIHRFEeyyQZoR1M2guQ" name="namedDayPositionInMonthUnion" type="_F6EWYHPEEeyyQZoR1M2guQ">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_a3OtQAg3Ee2fF6WcevVijA" annotatedElement="_HS7iIHRFEeyyQZoR1M2guQ">
+            <body>The position of each listed dayOfWeek in the month.&#xD;
+Is the union of all stated day positions.&#xD;
+For some months LAST and FIFTH will be the same occurrence.&#xD;
+Some months will not have a FIFTH occurrence of some days.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fbcaQHRFEeyyQZoR1M2guQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fbh50HRFEeyyQZoR1M2guQ" value="5"/>
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_s7F3EHtoEey4cMhm9-6ddw" instance="_vqgugHPEEeyyQZoR1M2guQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Kby7EHRGEeyyQZoR1M2guQ" name="monthPhasing" type="_rPB4IITPEey4cMhm9-6ddw">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_ypB0gAzXEe2zlIat60rxqg" annotatedElement="_Kby7EHRGEeyyQZoR1M2guQ">
+            <body>Identifies a start month and whether every month, every other month etc.&#xD;
+Interacts with specificMonth. The months chosen should be from the intersection of monthPhasing and specificMonth.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_imYPwHRGEeyyQZoR1M2guQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_kAAVIHRGEeyyQZoR1M2guQ" name="specificMonthUnion" type="_3YPqQHRIEeyyQZoR1M2guQ">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_EcCjIAzYEe2zlIat60rxqg" annotatedElement="_kAAVIHRGEeyyQZoR1M2guQ">
+            <body>Identifies specific months. &#xD;
+This is the union of all stated months.&#xD;
+Note all properties in the Te grouping this property are combined by intersection.&#xD;
+For example, this property interacts with monthPhasing such that the months chosen should be from the intersection of monthPhasing and specificMonth.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_r03_oHRGEeyyQZoR1M2guQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_r0-tUHRGEeyyQZoR1M2guQ" value="12"/>
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_CtVbYHtpEey4cMhm9-6ddw" instance="_xzCS4HtnEey4cMhm9-6ddw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ypRJYIUBEey4cMhm9-6ddw" name="weekInMonth" type="_fXfH8IUHEey4cMhm9-6ddw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8FGxsIUBEey4cMhm9-6ddw"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_0Y0ZgH0AEey4cMhm9-6ddw" memberEnd="_0Y1AkH0AEey4cMhm9-6ddw _0Y6gIn0AEey4cMhm9-6ddw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0Y0ZgX0AEey4cMhm9-6ddw" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0Y0Zgn0AEey4cMhm9-6ddw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_0Y6gIn0AEey4cMhm9-6ddw" name="incorporatedte" type="_Zwl_0HtiEey4cMhm9-6ddw" association="_0Y0ZgH0AEey4cMhm9-6ddw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_F6EWYHPEEeyyQZoR1M2guQ" name="DayPositionInMonth">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_UyafMAzZEe2zlIat60rxqg" annotatedElement="_F6EWYHPEEeyyQZoR1M2guQ">
+          <body>There are a number of occurrences of each named day in a mont.&#xD;
+This property identifies which of the occurrences should be active.</body>
+        </ownedComment>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_KeHwYHPEEeyyQZoR1M2guQ" name="FIRST">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_aTb3wAzZEe2zlIat60rxqg" annotatedElement="_KeHwYHPEEeyyQZoR1M2guQ">
+            <body>The first occurrence of the specific named day in the month (which may be the first day of the month).</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Mbol8HPEEeyyQZoR1M2guQ" name="SECOND">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_k5WGgAzZEe2zlIat60rxqg" annotatedElement="_Mbol8HPEEeyyQZoR1M2guQ">
+            <body>The second occurrence of the specific named day in the month.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Pr41wHPEEeyyQZoR1M2guQ" name="THIRD">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_oL-78AzZEe2zlIat60rxqg" annotatedElement="_Pr41wHPEEeyyQZoR1M2guQ">
+            <body>The third occurrence of the specific named day in the month.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XrvBMHPEEeyyQZoR1M2guQ" name="FOURTH">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_yQM9cAzaEe2zlIat60rxqg" annotatedElement="_XrvBMHPEEeyyQZoR1M2guQ">
+            <body>The fourth occurrence of the specific named day in the month.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_DJDw8AzbEe2zlIat60rxqg" name="FIFTH">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_bp4bYAzbEe2zlIat60rxqg" annotatedElement="_DJDw8AzbEe2zlIat60rxqg">
+            <body>The fifth occurrence of the specific named day in the month.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_cEvBwHPEEeyyQZoR1M2guQ" name="LAST">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_nFj0gAzbEe2zlIat60rxqg" annotatedElement="_cEvBwHPEEeyyQZoR1M2guQ">
+            <body>The last occurrence of the specific named day in the month.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_E_sicAzbEe2zlIat60rxqg" name="LAST_BUT_ONE">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_jehcYAzbEe2zlIat60rxqg" annotatedElement="_E_sicAzbEe2zlIat60rxqg">
+            <body>The last but one occurrence of the specific named day in the month.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_vqgugHPEEeyyQZoR1M2guQ" name="ALL_DAY_POSITIONS">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_qPCG4AzbEe2zlIat60rxqg" annotatedElement="_vqgugHPEEeyyQZoR1M2guQ">
+            <body>All day positions in the month.</body>
+          </ownedComment>
+        </ownedLiteral>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_nZPhMHl9EeygLpMY3b1PCQ" name="IncorporationMethod">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_rjO1YHl9EeygLpMY3b1PCQ" name="UNION">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_1RDqMAQlEe2V3aJvQ3vT5A" annotatedElement="_rjO1YHl9EeygLpMY3b1PCQ">
+            <body>The temporal expressions to be combined are unioned (essentially added together) such that the expression corresponds to all time periods referenced.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_u6g6QHl9EeygLpMY3b1PCQ" name="INTERSECTION">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_mdVsUAQnEe2V3aJvQ3vT5A" annotatedElement="_u6g6QHl9EeygLpMY3b1PCQ">
+            <body>The temporal expressions to be combined are intersected such that the expression corresponds only time periods that referenced by both definitions.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_njbdkHtiEey4cMhm9-6ddw" name="INTERSECT_COMPLEMENT">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_mstnIH0GEey4cMhm9-6ddw" annotatedElement="_njbdkHtiEey4cMhm9-6ddw">
+            <body>Exclude the definition of the referneced TemporalExpression, i.e., Intersction with the complement of the referenced TemporalExpression.</body>
+          </ownedComment>
+        </ownedLiteral>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_8BkmgHzzEey4cMhm9-6ddw" name="LeapYear">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_R4XokAzcEe2zlIat60rxqg" annotatedElement="_8BkmgHzzEey4cMhm9-6ddw">
+          <body>How to deal with leap years.</body>
+        </ownedComment>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_-PWssHzzEey4cMhm9-6ddw" name="ONLY_LEAP_YEAR">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_VRlnIAzcEe2zlIat60rxqg" annotatedElement="_-PWssHzzEey4cMhm9-6ddw">
+            <body>Only applies during leap years.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_BVKnEHz0Eey4cMhm9-6ddw" name="NOT_LEAP_YEAR">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_rLqRwAzcEe2zlIat60rxqg" annotatedElement="_BVKnEHz0Eey4cMhm9-6ddw">
+            <body>Does not apply to leap years.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Dz4FMHz0Eey4cMhm9-6ddw" name="ANY_YEAR">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_dg-DYAzcEe2zlIat60rxqg" annotatedElement="_Dz4FMHz0Eey4cMhm9-6ddw">
+            <body>Not sensitive to leap year.</body>
+          </ownedComment>
+        </ownedLiteral>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_3YPqQHRIEeyyQZoR1M2guQ" name="Month">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_tei6YAzcEe2zlIat60rxqg" annotatedElement="_3YPqQHRIEeyyQZoR1M2guQ">
+          <body>Month of the year.</body>
+        </ownedComment>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_IeCtkHRJEeyyQZoR1M2guQ" name="JANUARY"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_UoaYsHRJEeyyQZoR1M2guQ" name="FEBRUARY"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_6MSpwHRJEeyyQZoR1M2guQ" name="MARCH"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_ACK4AHRKEeyyQZoR1M2guQ" name="APRIL"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Ft2ocHRKEeyyQZoR1M2guQ" name="MAY"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_LFD9sHRKEeyyQZoR1M2guQ" name="JUNE"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_OtBi4HRKEeyyQZoR1M2guQ" name="JULY"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_SFJ8UHRKEeyyQZoR1M2guQ" name="AUGUST"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_VPyFQHRKEeyyQZoR1M2guQ" name="SEPTEMBER"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YFOBUHRKEeyyQZoR1M2guQ" name="OCTOBER"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_a0NXIHRKEeyyQZoR1M2guQ" name="NOVEMBER"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_fUPz0HRKEeyyQZoR1M2guQ" name="DECEMBER"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_xzCS4HtnEey4cMhm9-6ddw" name="ALL_MONTHS">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_L4F2QAzeEe2zlIat60rxqg" annotatedElement="_xzCS4HtnEey4cMhm9-6ddw">
+            <body>All months in the year.</body>
+          </ownedComment>
+        </ownedLiteral>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Uf79gHttEey4cMhm9-6ddw" name="MonthAndDay">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_UrFV4AzeEe2zlIat60rxqg" annotatedElement="_Uf79gHttEey4cMhm9-6ddw">
+          <body>Calendar date.</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_eNzxAHttEey4cMhm9-6ddw" name="month" type="_3YPqQHRIEeyyQZoR1M2guQ">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_XRuA8AzeEe2zlIat60rxqg" annotatedElement="_eNzxAHttEey4cMhm9-6ddw">
+            <body>Month name.</body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_rwR3gHttEey4cMhm9-6ddw" name="dayInMonth">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_a9YaYAzeEe2zlIat60rxqg" annotatedElement="_rwR3gHttEey4cMhm9-6ddw">
+            <body>Day number in month.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_m-ufkHPDEeyyQZoR1M2guQ" name="MonthPhase">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_rfPqMAzeEe2zlIat60rxqg" annotatedElement="_m-ufkHPDEeyyQZoR1M2guQ">
+          <body>Whether the event occurs every month or on some other basis.</body>
+        </ownedComment>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_qiF4oHPDEeyyQZoR1M2guQ" name="EVERY_MONTH">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_umK-4AzeEe2zlIat60rxqg" annotatedElement="_qiF4oHPDEeyyQZoR1M2guQ">
+            <body>All months (no gaps).</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_sv7CIHPDEeyyQZoR1M2guQ" name="EVERY_OTHER_MONTH">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_5FNwoAzeEe2zlIat60rxqg" annotatedElement="_sv7CIHPDEeyyQZoR1M2guQ">
+            <body>A one month gap. &#xD;
+The named month will be the first month.&#xD;
+The next month will not be active then the following month will be etc.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_uocC8HPDEeyyQZoR1M2guQ" name="EVERY_THREE_MONTHS">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_DgbyUAzfEe2zlIat60rxqg" annotatedElement="_uocC8HPDEeyyQZoR1M2guQ">
+            <body>A two month gap. &#xD;
+The named month will be the first month.&#xD;
+The next two months will not be active then the following month will be etc.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_l5rfQHtnEey4cMhm9-6ddw" name="EVERY_FOUR_MONTHS">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_JqBmwAzfEe2zlIat60rxqg" annotatedElement="_l5rfQHtnEey4cMhm9-6ddw">
+            <body>A three month gap. &#xD;
+The named month will be the first month.&#xD;
+The next three months will not be active then the following month will be etc.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_-KNHsHPDEeyyQZoR1M2guQ" name="EVERY_SIX_MONTHS">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_OB4X0AzfEe2zlIat60rxqg" annotatedElement="_-KNHsHPDEeyyQZoR1M2guQ">
+            <body>A five month gap. &#xD;
+The named month will be the first month.&#xD;
+The next five months will not be active then the following month will be etc.</body>
+          </ownedComment>
+        </ownedLiteral>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_v0tX4HO6EeyyQZoR1M2guQ" name="PeriodDuration">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_M4qIEIT6Eey4cMhm9-6ddw" annotatedElement="_v0tX4HO6EeyyQZoR1M2guQ">
+          <body>Defines the time period across daysOfWeek.</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_vI30UHO0EeyyQZoR1M2guQ" name="endTime" type="__snjwHtlEey4cMhm9-6ddw">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_D6QAsHz5Eey4cMhm9-6ddw" annotatedElement="_vI30UHO0EeyyQZoR1M2guQ">
+            <body>The time is the end moment of the identified hour/minute, so 23:59 is the moment before 00:00 of the next day.&#xD;
+No endTime means end of day unless periodDuration is stated.&#xD;
+</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LdlVMHO3EeyyQZoR1M2guQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_NIEBYHO0EeyyQZoR1M2guQ" name="startTime" type="__snjwHtlEey4cMhm9-6ddw">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_Gf2hAIT8Eey4cMhm9-6ddw" annotatedElement="_NIEBYHO0EeyyQZoR1M2guQ">
+            <body>The time is the beginning moment of the identified hour/minute.&#xD;
+So 00:00 is the moment after the end of the 59th minute in the 23rd hour of the previous day.&#xD;
+No startTime means start of day unless periodDuration and endTime are stated.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EIzGsHO8EeyyQZoR1M2guQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_8YriIHz3Eey4cMhm9-6ddw" name="periodDuration">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_8YriIXz3Eey4cMhm9-6ddw" annotatedElement="_8YriIHz3Eey4cMhm9-6ddw">
+            <body>Interacts with startTime and endTime.&#xD;
+If no endTime is stated then periodDuration is number of minutes from the startTime.&#xD;
+If endTime stated but no startTime stated then periodDuration is the number of minutes before the endTime.&#xD;
+If startTime, endTime and periodDuration are all stated then the result is the intersection of time definitions&#xD;
+startTime to endTime and startTime for periodDuration (i.e., whichever is shorter).&#xD;
+If not present then assumes defined by startTime/endTime.&#xD;
+The periodDuration may take the time beyond the end of the day or before the beginning of the day (see daySpan).</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8YriInz3Eey4cMhm9-6ddw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_oqAAsIT9Eey4cMhm9-6ddw" name="daySpan">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_BJnUwIT_Eey4cMhm9-6ddw" annotatedElement="_oqAAsIT9Eey4cMhm9-6ddw">
+            <body>The daySpan is used to provide a boundary of the startTime/endTime/periodDuration.&#xD;
+If daySpan &lt;1 there will be no period.&#xD;
+If daySpan =1 then there will only be a period if startTime/endTime/periodDuration does not go beyond a day boundary. This period will apply for each of the days of the week listed.&#xD;
+If daySpan >1 then a period will be triggered within each listed day of the week and may cross into a day not listed. &#xD;
+Via this structure it is possible to have a temporal expression that indicates a continuous period of many days starting on a specific day.&#xD;
+Periods may merge and hence become continuous over several period definitions.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eNDVYAg-Ee2fF6WcevVijA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eNJcAAg-Ee2fF6WcevVijA" value="*"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_FactQIT-Eey4cMhm9-6ddw" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Ht8m0HtvEey4cMhm9-6ddw" name="PeriodInAYear">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_LG2yUHzuEey4cMhm9-6ddw" annotatedElement="_Ht8m0HtvEey4cMhm9-6ddw">
+          <body>This may be combined with other structures as an intersection.&#xD;
+However, this is an unlikely approach.&#xD;
+More likely there will be an exclusion rule.</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_6cn3YHzyEey4cMhm9-6ddw">
+          <body>Equivalent to BoundingPeriod with no year defined, hence repeats every year.&#xD;
+Can be intersected with other structures. If no other structures intersected then the perioid is continuous.</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_peDrUHtvEey4cMhm9-6ddw" name="startDayInMonth" type="_Uf79gHttEey4cMhm9-6ddw">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_5mddsHztEey4cMhm9-6ddw" annotatedElement="_peDrUHtvEey4cMhm9-6ddw">
+            <body>Specific day in year that the event starts.</body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Sp7WwHtwEey4cMhm9-6ddw" name="startTimeInStartDay" type="__snjwHtlEey4cMhm9-6ddw">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_kfREsHzxEey4cMhm9-6ddw" annotatedElement="_Sp7WwHtwEey4cMhm9-6ddw">
+            <body>Defines the time in the start day that the period starts.&#xD;
+The time is the start moment of the identified hour/minute, so 00:00 is the moment that the day starts, i.e., the moment after the moment that the previous day ends.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bUwY4HtwEey4cMhm9-6ddw"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_ga9pIHzuEey4cMhm9-6ddw" value="hourInDay=0, minuteInHour=0"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_kIzocHtwEey4cMhm9-6ddw" name="endDayInMonth" type="_Uf79gHttEey4cMhm9-6ddw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pU-yYHtwEey4cMhm9-6ddw"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_53BMwHzuEey4cMhm9-6ddw" value="same as startDayInMonth"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_wUs9kHtwEey4cMhm9-6ddw" name="endTimeInEndDay" type="__snjwHtlEey4cMhm9-6ddw">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_7TuJYHzwEey4cMhm9-6ddw" annotatedElement="_wUs9kHtwEey4cMhm9-6ddw">
+            <body>Defines the time in the end day that the period ends.&#xD;
+The time is the end moment of the identified hour/minute, so 23:59 is the moment before 00:00 of the next day.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9wcVYHzuEey4cMhm9-6ddw"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_nGCkkHzvEey4cMhm9-6ddw" value="hourInDay=23, minuteInHour=59"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ULWuIHztEey4cMhm9-6ddw" name="periodDurationInMinutes">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_ySp44HztEey4cMhm9-6ddw" annotatedElement="_ULWuIHztEey4cMhm9-6ddw">
+            <body>An alternative to endDay/endTime.&#xD;
+Number of minutes from the startDayInMonth and startTimeInDay.&#xD;
+If not present then assumes defined by endDay/endTime..</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bkoo0HztEey4cMhm9-6ddw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_JI5pIHz0Eey4cMhm9-6ddw" name="accountForLeapYear" type="_8BkmgHzzEey4cMhm9-6ddw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aApCUHz0Eey4cMhm9-6ddw"/>
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_VRiO4Hz0Eey4cMhm9-6ddw" instance="_Dz4FMHz0Eey4cMhm9-6ddw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_L3x5sITVEey4cMhm9-6ddw" name="description">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_zZU18H0BEey4cMhm9-6ddw" name="TemporalDirection">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_akzQYAzgEe2zlIat60rxqg" annotatedElement="_zZU18H0BEey4cMhm9-6ddw">
+          <body>With respect to normal flow of time.</body>
+        </ownedComment>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_3VkpEH0BEey4cMhm9-6ddw" name="NEXT">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_enVRsAzgEe2zlIat60rxqg" annotatedElement="_3VkpEH0BEey4cMhm9-6ddw">
+            <body>Forward in time to the next valid period.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_5_Dz0H0BEey4cMhm9-6ddw" name="PREVIOUS">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_iX1H0AzgEe2zlIat60rxqg" annotatedElement="_5_Dz0H0BEey4cMhm9-6ddw">
+            <body>Reverse in time to the previous valid period.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_9DKeAH0BEey4cMhm9-6ddw" name="NEXT_AND_PREVIOUS">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_m8HLUAzgEe2zlIat60rxqg" annotatedElement="_9DKeAH0BEey4cMhm9-6ddw">
+            <body>Either forward or backward in time to the next valid period.</body>
+          </ownedComment>
+        </ownedLiteral>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="__snjwHtlEey4cMhm9-6ddw" name="TimeInDay">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_75jOkAzgEe2zlIat60rxqg" annotatedElement="__snjwHtlEey4cMhm9-6ddw">
+          <body>Clock time as per 24 hour clock.</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_OiRJYHtmEey4cMhm9-6ddw" name="hourInDay">
+          <ownedComment xmi:type="uml:Comment" xmi:id="__jYcAAzgEe2zlIat60rxqg" annotatedElement="_OiRJYHtmEey4cMhm9-6ddw">
+            <body>Clock time hours.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VhMqYHtmEey4cMhm9-6ddw"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_mTQ5QHzuEey4cMhm9-6ddw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_dSbLAHtmEey4cMhm9-6ddw" name="minuteInHour">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_DbmDsAzhEe2zlIat60rxqg" annotatedElement="_dSbLAHtmEey4cMhm9-6ddw">
+            <body>Clock time minutes.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_r3L08HtmEey4cMhm9-6ddw"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_sXgToHzuEey4cMhm9-6ddw"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_qOxigHk-EeygLpMY3b1PCQ" name="TimePeriodOptions">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_qOxigXk-EeygLpMY3b1PCQ" annotatedElement="_qOxigHk-EeygLpMY3b1PCQ">
+          <body>This data type specifies a time period.</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qOxignk-EeygLpMY3b1PCQ" name="startTime">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_qOxig3k-EeygLpMY3b1PCQ" annotatedElement="_qOxignk-EeygLpMY3b1PCQ">
+            <body>This attribute defines the start time of the time period.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="CoreCommonDataTypes.uml#_iP8kJfZaEeWhRf3FikFX5w"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_D0U5AHlCEeygLpMY3b1PCQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qOxihHk-EeygLpMY3b1PCQ" name="stopTime">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_qOxihXk-EeygLpMY3b1PCQ" annotatedElement="_qOxihHk-EeygLpMY3b1PCQ">
+            <body>This attribute defines the stop time of the time period.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="CoreCommonDataTypes.uml#_iP8kJfZaEeWhRf3FikFX5w"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GLchYHlCEeygLpMY3b1PCQ"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_r9c3kH4wEey4cMhm9-6ddw" name="TimeZone">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_Mp2jAAzhEe2zlIat60rxqg" annotatedElement="_r9c3kH4wEey4cMhm9-6ddw">
+          <body>List of all standard time zones.</body>
+        </ownedComment>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_xkxFYH4wEey4cMhm9-6ddw" name="UTC_PLUS_ZERO"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_-YfZIHO0EeyyQZoR1M2guQ" name="WeekDay">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_S9xYIAzhEe2zlIat60rxqg" annotatedElement="_-YfZIHO0EeyyQZoR1M2guQ">
+          <body>Named day of week.</body>
+        </ownedComment>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_FHaIMHO1EeyyQZoR1M2guQ" name="ALL_DAYS_OF_THE_WEEK"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_HsJ84HO1EeyyQZoR1M2guQ" name="MONDAY"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_JZ5REHO1EeyyQZoR1M2guQ" name="TUESDAY"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_PExwQHO1EeyyQZoR1M2guQ" name="WEDNESDAY"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Qd2cAHO1EeyyQZoR1M2guQ" name="THURSDAY"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_SX3RoHO1EeyyQZoR1M2guQ" name="FRIDAY"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_USSW8HO1EeyyQZoR1M2guQ" name="SATURDAY"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_V-QJgHO1EeyyQZoR1M2guQ" name="SUNDAY"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_rPB4IITPEey4cMhm9-6ddw" name="MonthPhasing">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_JwnV8AzqEe2zlIat60rxqg" annotatedElement="_rPB4IITPEey4cMhm9-6ddw">
+          <body>Phasing across months in a year.</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_y_xX8ITMEey4cMhm9-6ddw" name="phaseAlignMonth" type="_3YPqQHRIEeyyQZoR1M2guQ">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_NCrjoAzqEe2zlIat60rxqg" annotatedElement="_y_xX8ITMEey4cMhm9-6ddw">
+            <body>Start month of the phasing.</body>
+          </ownedComment>
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="__0MFoITMEey4cMhm9-6ddw" instance="_IeCtkHRJEeyyQZoR1M2guQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_R1RIoITREey4cMhm9-6ddw" name="monthPhase" type="_m-ufkHPDEeyyQZoR1M2guQ">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_R4W5IAzqEe2zlIat60rxqg" annotatedElement="_R1RIoITREey4cMhm9-6ddw">
+            <body>Specific month phasing.</body>
+          </ownedComment>
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_f3shkITREey4cMhm9-6ddw" instance="_qiF4oHPDEeyyQZoR1M2guQ"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_cy-sAITUEey4cMhm9-6ddw" client="_Ob6g4HLuEeyyQZoR1M2guQ" supplier="_6edRwHLeEeyyQZoR1M2guQ"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_OUPGgIUAEey4cMhm9-6ddw" client="_s1_dsHLuEeyyQZoR1M2guQ" supplier="_6edRwHLeEeyyQZoR1M2guQ"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_hKNG8IUAEey4cMhm9-6ddw" client="_WlMvcHLeEeyyQZoR1M2guQ" supplier="_6edRwHLeEeyyQZoR1M2guQ"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_9VOLMIUAEey4cMhm9-6ddw" client="_QL9FsHLvEeyyQZoR1M2guQ" supplier="_6edRwHLeEeyyQZoR1M2guQ"/>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_Xjc9MIUCEey4cMhm9-6ddw" name="WeekPositionInMonth">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_l3XlQAzqEe2zlIat60rxqg" annotatedElement="_Xjc9MIUCEey4cMhm9-6ddw">
+          <body>Week position in month recognizing that week and month boundaries are not necessarily coincident.</body>
+        </ownedComment>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_eRAaUIUCEey4cMhm9-6ddw" name="FIRST_WEEK_IN_MONTH">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_6Nr-IAzqEe2zlIat60rxqg" annotatedElement="_eRAaUIUCEey4cMhm9-6ddw">
+            <body>The month start boundary occurs in the week or at the start of the week.&#xD;
+At least one day of the week is in the month.&#xD;
+For example, the last day of the week is the first day of the month.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_jTDX4IUCEey4cMhm9-6ddw" name="FIRST_WHOLE_WEEK_IN_MONTH">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_gMvIQAzrEe2zlIat60rxqg" annotatedElement="_jTDX4IUCEey4cMhm9-6ddw">
+            <body>The month start boundary occurs at or before the week start boundary but there are less than seven days between the month start and week start..&#xD;
+All days of the week are in the month. &#xD;
+This may be the same as the FIRST_WEEK_IN_MONTH, but is more often the SECOND_WEEK_IN_MONTH.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_yk-CwIUCEey4cMhm9-6ddw" name="SECOND_WEEK_IN_MONTH">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_lYTOMAzrEe2zlIat60rxqg" annotatedElement="_yk-CwIUCEey4cMhm9-6ddw">
+            <body>The week directly after the FIRST_WEEK_IN_MONTH.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_21KFkIUCEey4cMhm9-6ddw" name="SECOND_WHOLE_WEEK_IN_MONTH">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_qvmDAAzrEe2zlIat60rxqg" annotatedElement="_21KFkIUCEey4cMhm9-6ddw">
+            <body>The week directlty after the FIRST_WHOLE_WEEK_IN_MONTH.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_B8JoIIUDEey4cMhm9-6ddw" name="THIRD_WEEK_IN_MONTH">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_w4PcQAzrEe2zlIat60rxqg" annotatedElement="_B8JoIIUDEey4cMhm9-6ddw">
+            <body>The week directly after the SECOND_WEEK_IN_MONTH.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_IifqAIUDEey4cMhm9-6ddw" name="THIRD_WHOLE_WEEK_IN_MONTH">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_FJoR0AzsEe2zlIat60rxqg" annotatedElement="_IifqAIUDEey4cMhm9-6ddw">
+            <body>The week directlty after the SECOND_WHOLE_WEEK_IN_MONTH.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_z8U6cIUGEey4cMhm9-6ddw" name="FOURTH_WEEK_IN_MONTH">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_00Zv0AzrEe2zlIat60rxqg" annotatedElement="_z8U6cIUGEey4cMhm9-6ddw">
+            <body>The week directly after the THIRD_WEEK_IN_MONTH.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_3oPLgIUGEey4cMhm9-6ddw" name="FOURTH_WHOLE_WEEK_IN_MONTH">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_HhhWQAzsEe2zlIat60rxqg" annotatedElement="_3oPLgIUGEey4cMhm9-6ddw">
+            <body>The week directlty after the THIRD_WHOLE_WEEK_IN_MONTH.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_7DysYIUGEey4cMhm9-6ddw" name="FIFTH_WEEK_IN_MONTH">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_4g2zcAzrEe2zlIat60rxqg" annotatedElement="_7DysYIUGEey4cMhm9-6ddw">
+            <body>The week directly after the FOURTH_WEEK_IN_MONTH.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_-IWpkIUGEey4cMhm9-6ddw" name="SIXTH_WEEK_IN_MONTH">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_7PLa4AzrEe2zlIat60rxqg" annotatedElement="_-IWpkIUGEey4cMhm9-6ddw">
+            <body>The week directly after the FIFTH_WEEK_IN_MONTH.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_KQW9MIUHEey4cMhm9-6ddw" name="LAST_WEEK_IN_MONTH">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_T6wj0AzsEe2zlIat60rxqg" annotatedElement="_KQW9MIUHEey4cMhm9-6ddw">
+            <body>The month end boundary occurs in the week or at the end of the week.&#xD;
+At least one day of the week is in the month.&#xD;
+For example, the first day of the week is the last day of the month.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_MwdicIUHEey4cMhm9-6ddw" name="LAST_WHOLE_WEEK_IN_MONTH">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_t-vqIAzsEe2zlIat60rxqg" annotatedElement="_MwdicIUHEey4cMhm9-6ddw">
+            <body>The month end boundary occurs at or after the week end boundary but there are less than seven days between the month end and week end.&#xD;
+All days of the week are in the month.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YsYFYIUIEey4cMhm9-6ddw" name="ALL_WEEKS_IN_MONTH">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_wjA9sAzsEe2zlIat60rxqg" annotatedElement="_YsYFYIUIEey4cMhm9-6ddw">
+            <body>All weeks in the month.</body>
+          </ownedComment>
+        </ownedLiteral>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_fXfH8IUHEey4cMhm9-6ddw" name="WeekInMonth">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_oSJV0IUHEey4cMhm9-6ddw" name="weekStartDay" type="_-YfZIHO0EeyyQZoR1M2guQ">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_O0PycAzrEe2zlIat60rxqg" annotatedElement="_oSJV0IUHEey4cMhm9-6ddw">
+            <body>The start day of the week (defining the week boundary).</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ukExcIUIEey4cMhm9-6ddw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ukr1cIUIEey4cMhm9-6ddw" value="6"/>
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_0qXPsIUHEey4cMhm9-6ddw" instance="_HsJ84HO1EeyyQZoR1M2guQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_JJ1kkIUIEey4cMhm9-6ddw" name="weekPositionInMonth" type="_Xjc9MIUCEey4cMhm9-6ddw">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_ThKioAztEe2zlIat60rxqg" annotatedElement="_JJ1kkIUIEey4cMhm9-6ddw">
+            <body>All relevant week positions in the month.</body>
+          </ownedComment>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NfetAAztEe2zlIat60rxqg" value="*"/>
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_jVupsIUIEey4cMhm9-6ddw" instance="_YsYFYIUIEey4cMhm9-6ddw"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_fEWMsMIUEeyCO-OTTyuWTA" client="_uGOawHl2EeygLpMY3b1PCQ" supplier="_WlMvcHLeEeyyQZoR1M2guQ"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TH_BAMIXEeyCO-OTTyuWTA" name="SimplePhasedPeriodIntersectionTe">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_Dze5gMNGEeypn59zBr_fGw" annotatedElement="_TH_BAMIXEeyCO-OTTyuWTA">
+          <body>There is a natural intersection of periods such that there is only activity if all stated periods indicate activity.&#xD;
+Hence if a second phasing indicates activity every other second and a minute phasing every other minute then thre is only activity every other second in every other minute.</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_jVtXYMIYEeyCO-OTTyuWTA" name="second" type="_xHpkoMIVEeyCO-OTTyuWTA">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_KzFiwAzuEe2zlIat60rxqg" annotatedElement="_jVtXYMIYEeyCO-OTTyuWTA">
+            <body>Second phasing within the minute boundary.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hHHjcMIZEeyCO-OTTyuWTA"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_r1rNUMIYEeyCO-OTTyuWTA" name="minute" type="_xHpkoMIVEeyCO-OTTyuWTA">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_OrQuMAzuEe2zlIat60rxqg" annotatedElement="_r1rNUMIYEeyCO-OTTyuWTA">
+            <body>Minute phasing within the hour boundary.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_i_DVcMIZEeyCO-OTTyuWTA"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_1w4SMMIYEeyCO-OTTyuWTA" name="hour" type="_xHpkoMIVEeyCO-OTTyuWTA">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_RyoHwAzuEe2zlIat60rxqg" annotatedElement="_1w4SMMIYEeyCO-OTTyuWTA">
+            <body>Hour phasing within the day boundary.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kkYUgMIZEeyCO-OTTyuWTA"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_-g7ykMIYEeyCO-OTTyuWTA" name="day" type="_xHpkoMIVEeyCO-OTTyuWTA">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_U66uYAzuEe2zlIat60rxqg" annotatedElement="_-g7ykMIYEeyCO-OTTyuWTA">
+            <body>Day phasing within the week boundary.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_l4yisMIZEeyCO-OTTyuWTA"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_F_pm4MIZEeyCO-OTTyuWTA" name="week" type="_xHpkoMIVEeyCO-OTTyuWTA">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_ZFTEIAzuEe2zlIat60rxqg" annotatedElement="_F_pm4MIZEeyCO-OTTyuWTA">
+            <body>Week phasing within the year boundary.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nOdVIMIZEeyCO-OTTyuWTA"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_OuC6YMIZEeyCO-OTTyuWTA" name="year" type="_xHpkoMIVEeyCO-OTTyuWTA">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_xT59MAzuEe2zlIat60rxqg" annotatedElement="_OuC6YMIZEeyCO-OTTyuWTA">
+            <body>Year phasing within the boundingPeriod.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_olojcMIZEeyCO-OTTyuWTA"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_a6A9cMIYEeyCO-OTTyuWTA" client="_TH_BAMIXEeyCO-OTTyuWTA" supplier="_6edRwHLeEeyyQZoR1M2guQ"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_xHpkoMIVEeyCO-OTTyuWTA" name="Phasing">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_6Z1hsMIVEeyCO-OTTyuWTA" name="gap">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_senukMIWEeyCO-OTTyuWTA" annotatedElement="_6Z1hsMIVEeyCO-OTTyuWTA">
+            <body>Indicates the gap between active periods. The value:&#xD;
+- 0 means repeated every period (no gap)&#xD;
+- 1 means gap of one period (and hence, if activityDuration is 1, every other period)&#xD;
+- etc.&#xD;
+If gap is used with repeatPeriod then there is guaranteed gap between active periods.&#xD;
+</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pRZz4MNDEeypn59zBr_fGw"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_Zu0PwMNDEeypn59zBr_fGw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_BFux8MIWEeyCO-OTTyuWTA" name="offset">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_5vpfwMIWEeyCO-OTTyuWTA" annotatedElement="_BFux8MIWEeyCO-OTTyuWTA">
+            <body>The offset of the start of the active period from the start of the next larger period.&#xD;
+So for minutes, offset of 1 means start periodicity 1 minute after the hour.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qZ8JQMNDEeypn59zBr_fGw"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_dA32YMNDEeypn59zBr_fGw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ME2x8MIWEeyCO-OTTyuWTA" name="activityDuration">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_AilMIMIXEeyCO-OTTyuWTA" annotatedElement="_ME2x8MIWEeyCO-OTTyuWTA">
+            <body>The length of the active period.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wVSGUMNDEeypn59zBr_fGw"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_gXRxgMNDEeypn59zBr_fGw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qify4MNEEeypn59zBr_fGw" name="repeatPeriod">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_BtHfYMNFEeypn59zBr_fGw" annotatedElement="_qify4MNEEeypn59zBr_fGw">
+            <body>Period of activity repeat. An activity of duration 1 and repeatPeriod 1 is essentially continuous.&#xD;
+The repeatPeriod is an alternative to gap.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2YdUQMNEEeypn59zBr_fGw"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_v4DiUMNEEeypn59zBr_fGw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_F0pVcMNFEeypn59zBr_fGw" name="variableActivityDuration">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_Zh6KQMNFEeypn59zBr_fGw" annotatedElement="_F0pVcMNFEeypn59zBr_fGw">
+            <body>The duration of activity is at least the activityDuration but may be more up to the repeatPeriod boundary.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_P8fvMMNFEeypn59zBr_fGw"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_OgYWgMNFEeypn59zBr_fGw"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_8Pwp8AzyEe2NeYxRC236WA" client="_Ht8m0HtvEey4cMhm9-6ddw" supplier="_Uf79gHttEey4cMhm9-6ddw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_9bp1UAzyEe2NeYxRC236WA" client="_Uf79gHttEey4cMhm9-6ddw" supplier="_WlMvcHLeEeyyQZoR1M2guQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="__us2AAzyEe2NeYxRC236WA" client="_s1_dsHLuEeyyQZoR1M2guQ" supplier="_3YPqQHRIEeyyQZoR1M2guQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_DT4M8AzzEe2NeYxRC236WA" client="_Ht8m0HtvEey4cMhm9-6ddw" supplier="_8BkmgHzzEey4cMhm9-6ddw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_Erh8YAzzEe2NeYxRC236WA" client="_Ht8m0HtvEey4cMhm9-6ddw" supplier="__snjwHtlEey4cMhm9-6ddw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_Fy07oAzzEe2NeYxRC236WA" client="_TH_BAMIXEeyCO-OTTyuWTA" supplier="_xHpkoMIVEeyCO-OTTyuWTA"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_HF9-gAzzEe2NeYxRC236WA" client="_s1_dsHLuEeyyQZoR1M2guQ" supplier="_v0tX4HO6EeyyQZoR1M2guQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_I7c5cAzzEe2NeYxRC236WA" client="_6edRwHLeEeyyQZoR1M2guQ" supplier="_r9c3kH4wEey4cMhm9-6ddw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_LCv9IAzzEe2NeYxRC236WA" client="_fXfH8IUHEey4cMhm9-6ddw" supplier="_-YfZIHO0EeyyQZoR1M2guQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_NkhWUAzzEe2NeYxRC236WA" client="_fXfH8IUHEey4cMhm9-6ddw" supplier="_Xjc9MIUCEey4cMhm9-6ddw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_O33NgAzzEe2NeYxRC236WA" client="_Zwl_0HtiEey4cMhm9-6ddw" supplier="_nZPhMHl9EeygLpMY3b1PCQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_RoOcUAzzEe2NeYxRC236WA" client="_rPB4IITPEey4cMhm9-6ddw" supplier="_WlMvcHLeEeyyQZoR1M2guQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_VUBYoAzzEe2NeYxRC236WA" client="_rPB4IITPEey4cMhm9-6ddw" supplier="_3YPqQHRIEeyyQZoR1M2guQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_mIA6QAzzEe2NeYxRC236WA" client="_s1_dsHLuEeyyQZoR1M2guQ" supplier="_-YfZIHO0EeyyQZoR1M2guQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_otGtMAzzEe2NeYxRC236WA" client="_Ob6g4HLuEeyyQZoR1M2guQ" supplier="_qOxigHk-EeygLpMY3b1PCQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_3z_MwAzzEe2NeYxRC236WA" client="_v0tX4HO6EeyyQZoR1M2guQ" supplier="__snjwHtlEey4cMhm9-6ddw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_6m9qsAzzEe2NeYxRC236WA" client="_s1_dsHLuEeyyQZoR1M2guQ" supplier="_F6EWYHPEEeyyQZoR1M2guQ"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_DRt0UAz0Ee2NeYxRC236WA" client="_s1_dsHLuEeyyQZoR1M2guQ" supplier="_fXfH8IUHEey4cMhm9-6ddw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_Lrm3cAz0Ee2NeYxRC236WA" client="_s1_dsHLuEeyyQZoR1M2guQ" supplier="_rPB4IITPEey4cMhm9-6ddw"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_ZuF6wAz0Ee2NeYxRC236WA" client="_AQHQ8Hl6EeygLpMY3b1PCQ" supplier="_JI5pIHz0Eey4cMhm9-6ddw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_BEufwH6TEey4cMhm9-6ddw" name="InstanceDiagrams"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_nIx_AITQEey4cMhm9-6ddw" name="Instances">
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_CK5rYH6YEey4cMhm9-6ddw" name="InstanceSpecification24" classifier="_phOk4H0AEey4cMhm9-6ddw"/>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_HaNo4H6YEey4cMhm9-6ddw" name="InstanceSpecification25" classifier="_0Y0ZgH0AEey4cMhm9-6ddw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_H7WAAH6YEey4cMhm9-6ddw" source="InstanceEnd" references="_CK5rYH6YEey4cMhm9-6ddw _h5HmEH6XEey4cMhm9-6ddw"/>
+        <slot xmi:type="uml:Slot" xmi:id="_H7WnEX6YEey4cMhm9-6ddw" definingFeature="_0Y6gIn0AEey4cMhm9-6ddw">
+          <value xmi:type="uml:InstanceValue" xmi:id="_H7WnEn6YEey4cMhm9-6ddw" name="InstanceValue0" type="_Zwl_0HtiEey4cMhm9-6ddw" instance="_h5HmEH6XEey4cMhm9-6ddw"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n1ZsYH6ZEey4cMhm9-6ddw" name="InstanceSpecification27">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oxQ3sH6ZEey4cMhm9-6ddw" source="InstanceEnd" references="_5ZMIsH6YEey4cMhm9-6ddw __uTikH6WEey4cMhm9-6ddw"/>
+        <slot xmi:type="uml:Slot" xmi:id="_oxRewX6ZEey4cMhm9-6ddw">
+          <value xmi:type="uml:InstanceValue" xmi:id="_oxRewn6ZEey4cMhm9-6ddw" name="InstanceValue0" type="_6edRwHLeEeyyQZoR1M2guQ" instance="__uTikH6WEey4cMhm9-6ddw"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_eIBysH6aEey4cMhm9-6ddw" name="InstanceSpecification29">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eq6dUH6aEey4cMhm9-6ddw" source="InstanceEnd" references="_EFlkgH6aEey4cMhm9-6ddw __uTikH6WEey4cMhm9-6ddw"/>
+        <slot xmi:type="uml:Slot" xmi:id="_eq6dU36aEey4cMhm9-6ddw">
+          <value xmi:type="uml:InstanceValue" xmi:id="_eq7EYH6aEey4cMhm9-6ddw" name="InstanceValue0" type="_6edRwHLeEeyyQZoR1M2guQ" instance="__uTikH6WEey4cMhm9-6ddw"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_ClSZ8H6bEey4cMhm9-6ddw" name="InstanceSpecification31">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DH9CIH6bEey4cMhm9-6ddw" source="InstanceEnd" references="_lqHrIH6aEey4cMhm9-6ddw __uTikH6WEey4cMhm9-6ddw"/>
+        <slot xmi:type="uml:Slot" xmi:id="_DH9pMX6bEey4cMhm9-6ddw">
+          <value xmi:type="uml:InstanceValue" xmi:id="_DH9pMn6bEey4cMhm9-6ddw" name="InstanceValue0" type="_6edRwHLeEeyyQZoR1M2guQ" instance="__uTikH6WEey4cMhm9-6ddw"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_tJG-gH6VEey4cMhm9-6ddw" name="25Dec" classifier="_Uf79gHttEey4cMhm9-6ddw">
+        <slot xmi:type="uml:Slot" xmi:id="_6pWQYH6VEey4cMhm9-6ddw" definingFeature="_eNzxAHttEey4cMhm9-6ddw">
+          <value xmi:type="uml:InstanceValue" xmi:id="_JiWsAH6WEey4cMhm9-6ddw" instance="_fUPz0HRKEeyyQZoR1M2guQ"/>
+        </slot>
+        <slot xmi:type="uml:Slot" xmi:id="_-PLHkH6VEey4cMhm9-6ddw" definingFeature="_rwR3gHttEey4cMhm9-6ddw">
+          <value xmi:type="uml:LiteralInteger" xmi:id="_ERf2YH6WEey4cMhm9-6ddw" value="25"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_wTjzMH6TEey4cMhm9-6ddw" name="Anual Public Holidays" classifier="_6edRwHLeEeyyQZoR1M2guQ">
+        <slot xmi:type="uml:Slot" xmi:id="_3hR-IH6TEey4cMhm9-6ddw" definingFeature="_F7qlgHRLEeyyQZoR1M2guQ">
+          <value xmi:type="uml:LiteralString" xmi:id="_KJ9JcH6UEey4cMhm9-6ddw" value="Anual Public Holidays"/>
+        </slot>
+        <slot xmi:type="uml:Slot" xmi:id="_9CTWsH6TEey4cMhm9-6ddw" definingFeature="_5uOcQHtxEey4cMhm9-6ddw">
+          <value xmi:type="uml:LiteralString" xmi:id="_Ogo10H6UEey4cMhm9-6ddw" value="Not working day"/>
+        </slot>
+        <slot xmi:type="uml:Slot" xmi:id="_ADP_MH6UEey4cMhm9-6ddw" definingFeature="_eZHv4H4wEey4cMhm9-6ddw">
+          <value xmi:type="uml:InstanceValue" xmi:id="_TfWLgH6UEey4cMhm9-6ddw" instance="_xkxFYH4wEey4cMhm9-6ddw"/>
+        </slot>
+        <slot xmi:type="uml:Slot" xmi:id="_DiBzMH6UEey4cMhm9-6ddw" definingFeature="_DlanYH4xEey4cMhm9-6ddw"/>
+        <slot xmi:type="uml:Slot" xmi:id="_BUquUX6VEey4cMhm9-6ddw">
+          <value xmi:type="uml:InstanceValue" xmi:id="_BUrVYH6VEey4cMhm9-6ddw" name="InstanceValue0" type="_AQHQ8Hl6EeygLpMY3b1PCQ" instance="_bRcO0H6UEey4cMhm9-6ddw"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_bRcO0H6UEey4cMhm9-6ddw" name="Christmas" classifier="_AQHQ8Hl6EeygLpMY3b1PCQ">
+        <slot xmi:type="uml:Slot" xmi:id="_xiNiMH6UEey4cMhm9-6ddw" definingFeature="_qK26IH6UEey4cMhm9-6ddw">
+          <value xmi:type="uml:LiteralString" xmi:id="_-00nwH6UEey4cMhm9-6ddw" value="Christmas"/>
+        </slot>
+        <slot xmi:type="uml:Slot" xmi:id="_1aHn4H6UEey4cMhm9-6ddw" definingFeature="_JntScHl6EeygLpMY3b1PCQ">
+          <value xmi:type="uml:LiteralString" xmi:id="_U-so8H6VEey4cMhm9-6ddw" value="ChristmasDay"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_KlFw0H6VEey4cMhm9-6ddw" name="ChristmasDay" classifier="_Ht8m0HtvEey4cMhm9-6ddw">
+        <slot xmi:type="uml:Slot" xmi:id="_Y5dOUH6VEey4cMhm9-6ddw" definingFeature="_peDrUHtvEey4cMhm9-6ddw">
+          <value xmi:type="uml:LiteralString" xmi:id="_mPI2AH6VEey4cMhm9-6ddw" value="25Dec"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_h5HmEH6XEey4cMhm9-6ddw" name="ExcludePublicHolidays" classifier="_Zwl_0HtiEey4cMhm9-6ddw">
+        <slot xmi:type="uml:Slot" xmi:id="_uI7K0X6XEey4cMhm9-6ddw" definingFeature="_mAgCEnl8EeygLpMY3b1PCQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_uI7K0n6XEey4cMhm9-6ddw" name="InstanceValue0" type="_JePDwHLfEeyyQZoR1M2guQ" instance="_EcqE4H6TEey4cMhm9-6ddw"/>
+        </slot>
+        <slot xmi:type="uml:Slot" xmi:id="_0vWFMH6XEey4cMhm9-6ddw" definingFeature="_TdOesHl9EeygLpMY3b1PCQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_-mAoUH6XEey4cMhm9-6ddw" instance="_njbdkHtiEey4cMhm9-6ddw"/>
+        </slot>
+        <slot xmi:type="uml:Slot" xmi:id="_H7WAAX6YEey4cMhm9-6ddw" definingFeature="_0Y1AkH0AEey4cMhm9-6ddw">
+          <value xmi:type="uml:InstanceValue" xmi:id="_H7WnEH6YEey4cMhm9-6ddw" name="InstanceValue0" type="_phOk4H0AEey4cMhm9-6ddw" instance="_CK5rYH6YEey4cMhm9-6ddw"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_lqHrIH6aEey4cMhm9-6ddw" name="First and third">
+        <slot xmi:type="uml:Slot" xmi:id="_thM8IH6aEey4cMhm9-6ddw" definingFeature="_HS7iIHRFEeyyQZoR1M2guQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_-IDZoH6aEey4cMhm9-6ddw" instance="_KeHwYHPEEeyyQZoR1M2guQ"/>
+          <value xmi:type="uml:InstanceValue" xmi:id="_AlUGQH6bEey4cMhm9-6ddw" instance="_Pr41wHPEEeyyQZoR1M2guQ"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_5ZMIsH6YEey4cMhm9-6ddw" name="Half Year">
+        <slot xmi:type="uml:Slot" xmi:id="_GIxZsH6ZEey4cMhm9-6ddw" definingFeature="_kAAVIHRGEeyyQZoR1M2guQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_ROnswH6ZEey4cMhm9-6ddw" instance="_ACK4AHRKEeyyQZoR1M2guQ"/>
+          <value xmi:type="uml:InstanceValue" xmi:id="_UiJTAH6ZEey4cMhm9-6ddw" instance="_Ft2ocHRKEeyyQZoR1M2guQ"/>
+          <value xmi:type="uml:InstanceValue" xmi:id="_XeqHcH6ZEey4cMhm9-6ddw" instance="_LFD9sHRKEeyyQZoR1M2guQ"/>
+          <value xmi:type="uml:InstanceValue" xmi:id="_avuPkH6ZEey4cMhm9-6ddw" instance="_OtBi4HRKEeyyQZoR1M2guQ"/>
+          <value xmi:type="uml:InstanceValue" xmi:id="_fwieEH6ZEey4cMhm9-6ddw" instance="_SFJ8UHRKEeyyQZoR1M2guQ"/>
+          <value xmi:type="uml:InstanceValue" xmi:id="_ihmQcH6ZEey4cMhm9-6ddw" instance="_VPyFQHRKEeyyQZoR1M2guQ"/>
+          <value xmi:type="uml:InstanceValue" xmi:id="_lXwlQH6ZEey4cMhm9-6ddw" instance="_YFOBUHRKEeyyQZoR1M2guQ"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_V1eVYH6UEey4cMhm9-6ddw" name="InstanceSpecification11" classifier="_Xa06cHLfEeyyQZoR1M2guQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WqLIwH6UEey4cMhm9-6ddw" source="InstanceEnd" references="_wTjzMH6TEey4cMhm9-6ddw _EcqE4H6TEey4cMhm9-6ddw"/>
+        <slot xmi:type="uml:Slot" xmi:id="_WqMW4X6UEey4cMhm9-6ddw" definingFeature="_XbBHsHLfEeyyQZoR1M2guQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_WqMW4n6UEey4cMhm9-6ddw" name="InstanceValue0" type="_JePDwHLfEeyyQZoR1M2guQ" instance="_EcqE4H6TEey4cMhm9-6ddw"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_AsxA0H6VEey4cMhm9-6ddw" name="InstanceSpecification13">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BUquUH6VEey4cMhm9-6ddw" source="InstanceEnd" references="_bRcO0H6UEey4cMhm9-6ddw _wTjzMH6TEey4cMhm9-6ddw"/>
+        <slot xmi:type="uml:Slot" xmi:id="_BUrVYX6VEey4cMhm9-6ddw">
+          <value xmi:type="uml:InstanceValue" xmi:id="_BUrVYn6VEey4cMhm9-6ddw" name="InstanceValue0" type="_6edRwHLeEeyyQZoR1M2guQ" instance="_wTjzMH6TEey4cMhm9-6ddw"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_obAQoH6VEey4cMhm9-6ddw" name="InstanceSpecification15">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pImWcH6VEey4cMhm9-6ddw" source="InstanceEnd" references="_bRcO0H6UEey4cMhm9-6ddw _KlFw0H6VEey4cMhm9-6ddw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_2nPF0H6VEey4cMhm9-6ddw" name="InstanceSpecification17">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3muM4H6VEey4cMhm9-6ddw" source="InstanceEnd" references="_KlFw0H6VEey4cMhm9-6ddw _tJG-gH6VEey4cMhm9-6ddw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_JcQOkH6XEey4cMhm9-6ddw" name="InstanceSpecification20" classifier="_Xa06cHLfEeyyQZoR1M2guQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KecrYH6XEey4cMhm9-6ddw" source="InstanceEnd" references="__uTikH6WEey4cMhm9-6ddw _eHwpwH6WEey4cMhm9-6ddw"/>
+        <slot xmi:type="uml:Slot" xmi:id="_KedScn6XEey4cMhm9-6ddw" definingFeature="_XbBHsHLfEeyyQZoR1M2guQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_KedSc36XEey4cMhm9-6ddw" name="InstanceValue0" type="_JePDwHLfEeyyQZoR1M2guQ" instance="_eHwpwH6WEey4cMhm9-6ddw"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_njjZUH6XEey4cMhm9-6ddw" name="InstanceSpecification22" classifier="_DyNyEHtkEey4cMhm9-6ddw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pql-UH6XEey4cMhm9-6ddw" source="InstanceEnd" references="_h5HmEH6XEey4cMhm9-6ddw __uTikH6WEey4cMhm9-6ddw"/>
+        <slot xmi:type="uml:Slot" xmi:id="_pqmlYH6XEey4cMhm9-6ddw" definingFeature="_DybNcHtkEey4cMhm9-6ddw">
+          <value xmi:type="uml:InstanceValue" xmi:id="_pqmlYX6XEey4cMhm9-6ddw" name="InstanceValue0" type="_6edRwHLeEeyyQZoR1M2guQ" instance="__uTikH6WEey4cMhm9-6ddw"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_sI2JcH6XEey4cMhm9-6ddw" name="InstanceSpecification23" classifier="_mAfbAHl8EeygLpMY3b1PCQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uI7K0H6XEey4cMhm9-6ddw" source="InstanceEnd" references="_EcqE4H6TEey4cMhm9-6ddw _h5HmEH6XEey4cMhm9-6ddw"/>
+        <slot xmi:type="uml:Slot" xmi:id="_uI7K036XEey4cMhm9-6ddw" definingFeature="_mAlhonl8EeygLpMY3b1PCQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_uI7K1H6XEey4cMhm9-6ddw" name="InstanceValue0" type="_Zwl_0HtiEey4cMhm9-6ddw" instance="_h5HmEH6XEey4cMhm9-6ddw"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_EFlkgH6aEey4cMhm9-6ddw" name="Mondays" classifier="_s1_dsHLuEeyyQZoR1M2guQ">
+        <slot xmi:type="uml:Slot" xmi:id="_PmrpIH6aEey4cMhm9-6ddw" definingFeature="_Nhr68HO3EeyyQZoR1M2guQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_beUlgH6aEey4cMhm9-6ddw" instance="_HsJ84HO1EeyyQZoR1M2guQ"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_EcqE4H6TEey4cMhm9-6ddw" name="PublicHolidays" classifier="_JePDwHLfEeyyQZoR1M2guQ">
+        <slot xmi:type="uml:Slot" xmi:id="_hIySIH6TEey4cMhm9-6ddw" definingFeature="_koUgEHRLEeyyQZoR1M2guQ">
+          <value xmi:type="uml:LiteralString" xmi:id="_u4duMH6TEey4cMhm9-6ddw" value="Public Holidays"/>
+        </slot>
+        <slot xmi:type="uml:Slot" xmi:id="_WqLIwX6UEey4cMhm9-6ddw" definingFeature="_Xa7BEHLfEeyyQZoR1M2guQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_WqMW4H6UEey4cMhm9-6ddw" name="InstanceValue0" type="_6edRwHLeEeyyQZoR1M2guQ" instance="_wTjzMH6TEey4cMhm9-6ddw"/>
+        </slot>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="__uTikH6WEey4cMhm9-6ddw" name="Regular Street Cleaning" classifier="_6edRwHLeEeyyQZoR1M2guQ">
+        <slot xmi:type="uml:Slot" xmi:id="_UghNQH6XEey4cMhm9-6ddw" definingFeature="_F7qlgHRLEeyyQZoR1M2guQ">
+          <value xmi:type="uml:LiteralString" xmi:id="_d7mnoH6XEey4cMhm9-6ddw" value="Regular Street Cleaning"/>
+        </slot>
+        <slot xmi:type="uml:Slot" xmi:id="_pql-UX6XEey4cMhm9-6ddw" definingFeature="_DyRccHtkEey4cMhm9-6ddw">
+          <value xmi:type="uml:InstanceValue" xmi:id="_pql-Un6XEey4cMhm9-6ddw" name="InstanceValue0" type="_Zwl_0HtiEey4cMhm9-6ddw" instance="_h5HmEH6XEey4cMhm9-6ddw"/>
+        </slot>
+        <slot xmi:type="uml:Slot" xmi:id="_oxQ3sX6ZEey4cMhm9-6ddw">
+          <value xmi:type="uml:InstanceValue" xmi:id="_oxRewH6ZEey4cMhm9-6ddw" name="InstanceValue0" instance="_5ZMIsH6YEey4cMhm9-6ddw"/>
+        </slot>
+        <slot xmi:type="uml:Slot" xmi:id="_eq6dUX6aEey4cMhm9-6ddw">
+          <value xmi:type="uml:InstanceValue" xmi:id="_eq6dUn6aEey4cMhm9-6ddw" name="InstanceValue0" type="_s1_dsHLuEeyyQZoR1M2guQ" instance="_EFlkgH6aEey4cMhm9-6ddw"/>
+        </slot>
+        <slot xmi:type="uml:Slot" xmi:id="_DH9CIX6bEey4cMhm9-6ddw">
+          <value xmi:type="uml:InstanceValue" xmi:id="_DH9pMH6bEey4cMhm9-6ddw" name="InstanceValue0" instance="_lqHrIH6aEey4cMhm9-6ddw"/>
+        </slot>
+        <slot xmi:type="uml:Slot" xmi:id="_qcMdkH6bEey4cMhm9-6ddw" definingFeature="_eZHv4H4wEey4cMhm9-6ddw">
+          <value xmi:type="uml:InstanceValue" xmi:id="_qcMdkX6bEey4cMhm9-6ddw" instance="_xkxFYH4wEey4cMhm9-6ddw"/>
+        </slot>
+        <slot xmi:type="uml:Slot" xmi:id="_qcNEoH6bEey4cMhm9-6ddw" definingFeature="_DlanYH4xEey4cMhm9-6ddw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_eHwpwH6WEey4cMhm9-6ddw" name="Street Cleaning" classifier="_JePDwHLfEeyyQZoR1M2guQ">
+        <slot xmi:type="uml:Slot" xmi:id="_xeJPoH6WEey4cMhm9-6ddw" definingFeature="_koUgEHRLEeyyQZoR1M2guQ">
+          <value xmi:type="uml:LiteralString" xmi:id="_5VTZIH6WEey4cMhm9-6ddw" value="Street Cleaning"/>
+        </slot>
+        <slot xmi:type="uml:Slot" xmi:id="_KedScH6XEey4cMhm9-6ddw" definingFeature="_Xa7BEHLfEeyyQZoR1M2guQ">
+          <value xmi:type="uml:InstanceValue" xmi:id="_KedScX6XEey4cMhm9-6ddw" name="InstanceValue0" type="_6edRwHLeEeyyQZoR1M2guQ" instance="__uTikH6WEey4cMhm9-6ddw"/>
+        </slot>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_208NYHLeEeyyQZoR1M2guQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_20-CkHLeEeyyQZoR1M2guQ" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_20-CkXLeEeyyQZoR1M2guQ" key="Version" value="0.0.2"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_20-CknLeEeyyQZoR1M2guQ" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_20-Ck3LeEeyyQZoR1M2guQ" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_20-ClHLeEeyyQZoR1M2guQ" key="Date" value="2022-01-11"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_20-ClXLeEeyyQZoR1M2guQ" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_209bgHLeEeyyQZoR1M2guQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UmlProfiles/OpenDddAggregateProfile/OpenDddAggregateProfile.profile.uml#_QIm78HLdEeyyQZoR1M2guQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="UmlProfiles/OpenDddAggregateProfile/OpenDddAggregateProfile.profile.uml#_XnSdYHLEEeyyQZoR1M2guQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_20-ClnLeEeyyQZoR1M2guQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_21FXUHLeEeyyQZoR1M2guQ" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_21FXUXLeEeyyQZoR1M2guQ" key="Version" value="0.2.14"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_21FXUnLeEeyyQZoR1M2guQ" key="Comment" value="New stereotype OpenModelStatement added. It contains the generic information of the model and extends the Metaclass &quot;Model&quot;."/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_21FXU3LeEeyyQZoR1M2guQ" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_21FXVHLeEeyyQZoR1M2guQ" key="Date" value="2018-04-13"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_21FXVXLeEeyyQZoR1M2guQ" key="Author" value="IISOMI"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_20-Cl3LeEeyyQZoR1M2guQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_S32LgD8HEeiIisB6uOvKFA"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_m1xqsHBgEd6FKu9XX1078A"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_21-IIHLeEeyyQZoR1M2guQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_22AkYHLeEeyyQZoR1M2guQ" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_22AkYXLeEeyyQZoR1M2guQ" key="Version" value="0.0.47"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_22AkYnLeEeyyQZoR1M2guQ" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_22AkY3LeEeyyQZoR1M2guQ" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_22AkZHLeEeyyQZoR1M2guQ" key="Date" value="2019-06-17"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_22AkZXLeEeyyQZoR1M2guQ" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_21_WQHLeEeyyQZoR1M2guQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="UmlProfiles/Experimental.profile.uml#_unEcAJDrEemIv9iw4JXc9w"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="UmlProfiles/Experimental.profile.uml#_EDtRcAH_Eea6DZDQ0h6cdQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_gMBqEHN-EeyyQZoR1M2guQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gMBqEXN-EeyyQZoR1M2guQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </profileApplication>
+  </uml:Model>
+  <OpenModel_Profile:OpenModelStatement xmi:id="_20_QsHLeEeyyQZoR1M2guQ" base_Model="_KV4S4HLeEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_6edRwXLeEeyyQZoR1M2guQ" base_Class="_6edRwHLeEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_JePDwXLfEeyyQZoR1M2guQ" base_Class="_JePDwHLfEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_Xa7oIHLfEeyyQZoR1M2guQ" base_StructuralFeature="_Xa7BEHLfEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_XbBHsXLfEeyyQZoR1M2guQ" base_StructuralFeature="_XbBHsHLfEeyyQZoR1M2guQ"/>
+  <OpenDddAggregateProfile:AggWithin xmi:id="_h-xaUHLfEeyyQZoR1M2guQ" base_Association="_Xa06cHLfEeyyQZoR1M2guQ"/>
+  <OpenDddAggregateProfile:AggRoot xmi:id="_kvToQHLfEeyyQZoR1M2guQ" base_Class="_JePDwHLfEeyyQZoR1M2guQ"/>
+  <OpenDddAggregateProfile:AggLeaf xmi:id="_qQCs8HLfEeyyQZoR1M2guQ" base_Class="_6edRwHLeEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_oVsDoHLgEeyyQZoR1M2guQ" base_Element="_Xa06cHLfEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_Ob7H8HLuEeyyQZoR1M2guQ" base_Class="_Ob6g4HLuEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_pPsscHLuEeyyQZoR1M2guQ" base_Element="_Ob6g4HLuEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_s1_dsXLuEeyyQZoR1M2guQ" base_Class="_s1_dsHLuEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_y7DXcHLuEeyyQZoR1M2guQ" base_Element="_s1_dsHLuEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_QL9swHLvEeyyQZoR1M2guQ" base_Class="_QL9FsHLvEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_bDv-IXN9EeyyQZoR1M2guQ" base_StructuralFeature="_bDv-IHN9EeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_NIEocHO0EeyyQZoR1M2guQ" base_StructuralFeature="_NIEBYHO0EeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_ST_6wHO0EeyyQZoR1M2guQ" base_Element="_NIEBYHO0EeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_YG-mAHO0EeyyQZoR1M2guQ" base_Element="_bDv-IHN9EeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_vI30UXO0EeyyQZoR1M2guQ" base_StructuralFeature="_vI30UHO0EeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_zroN0HO0EeyyQZoR1M2guQ" base_Element="_vI30UHO0EeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_Nhr68XO3EeyyQZoR1M2guQ" base_StructuralFeature="_Nhr68HO3EeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_T4RpkHO3EeyyQZoR1M2guQ" base_Element="_Nhr68HO3EeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_HS8JMHRFEeyyQZoR1M2guQ" base_StructuralFeature="_HS7iIHRFEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_VnNgEHRFEeyyQZoR1M2guQ" base_Element="_HS7iIHRFEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_Kby7EXRGEeyyQZoR1M2guQ" base_StructuralFeature="_Kby7EHRGEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_ZKPFcHRGEeyyQZoR1M2guQ" base_Element="_Kby7EHRGEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_kAAVIXRGEeyyQZoR1M2guQ" base_StructuralFeature="_kAAVIHRGEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_x-7HEHRGEeyyQZoR1M2guQ" base_Element="_kAAVIHRGEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_F7rMkHRLEeyyQZoR1M2guQ" base_StructuralFeature="_F7qlgHRLEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_koUgEXRLEeyyQZoR1M2guQ" base_StructuralFeature="_koUgEHRLEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_8INxoXROEeyyQZoR1M2guQ" base_StructuralFeature="_8INxoHROEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_Gqs48HRPEeyyQZoR1M2guQ" base_Element="_8INxoHROEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_9uLNYHRPEeyyQZoR1M2guQ" base_StructuralFeature="_9uKmUHRPEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_VIFTEHRQEeyyQZoR1M2guQ" base_Element="_9uKmUHRPEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_qOyJkHk-EeygLpMY3b1PCQ" base_StructuralFeature="_qOxignk-EeygLpMY3b1PCQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_qO6FYHk-EeygLpMY3b1PCQ" base_StructuralFeature="_qOxihHk-EeygLpMY3b1PCQ"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_uGOawXl2EeygLpMY3b1PCQ" base_Class="_uGOawHl2EeygLpMY3b1PCQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_dOPUgXl3EeygLpMY3b1PCQ" base_StructuralFeature="_dOPUgHl3EeygLpMY3b1PCQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_wVWIQHl3EeygLpMY3b1PCQ" base_StructuralFeature="_wVVhMHl3EeygLpMY3b1PCQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_2bxT8Hl3EeygLpMY3b1PCQ" base_StructuralFeature="_2bws4Hl3EeygLpMY3b1PCQ"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_AQH4AHl6EeygLpMY3b1PCQ" base_Class="_AQHQ8Hl6EeygLpMY3b1PCQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_JntScXl6EeygLpMY3b1PCQ" base_StructuralFeature="_JntScHl6EeygLpMY3b1PCQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_mAgCE3l8EeygLpMY3b1PCQ" base_StructuralFeature="_mAgCEnl8EeygLpMY3b1PCQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_mAlho3l8EeygLpMY3b1PCQ" base_StructuralFeature="_mAlhonl8EeygLpMY3b1PCQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_TdPFwHl9EeygLpMY3b1PCQ" base_StructuralFeature="_TdOesHl9EeygLpMY3b1PCQ"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_Zwmm4HtiEey4cMhm9-6ddw" base_Class="_Zwl_0HtiEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_DyRccXtkEey4cMhm9-6ddw" base_StructuralFeature="_DyRccHtkEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_DybNcXtkEey4cMhm9-6ddw" base_StructuralFeature="_DybNcHtkEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_OiRwcHtmEey4cMhm9-6ddw" base_StructuralFeature="_OiRJYHtmEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_dSbLAXtmEey4cMhm9-6ddw" base_StructuralFeature="_dSbLAHtmEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_eNzxAXttEey4cMhm9-6ddw" base_StructuralFeature="_eNzxAHttEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_rwSekHttEey4cMhm9-6ddw" base_StructuralFeature="_rwR3gHttEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_peESYHtvEey4cMhm9-6ddw" base_StructuralFeature="_peDrUHtvEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_Sp7WwXtwEey4cMhm9-6ddw" base_StructuralFeature="_Sp7WwHtwEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_kIzocXtwEey4cMhm9-6ddw" base_StructuralFeature="_kIzocHtwEey4cMhm9-6ddw" condition="unless defined by periodDuration."/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_wUtkoHtwEey4cMhm9-6ddw" base_StructuralFeature="_wUs9kHtwEey4cMhm9-6ddw" support="CONDITIONAL_MANDATORY" condition="unless defined by periodDuration.."/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_5uPDUHtxEey4cMhm9-6ddw" base_StructuralFeature="_5uOcQHtxEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_ULWuIXztEey4cMhm9-6ddw" base_StructuralFeature="_ULWuIHztEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_X4F24HzzEey4cMhm9-6ddw" base_StructuralFeature="_X4FP0HzzEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_JI5pIXz0Eey4cMhm9-6ddw" base_StructuralFeature="_JI5pIHz0Eey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_Qd71oHz3Eey4cMhm9-6ddw" base_StructuralFeature="_Qd7OkHz3Eey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_8YriI3z3Eey4cMhm9-6ddw" base_StructuralFeature="_8YriIHz3Eey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_phOk4X0AEey4cMhm9-6ddw" base_Class="_phOk4H0AEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_0Y1AkX0AEey4cMhm9-6ddw" base_StructuralFeature="_0Y1AkH0AEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_0Y6gI30AEey4cMhm9-6ddw" base_StructuralFeature="_0Y6gIn0AEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_MM6g030BEey4cMhm9-6ddw" base_StructuralFeature="_MM6g0n0BEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_MNAAY30BEey4cMhm9-6ddw" base_StructuralFeature="_MNAAYn0BEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_a7rbUX0BEey4cMhm9-6ddw" base_StructuralFeature="_a7rbUH0BEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_kzktgX0BEey4cMhm9-6ddw" base_StructuralFeature="_kzktgH0BEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_u3zLgX0BEey4cMhm9-6ddw" base_StructuralFeature="_u3zLgH0BEey4cMhm9-6ddw"/>
+  <OpenDddAggregateProfile:AggLeaf xmi:id="_BtJcoH3NEey4cMhm9-6ddw" base_Class="_Zwl_0HtiEey4cMhm9-6ddw"/>
+  <OpenDddAggregateProfile:AggBetween xmi:id="_D1g3UH3NEey4cMhm9-6ddw" base_Association="_mAfbAHl8EeygLpMY3b1PCQ"/>
+  <OpenDddAggregateProfile:AggBetween xmi:id="_Gs4GAH3NEey4cMhm9-6ddw" base_Association="_MM55wH0BEey4cMhm9-6ddw"/>
+  <OpenDddAggregateProfile:AggLeaf xmi:id="_LrTH0H3NEey4cMhm9-6ddw" base_Class="_phOk4H0AEey4cMhm9-6ddw"/>
+  <OpenDddAggregateProfile:AggWithin xmi:id="_QOHLsH3NEey4cMhm9-6ddw" base_Association="_DyNyEHtkEey4cMhm9-6ddw"/>
+  <OpenDddAggregateProfile:AggLeaf xmi:id="_S1pOoH3NEey4cMhm9-6ddw" base_Class="_Ob6g4HLuEeyyQZoR1M2guQ"/>
+  <OpenDddAggregateProfile:AggLeaf xmi:id="_VwyxIH3NEey4cMhm9-6ddw" base_Class="_s1_dsHLuEeyyQZoR1M2guQ"/>
+  <OpenDddAggregateProfile:AggLeaf xmi:id="_uNBPcH3NEey4cMhm9-6ddw" base_Class="_uGOawHl2EeygLpMY3b1PCQ"/>
+  <OpenDddAggregateProfile:AggLeaf xmi:id="_93b54H3NEey4cMhm9-6ddw" base_Class="_AQHQ8Hl6EeygLpMY3b1PCQ"/>
+  <OpenDddAggregateProfile:AggLeaf xmi:id="_A1wsMH3OEey4cMhm9-6ddw" base_Class="_QL9FsHLvEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_eZHv4X4wEey4cMhm9-6ddw" base_StructuralFeature="_eZHv4H4wEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_DlbOcH4xEey4cMhm9-6ddw" base_StructuralFeature="_DlanYH4xEey4cMhm9-6ddw" condition="If DST used for TE"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_qK26In6UEey4cMhm9-6ddw" base_StructuralFeature="_qK26IH6UEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_y_x_AITMEey4cMhm9-6ddw" base_StructuralFeature="_y_xX8ITMEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Experimental xmi:id="_RARFMITPEey4cMhm9-6ddw" base_Element="_y_xX8ITMEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_R1RvsITREey4cMhm9-6ddw" base_StructuralFeature="_R1RIoITREey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Experimental xmi:id="_j2FCsITREey4cMhm9-6ddw" base_Element="_R1RIoITREey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Specify xmi:id="_gVCdgITUEey4cMhm9-6ddw" base_Abstraction="_cy-sAITUEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_L3x5sYTVEey4cMhm9-6ddw" base_StructuralFeature="_L3x5sITVEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_oqAnwIT9Eey4cMhm9-6ddw" base_StructuralFeature="_oqAAsIT9Eey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Experimental xmi:id="_LQ90sIT-Eey4cMhm9-6ddw" base_Element="_oqAAsIT9Eey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Experimental xmi:id="_OcvNIIT-Eey4cMhm9-6ddw" base_Element="_8YriIHz3Eey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Specify xmi:id="_mzgRwIUAEey4cMhm9-6ddw" base_Abstraction="_OUPGgIUAEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Specify xmi:id="_tpbAsIUAEey4cMhm9-6ddw" base_Abstraction="_hKNG8IUAEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Specify xmi:id="_CjHzcIUBEey4cMhm9-6ddw" base_Abstraction="_9VOLMIUAEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_ypRwcIUBEey4cMhm9-6ddw" base_StructuralFeature="_ypRJYIUBEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_oSJV0YUHEey4cMhm9-6ddw" base_StructuralFeature="_oSJV0IUHEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Experimental xmi:id="_5Own8IUHEey4cMhm9-6ddw" base_Element="_oSJV0IUHEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_JJ1kkYUIEey4cMhm9-6ddw" base_StructuralFeature="_JJ1kkIUIEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Experimental xmi:id="_m0RNIIUIEey4cMhm9-6ddw" base_Element="_JJ1kkIUIEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Experimental xmi:id="_7FXu0IUIEey4cMhm9-6ddw" base_Element="_ypRJYIUBEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Experimental xmi:id="__5u1sIUIEey4cMhm9-6ddw" base_Element="_qK26IH6UEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Experimental xmi:id="_E06WQIUJEey4cMhm9-6ddw" base_Element="_JntScHl6EeygLpMY3b1PCQ"/>
+  <OpenModel_Profile:Specify xmi:id="_iBbB0MIUEeyCO-OTTyuWTA" base_Abstraction="_fEWMsMIUEeyCO-OTTyuWTA"/>
+  <OpenModel_Profile:Experimental xmi:id="_vUJcIMIUEeyCO-OTTyuWTA" base_Element="_dOPUgHl3EeygLpMY3b1PCQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_xckhMMIUEeyCO-OTTyuWTA" base_Element="_wVVhMHl3EeygLpMY3b1PCQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_21K9kMIUEeyCO-OTTyuWTA" base_Element="_2bws4Hl3EeygLpMY3b1PCQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_BPF-wMIVEeyCO-OTTyuWTA" base_Element="_X4FP0HzzEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Experimental xmi:id="_EXPbcMIVEeyCO-OTTyuWTA" base_Element="_Qd7OkHz3Eey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_6Z1hscIVEeyCO-OTTyuWTA" base_StructuralFeature="_6Z1hsMIVEeyCO-OTTyuWTA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_BFvZAMIWEeyCO-OTTyuWTA" base_StructuralFeature="_BFux8MIWEeyCO-OTTyuWTA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_ME2x8cIWEeyCO-OTTyuWTA" base_StructuralFeature="_ME2x8MIWEeyCO-OTTyuWTA"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_TH_BAcIXEeyCO-OTTyuWTA" base_Class="_TH_BAMIXEeyCO-OTTyuWTA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_jVt-cMIYEeyCO-OTTyuWTA" base_StructuralFeature="_jVtXYMIYEeyCO-OTTyuWTA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_r1r0YMIYEeyCO-OTTyuWTA" base_StructuralFeature="_r1rNUMIYEeyCO-OTTyuWTA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_1w4SMcIYEeyCO-OTTyuWTA" base_StructuralFeature="_1w4SMMIYEeyCO-OTTyuWTA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_-g7ykcIYEeyCO-OTTyuWTA" base_StructuralFeature="_-g7ykMIYEeyCO-OTTyuWTA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_F_pm4cIZEeyCO-OTTyuWTA" base_StructuralFeature="_F_pm4MIZEeyCO-OTTyuWTA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_OuC6YcIZEeyCO-OTTyuWTA" base_StructuralFeature="_OuC6YMIZEeyCO-OTTyuWTA"/>
+  <OpenModel_Profile:Experimental xmi:id="_VvBp0MIZEeyCO-OTTyuWTA" base_Element="_OuC6YMIZEeyCO-OTTyuWTA"/>
+  <OpenModel_Profile:Experimental xmi:id="_XRMnMMIZEeyCO-OTTyuWTA" base_Element="_F_pm4MIZEeyCO-OTTyuWTA"/>
+  <OpenModel_Profile:Experimental xmi:id="_aelJMMIZEeyCO-OTTyuWTA" base_Element="_1w4SMMIYEeyCO-OTTyuWTA"/>
+  <OpenModel_Profile:Experimental xmi:id="_bqh-8MIZEeyCO-OTTyuWTA" base_Element="_-g7ykMIYEeyCO-OTTyuWTA"/>
+  <OpenModel_Profile:Experimental xmi:id="_dQda8MIZEeyCO-OTTyuWTA" base_Element="_r1rNUMIYEeyCO-OTTyuWTA"/>
+  <OpenModel_Profile:Experimental xmi:id="_e5nxIMIZEeyCO-OTTyuWTA" base_Element="_jVtXYMIYEeyCO-OTTyuWTA"/>
+  <OpenModel_Profile:Specify xmi:id="_qhsAcMIZEeyCO-OTTyuWTA" base_Abstraction="_a6A9cMIYEeyCO-OTTyuWTA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_qify4cNEEeypn59zBr_fGw" base_StructuralFeature="_qify4MNEEeypn59zBr_fGw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_F0pVccNFEeypn59zBr_fGw" base_StructuralFeature="_F0pVcMNFEeypn59zBr_fGw"/>
+  <OpenModel_Profile:Experimental xmi:id="_mb5ucAQSEe2V3aJvQ3vT5A" base_Element="_phOk4H0AEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Experimental xmi:id="_tDPM0AQoEe2V3aJvQ3vT5A" base_Element="_0Y1AkH0AEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_xPr4cAzWEe2zlIat60rxqg" base_StructuralFeature="_xPrRYAzWEe2zlIat60rxqg"/>
+  <OpenModel_Profile:Experimental xmi:id="_8gh6kAzWEe2zlIat60rxqg" base_Element="_xPrRYAzWEe2zlIat60rxqg"/>
+  <OpenModel_Profile:Experimental xmi:id="_LbAVwDSrEe22jbMp3BDUaA" base_Element="_TdOesHl9EeygLpMY3b1PCQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_No2GUDSrEe22jbMp3BDUaA" base_Element="_Zwl_0HtiEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Experimental xmi:id="_0dCIsDSrEe22jbMp3BDUaA" base_Element="_5uOcQHtxEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Experimental xmi:id="_-lQ88DSrEe22jbMp3BDUaA" base_Element="_DlanYH4xEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Preliminary xmi:id="_GOO5cDSsEe22jbMp3BDUaA" base_Element="_eZHv4H4wEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Preliminary xmi:id="_JIj8kDSsEe22jbMp3BDUaA" base_Element="_F7qlgHRLEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Preliminary xmi:id="_PlHwUDSsEe22jbMp3BDUaA" base_Element="_koUgEHRLEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Preliminary xmi:id="_SsCd8DSsEe22jbMp3BDUaA" base_Element="_JePDwHLfEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Preliminary xmi:id="_WEiDwDSsEe22jbMp3BDUaA" base_Element="_Xa7BEHLfEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Preliminary xmi:id="_ZS8ggDSsEe22jbMp3BDUaA" base_Element="_6edRwHLeEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_deAywDSsEe22jbMp3BDUaA" base_Element="_QL9FsHLvEeyyQZoR1M2guQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_fHAJ0DSsEe22jbMp3BDUaA" base_Element="_AQHQ8Hl6EeygLpMY3b1PCQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_hm4soDSsEe22jbMp3BDUaA" base_Element="_uGOawHl2EeygLpMY3b1PCQ"/>
+  <OpenModel_Profile:Experimental xmi:id="_lHV7oDSsEe22jbMp3BDUaA" base_Element="_TH_BAMIXEeyCO-OTTyuWTA"/>
+  <OpenDddAggregateProfile:AggLeaf xmi:id="_lTEDcDSsEe22jbMp3BDUaA" base_Class="_TH_BAMIXEeyCO-OTTyuWTA"/>
+  <OpenModel_Profile:Experimental xmi:id="_r7IjoDSsEe22jbMp3BDUaA" base_Element="_DyRccHtkEey4cMhm9-6ddw"/>
+  <OpenModel_Profile:Experimental xmi:id="_yLxbQDSsEe22jbMp3BDUaA" base_Element="_mAgCEnl8EeygLpMY3b1PCQ"/>
+</xmi:XMI>

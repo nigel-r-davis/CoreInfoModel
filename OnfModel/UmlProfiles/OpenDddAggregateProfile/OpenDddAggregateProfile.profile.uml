@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_XnSdYHLEEeyyQZoR1M2guQ" name="OpenDddAggregateProfile" metaclassReference="_hQoWMHLEEeyyQZoR1M2guQ _lWW1cHLEEeyyQZoR1M2guQ">
+  <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_919D8HLcEeyyQZoR1M2guQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OCzGAHLdEeyyQZoR1M2guQ" source="PapyrusVersion">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OCzGAXLdEeyyQZoR1M2guQ" key="Version" value="0.0.0"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OCzGAnLdEeyyQZoR1M2guQ" key="Comment" value="&lt;undefined>"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OCzGA3LdEeyyQZoR1M2guQ" key="Copyright" value=""/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OCzGBHLdEeyyQZoR1M2guQ" key="Date" value=""/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OCzGBXLdEeyyQZoR1M2guQ" key="Author" value="&lt;undefined>"/>
+    </eAnnotations>
+    <contents xmi:type="ecore:EPackage" xmi:id="_QIm78HLdEeyyQZoR1M2guQ" name="OpenDddAggregateProfile" nsURI="http:///schemas/OpenDddAggregateProfile/_QImU4HLdEeyyQZoR1M2guQ/1" nsPrefix="OpenDddAggregateProfile">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QInjBXLdEeyyQZoR1M2guQ" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QInjBnLdEeyyQZoR1M2guQ" key="Version" value="0.0.2"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QInjB3LdEeyyQZoR1M2guQ" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QInjCHLdEeyyQZoR1M2guQ" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QInjCXLdEeyyQZoR1M2guQ" key="Date" value="2022-01-11"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QInjCnLdEeyyQZoR1M2guQ" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_QIm78XLdEeyyQZoR1M2guQ" name="AggRoot">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QIm78nLdEeyyQZoR1M2guQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_S4o68HLaEeyyQZoR1M2guQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_QIm783LdEeyyQZoR1M2guQ" name="base_Class" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_QIm79XLdEeyyQZoR1M2guQ" name="AggLeaf">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QIm79nLdEeyyQZoR1M2guQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_CvZKAHLbEeyyQZoR1M2guQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_QIm793LdEeyyQZoR1M2guQ" name="base_Class" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_QIm7-XLdEeyyQZoR1M2guQ" name="AggBetween">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QIm7-nLdEeyyQZoR1M2guQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_F-gxYHLbEeyyQZoR1M2guQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_QIm7-3LdEeyyQZoR1M2guQ" name="base_Association" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Association"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_QIm7_XLdEeyyQZoR1M2guQ" name="AggWithin">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QIm7_nLdEeyyQZoR1M2guQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_IwvBYHLbEeyyQZoR1M2guQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_QIm7_3LdEeyyQZoR1M2guQ" name="base_Association" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Association"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_QIm8AXLdEeyyQZoR1M2guQ" name="AggWithinByRef">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QIm8AnLdEeyyQZoR1M2guQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_LLYe4HLbEeyyQZoR1M2guQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_QIm8A3LdEeyyQZoR1M2guQ" name="base_Association" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Association"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_919rAHLcEeyyQZoR1M2guQ" name="OpenDddAggregateProfile" nsURI="http:///schemas/OpenDddAggregateProfile/_914ygHLcEeyyQZoR1M2guQ/0" nsPrefix="OpenDddAggregateProfile">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_91-5I3LcEeyyQZoR1M2guQ" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_91-5JHLcEeyyQZoR1M2guQ" key="Version" value="0.0.1"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_91-5JXLcEeyyQZoR1M2guQ" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_91-5JnLcEeyyQZoR1M2guQ" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_91-5J3LcEeyyQZoR1M2guQ" key="Date" value="2022-01-11"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_91-5KHLcEeyyQZoR1M2guQ" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_919rAXLcEeyyQZoR1M2guQ" name="AggRoot">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_919rAnLcEeyyQZoR1M2guQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_S4o68HLaEeyyQZoR1M2guQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_919rA3LcEeyyQZoR1M2guQ" name="base_Class" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_919rBXLcEeyyQZoR1M2guQ" name="AggLeaf">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_919rBnLcEeyyQZoR1M2guQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_CvZKAHLbEeyyQZoR1M2guQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_919rB3LcEeyyQZoR1M2guQ" name="base_Class" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_919rCXLcEeyyQZoR1M2guQ" name="AggBetween">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_919rCnLcEeyyQZoR1M2guQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_F-gxYHLbEeyyQZoR1M2guQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_919rC3LcEeyyQZoR1M2guQ" name="base_Association" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Association"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_919rDXLcEeyyQZoR1M2guQ" name="AggWithin">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_919rDnLcEeyyQZoR1M2guQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_IwvBYHLbEeyyQZoR1M2guQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_919rD3LcEeyyQZoR1M2guQ" name="base_Association" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Association"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_919rEXLcEeyyQZoR1M2guQ" name="AggWithinByRef">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_919rEnLcEeyyQZoR1M2guQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_LLYe4HLbEeyyQZoR1M2guQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_919rE3LcEeyyQZoR1M2guQ" name="base_Association" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Association"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+  </eAnnotations>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_hQoWMHLEEeyyQZoR1M2guQ" alias="Class">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_lWW1cHLEEeyyQZoR1M2guQ" alias="Association">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Association"/>
+  </elementImport>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_XtH_oHLEEeyyQZoR1M2guQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_XtJNwHLEEeyyQZoR1M2guQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_S4o68HLaEeyyQZoR1M2guQ" name="AggRoot">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_YbxW4HLbEeyyQZoR1M2guQ" annotatedElement="_S4o68HLaEeyyQZoR1M2guQ">
+      <body>Defines a DDD Aggregate. An entity that is &lt;&lt;AggRoot>> will be indentified using a uuid.</body>
+    </ownedComment>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_PthNUXLbEeyyQZoR1M2guQ" name="base_Class" association="_PtfYIHLbEeyyQZoR1M2guQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PthNUnLbEeyyQZoR1M2guQ"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_CvZKAHLbEeyyQZoR1M2guQ" name="AggLeaf">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_jOYk4HLbEeyyQZoR1M2guQ" annotatedElement="_CvZKAHLbEeyyQZoR1M2guQ">
+      <body>Defines a DDD Aggregate Leaf. A leaf is part of an Aggregate and is locally is identified by an id local to the Aggregatet instance. A leaf needs to have a path back to an Aggregate Root via Agg_Within composite associations.</body>
+    </ownedComment>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_QzpH4nLbEeyyQZoR1M2guQ" name="base_Class" association="_QzpH4HLbEeyyQZoR1M2guQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QzpH43LbEeyyQZoR1M2guQ"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_F-gxYHLbEeyyQZoR1M2guQ" name="AggBetween">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_1OvzAHLbEeyyQZoR1M2guQ" annotatedElement="_F-gxYHLbEeyyQZoR1M2guQ">
+      <body>An association that crosses DDD Aggregate boundaries. One end must be an &lt;&lt;AggRoot>>. The association can’t have navigability into an &lt;&lt;AggLeaf>>.</body>
+    </ownedComment>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_RrZPQHLbEeyyQZoR1M2guQ" name="base_Association" association="_RrYoMHLbEeyyQZoR1M2guQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Association"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RrZPQXLbEeyyQZoR1M2guQ"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_IwvBYHLbEeyyQZoR1M2guQ" name="AggWithin">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_Egh7AHLcEeyyQZoR1M2guQ" annotatedElement="_IwvBYHLbEeyyQZoR1M2guQ">
+      <body>An association with both ends in the same DDD Aggregate boundary (instance). One end must be an Aggregate Leaf. References use a local identifier.</body>
+    </ownedComment>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_STCeEHLbEeyyQZoR1M2guQ" name="base_Association" association="_STB3AHLbEeyyQZoR1M2guQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Association"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_STCeEXLbEeyyQZoR1M2guQ"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_LLYe4HLbEeyyQZoR1M2guQ" name="AggWithinByRef">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_4oNMsHLcEeyyQZoR1M2guQ" annotatedElement="_LLYe4HLbEeyyQZoR1M2guQ">
+      <body>An optimization of AggWithin for statistics classes.&#xD;
+This allows transactions and events to split config and operational data.&#xD;
+References use a global identifier.&#xD;
+</body>
+    </ownedComment>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TB-nsnLbEeyyQZoR1M2guQ" name="base_Association" association="_TB-nsHLbEeyyQZoR1M2guQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Association"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TB-ns3LbEeyyQZoR1M2guQ"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_PtfYIHLbEeyyQZoR1M2guQ" name="E_AggRoot_Class10" memberEnd="_PthNUHLbEeyyQZoR1M2guQ _PthNUXLbEeyyQZoR1M2guQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_PthNUHLbEeyyQZoR1M2guQ" name="extension_AggRoot" type="_S4o68HLaEeyyQZoR1M2guQ" aggregation="composite" association="_PtfYIHLbEeyyQZoR1M2guQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_QzpH4HLbEeyyQZoR1M2guQ" name="E_AggLeaf_Class11" memberEnd="_QzpH4XLbEeyyQZoR1M2guQ _QzpH4nLbEeyyQZoR1M2guQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_QzpH4XLbEeyyQZoR1M2guQ" name="extension_AggLeaf" type="_CvZKAHLbEeyyQZoR1M2guQ" aggregation="composite" association="_QzpH4HLbEeyyQZoR1M2guQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_RrYoMHLbEeyyQZoR1M2guQ" name="E_AggBetween_Association12" memberEnd="_RrYoMXLbEeyyQZoR1M2guQ _RrZPQHLbEeyyQZoR1M2guQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_RrYoMXLbEeyyQZoR1M2guQ" name="extension_AggBetween" type="_F-gxYHLbEeyyQZoR1M2guQ" aggregation="composite" association="_RrYoMHLbEeyyQZoR1M2guQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_STB3AHLbEeyyQZoR1M2guQ" name="E_AggWithin_Association13" memberEnd="_STB3AXLbEeyyQZoR1M2guQ _STCeEHLbEeyyQZoR1M2guQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_STB3AXLbEeyyQZoR1M2guQ" name="extension_AggWithin" type="_IwvBYHLbEeyyQZoR1M2guQ" aggregation="composite" association="_STB3AHLbEeyyQZoR1M2guQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_TB-nsHLbEeyyQZoR1M2guQ" name="E_AggWithinByRef_Association14" memberEnd="_TB-nsXLbEeyyQZoR1M2guQ _TB-nsnLbEeyyQZoR1M2guQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_TB-nsXLbEeyyQZoR1M2guQ" name="extension_AggWithinByRef" type="_LLYe4HLbEeyyQZoR1M2guQ" aggregation="composite" association="_TB-nsHLbEeyyQZoR1M2guQ"/>
+  </packagedElement>
+</uml:Profile>
