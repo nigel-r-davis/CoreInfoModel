@@ -984,12 +984,12 @@ The repeatPeriod is an alternative to gap.</body>
           <value xmi:type="uml:InstanceValue" xmi:id="_DH9pMn6bEey4cMhm9-6ddw" name="InstanceValue0" type="_6edRwHLeEeyyQZoR1M2guQ" instance="__uTikH6WEey4cMhm9-6ddw"/>
         </slot>
       </packagedElement>
-      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_tJG-gH6VEey4cMhm9-6ddw" name="25Dec" classifier="_Uf79gHttEey4cMhm9-6ddw">
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_tJG-gH6VEey4cMhm9-6ddw" name="1May" classifier="_Uf79gHttEey4cMhm9-6ddw">
         <slot xmi:type="uml:Slot" xmi:id="_6pWQYH6VEey4cMhm9-6ddw" definingFeature="_eNzxAHttEey4cMhm9-6ddw">
-          <value xmi:type="uml:InstanceValue" xmi:id="_JiWsAH6WEey4cMhm9-6ddw" instance="_fUPz0HRKEeyyQZoR1M2guQ"/>
+          <value xmi:type="uml:InstanceValue" xmi:id="_JiWsAH6WEey4cMhm9-6ddw" instance="_Ft2ocHRKEeyyQZoR1M2guQ"/>
         </slot>
         <slot xmi:type="uml:Slot" xmi:id="_-PLHkH6VEey4cMhm9-6ddw" definingFeature="_rwR3gHttEey4cMhm9-6ddw">
-          <value xmi:type="uml:LiteralInteger" xmi:id="_ERf2YH6WEey4cMhm9-6ddw" value="25"/>
+          <value xmi:type="uml:LiteralInteger" xmi:id="_ERf2YH6WEey4cMhm9-6ddw" value="1"/>
         </slot>
       </packagedElement>
       <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_wTjzMH6TEey4cMhm9-6ddw" name="Anual Public Holidays" classifier="_6edRwHLeEeyyQZoR1M2guQ">
@@ -1009,15 +1009,15 @@ The repeatPeriod is an alternative to gap.</body>
       </packagedElement>
       <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_bRcO0H6UEey4cMhm9-6ddw" name="Christmas" classifier="_AQHQ8Hl6EeygLpMY3b1PCQ">
         <slot xmi:type="uml:Slot" xmi:id="_xiNiMH6UEey4cMhm9-6ddw" definingFeature="_qK26IH6UEey4cMhm9-6ddw">
-          <value xmi:type="uml:LiteralString" xmi:id="_-00nwH6UEey4cMhm9-6ddw" value="Christmas"/>
+          <value xmi:type="uml:LiteralString" xmi:id="_-00nwH6UEey4cMhm9-6ddw" value="May Holiday"/>
         </slot>
         <slot xmi:type="uml:Slot" xmi:id="_1aHn4H6UEey4cMhm9-6ddw" definingFeature="_JntScHl6EeygLpMY3b1PCQ">
-          <value xmi:type="uml:LiteralString" xmi:id="_U-so8H6VEey4cMhm9-6ddw" value="ChristmasDay"/>
+          <value xmi:type="uml:LiteralString" xmi:id="_U-so8H6VEey4cMhm9-6ddw" value="Early May Bank Holiday"/>
         </slot>
       </packagedElement>
       <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_KlFw0H6VEey4cMhm9-6ddw" name="ChristmasDay" classifier="_Ht8m0HtvEey4cMhm9-6ddw">
         <slot xmi:type="uml:Slot" xmi:id="_Y5dOUH6VEey4cMhm9-6ddw" definingFeature="_peDrUHtvEey4cMhm9-6ddw">
-          <value xmi:type="uml:LiteralString" xmi:id="_mPI2AH6VEey4cMhm9-6ddw" value="25Dec"/>
+          <value xmi:type="uml:LiteralString" xmi:id="_mPI2AH6VEey4cMhm9-6ddw" value="1 May"/>
         </slot>
       </packagedElement>
       <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_h5HmEH6XEey4cMhm9-6ddw" name="ExcludePublicHolidays" classifier="_Zwl_0HtiEey4cMhm9-6ddw">
@@ -1099,7 +1099,7 @@ The repeatPeriod is an alternative to gap.</body>
       </packagedElement>
       <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="__uTikH6WEey4cMhm9-6ddw" name="Regular Street Cleaning" classifier="_6edRwHLeEeyyQZoR1M2guQ">
         <slot xmi:type="uml:Slot" xmi:id="_UghNQH6XEey4cMhm9-6ddw" definingFeature="_F7qlgHRLEeyyQZoR1M2guQ">
-          <value xmi:type="uml:LiteralString" xmi:id="_d7mnoH6XEey4cMhm9-6ddw" value="Regular Street Cleaning"/>
+          <value xmi:type="uml:LiteralString" xmi:id="_d7mnoH6XEey4cMhm9-6ddw" value="Garden Waste Collection (Summer Period)"/>
         </slot>
         <slot xmi:type="uml:Slot" xmi:id="_pql-UX6XEey4cMhm9-6ddw" definingFeature="_DyRccHtkEey4cMhm9-6ddw">
           <value xmi:type="uml:InstanceValue" xmi:id="_pql-Un6XEey4cMhm9-6ddw" name="InstanceValue0" type="_Zwl_0HtiEey4cMhm9-6ddw" instance="_h5HmEH6XEey4cMhm9-6ddw"/>
@@ -1120,7 +1120,7 @@ The repeatPeriod is an alternative to gap.</body>
       </packagedElement>
       <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_eHwpwH6WEey4cMhm9-6ddw" name="Street Cleaning" classifier="_JePDwHLfEeyyQZoR1M2guQ">
         <slot xmi:type="uml:Slot" xmi:id="_xeJPoH6WEey4cMhm9-6ddw" definingFeature="_koUgEHRLEeyyQZoR1M2guQ">
-          <value xmi:type="uml:LiteralString" xmi:id="_5VTZIH6WEey4cMhm9-6ddw" value="Street Cleaning"/>
+          <value xmi:type="uml:LiteralString" xmi:id="_5VTZIH6WEey4cMhm9-6ddw" value="Garden Waste Collection"/>
         </slot>
         <slot xmi:type="uml:Slot" xmi:id="_KedScH6XEey4cMhm9-6ddw" definingFeature="_Xa7BEHLfEeyyQZoR1M2guQ">
           <value xmi:type="uml:InstanceValue" xmi:id="_KedScX6XEey4cMhm9-6ddw" name="InstanceValue0" type="_6edRwHLeEeyyQZoR1M2guQ" instance="__uTikH6WEey4cMhm9-6ddw"/>

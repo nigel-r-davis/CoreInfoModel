@@ -2125,7 +2125,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EcrTCX6TEey4cMhm9-6ddw"/>
       </children>
       <element xmi:type="uml:InstanceSpecification" href="TemporalExpression.uml#_EcqE4H6TEey4cMhm9-6ddw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EcrTAX6TEey4cMhm9-6ddw" x="780" y="80"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EcrTAX6TEey4cMhm9-6ddw" x="780" y="80" width="241"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_wTkaQH6TEey4cMhm9-6ddw" type="InstanceSpecification_Shape">
       <children xmi:type="notation:DecorationNode" xmi:id="_wTkaQn6TEey4cMhm9-6ddw" type="InstanceSpecification_NameLabel"/>
@@ -2177,7 +2177,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bRdc936UEey4cMhm9-6ddw"/>
       </children>
       <element xmi:type="uml:InstanceSpecification" href="TemporalExpression.uml#_bRcO0H6UEey4cMhm9-6ddw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bRc14X6UEey4cMhm9-6ddw" x="780" y="320"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bRc14X6UEey4cMhm9-6ddw" x="780" y="320" width="361"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_KlG-8H6VEey4cMhm9-6ddw" type="InstanceSpecification_Shape">
       <children xmi:type="notation:DecorationNode" xmi:id="_KlG-8n6VEey4cMhm9-6ddw" type="InstanceSpecification_NameLabel"/>
@@ -2235,7 +2235,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eHye936WEey4cMhm9-6ddw"/>
       </children>
       <element xmi:type="uml:InstanceSpecification" href="TemporalExpression.uml#_eHwpwH6WEey4cMhm9-6ddw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eHx34X6WEey4cMhm9-6ddw" x="520" y="-160"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eHx34X6WEey4cMhm9-6ddw" x="500" y="-160" width="262"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="__uUwsH6WEey4cMhm9-6ddw" type="InstanceSpecification_Shape">
       <children xmi:type="notation:DecorationNode" xmi:id="__uUwsn6WEey4cMhm9-6ddw" type="InstanceSpecification_NameLabel"/>
@@ -2261,7 +2261,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="__uUwuX6WEey4cMhm9-6ddw"/>
       </children>
       <element xmi:type="uml:InstanceSpecification" href="TemporalExpression.uml#__uTikH6WEey4cMhm9-6ddw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="__uUwsX6WEey4cMhm9-6ddw" x="500" y="-40" width="261"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="__uUwsX6WEey4cMhm9-6ddw" x="320" y="-40" width="441"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_h5INIH6XEey4cMhm9-6ddw" type="InstanceSpecification_Shape">
       <children xmi:type="notation:DecorationNode" xmi:id="_h5INIn6XEey4cMhm9-6ddw" type="InstanceSpecification_NameLabel"/>
@@ -2287,13 +2287,31 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_CK65hH6YEey4cMhm9-6ddw" y="15"/>
       </children>
       <children xmi:type="notation:BasicCompartment" xmi:id="_CK65hX6YEey4cMhm9-6ddw" type="InstanceSpecification_SlotCompartment">
+        <children xmi:type="notation:Shape" xmi:id="__q184NIHEe2BDcWLQ11o3A" type="Text" fontColor="255" fontName="Segoe UI" fontHeight="18" bold="true" description="Incomplete">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__q3LANIHEe2BDcWLQ11o3A" source="PapyrusCSSForceValue">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__q3LAdIHEe2BDcWLQ11o3A" key="lineColor" value="true"/>
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__q3LAtIHEe2BDcWLQ11o3A" key="fontHeight" value="true"/>
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__q3LA9IHEe2BDcWLQ11o3A" key="bold" value="true"/>
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__q3LBNIHEe2BDcWLQ11o3A" key="italic" value="true"/>
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__q3LBdIHEe2BDcWLQ11o3A" key="fontColor" value="true"/>
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__q3LBtIHEe2BDcWLQ11o3A" key="fillColor" value="true"/>
+          </eAnnotations>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="__q3LB9IHEe2BDcWLQ11o3A" type="DiagramName">
+            <element xsi:nil="true"/>
+          </children>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="__q3LCNIHEe2BDcWLQ11o3A" type="Description">
+            <element xsi:nil="true"/>
+          </children>
+          <element xsi:nil="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="__q184dIHEe2BDcWLQ11o3A" x="1340" y="200"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_CK65hn6YEey4cMhm9-6ddw"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_CK65h36YEey4cMhm9-6ddw"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_CK65iH6YEey4cMhm9-6ddw"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CK65iX6YEey4cMhm9-6ddw"/>
       </children>
       <element xmi:type="uml:InstanceSpecification" href="TemporalExpression.uml#_CK5rYH6YEey4cMhm9-6ddw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CK65gX6YEey4cMhm9-6ddw" x="1020" y="80"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CK65gX6YEey4cMhm9-6ddw" x="1040" y="80" width="381"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_5ZMvwH6YEey4cMhm9-6ddw" type="InstanceSpecification_Shape">
       <children xmi:type="notation:DecorationNode" xmi:id="_5ZMvwn6YEey4cMhm9-6ddw" type="InstanceSpecification_NameLabel"/>
@@ -2311,7 +2329,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5ZNW1H6YEey4cMhm9-6ddw"/>
       </children>
       <element xmi:type="uml:InstanceSpecification" href="TemporalExpression.uml#_5ZMIsH6YEey4cMhm9-6ddw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5ZMvwX6YEey4cMhm9-6ddw" x="220" y="80" width="461"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5ZMvwX6YEey4cMhm9-6ddw" x="180" y="80" width="501"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_EFmyoH6aEey4cMhm9-6ddw" type="InstanceSpecification_Shape">
       <children xmi:type="notation:DecorationNode" xmi:id="_EFmyon6aEey4cMhm9-6ddw" type="InstanceSpecification_NameLabel"/>
@@ -2329,7 +2347,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EFmyqX6aEey4cMhm9-6ddw"/>
       </children>
       <element xmi:type="uml:InstanceSpecification" href="TemporalExpression.uml#_EFlkgH6aEey4cMhm9-6ddw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EFmyoX6aEey4cMhm9-6ddw" x="520" y="200"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EFmyoX6aEey4cMhm9-6ddw" x="380" y="200" width="345"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_lqI5QH6aEey4cMhm9-6ddw" type="InstanceSpecification_Shape">
       <children xmi:type="notation:DecorationNode" xmi:id="_lqI5Qn6aEey4cMhm9-6ddw" type="InstanceSpecification_NameLabel"/>
@@ -2347,7 +2365,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lqI5SX6aEey4cMhm9-6ddw"/>
       </children>
       <element xmi:type="uml:InstanceSpecification" href="TemporalExpression.uml#_lqHrIH6aEey4cMhm9-6ddw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lqI5QX6aEey4cMhm9-6ddw" x="396" y="320" width="365"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lqI5QX6aEey4cMhm9-6ddw" x="340" y="320" width="421"/>
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="__k8vEX6SEey4cMhm9-6ddw" name="diagram_compatibility_version" stringValue="1.4.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="__k8vEn6SEey4cMhm9-6ddw"/>
@@ -2367,7 +2385,7 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_WqPaMX6UEey4cMhm9-6ddw"/>
       <element xmi:type="uml:InstanceSpecification" href="TemporalExpression.uml#_V1eVYH6UEey4cMhm9-6ddw"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WqPaMn6UEey4cMhm9-6ddw" points="[680, 80, -643984, -643984]$[880, 200, -643984, -643984]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Wq3sUH6UEey4cMhm9-6ddw" id="(0.45248868778280543,1.0)"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Wq3sUH6UEey4cMhm9-6ddw" id="(0.4149377593360996,1.0)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Wq3sUX6UEey4cMhm9-6ddw" id="(0.4166666666666667,0.0)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_BUu_wH6VEey4cMhm9-6ddw" type="InstanceSpecification_Edge" source="_wTkaQH6TEey4cMhm9-6ddw" target="_bRc14H6UEey4cMhm9-6ddw">
@@ -2383,7 +2401,7 @@
       <element xmi:type="uml:InstanceSpecification" href="TemporalExpression.uml#_AsxA0H6VEey4cMhm9-6ddw"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BUu_wn6VEey4cMhm9-6ddw" points="[900, 300, -643984, -643984]$[1060, 380, -643984, -643984]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BU_ecH6VEey4cMhm9-6ddw" id="(0.4166666666666667,1.0)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BVAFgH6VEey4cMhm9-6ddw" id="(0.36363636363636365,0.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BVAFgH6VEey4cMhm9-6ddw" id="(0.2770083102493075,0.0)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_pIm9gH6VEey4cMhm9-6ddw" type="InstanceSpecification_Edge" source="_bRc14H6UEey4cMhm9-6ddw" target="_KlG-8H6VEey4cMhm9-6ddw">
       <children xmi:type="notation:DecorationNode" xmi:id="_pIm9g36VEey4cMhm9-6ddw" visible="false" type="InstanceSpecification_SourceRoleLabel">
@@ -2397,8 +2415,8 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_pIm9gX6VEey4cMhm9-6ddw"/>
       <element xmi:type="uml:InstanceSpecification" href="TemporalExpression.uml#_obAQoH6VEey4cMhm9-6ddw"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_pIm9gn6VEey4cMhm9-6ddw" points="[1160, 480, -643984, -643984]$[1240, 560, -643984, -643984]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pI4DQH6VEey4cMhm9-6ddw" id="(0.509090909090909,1.0)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pI4DQX6VEey4cMhm9-6ddw" id="(0.498220640569395,0.0)"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pI4DQH6VEey4cMhm9-6ddw" id="(0.2770083102493075,1.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pI4DQX6VEey4cMhm9-6ddw" id="(0.35587188612099646,0.0)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_3muz8H6VEey4cMhm9-6ddw" type="InstanceSpecification_Edge" source="_KlG-8H6VEey4cMhm9-6ddw" target="_tJHlkH6VEey4cMhm9-6ddw">
       <children xmi:type="notation:DecorationNode" xmi:id="_3mvbAH6VEey4cMhm9-6ddw" visible="false" type="InstanceSpecification_SourceRoleLabel">
@@ -2412,8 +2430,8 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_3muz8X6VEey4cMhm9-6ddw"/>
       <element xmi:type="uml:InstanceSpecification" href="TemporalExpression.uml#_2nPF0H6VEey4cMhm9-6ddw"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3muz8n6VEey4cMhm9-6ddw" points="[1340, 660, -643984, -643984]$[1500, 720, -643984, -643984]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3m_5sH6VEey4cMhm9-6ddw" id="(0.498220640569395,1.0)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3m_5sX6VEey4cMhm9-6ddw" id="(0.498220640569395,0.0)"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3m_5sH6VEey4cMhm9-6ddw" id="(0.42704626334519574,1.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3m_5sX6VEey4cMhm9-6ddw" id="(0.42704626334519574,0.0)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_Kehj4H6XEey4cMhm9-6ddw" type="InstanceSpecification_Edge" source="_eHx34H6WEey4cMhm9-6ddw" target="__uUwsH6WEey4cMhm9-6ddw">
       <children xmi:type="notation:DecorationNode" xmi:id="_KeiK8H6XEey4cMhm9-6ddw" visible="false" type="InstanceSpecification_SourceRoleLabel">
@@ -2428,7 +2446,7 @@
       <element xmi:type="uml:InstanceSpecification" href="TemporalExpression.uml#_JcQOkH6XEey4cMhm9-6ddw"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Kehj4n6XEey4cMhm9-6ddw" points="[520, -100, -643984, -643984]$[600, -20, -643984, -643984]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Ke9BsH6XEey4cMhm9-6ddw" id="(0.5405405405405406,1.0)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Ke9BsX6XEey4cMhm9-6ddw" id="(0.5363984674329502,0.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Ke9BsX6XEey4cMhm9-6ddw" id="(0.7256235827664399,0.0)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_pquhMH6XEey4cMhm9-6ddw" type="InstanceSpecification_Edge" source="__uUwsH6WEey4cMhm9-6ddw" target="_h5INIH6XEey4cMhm9-6ddw">
       <children xmi:type="notation:DecorationNode" xmi:id="_pqvIQH6XEey4cMhm9-6ddw" visible="false" type="InstanceSpecification_SourceRoleLabel">
@@ -2458,7 +2476,7 @@
       <element xmi:type="uml:InstanceSpecification" href="TemporalExpression.uml#_sI2JcH6XEey4cMhm9-6ddw"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_uJDGon6XEey4cMhm9-6ddw" points="[940, 60, -643984, -643984]$[940, 160, -643984, -643984]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uJd9YH6XEey4cMhm9-6ddw" id="(0.3037974683544304,1.0)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uJd9YX6XEey4cMhm9-6ddw" id="(0.5429864253393665,0.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uJd9YX6XEey4cMhm9-6ddw" id="(0.4979253112033195,0.0)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_H7fxAH6YEey4cMhm9-6ddw" type="InstanceSpecification_Edge" source="_h5INIH6XEey4cMhm9-6ddw" target="_CK65gH6YEey4cMhm9-6ddw">
       <children xmi:type="notation:DecorationNode" xmi:id="_H7gYEH6YEey4cMhm9-6ddw" visible="false" type="InstanceSpecification_SourceRoleLabel">
@@ -2472,8 +2490,8 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_H7fxAX6YEey4cMhm9-6ddw"/>
       <element xmi:type="uml:InstanceSpecification" href="TemporalExpression.uml#_HaNo4H6YEey4cMhm9-6ddw"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_H7fxAn6YEey4cMhm9-6ddw" points="[1120, 60, -643984, -643984]$[1300, 20, -643984, -643984]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H8GN8H6YEey4cMhm9-6ddw" id="(0.8607594936708861,1.0)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H8GN8X6YEey4cMhm9-6ddw" id="(0.28901734104046245,0.0)"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H8GN8H6YEey4cMhm9-6ddw" id="(0.8436724565756824,1.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H8GN8X6YEey4cMhm9-6ddw" id="(0.2099737532808399,0.0)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_oxZakH6ZEey4cMhm9-6ddw" type="InstanceSpecification_Edge" source="__uUwsH6WEey4cMhm9-6ddw" target="_5ZMvwH6YEey4cMhm9-6ddw">
       <children xmi:type="notation:DecorationNode" xmi:id="_oxaBoH6ZEey4cMhm9-6ddw" visible="false" type="InstanceSpecification_SourceRoleLabel">
@@ -2487,8 +2505,8 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_oxZakX6ZEey4cMhm9-6ddw"/>
       <element xmi:type="uml:InstanceSpecification" href="TemporalExpression.uml#_n1ZsYH6ZEey4cMhm9-6ddw"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oxZakn6ZEey4cMhm9-6ddw" points="[500, 20, -643984, -643984]$[500, 80, -643984, -643984]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oyBssH6ZEey4cMhm9-6ddw" id="(0.3831417624521073,1.0)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oyBssX6ZEey4cMhm9-6ddw" id="(0.824295010845987,0.0)"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oyBssH6ZEey4cMhm9-6ddw" id="(0.6349206349206349,1.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oyBssX6ZEey4cMhm9-6ddw" id="(0.8383233532934131,0.0)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_erOmYH6aEey4cMhm9-6ddw" type="InstanceSpecification_Edge" source="__uUwsH6WEey4cMhm9-6ddw" target="_EFmyoH6aEey4cMhm9-6ddw">
       <children xmi:type="notation:DecorationNode" xmi:id="_erOmY36aEey4cMhm9-6ddw" visible="false" type="InstanceSpecification_SourceRoleLabel">
@@ -2502,8 +2520,8 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_erOmYX6aEey4cMhm9-6ddw"/>
       <element xmi:type="uml:InstanceSpecification" href="TemporalExpression.uml#_eIBysH6aEey4cMhm9-6ddw"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_erOmYn6aEey4cMhm9-6ddw" points="[500, 20, -643984, -643984]$[400, 280, -643984, -643984]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_erxY8H6aEey4cMhm9-6ddw" id="(0.7662835249042146,1.0)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_erxY8X6aEey4cMhm9-6ddw" id="(0.8944723618090452,0.0)"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_erxY8H6aEey4cMhm9-6ddw" id="(0.8616780045351474,1.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_erxY8X6aEey4cMhm9-6ddw" id="(0.927536231884058,0.0)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_DILroH6bEey4cMhm9-6ddw" type="InstanceSpecification_Edge" source="__uUwsH6WEey4cMhm9-6ddw" target="_lqI5QH6aEey4cMhm9-6ddw">
       <children xmi:type="notation:DecorationNode" xmi:id="_DIMSsH6bEey4cMhm9-6ddw" visible="false" type="InstanceSpecification_SourceRoleLabel">
@@ -2517,8 +2535,8 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_DILroX6bEey4cMhm9-6ddw"/>
       <element xmi:type="uml:InstanceSpecification" href="TemporalExpression.uml#_ClSZ8H6bEey4cMhm9-6ddw"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DILron6bEey4cMhm9-6ddw" points="[500, 20, -643984, -643984]$[460, 280, -643984, -643984]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DInJcH6bEey4cMhm9-6ddw" id="(0.9195402298850575,1.0)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DInJcX6bEey4cMhm9-6ddw" id="(0.9424657534246575,0.0)"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DInJcH6bEey4cMhm9-6ddw" id="(0.9523809523809523,1.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DInJcX6bEey4cMhm9-6ddw" id="(0.9501187648456056,0.0)"/>
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_MnwyEMITEeyCO-OTTyuWTA" type="PapyrusUMLClassDiagram" name="TemporalExpression-Overview" measurementUnit="Pixel">
