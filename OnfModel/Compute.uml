@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:OpenModel_Profile="http:///schemas/OpenModel_Profile/_S30WUD8HEeiIisB6uOvKFA/26" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/OpenModel_Profile/_S30WUD8HEeiIisB6uOvKFA/26 UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_S32LgD8HEeiIisB6uOvKFA">
   <uml:Model xmi:id="_Q2V7cPrMEe2K5rGl_jmrlg" name="Compute">
-    <ownedComment xmi:type="uml:Comment" xmi:id="_-71iEPrpEe2K5rGl_jmrlg">
-      <body>Adapter description...&#xD;
-Need to provide transfer function description&#xD;
-Should be in spec&#xD;
-Same as Task??&#xD;
-Work on for 15/6</body>
-    </ownedComment>
-    <ownedComment xmi:type="uml:Comment" xmi:id="_H9xcoPrqEe2K5rGl_jmrlg">
-      <body>Allocation rules.&#xD;
-Coarse only... VM for fine.</body>
-    </ownedComment>
     <packageImport xmi:type="uml:PackageImport" xmi:id="_Q6Z8EPrMEe2K5rGl_jmrlg">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
     </packageImport>
@@ -97,56 +86,15 @@ Coarse only... VM for fine.</body>
         </ownedEnd>
       </packagedElement>
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_trkvcPrOEe2K5rGl_jmrlg" name="RoleInPool"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_gZ9oQDzhEe6Rauf2bWY-_w" name="ComputePoolTransferFunction"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_bUTgkDziEe6Rauf2bWY-_w" name="ComputePoolHasTransferFunction" memberEnd="_bUTgkzziEe6Rauf2bWY-_w _bUbcYjziEe6Rauf2bWY-_w">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bUTgkTziEe6Rauf2bWY-_w" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bUTgkjziEe6Rauf2bWY-_w" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_bUbcYjziEe6Rauf2bWY-_w" name="computepool" type="_N4yvwPrNEe2K5rGl_jmrlg" association="_bUTgkDziEe6Rauf2bWY-_w"/>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_vjqyIPrREe2K5rGl_jmrlg" name="Processing">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_z0fAoABvEe6K5rGl_jmrlg">
-        <body>DONE (renamed as ComputeComponent) and need to add ComputeSystem as per Component_System pattern... ComputeComponent is complex and may be emergent from a ComputeSystem) - ComputeConstruct needs multiple storage and multiple processing elements. &#xD;
-These may need to be joined as systems...</body>
-      </ownedComment>
-      <ownedComment xmi:type="uml:Comment" xmi:id="_YsfW0AXZEe6K5rGl_jmrlg">
-        <body>Some of this stuff should be in spec...&#xD;
-Refer to the pattern in text in the document, but do not model.&#xD;
-Work on for 15/6&#xD;
-Words constructed in slides.</body>
-      </ownedComment>
-      <ownedComment xmi:type="uml:Comment" xmi:id="_hLYZQAXaEe6K5rGl_jmrlg">
-        <body>Zone size... (block, sector, byte, data bus, address bus, &#xD;
-&#xD;
-Work on for 15/6</body>
-      </ownedComment>
-      <ownedComment xmi:type="uml:Comment" xmi:id="_4l6UkAXbEe6K5rGl_jmrlg">
-        <body>NOT DONE - DISCUSS - memory cell type&#xD;
-REMOVE this.&#xD;
-&#xD;
-&#xD;
-Work on for 15/6</body>
-      </ownedComment>
-      <ownedComment xmi:type="uml:Comment" xmi:id="_HIYfgAXcEe6K5rGl_jmrlg">
-        <body>Should removable media be a physical/equipment characteristic covered by equipment-holder&#xD;
-Work on text to briefly describe this .&#xD;
-Work on for 15/6&#xD;
-See slides</body>
-      </ownedComment>
-      <ownedComment xmi:type="uml:Comment" xmi:id="_aKs54AXcEe6K5rGl_jmrlg">
-        <body>Discuss endurance rating&#xD;
-Needs wording along with rotation speed.&#xD;
-Work on for 15/6 </body>
-      </ownedComment>
-      <ownedComment xmi:type="uml:Comment" xmi:id="_mV5EYAXcEe6K5rGl_jmrlg">
-        <body>Component-System should be just reference... Explain that like all &quot;constructs&quot; the CC is a Component in a C-S pattern. The model does not expose this fully.&#xD;
-ProcessingConstruct needs some form of general description of transfer function (same as task)&#xD;
-ProcessingConstruct emergence diagram should align more with Component-System pattern (assembly-view pattern&#xD;
-Work on for 15/6 and prepare text</body>
-      </ownedComment>
-      <ownedComment xmi:type="uml:Comment" xmi:id="_5g5xoAXlEe6K5rGl_jmrlg">
-        <body>is isEmulated necessary/sufficient&#xD;
-Work on for 15/6</body>
-      </ownedComment>
-      <ownedComment xmi:type="uml:Comment" xmi:id="__vfrQDziEe6Rauf2bWY-_w">
-        <body>Running VM etc. gives rise compute components.&#xD;
-Add VM etc. to this figure.&#xD;
-</body>
-      </ownedComment>
       <packagedElement xmi:type="uml:DataType" xmi:id="_m4gjYPrSEe2K5rGl_jmrlg" name="ProcessingProperties">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_r1VCsPrSEe2K5rGl_jmrlg" name="instructionSet" type="_7VvckPrSEe2K5rGl_jmrlg">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sxaTYABXEe6K5rGl_jmrlg"/>
@@ -183,6 +131,12 @@ Add VM etc. to this figure.&#xD;
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nrOYgABeEe6K5rGl_jmrlg"/>
           <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_pXPOYABeEe6K5rGl_jmrlg" value="true"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_FaEYMHjKEe6KdJ00TZsmOg" name="media" type="_pzd6gHjHEe6KdJ00TZsmOg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F5x9kHjLEe6KdJ00TZsmOg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qfUFIHjNEe6KdJ00TZsmOg" name="status" type="_PHn7QHjNEe6KdJ00TZsmOg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qfUFIXjNEe6KdJ00TZsmOg"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_7VvckPrSEe2K5rGl_jmrlg" name="InstructionSet">
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_9I100ABXEe6K5rGl_jmrlg" name="GENERIC"/>
@@ -190,6 +144,153 @@ Add VM etc. to this figure.&#xD;
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_J5qZAPrTEe2K5rGl_jmrlg" name="ProcessorArchitecture">
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_AnbbkABYEe6K5rGl_jmrlg" name="GENERIC"/>
       </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_6cDB8ABYEe6K5rGl_jmrlg" name="Availability">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_7iZmAABYEe6K5rGl_jmrlg" name="HIGH"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_8slhMABYEe6K5rGl_jmrlg" name="MEDIUM"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_9iFl0ABYEe6K5rGl_jmrlg" name="LOW"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_xDr8oHjDEe6KdJ00TZsmOg" client="_r1VCsPrSEe2K5rGl_jmrlg" supplier="_7VvckPrSEe2K5rGl_jmrlg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_3MmboHjDEe6KdJ00TZsmOg" client="_m4gjYPrSEe2K5rGl_jmrlg" supplier="_6cDB8ABYEe6K5rGl_jmrlg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_QqZ2QHjFEe6KdJ00TZsmOg" client="_m4gjYPrSEe2K5rGl_jmrlg" supplier="_nQE1sAXREe6K5rGl_jmrlg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_xm7IYHjKEe6KdJ00TZsmOg" client="_VttPwABuEe6K5rGl_jmrlg" supplier="_pzd6gHjHEe6KdJ00TZsmOg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_X0wqgHjNEe6KdJ00TZsmOg" client="_m4gjYPrSEe2K5rGl_jmrlg" supplier="_PHn7QHjNEe6KdJ00TZsmOg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_UPq2UHjREe6KdJ00TZsmOg" client="_m4gjYPrSEe2K5rGl_jmrlg" supplier="_J5qZAPrTEe2K5rGl_jmrlg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_XUZLoABsEe6K5rGl_jmrlg" name="Storage">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_sbzS8ABbEe6K5rGl_jmrlg" name="StorageProperties">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_urV3MABcEe6K5rGl_jmrlg" name="blockSize">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfPRcHjJEe6KdJ00TZsmOg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_GTZtoABdEe6K5rGl_jmrlg" name="capacity">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_k47oQHjJEe6KdJ00TZsmOg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_MD33cABdEe6K5rGl_jmrlg" name="storageStrategy" type="_iKZ1AAXUEe6K5rGl_jmrlg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mgMhAHjJEe6KdJ00TZsmOg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_jf3AwABdEe6K5rGl_jmrlg" name="status" type="_PHn7QHjNEe6KdJ00TZsmOg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_n0jE0HjJEe6KdJ00TZsmOg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_our2EABdEe6K5rGl_jmrlg" name="extentRange" type="_wo6WEHjMEe6KdJ00TZsmOg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pbU1YHjJEe6KdJ00TZsmOg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_rxhU8ABdEe6K5rGl_jmrlg" name="internalPoolExtentRange" type="_wo6WEHjMEe6KdJ00TZsmOg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_q3yMUHjJEe6KdJ00TZsmOg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_vGwLYABdEe6K5rGl_jmrlg" name="isEmulated">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AcjvcAXWEe6K5rGl_jmrlg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_zOKFoABdEe6K5rGl_jmrlg" name="isEncrypted">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-7wEAAXVEe6K5rGl_jmrlg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_fGAu0ABhEe6K5rGl_jmrlg" name="errorCorrectionStragegy" type="_U2D6MHjMEe6KdJ00TZsmOg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2ZMaAHjJEe6KdJ00TZsmOg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_RaZ4AAXTEe6K5rGl_jmrlg" name="speedCharacteristic" type="_nQE1sAXREe6K5rGl_jmrlg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QcL04AXWEe6K5rGl_jmrlg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QcQtYAXWEe6K5rGl_jmrlg" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_uDRRsAXaEe6K5rGl_jmrlg" name="applicationRole" type="_1ureMAXaEe6K5rGl_jmrlg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KhlFYAXbEe6K5rGl_jmrlg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KhrMAAXbEe6K5rGl_jmrlg" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_AGe-sHjKEe6KdJ00TZsmOg" name="media" type="_pzd6gHjHEe6KdJ00TZsmOg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ERCeIHjLEe6KdJ00TZsmOg"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_ATFfEABfEe6K5rGl_jmrlg" name="AccessStrategy">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_C0lygABfEe6K5rGl_jmrlg" name="RANDOM_ACCESS"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_LD2S8ABfEe6K5rGl_jmrlg" name="SERIAL_ACCESS"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_67hvEABfEe6K5rGl_jmrlg" name="ReadWriteStrategy">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_A08ZgABgEe6K5rGl_jmrlg" name="READ_ONLY"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_DosTgABgEe6K5rGl_jmrlg" name="REWRITABLE"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Cx6nEABhEe6K5rGl_jmrlg" name="WRITE_ONCE_ERASE"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_UNgm4AXVEe6K5rGl_jmrlg" name="WRITE_ONCE"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_5tAZ0DzhEe6Rauf2bWY-_w" name="WRITE_ONLY"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_Tx9kcHjCEe6KdJ00TZsmOg" client="_sbzS8ABbEe6K5rGl_jmrlg" supplier="_iKZ1AAXUEe6K5rGl_jmrlg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_rvt-EHjCEe6KdJ00TZsmOg" client="_sbzS8ABbEe6K5rGl_jmrlg" supplier="_nQE1sAXREe6K5rGl_jmrlg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_McXacHjDEe6KdJ00TZsmOg" client="_sbzS8ABbEe6K5rGl_jmrlg" supplier="_1ureMAXaEe6K5rGl_jmrlg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_iuwaQHjKEe6KdJ00TZsmOg" client="_sbzS8ABbEe6K5rGl_jmrlg" supplier="_pzd6gHjHEe6KdJ00TZsmOg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_2j0OQHjMEe6KdJ00TZsmOg" client="_sbzS8ABbEe6K5rGl_jmrlg" supplier="_wo6WEHjMEe6KdJ00TZsmOg"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_iKZ1AAXUEe6K5rGl_jmrlg" name="StorageStrategy">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_D9yP8AXVEe6K5rGl_jmrlg" name="readWriteStrategy" type="_67hvEABfEe6K5rGl_jmrlg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Jw-WkAXVEe6K5rGl_jmrlg" name="accessStrategy" type="_ATFfEABfEe6K5rGl_jmrlg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dSt34AXVEe6K5rGl_jmrlg"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_U2D6MHjMEe6KdJ00TZsmOg" name="ErrorCorrectionStrategyy"/>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_1ureMAXaEe6K5rGl_jmrlg" name="ApplicationRole">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4r-80AXaEe6K5rGl_jmrlg" name="CACHE"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="__xx60AXaEe6K5rGl_jmrlg" name="LONG_TERM_LOG"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_2ydxcHjQEe6KdJ00TZsmOg" client="_sbzS8ABbEe6K5rGl_jmrlg" supplier="_PHn7QHjNEe6KdJ00TZsmOg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_bgzfcHjCEe6KdJ00TZsmOg" client="_iKZ1AAXUEe6K5rGl_jmrlg" supplier="_67hvEABfEe6K5rGl_jmrlg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_gLyA0HjCEe6KdJ00TZsmOg" client="_iKZ1AAXUEe6K5rGl_jmrlg" supplier="_ATFfEABfEe6K5rGl_jmrlg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_dkVR4HjMEe6KdJ00TZsmOg" client="_sbzS8ABbEe6K5rGl_jmrlg" supplier="_U2D6MHjMEe6KdJ00TZsmOg"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_wo6WEHjMEe6KdJ00TZsmOg" name="ExtentRange"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_A-wRMHjPEe6KdJ00TZsmOg" name="Common">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_l5iewHjLEe6KdJ00TZsmOg" name="SpeedProfile"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_nQE1sAXREe6K5rGl_jmrlg" name="SpeedCharacteristic">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_YnLdMAXSEe6K5rGl_jmrlg" name="speedCharacteristicName" type="_HOyOAAXSEe6K5rGl_jmrlg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_07Y5sAXSEe6K5rGl_jmrlg" name="speedCharacteristicProfile" type="_l5iewHjLEe6KdJ00TZsmOg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hv2-gHjJEe6KdJ00TZsmOg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_OL-wAAXaEe6K5rGl_jmrlg" name="characteristicNameQualifier">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4klIwAXkEe6K5rGl_jmrlg"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_HOyOAAXSEe6K5rGl_jmrlg" name="SpeedCharacteristicName">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_KIlFoAXSEe6K5rGl_jmrlg" name="CLOCK"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Mi1hkAXSEe6K5rGl_jmrlg" name="INSTRUCTIONS"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_PZ4nMAXSEe6K5rGl_jmrlg" name="FLOATING_POINT_OPERATIONS"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_HhAxAAXTEe6K5rGl_jmrlg" name="TRANSFER_RATE"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Yi2E4AXUEe6K5rGl_jmrlg" name="START_UP_DELAY"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_C3lncAXWEe6K5rGl_jmrlg" name="ACCESS_DELAY"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_I7npoAXaEe6K5rGl_jmrlg" name="OPERATIONS_PER_SECOND"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_uyFi4HjCEe6KdJ00TZsmOg" client="_nQE1sAXREe6K5rGl_jmrlg" supplier="_HOyOAAXSEe6K5rGl_jmrlg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_40oPwHjLEe6KdJ00TZsmOg" client="_nQE1sAXREe6K5rGl_jmrlg" supplier="_l5iewHjLEe6KdJ00TZsmOg"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_PHn7QHjNEe6KdJ00TZsmOg" name="Status"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_GycuIHjPEe6KdJ00TZsmOg" name="Media">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_pzd6gHjHEe6KdJ00TZsmOg" name="Media">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Q5qhsABdEe6K5rGl_jmrlg" name="mediaType" type="_le6cgABfEe6K5rGl_jmrlg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-GSREAXUEe6K5rGl_jmrlg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_2o2jgABgEe6K5rGl_jmrlg" name="lifetime">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_c1WMUHjJEe6KdJ00TZsmOg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Z54BIABhEe6K5rGl_jmrlg" name="isPowerDownSafe">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pop9AAXZEe6K5rGl_jmrlg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_M63iEHjIEe6KdJ00TZsmOg" name="rotationSpeedCharacteristicProfile" type="_l5iewHjLEe6KdJ00TZsmOg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UKoUYHjIEe6KdJ00TZsmOg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_kW02MHjIEe6KdJ00TZsmOg" name="speedCharacteristicProfile" type="_l5iewHjLEe6KdJ00TZsmOg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eZ36IHjJEe6KdJ00TZsmOg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_PiHJwHjLEe6KdJ00TZsmOg" name="removable">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Vf-PUHjLEe6KdJ00TZsmOg"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_le6cgABfEe6K5rGl_jmrlg" name="MediaType">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_rMlJ8ABfEe6K5rGl_jmrlg" name="SOLID_STATE"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_tpaYwABfEe6K5rGl_jmrlg" name="ROTATING"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_zYefMHjCEe6KdJ00TZsmOg" client="_pzd6gHjHEe6KdJ00TZsmOg" supplier="_le6cgABfEe6K5rGl_jmrlg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_v_wg0HjLEe6KdJ00TZsmOg" client="_pzd6gHjHEe6KdJ00TZsmOg" supplier="_l5iewHjLEe6KdJ00TZsmOg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_y0NWsHjREe6KdJ00TZsmOg" name="ComputeConstruct">
+      <packagedElement xmi:type="uml:Usage" xmi:id="_K_YUgHjCEe6KdJ00TZsmOg" client="_lkQQwPrTEe2K5rGl_jmrlg" supplier="_sbzS8ABbEe6K5rGl_jmrlg"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_lkQQwPrTEe2K5rGl_jmrlg" name="ComputeConstruct">
         <ownedRule xmi:type="uml:Constraint" xmi:id="_sZ0IMABWEe6K5rGl_jmrlg" name="SourceOfComputeConstruct" constrainedElement="_vpHLMABVEe6K5rGl_jmrlg _x3ZnsABVEe6K5rGl_jmrlg _hZdZYPrVEe2K5rGl_jmrlg _8PPtQD0GEe6Rauf2bWY-_w">
           <specification xmi:type="uml:LiteralString" xmi:id="_5FtzEABWEe6K5rGl_jmrlg" value="XOR"/>
@@ -236,24 +337,6 @@ Add VM etc. to this figure.&#xD;
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__yoH4T0bEe6Rauf2bWY-_w" value="*"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_gzx5cPrVEe2K5rGl_jmrlg" name="ComputeConstructIsComputePoolInput" memberEnd="_gzyggfrVEe2K5rGl_jmrlg _gz7qcfrVEe2K5rGl_jmrlg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gzx5cfrVEe2K5rGl_jmrlg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gzyggPrVEe2K5rGl_jmrlg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_gzyggfrVEe2K5rGl_jmrlg" name="_computeConstruct" type="_lkQQwPrTEe2K5rGl_jmrlg" association="_gzx5cPrVEe2K5rGl_jmrlg">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gz7DYPrVEe2K5rGl_jmrlg"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gz7qcPrVEe2K5rGl_jmrlg" value="1"/>
-        </ownedEnd>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_hZdZYPrVEe2K5rGl_jmrlg" name="ComputeConstructIsComputePoolOutput" memberEnd="_hZeAcvrVEe2K5rGl_jmrlg _hZl8QvrVEe2K5rGl_jmrlg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hZeAcPrVEe2K5rGl_jmrlg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hZeAcfrVEe2K5rGl_jmrlg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_hZeAcvrVEe2K5rGl_jmrlg" name="_computeConstruct" type="_lkQQwPrTEe2K5rGl_jmrlg" association="_hZdZYPrVEe2K5rGl_jmrlg">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hZl8QPrVEe2K5rGl_jmrlg"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hZl8QfrVEe2K5rGl_jmrlg" value="1"/>
-        </ownedEnd>
-      </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_vpHLMABVEe6K5rGl_jmrlg" name="ComputeConstructEmergentFromPc" memberEnd="_vpPHAgBVEe6K5rGl_jmrlg _vpb7UABVEe6K5rGl_jmrlg">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vpPHAABVEe6K5rGl_jmrlg" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vpPHAQBVEe6K5rGl_jmrlg" key="nature" value="UML_Nature"/>
@@ -272,33 +355,6 @@ Add VM etc. to this figure.&#xD;
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dpHUAABWEe6K5rGl_jmrlg" value="*"/>
         </ownedEnd>
       </packagedElement>
-      <packagedElement xmi:type="uml:Enumeration" xmi:id="_6cDB8ABYEe6K5rGl_jmrlg" name="Availability">
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_7iZmAABYEe6K5rGl_jmrlg" name="HIGH"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_8slhMABYEe6K5rGl_jmrlg" name="MEDIUM"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_9iFl0ABYEe6K5rGl_jmrlg" name="LOW"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:DataType" xmi:id="_nQE1sAXREe6K5rGl_jmrlg" name="speedCharacteristic">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_YnLdMAXSEe6K5rGl_jmrlg" name="speedCharacteristicName" type="_HOyOAAXSEe6K5rGl_jmrlg"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_07Y5sAXSEe6K5rGl_jmrlg" name="speedCharacteristicProfile"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_OL-wAAXaEe6K5rGl_jmrlg" name="characteristicNameQualifier">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4klIwAXkEe6K5rGl_jmrlg"/>
-        </ownedAttribute>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Enumeration" xmi:id="_HOyOAAXSEe6K5rGl_jmrlg" name="SpeedCharacteristicName">
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_KIlFoAXSEe6K5rGl_jmrlg" name="CLOCK"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Mi1hkAXSEe6K5rGl_jmrlg" name="INSTRUCTIONS"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_PZ4nMAXSEe6K5rGl_jmrlg" name="FLOATING_POINT_OPERATIONS"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_HhAxAAXTEe6K5rGl_jmrlg" name="TRANSFER_RATE"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Yi2E4AXUEe6K5rGl_jmrlg" name="START_UP_DELAY"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_pidyQAXVEe6K5rGl_jmrlg" name="ROTATION_SPEED"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_C3lncAXWEe6K5rGl_jmrlg" name="ACCESS_DELAY"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_I7npoAXaEe6K5rGl_jmrlg" name="OPERATIONS_PER_SECOND"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Enumeration" xmi:id="_1ureMAXaEe6K5rGl_jmrlg" name="ApplicationRole">
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4r-80AXaEe6K5rGl_jmrlg" name="CACHE"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="__xx60AXaEe6K5rGl_jmrlg" name="LONG_TERM_LOG"/>
-      </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_8PPtQD0GEe6Rauf2bWY-_w" name="ComputeConstructEmergentFromRunningVirtualMachine" memberEnd="_8PQUUj0GEe6Rauf2bWY-_w _8PT-sj0GEe6Rauf2bWY-_w">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8PQUUD0GEe6Rauf2bWY-_w" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8PQUUT0GEe6Rauf2bWY-_w" key="nature" value="UML_Nature"/>
@@ -308,94 +364,7 @@ Add VM etc. to this figure.&#xD;
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_c4EpgD0bEe6Rauf2bWY-_w" value="*"/>
         </ownedEnd>
       </packagedElement>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_XUZLoABsEe6K5rGl_jmrlg" name="Storage">
-      <packagedElement xmi:type="uml:Class" xmi:id="_XQIb4ABaEe6K5rGl_jmrlg" name="StorageFunction"/>
-      <packagedElement xmi:type="uml:DataType" xmi:id="_sbzS8ABbEe6K5rGl_jmrlg" name="StorageProperties">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_urV3MABcEe6K5rGl_jmrlg" name="blockSize">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_GTZtoABdEe6K5rGl_jmrlg" name="capacity">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_MD33cABdEe6K5rGl_jmrlg" name="storageStrategy" type="_iKZ1AAXUEe6K5rGl_jmrlg"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_Q5qhsABdEe6K5rGl_jmrlg" name="mediaType" type="_le6cgABfEe6K5rGl_jmrlg">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-GSREAXUEe6K5rGl_jmrlg"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_jf3AwABdEe6K5rGl_jmrlg" name="status"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_our2EABdEe6K5rGl_jmrlg" name="extentRange"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_rxhU8ABdEe6K5rGl_jmrlg" name="internalPoolExtentRange"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_vGwLYABdEe6K5rGl_jmrlg" name="isEmulated">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AcjvcAXWEe6K5rGl_jmrlg"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_zOKFoABdEe6K5rGl_jmrlg" name="isEncrypted">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-7wEAAXVEe6K5rGl_jmrlg"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_2o2jgABgEe6K5rGl_jmrlg" name="lifetime"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_Z54BIABhEe6K5rGl_jmrlg" name="isPowerDownSafe">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pop9AAXZEe6K5rGl_jmrlg"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_fGAu0ABhEe6K5rGl_jmrlg" name="errorCorrectionStragegy"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_RaZ4AAXTEe6K5rGl_jmrlg" name="speedCharacteristic" type="_nQE1sAXREe6K5rGl_jmrlg">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QcL04AXWEe6K5rGl_jmrlg"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QcQtYAXWEe6K5rGl_jmrlg" value="*"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_uDRRsAXaEe6K5rGl_jmrlg" name="applicationRole" type="_1ureMAXaEe6K5rGl_jmrlg">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KhlFYAXbEe6K5rGl_jmrlg"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KhrMAAXbEe6K5rGl_jmrlg" value="*"/>
-        </ownedAttribute>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Enumeration" xmi:id="_ATFfEABfEe6K5rGl_jmrlg" name="AccessStrategy">
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_C0lygABfEe6K5rGl_jmrlg" name="RANDOM_ACCESS"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_LD2S8ABfEe6K5rGl_jmrlg" name="SERIAL_ACCESS"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Enumeration" xmi:id="_le6cgABfEe6K5rGl_jmrlg" name="MediaType">
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_rMlJ8ABfEe6K5rGl_jmrlg" name="SOLID_STATE"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_tpaYwABfEe6K5rGl_jmrlg" name="ROTATING"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Enumeration" xmi:id="_67hvEABfEe6K5rGl_jmrlg" name="ReadWriteStrategy">
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_A08ZgABgEe6K5rGl_jmrlg" name="READ_ONLY"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_DosTgABgEe6K5rGl_jmrlg" name="REWRITABLE"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Cx6nEABhEe6K5rGl_jmrlg" name="WRITE_ONCE_ERASE"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_UNgm4AXVEe6K5rGl_jmrlg" name="WRITE_ONCE"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_5tAZ0DzhEe6Rauf2bWY-_w" name="WRITE_ONLY"/>
-      </packagedElement>
-    </packagedElement>
-    <packagedElement xmi:type="uml:DataType" xmi:id="_iKZ1AAXUEe6K5rGl_jmrlg" name="StorageStrategy">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_D9yP8AXVEe6K5rGl_jmrlg" name="readWriteStrategy" type="_67hvEABfEe6K5rGl_jmrlg"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_Jw-WkAXVEe6K5rGl_jmrlg" name="accessStrategy" type="_ATFfEABfEe6K5rGl_jmrlg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dSt34AXVEe6K5rGl_jmrlg"/>
-      </ownedAttribute>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_VttPwABuEe6K5rGl_jmrlg" name="Diagrams">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_0a67EABaEe6K5rGl_jmrlg">
-        <body>DONE - Complexity of properties like clock speed&#xD;
-DONE - General pattern&#xD;
-DONE - Reverse associations (to pools)&#xD;
-DONE (used ComputeComponent) - Could use ComputeFunction and then provide properties for processing/storage&#xD;
-NO LONGER RELEVANT - ProcessingFunction could be ProcessingConstruct&#xD;
-MOVED - ProcessingConstruct needs some form of general description of transfer function (same as task)&#xD;
-MOVED - ProcessingConstruct emergence diagram should align more with Component-System pattern (assembly-view pattern</body>
-      </ownedComment>
-      <ownedComment xmi:type="uml:Comment" xmi:id="_p6PGYABhEe6K5rGl_jmrlg">
-        <body>MOVED - Zone strategy (block, sector, byte)&#xD;
-MOVED - Bus width&#xD;
-MOVED - What goes in spec and what in running&#xD;
-DONE - Application role (cache, long term,...) and application restrictions&#xD;
-MOVED - Need to consider removable media&#xD;
-MOVED - Endurance rating&#xD;
-MOVED - memory cell type&#xD;
-DONE (in speedCharacteristic) - operations per second</body>
-      </ownedComment>
-      <ownedComment xmi:type="uml:Comment" xmi:id="_ktjh8ABoEe6K5rGl_jmrlg">
-        <body>Relegate MediaType to physical model&#xD;
-Also rotation speed (as per fan).&#xD;
-Text in Equipment model to explain that rotation, temperatore and power are all overloading the model.&#xD;
-Work on for 15/6</body>
-      </ownedComment>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_I6S3UHjCEe6KdJ00TZsmOg" client="_VttPwABuEe6K5rGl_jmrlg" supplier="_m4gjYPrSEe2K5rGl_jmrlg"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_1ApogD0aEe6Rauf2bWY-_w" name="ComputeConstructSupportsFileSystem" memberEnd="_1Ayycj0aEe6Rauf2bWY-_w _1Ayydj0aEe6Rauf2bWY-_w">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1AyycD0aEe6Rauf2bWY-_w" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1AyycT0aEe6Rauf2bWY-_w" key="nature" value="UML_Nature"/>
@@ -412,14 +381,26 @@ Work on for 15/6</body>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mhiosD0cEe6Rauf2bWY-_w"/>
         </ownedEnd>
       </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gzx5cPrVEe2K5rGl_jmrlg" name="ComputeConstructIsComputePoolInput" memberEnd="_gzyggfrVEe2K5rGl_jmrlg _gz7qcfrVEe2K5rGl_jmrlg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gzx5cfrVEe2K5rGl_jmrlg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gzyggPrVEe2K5rGl_jmrlg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_gzyggfrVEe2K5rGl_jmrlg" name="_computeConstruct" type="_lkQQwPrTEe2K5rGl_jmrlg" association="_gzx5cPrVEe2K5rGl_jmrlg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gz7DYPrVEe2K5rGl_jmrlg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gz7qcPrVEe2K5rGl_jmrlg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_hZdZYPrVEe2K5rGl_jmrlg" name="ComputeConstructIsComputePoolOutput" memberEnd="_hZeAcvrVEe2K5rGl_jmrlg _hZl8QvrVEe2K5rGl_jmrlg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hZeAcPrVEe2K5rGl_jmrlg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hZeAcfrVEe2K5rGl_jmrlg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_hZeAcvrVEe2K5rGl_jmrlg" name="_computeConstruct" type="_lkQQwPrTEe2K5rGl_jmrlg" association="_hZdZYPrVEe2K5rGl_jmrlg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hZl8QPrVEe2K5rGl_jmrlg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hZl8QfrVEe2K5rGl_jmrlg" value="1"/>
+        </ownedEnd>
+      </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_gZ9oQDzhEe6Rauf2bWY-_w" name="ComputePoolTransferFunction"/>
-    <packagedElement xmi:type="uml:Association" xmi:id="_bUTgkDziEe6Rauf2bWY-_w" name="ComputePoolHasTransferFunction" memberEnd="_bUTgkzziEe6Rauf2bWY-_w _bUbcYjziEe6Rauf2bWY-_w">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bUTgkTziEe6Rauf2bWY-_w" source="org.eclipse.papyrus">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bUTgkjziEe6Rauf2bWY-_w" key="nature" value="UML_Nature"/>
-      </eAnnotations>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_bUbcYjziEe6Rauf2bWY-_w" name="computepool" type="_N4yvwPrNEe2K5rGl_jmrlg" association="_bUTgkDziEe6Rauf2bWY-_w"/>
-    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_VttPwABuEe6K5rGl_jmrlg" name="Diagrams"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Y8ixEPrNEe2K5rGl_jmrlg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Y_L1YPrNEe2K5rGl_jmrlg" source="PapyrusVersion">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Y_L1YfrNEe2K5rGl_jmrlg" key="Version" value="0.2.14"/>
@@ -488,7 +469,6 @@ Work on for 15/6</body>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_x3nqIABVEe6K5rGl_jmrlg" base_StructuralFeature="_x3nDEQBVEe6K5rGl_jmrlg"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_zfYx0ABYEe6K5rGl_jmrlg" base_StructuralFeature="_zfYKwABYEe6K5rGl_jmrlg"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_V-6HwQBeEe6K5rGl_jmrlg" base_StructuralFeature="_V-6HwABeEe6K5rGl_jmrlg"/>
-  <OpenModel_Profile:OpenModelClass xmi:id="_8bP8wABcEe6K5rGl_jmrlg" base_Class="_XQIb4ABaEe6K5rGl_jmrlg"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_In8TYABuEe6K5rGl_jmrlg" base_StructuralFeature="_In7sUABuEe6K5rGl_jmrlg"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_YnLdMQXSEe6K5rGl_jmrlg" base_StructuralFeature="_YnLdMAXSEe6K5rGl_jmrlg"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_07Y5sQXSEe6K5rGl_jmrlg" base_StructuralFeature="_07Y5sAXSEe6K5rGl_jmrlg"/>
@@ -518,4 +498,10 @@ Work on for 15/6</body>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_1Ayydz0aEe6Rauf2bWY-_w" base_StructuralFeature="_1Ayydj0aEe6Rauf2bWY-_w"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="__yj2dD0bEe6Rauf2bWY-_w" base_StructuralFeature="__yj2cz0bEe6Rauf2bWY-_w"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="__yoH4z0bEe6Rauf2bWY-_w" base_StructuralFeature="__yoH4j0bEe6Rauf2bWY-_w"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_M63iEXjIEe6KdJ00TZsmOg" base_StructuralFeature="_M63iEHjIEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_kW02MXjIEe6KdJ00TZsmOg" base_StructuralFeature="_kW02MHjIEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_AGflwHjKEe6KdJ00TZsmOg" base_StructuralFeature="_AGe-sHjKEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_FaEYMXjKEe6KdJ00TZsmOg" base_StructuralFeature="_FaEYMHjKEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_PiHJwXjLEe6KdJ00TZsmOg" base_StructuralFeature="_PiHJwHjLEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_qfUFInjNEe6KdJ00TZsmOg" base_StructuralFeature="_qfUFIHjNEe6KdJ00TZsmOg"/>
 </xmi:XMI>
