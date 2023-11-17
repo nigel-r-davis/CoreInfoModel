@@ -1,0 +1,24 @@
+OIMT Minutes – 16 November 2023
+Attendees
+-	Kam Lam
+-	Nigel Davis
+-	Malcolm Betts
+-	Xiaobing Niu  
+Agenda
+-	Recovery of ONF wiki information
+-	OIMT activity
+-	TR-512 v1.6 progress
+
+Discussion
+-	Recovery of ONF wiki information
+		Should wait until the recovery from ONF
+-	OIMT activity
+		Next meeting will be on 7 December 2023
+-	TR-512 v1.6 progress
+		Done: TR-512.8, TR-512-18, A.4, 
+		In progress: 
+ 			TR-512.15 Compute: cleaned up, in adequate shape, should be able to close this in next meeting.
+		Aim for January 2024 delivery
+
+Next calls
+-	7 December 2023
