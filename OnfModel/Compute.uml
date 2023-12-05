@@ -6,50 +6,135 @@
     </packageImport>
     <packagedElement xmi:type="uml:Package" xmi:id="_mn2tsPrREe2K5rGl_jmrlg" name="ComputePool">
       <packagedElement xmi:type="uml:Class" xmi:id="_N4yvwPrNEe2K5rGl_jmrlg" name="ComputePool">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_eC-hAHlhEe6KdJ00TZsmOg" annotatedElement="_N4yvwPrNEe2K5rGl_jmrlg">
+          <body>A pool that manages ComputePoolEntries. These entries can consist of Storage, Memory and CPU resources.&#xD;
+This mechanism allows for basic allocation of groups of compute resource. &#xD;
+The pool does allow for some combination of resources but is not modelled as a system of components, it is simply a basic container.</body>
+        </ownedComment>
         <generalization xmi:type="uml:Generalization" xmi:id="_LxLtkPrOEe2K5rGl_jmrlg">
           <general xmi:type="uml:Class" href="CoreModel.uml#_iVJ1kI2wEeO38ZmbECnvbg"/>
         </generalization>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_uzq1YPrNEe2K5rGl_jmrlg" name="_computePoolInputEntry" type="_RCGqEPrNEe2K5rGl_jmrlg" aggregation="composite" association="_uzmj8PrNEe2K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_xMqVYHlmEe6KdJ00TZsmOg" annotatedElement="_uzq1YPrNEe2K5rGl_jmrlg">
+            <body>The resources provided to the pool.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uzwU8PrNEe2K5rGl_jmrlg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uzwU8frNEe2K5rGl_jmrlg" value="*"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_vbwwIfrNEe2K5rGl_jmrlg" name="_computePoolOutputEntry" type="_etifUPrNEe2K5rGl_jmrlg" aggregation="composite" association="_vbviAPrNEe2K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_zDFEcHlmEe6KdJ00TZsmOg" annotatedElement="_vbwwIfrNEe2K5rGl_jmrlg">
+            <body>The resources exposed by the pool.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vb1ooPrNEe2K5rGl_jmrlg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vb2PsPrNEe2K5rGl_jmrlg" value="*"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_xfrIofrNEe2K5rGl_jmrlg" name="_computePoolSegment" type="_nvF_YPrNEe2K5rGl_jmrlg" aggregation="composite" association="_xfqhkPrNEe2K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_4aOvUHlmEe6KdJ00TZsmOg" annotatedElement="_xfrIofrNEe2K5rGl_jmrlg">
+            <body>Pool segments (grouping and structures).</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xfwBIPrNEe2K5rGl_jmrlg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xfwoMPrNEe2K5rGl_jmrlg" value="*"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_bUTgkzziEe6Rauf2bWY-_w" name="_computePoolransferfunction" type="_gZ9oQDzhEe6Rauf2bWY-_w" aggregation="composite" association="_bUTgkDziEe6Rauf2bWY-_w">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_FhXksHlnEe6KdJ00TZsmOg" annotatedElement="_bUTgkzziEe6Rauf2bWY-_w">
+            <body>Explains the mapping from the inputs to the pool to the outputs from the pool, i.e., how the output is produced.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bUbcYDziEe6Rauf2bWY-_w"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bUbcYTziEe6Rauf2bWY-_w" value="*"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_RCGqEPrNEe2K5rGl_jmrlg" name="ComputePoolInput">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_GvKKUHljEe6KdJ00TZsmOg" annotatedElement="_RCGqEPrNEe2K5rGl_jmrlg">
+          <body>A compute capability provided to the pool.</body>
+        </ownedComment>
         <generalization xmi:type="uml:Generalization" xmi:id="_R16QIPrOEe2K5rGl_jmrlg">
           <general xmi:type="uml:Class" href="CoreModel.uml#_k5nWYI2wEeO38ZmbECnvbg"/>
         </generalization>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_wUw_QPrOEe2K5rGl_jmrlg" name="roleInPool" type="_trkvcPrOEe2K5rGl_jmrlg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_wUw_QPrOEe2K5rGl_jmrlg" name="roleInPool" type="_trkvcPrOEe2K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_RM5XsHlnEe6KdJ00TZsmOg" annotatedElement="_wUw_QPrOEe2K5rGl_jmrlg">
+            <body>Explains the use of the item in the pool and especially with respect to the mapping.</body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_1-a7kHljEe6KdJ00TZsmOg" name="roleInPoolSegment">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_Mrja0HlkEe6KdJ00TZsmOg" annotatedElement="_1-a7kHljEe6KdJ00TZsmOg">
+            <body>Role (perhaps just position) of the pool item in the related segment.&#xD;
+Provides information on the concatenation process (of either inputs or outputs).</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PMOAwHlkEe6KdJ00TZsmOg"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_etifUPrNEe2K5rGl_jmrlg" name="ComputePoolOutput">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_LFOLoHljEe6KdJ00TZsmOg" annotatedElement="_etifUPrNEe2K5rGl_jmrlg">
+          <body>A compute capability derived from the pool.</body>
+        </ownedComment>
         <generalization xmi:type="uml:Generalization" xmi:id="_SkAsQPrOEe2K5rGl_jmrlg">
           <general xmi:type="uml:Class" href="CoreModel.uml#_k5nWYI2wEeO38ZmbECnvbg"/>
         </generalization>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_bY1X4PrOEe2K5rGl_jmrlg" name="roleInPool" type="_trkvcPrOEe2K5rGl_jmrlg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_bY1X4PrOEe2K5rGl_jmrlg" name="roleInPool" type="_trkvcPrOEe2K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_U9X_sHlnEe6KdJ00TZsmOg" annotatedElement="_bY1X4PrOEe2K5rGl_jmrlg">
+            <body>Explains the use of the item in the pool and especially with respect to the mapping.</body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_UWLkMHlkEe6KdJ00TZsmOg" name="roleInPoolSegment">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_UWLkMXlkEe6KdJ00TZsmOg" annotatedElement="_UWLkMHlkEe6KdJ00TZsmOg">
+            <body>Role (perhaps just position) of the pool item in the related segment.&#xD;
+Provides information on the concatenation process (of either inputs or outputs).</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UWLkMnlkEe6KdJ00TZsmOg"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_nvF_YPrNEe2K5rGl_jmrlg" name="ComputePoolSegment">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_akZPYHljEe6KdJ00TZsmOg" annotatedElement="_nvF_YPrNEe2K5rGl_jmrlg">
+          <body>A grouping of inputs and/or outputs. &#xD;
+Used where several inputs and/or outputs need to be considered as a unit.</body>
+        </ownedComment>
         <generalization xmi:type="uml:Generalization" xmi:id="_TKk9APrOEe2K5rGl_jmrlg">
           <general xmi:type="uml:Class" href="CoreModel.uml#_k5nWYI2wEeO38ZmbECnvbg"/>
         </generalization>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_z56WcvrNEe2K5rGl_jmrlg" name="_computePoolInputEntry" type="_RCGqEPrNEe2K5rGl_jmrlg" association="_z55vYPrNEe2K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_bLd5oHlnEe6KdJ00TZsmOg" annotatedElement="_z56WcvrNEe2K5rGl_jmrlg">
+            <body>Collection of inputs where each may have a role stated for the segment.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_z6BrMPrNEe2K5rGl_jmrlg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_z6BrMfrNEe2K5rGl_jmrlg" value="*"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_0j-AE_rNEe2K5rGl_jmrlg" name="_computePoolOutputEntry" type="_etifUPrNEe2K5rGl_jmrlg" association="_0j-AEPrNEe2K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_z0xKoHlnEe6KdJ00TZsmOg" annotatedElement="_0j-AE_rNEe2K5rGl_jmrlg">
+            <body>Collection of outputss where each may have a role stated for the segment.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0kDfoPrNEe2K5rGl_jmrlg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0kEGsPrNEe2K5rGl_jmrlg" value="*"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_hn548HlkEe6KdJ00TZsmOg" name="roleInPool" type="_trkvcPrOEe2K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_XOBMoHlnEe6KdJ00TZsmOg" annotatedElement="_hn548HlkEe6KdJ00TZsmOg">
+            <body>Explains the use of the item in the pool and especially with respect to the mapping.</body>
+          </ownedComment>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_gZ9oQDzhEe6Rauf2bWY-_w" name="ComputePoolTransferFunction">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_DpckUHloEe6KdJ00TZsmOg" annotatedElement="_gZ9oQDzhEe6Rauf2bWY-_w">
+          <body>Placeholder.&#xD;
+&#xD;
+Explains the mapping between inputs and outputs of the pool.</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_trkvcPrOEe2K5rGl_jmrlg" name="RoleInPool">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_3rpVkHlnEe6KdJ00TZsmOg" annotatedElement="_trkvcPrOEe2K5rGl_jmrlg">
+          <body>The role of the item in the pool.</body>
+        </ownedComment>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_u-anEHlkEe6KdJ00TZsmOg" name="NO_DEFINDE_ROLE">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_8hwI4HlnEe6KdJ00TZsmOg" annotatedElement="_u-anEHlkEe6KdJ00TZsmOg">
+            <body>The item has no defined role, the pool is simply grouping several items.</body>
+          </ownedComment>
+        </ownedLiteral>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_bUTgkDziEe6Rauf2bWY-_w" name="ComputePoolHasTransferFunction" memberEnd="_bUTgkzziEe6Rauf2bWY-_w _bUbcYjziEe6Rauf2bWY-_w">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bUTgkTziEe6Rauf2bWY-_w" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bUTgkjziEe6Rauf2bWY-_w" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_bUbcYjziEe6Rauf2bWY-_w" name="computepool" type="_N4yvwPrNEe2K5rGl_jmrlg" association="_bUTgkDziEe6Rauf2bWY-_w"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_uzmj8PrNEe2K5rGl_jmrlg" name="ComputePoolHasInputEntries" memberEnd="_uzq1YPrNEe2K5rGl_jmrlg _uzwU8vrNEe2K5rGl_jmrlg">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uzpnQPrNEe2K5rGl_jmrlg" source="org.eclipse.papyrus">
@@ -85,69 +170,133 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dBzO4PrQEe2K5rGl_jmrlg"/>
         </ownedEnd>
       </packagedElement>
-      <packagedElement xmi:type="uml:Enumeration" xmi:id="_trkvcPrOEe2K5rGl_jmrlg" name="RoleInPool"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_gZ9oQDzhEe6Rauf2bWY-_w" name="ComputePoolTransferFunction"/>
-      <packagedElement xmi:type="uml:Association" xmi:id="_bUTgkDziEe6Rauf2bWY-_w" name="ComputePoolHasTransferFunction" memberEnd="_bUTgkzziEe6Rauf2bWY-_w _bUbcYjziEe6Rauf2bWY-_w">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bUTgkTziEe6Rauf2bWY-_w" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bUTgkjziEe6Rauf2bWY-_w" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_bUbcYjziEe6Rauf2bWY-_w" name="computepool" type="_N4yvwPrNEe2K5rGl_jmrlg" association="_bUTgkDziEe6Rauf2bWY-_w"/>
-      </packagedElement>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_558XIHl9Ee6KdJ00TZsmOg" client="_RCGqEPrNEe2K5rGl_jmrlg" supplier="_trkvcPrOEe2K5rGl_jmrlg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_6pVMsHl9Ee6KdJ00TZsmOg" client="_etifUPrNEe2K5rGl_jmrlg" supplier="_trkvcPrOEe2K5rGl_jmrlg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_7b7uUHl9Ee6KdJ00TZsmOg" client="_nvF_YPrNEe2K5rGl_jmrlg" supplier="_trkvcPrOEe2K5rGl_jmrlg"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_vjqyIPrREe2K5rGl_jmrlg" name="Processing">
       <packagedElement xmi:type="uml:DataType" xmi:id="_m4gjYPrSEe2K5rGl_jmrlg" name="ProcessingProperties">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_Z535cHloEe6KdJ00TZsmOg" annotatedElement="_m4gjYPrSEe2K5rGl_jmrlg">
+          <body>The properties of the processing capability of a compute construct.</body>
+        </ownedComment>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_r1VCsPrSEe2K5rGl_jmrlg" name="instructionSet" type="_7VvckPrSEe2K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_y-RVkHlpEe6KdJ00TZsmOg" annotatedElement="_r1VCsPrSEe2K5rGl_jmrlg">
+            <body>The identifier of the set of instructions that can be used to manipulate the processing functionality.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sxaTYABXEe6K5rGl_jmrlg"/>
           <defaultValue xmi:type="uml:InstanceValue" xmi:id="_I1MHMABYEe6K5rGl_jmrlg" instance="_9I100ABXEe6K5rGl_jmrlg"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_BitVIPrTEe2K5rGl_jmrlg" name="speedCharacteristic" type="_nQE1sAXREe6K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_-OV7oHlpEe6KdJ00TZsmOg" annotatedElement="_BitVIPrTEe2K5rGl_jmrlg">
+            <body>A statement of operational performance.&#xD;
+Note that this is a somewhat simplistic property. Speed/performance is far more complex and requires a temporal treatment.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wOh6gABXEe6K5rGl_jmrlg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sI8MoAXSEe6K5rGl_jmrlg" value="*"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_GPz9cPrTEe2K5rGl_jmrlg" name="ProcessorArchitecture" type="_J5qZAPrTEe2K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_D4FLUHlqEe6KdJ00TZsmOg" annotatedElement="_GPz9cPrTEe2K5rGl_jmrlg">
+            <body>The identification of the architecture of the processing functionality. &#xD;
+Essentially a reference to a spec.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_x5wtQABXEe6K5rGl_jmrlg"/>
           <defaultValue xmi:type="uml:InstanceValue" xmi:id="_QQiecABYEe6K5rGl_jmrlg" instance="_AnbbkABYEe6K5rGl_jmrlg"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_TddDcPrTEe2K5rGl_jmrlg" name="ProcessorType">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_JSkeEHlqEe6KdJ00TZsmOg" annotatedElement="_TddDcPrTEe2K5rGl_jmrlg">
+            <body>The identification of the specification of the processor.&#xD;
+Note that the processor may be a hardware device or a software emulation.</body>
+          </ownedComment>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1NiLIABXEe6K5rGl_jmrlg"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_V4_40PrTEe2K5rGl_jmrlg" name="maxThreads">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_MeBGYHlqEe6KdJ00TZsmOg" annotatedElement="_V4_40PrTEe2K5rGl_jmrlg">
+            <body>Manximum number of threads.&#xD;
+Note that this is a somewhat simplistic property. It requires a temporal treatment and may have other dependencies.</body>
+          </ownedComment>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_28BGMABXEe6K5rGl_jmrlg"/>
           <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_WPfwMABYEe6K5rGl_jmrlg" value="1"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_m_AiEPrUEe2K5rGl_jmrlg" name="numberOfCores">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_aNr7YHlqEe6KdJ00TZsmOg" annotatedElement="_m_AiEPrUEe2K5rGl_jmrlg">
+            <body>Number of cores.</body>
+          </ownedComment>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4-1SgABXEe6K5rGl_jmrlg"/>
           <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_ZkeH8ABYEe6K5rGl_jmrlg" value="1"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_zfYKwABYEe6K5rGl_jmrlg" name="availability" type="_6cDB8ABYEe6K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_faSjIHlqEe6KdJ00TZsmOg" annotatedElement="_zfYKwABYEe6K5rGl_jmrlg">
+            <body>A statement of the operational resilience of the function.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lRIUoABeEe6K5rGl_jmrlg"/>
           <defaultValue xmi:type="uml:InstanceValue" xmi:id="_O3RwAABZEe6K5rGl_jmrlg" instance="_8slhMABYEe6K5rGl_jmrlg"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_V-6HwABeEe6K5rGl_jmrlg" name="isEmulated">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_nSDwoHlqEe6KdJ00TZsmOg" annotatedElement="_V-6HwABeEe6K5rGl_jmrlg">
+            <body>An indication as to whether the function is a native form of the type or is emergent from a complex system designed to appear to be the type.</body>
+          </ownedComment>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nrOYgABeEe6K5rGl_jmrlg"/>
           <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_pXPOYABeEe6K5rGl_jmrlg" value="true"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_FaEYMHjKEe6KdJ00TZsmOg" name="media" type="_pzd6gHjHEe6KdJ00TZsmOg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_tpM44HlqEe6KdJ00TZsmOg" annotatedElement="_FaEYMHjKEe6KdJ00TZsmOg">
+            <body>Details of the physical realization.&#xD;
+Note that this should migrate to the physical model.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F5x9kHjLEe6KdJ00TZsmOg"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_qfUFIHjNEe6KdJ00TZsmOg" name="status" type="_PHn7QHjNEe6KdJ00TZsmOg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_67kt4HlqEe6KdJ00TZsmOg" annotatedElement="_qfUFIHjNEe6KdJ00TZsmOg">
+            <body>A statement of the operational situation of the function.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qfUFIXjNEe6KdJ00TZsmOg"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_7VvckPrSEe2K5rGl_jmrlg" name="InstructionSet">
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_9I100ABXEe6K5rGl_jmrlg" name="GENERIC"/>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_KaUT0HlrEe6KdJ00TZsmOg" annotatedElement="_7VvckPrSEe2K5rGl_jmrlg">
+          <body>List of the identifiers of the set of instruction sets.&#xD;
+Essentially spec references.</body>
+        </ownedComment>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_9I100ABXEe6K5rGl_jmrlg" name="GENERIC">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_NBzTcHlrEe6KdJ00TZsmOg" annotatedElement="_9I100ABXEe6K5rGl_jmrlg">
+            <body>Generic instruction set.</body>
+          </ownedComment>
+        </ownedLiteral>
       </packagedElement>
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_J5qZAPrTEe2K5rGl_jmrlg" name="ProcessorArchitecture">
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_AnbbkABYEe6K5rGl_jmrlg" name="GENERIC"/>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_XtTz4HlrEe6KdJ00TZsmOg" annotatedElement="_J5qZAPrTEe2K5rGl_jmrlg">
+          <body>List of identifiers for architectures of processing functionality. &#xD;
+Essentially spec references.</body>
+        </ownedComment>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_AnbbkABYEe6K5rGl_jmrlg" name="GENERIC">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_fjPOUHlrEe6KdJ00TZsmOg" annotatedElement="_AnbbkABYEe6K5rGl_jmrlg">
+            <body>Generic architecture.</body>
+          </ownedComment>
+        </ownedLiteral>
       </packagedElement>
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_6cDB8ABYEe6K5rGl_jmrlg" name="Availability">
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_7iZmAABYEe6K5rGl_jmrlg" name="HIGH"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_8slhMABYEe6K5rGl_jmrlg" name="MEDIUM"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_9iFl0ABYEe6K5rGl_jmrlg" name="LOW"/>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_uQBL0HlrEe6KdJ00TZsmOg" annotatedElement="_6cDB8ABYEe6K5rGl_jmrlg">
+          <body>List of statements of the operational resilience of the functions.</body>
+        </ownedComment>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_7iZmAABYEe6K5rGl_jmrlg" name="HIGH">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_yKxxMHlrEe6KdJ00TZsmOg" annotatedElement="_7iZmAABYEe6K5rGl_jmrlg">
+            <body>High operational resilience (nearly always on).</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_8slhMABYEe6K5rGl_jmrlg" name="MEDIUM">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_6MmSkHlrEe6KdJ00TZsmOg" annotatedElement="_8slhMABYEe6K5rGl_jmrlg">
+            <body>Medium operational resilience (normally running OK).</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_9iFl0ABYEe6K5rGl_jmrlg" name="LOW">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_FEfCIHlsEe6KdJ00TZsmOg" annotatedElement="_9iFl0ABYEe6K5rGl_jmrlg">
+            <body>Low operational resilience (often not functioning).</body>
+          </ownedComment>
+        </ownedLiteral>
       </packagedElement>
       <packagedElement xmi:type="uml:Usage" xmi:id="_xDr8oHjDEe6KdJ00TZsmOg" client="_r1VCsPrSEe2K5rGl_jmrlg" supplier="_7VvckPrSEe2K5rGl_jmrlg"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_3MmboHjDEe6KdJ00TZsmOg" client="_m4gjYPrSEe2K5rGl_jmrlg" supplier="_6cDB8ABYEe6K5rGl_jmrlg"/>
@@ -158,140 +307,352 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_XUZLoABsEe6K5rGl_jmrlg" name="Storage">
       <packagedElement xmi:type="uml:DataType" xmi:id="_sbzS8ABbEe6K5rGl_jmrlg" name="StorageProperties">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_0ul5IHloEe6KdJ00TZsmOg" annotatedElement="_sbzS8ABbEe6K5rGl_jmrlg">
+          <body>The properties of the storage capability of a compute construct.</body>
+        </ownedComment>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_urV3MABcEe6K5rGl_jmrlg" name="blockSize">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_ub1goHlzEe6KdJ00TZsmOg" annotatedElement="_urV3MABcEe6K5rGl_jmrlg">
+            <body>Where the storage is arranged in blocks, this property provides the size of the blocks.</body>
+          </ownedComment>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfPRcHjJEe6KdJ00TZsmOg"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_GTZtoABdEe6K5rGl_jmrlg" name="capacity">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_z92-wHlzEe6KdJ00TZsmOg" annotatedElement="_GTZtoABdEe6K5rGl_jmrlg">
+            <body>Size of the storage in total.</body>
+          </ownedComment>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_k47oQHjJEe6KdJ00TZsmOg"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_MD33cABdEe6K5rGl_jmrlg" name="storageStrategy" type="_iKZ1AAXUEe6K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_GPuMkHl0Ee6KdJ00TZsmOg" annotatedElement="_MD33cABdEe6K5rGl_jmrlg">
+            <body>Defines how the data is stored and accessed.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mgMhAHjJEe6KdJ00TZsmOg"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_jf3AwABdEe6K5rGl_jmrlg" name="status" type="_PHn7QHjNEe6KdJ00TZsmOg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_-3GIQHlqEe6KdJ00TZsmOg" annotatedElement="_jf3AwABdEe6K5rGl_jmrlg">
+            <body>A statement of the operational situation of the function.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_n0jE0HjJEe6KdJ00TZsmOg"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_our2EABdEe6K5rGl_jmrlg" name="extentRange" type="_wo6WEHjMEe6KdJ00TZsmOg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_rKInsHllEe6KdJ00TZsmOg" annotatedElement="_our2EABdEe6K5rGl_jmrlg">
+            <body>Represents the range of the extent, i.e., the storage capacity.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pbU1YHjJEe6KdJ00TZsmOg"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_rxhU8ABdEe6K5rGl_jmrlg" name="internalPoolExtentRange" type="_wo6WEHjMEe6KdJ00TZsmOg">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_q3yMUHjJEe6KdJ00TZsmOg"/>
-        </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_vGwLYABdEe6K5rGl_jmrlg" name="isEmulated">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_pe53IHl0Ee6KdJ00TZsmOg" annotatedElement="_vGwLYABdEe6K5rGl_jmrlg">
+            <body>An indication as to whether the function is a native form of the type or is emergent from a complex system designed to appear to be the type.</body>
+          </ownedComment>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AcjvcAXWEe6K5rGl_jmrlg"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_zOKFoABdEe6K5rGl_jmrlg" name="isEncrypted">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_v-Nc4Hl0Ee6KdJ00TZsmOg" annotatedElement="_zOKFoABdEe6K5rGl_jmrlg">
+            <body>The data is encrypted.&#xD;
+The encryption scheme is not described here. Further work is required to detail this area.</body>
+          </ownedComment>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-7wEAAXVEe6K5rGl_jmrlg"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_fGAu0ABhEe6K5rGl_jmrlg" name="errorCorrectionStragegy" type="_U2D6MHjMEe6KdJ00TZsmOg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_2Y62gHl0Ee6KdJ00TZsmOg" annotatedElement="_fGAu0ABhEe6K5rGl_jmrlg">
+            <body>Some mechanism is used to correct errors in the data.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2ZMaAHjJEe6KdJ00TZsmOg"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_RaZ4AAXTEe6K5rGl_jmrlg" name="speedCharacteristic" type="_nQE1sAXREe6K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_aDNvwHl1Ee6KdJ00TZsmOg" annotatedElement="_RaZ4AAXTEe6K5rGl_jmrlg">
+            <body>A statement of operational performance.&#xD;
+Note that this is a somewhat simplistic property. Speed/performance is far more complex and requires a temporal treatment.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QcL04AXWEe6K5rGl_jmrlg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QcQtYAXWEe6K5rGl_jmrlg" value="*"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_uDRRsAXaEe6K5rGl_jmrlg" name="applicationRole" type="_1ureMAXaEe6K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_XPw7QHl2Ee6KdJ00TZsmOg" annotatedElement="_uDRRsAXaEe6K5rGl_jmrlg">
+            <body>Indicates the design intent for the application of this storage function.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KhlFYAXbEe6K5rGl_jmrlg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KhrMAAXbEe6K5rGl_jmrlg" value="*"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_AGe-sHjKEe6KdJ00TZsmOg" name="media" type="_pzd6gHjHEe6KdJ00TZsmOg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_zwC7UHlqEe6KdJ00TZsmOg" annotatedElement="_AGe-sHjKEe6KdJ00TZsmOg">
+            <body>Details of the physical realization.&#xD;
+Note that this should migrate to the physical model.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ERCeIHjLEe6KdJ00TZsmOg"/>
         </ownedAttribute>
       </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_iKZ1AAXUEe6K5rGl_jmrlg" name="StorageStrategy">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_H4NNUHl0Ee6KdJ00TZsmOg" annotatedElement="_iKZ1AAXUEe6K5rGl_jmrlg">
+          <body>Defines how the data is stored and accessed.</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_D9yP8AXVEe6K5rGl_jmrlg" name="readWriteStrategy" type="_67hvEABfEe6K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_QbUWgHl3Ee6KdJ00TZsmOg" annotatedElement="_D9yP8AXVEe6K5rGl_jmrlg">
+            <body>Approach to examine and change of the data stored.</body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Jw-WkAXVEe6K5rGl_jmrlg" name="accessStrategy" type="_ATFfEABfEe6K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_XJbNQHl3Ee6KdJ00TZsmOg" annotatedElement="_Jw-WkAXVEe6K5rGl_jmrlg">
+            <body>Approach to access of the data.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dSt34AXVEe6K5rGl_jmrlg"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_U2D6MHjMEe6KdJ00TZsmOg" name="ErrorCorrectionStrategyy">
+        <ownedComment xmi:type="uml:Comment" xmi:id="__IPXEHl0Ee6KdJ00TZsmOg" annotatedElement="_U2D6MHjMEe6KdJ00TZsmOg">
+          <body>Placeholder&#xD;
+Some mechanism is used to correct errors in the data.&#xD;
+The specific mechanism have not yet been modelled.</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_wo6WEHjMEe6KdJ00TZsmOg" name="ExtentRange">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_Hcd3EHl1Ee6KdJ00TZsmOg" annotatedElement="_wo6WEHjMEe6KdJ00TZsmOg">
+          <body>Placeholder.&#xD;
+Represents the range of the extent, i.e., the storage capacity.&#xD;
+Further work is required to develop the form of representation.</body>
+        </ownedComment>
+      </packagedElement>
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_ATFfEABfEe6K5rGl_jmrlg" name="AccessStrategy">
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_C0lygABfEe6K5rGl_jmrlg" name="RANDOM_ACCESS"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_LD2S8ABfEe6K5rGl_jmrlg" name="SERIAL_ACCESS"/>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_avvMoHl3Ee6KdJ00TZsmOg" annotatedElement="_ATFfEABfEe6K5rGl_jmrlg">
+          <body>List of access approaches.</body>
+        </ownedComment>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_C0lygABfEe6K5rGl_jmrlg" name="RANDOM_ACCESS">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_f5BaoHl3Ee6KdJ00TZsmOg" annotatedElement="_C0lygABfEe6K5rGl_jmrlg">
+            <body>Any individual item of data can be accessed directly with equal performance.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_LD2S8ABfEe6K5rGl_jmrlg" name="SERIAL_ACCESS">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_oFSRcHl3Ee6KdJ00TZsmOg" annotatedElement="_LD2S8ABfEe6K5rGl_jmrlg">
+            <body>Data can be accessed efficiently in series, but accessing the first element of data takes significant time.</body>
+          </ownedComment>
+        </ownedLiteral>
       </packagedElement>
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_67hvEABfEe6K5rGl_jmrlg" name="ReadWriteStrategy">
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_A08ZgABgEe6K5rGl_jmrlg" name="READ_ONLY"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_DosTgABgEe6K5rGl_jmrlg" name="REWRITABLE"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Cx6nEABhEe6K5rGl_jmrlg" name="WRITE_ONCE_ERASE"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_UNgm4AXVEe6K5rGl_jmrlg" name="WRITE_ONCE"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_5tAZ0DzhEe6Rauf2bWY-_w" name="WRITE_ONLY"/>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_uqK6wHl3Ee6KdJ00TZsmOg" annotatedElement="_67hvEABfEe6K5rGl_jmrlg">
+          <body>List of read and write combinations.</body>
+        </ownedComment>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_A08ZgABgEe6K5rGl_jmrlg" name="READ_ONLY">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_xVWuoHl3Ee6KdJ00TZsmOg" annotatedElement="_A08ZgABgEe6K5rGl_jmrlg">
+            <body>The data can be read but not written.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_DosTgABgEe6K5rGl_jmrlg" name="REWRITABLE">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_2nTwcHl3Ee6KdJ00TZsmOg" annotatedElement="_DosTgABgEe6K5rGl_jmrlg">
+            <body>The data can be read and written as required.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Cx6nEABhEe6K5rGl_jmrlg" name="WRITE_ONCE_ERASE">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_ADvOoHl4Ee6KdJ00TZsmOg" annotatedElement="_Cx6nEABhEe6K5rGl_jmrlg">
+            <body>The data can be read as required and can be written one unit at a time but cannot be changed.&#xD;
+The data can only be errased on mass (all data at once).</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_UNgm4AXVEe6K5rGl_jmrlg" name="WRITE_ONCE">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_EntwIHl4Ee6KdJ00TZsmOg" annotatedElement="_UNgm4AXVEe6K5rGl_jmrlg">
+            <body>Data can be read as required but written only once and never changed or erased.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_5tAZ0DzhEe6Rauf2bWY-_w" name="WRITE_ONLY">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_LUHWsHl4Ee6KdJ00TZsmOg" annotatedElement="_5tAZ0DzhEe6Rauf2bWY-_w">
+            <body>Data can be written but not read.</body>
+          </ownedComment>
+        </ownedLiteral>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_1ureMAXaEe6K5rGl_jmrlg" name="ApplicationRole">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_cLDJgHl2Ee6KdJ00TZsmOg" annotatedElement="_1ureMAXaEe6K5rGl_jmrlg">
+          <body>List of application roles for a storage function.</body>
+        </ownedComment>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4r-80AXaEe6K5rGl_jmrlg" name="CACHE">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_khOxUHl2Ee6KdJ00TZsmOg" annotatedElement="_4r-80AXaEe6K5rGl_jmrlg">
+            <body>Temporary storage for frequently accessed data.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="__xx60AXaEe6K5rGl_jmrlg" name="LONG_TERM_LOG">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_vmICIHl2Ee6KdJ00TZsmOg" annotatedElement="__xx60AXaEe6K5rGl_jmrlg">
+            <body>For storage of large quantities of data where there are essentially no changes, just additions and the data needs to be stored for a very long duration.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_x1I3YHl2Ee6KdJ00TZsmOg" name="RAM">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_2E_jAHl2Ee6KdJ00TZsmOg" annotatedElement="_x1I3YHl2Ee6KdJ00TZsmOg">
+            <body>Main memory.</body>
+          </ownedComment>
+        </ownedLiteral>
       </packagedElement>
       <packagedElement xmi:type="uml:Usage" xmi:id="_Tx9kcHjCEe6KdJ00TZsmOg" client="_sbzS8ABbEe6K5rGl_jmrlg" supplier="_iKZ1AAXUEe6K5rGl_jmrlg"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_rvt-EHjCEe6KdJ00TZsmOg" client="_sbzS8ABbEe6K5rGl_jmrlg" supplier="_nQE1sAXREe6K5rGl_jmrlg"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_McXacHjDEe6KdJ00TZsmOg" client="_sbzS8ABbEe6K5rGl_jmrlg" supplier="_1ureMAXaEe6K5rGl_jmrlg"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_iuwaQHjKEe6KdJ00TZsmOg" client="_sbzS8ABbEe6K5rGl_jmrlg" supplier="_pzd6gHjHEe6KdJ00TZsmOg"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_2j0OQHjMEe6KdJ00TZsmOg" client="_sbzS8ABbEe6K5rGl_jmrlg" supplier="_wo6WEHjMEe6KdJ00TZsmOg"/>
-      <packagedElement xmi:type="uml:DataType" xmi:id="_iKZ1AAXUEe6K5rGl_jmrlg" name="StorageStrategy">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_D9yP8AXVEe6K5rGl_jmrlg" name="readWriteStrategy" type="_67hvEABfEe6K5rGl_jmrlg"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_Jw-WkAXVEe6K5rGl_jmrlg" name="accessStrategy" type="_ATFfEABfEe6K5rGl_jmrlg">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dSt34AXVEe6K5rGl_jmrlg"/>
-        </ownedAttribute>
-      </packagedElement>
-      <packagedElement xmi:type="uml:DataType" xmi:id="_U2D6MHjMEe6KdJ00TZsmOg" name="ErrorCorrectionStrategyy"/>
-      <packagedElement xmi:type="uml:Enumeration" xmi:id="_1ureMAXaEe6K5rGl_jmrlg" name="ApplicationRole">
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4r-80AXaEe6K5rGl_jmrlg" name="CACHE"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="__xx60AXaEe6K5rGl_jmrlg" name="LONG_TERM_LOG"/>
-      </packagedElement>
       <packagedElement xmi:type="uml:Usage" xmi:id="_2ydxcHjQEe6KdJ00TZsmOg" client="_sbzS8ABbEe6K5rGl_jmrlg" supplier="_PHn7QHjNEe6KdJ00TZsmOg"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_bgzfcHjCEe6KdJ00TZsmOg" client="_iKZ1AAXUEe6K5rGl_jmrlg" supplier="_67hvEABfEe6K5rGl_jmrlg"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_gLyA0HjCEe6KdJ00TZsmOg" client="_iKZ1AAXUEe6K5rGl_jmrlg" supplier="_ATFfEABfEe6K5rGl_jmrlg"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_dkVR4HjMEe6KdJ00TZsmOg" client="_sbzS8ABbEe6K5rGl_jmrlg" supplier="_U2D6MHjMEe6KdJ00TZsmOg"/>
-      <packagedElement xmi:type="uml:DataType" xmi:id="_wo6WEHjMEe6KdJ00TZsmOg" name="ExtentRange"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_A-wRMHjPEe6KdJ00TZsmOg" name="Common">
-      <packagedElement xmi:type="uml:DataType" xmi:id="_l5iewHjLEe6KdJ00TZsmOg" name="SpeedProfile"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_l5iewHjLEe6KdJ00TZsmOg" name="SpeedProfile">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_dI_tkHl4Ee6KdJ00TZsmOg" annotatedElement="_l5iewHjLEe6KdJ00TZsmOg">
+          <body>Placeholder.&#xD;
+Defines the complex speed characteristics.</body>
+        </ownedComment>
+      </packagedElement>
       <packagedElement xmi:type="uml:DataType" xmi:id="_nQE1sAXREe6K5rGl_jmrlg" name="SpeedCharacteristic">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_YnLdMAXSEe6K5rGl_jmrlg" name="speedCharacteristicName" type="_HOyOAAXSEe6K5rGl_jmrlg"/>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_cUAGoHl1Ee6KdJ00TZsmOg" annotatedElement="_nQE1sAXREe6K5rGl_jmrlg">
+          <body>A statement of operational performance.&#xD;
+Note that this is a somewhat simplistic property. Speed/performance is far more complex and requires a temporal treatment.</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_YnLdMAXSEe6K5rGl_jmrlg" name="speedCharacteristicName" type="_HOyOAAXSEe6K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_jPhm8Hl4Ee6KdJ00TZsmOg" annotatedElement="_YnLdMAXSEe6K5rGl_jmrlg">
+            <body>Name of the speed characteristic type.</body>
+          </ownedComment>
+        </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_07Y5sAXSEe6K5rGl_jmrlg" name="speedCharacteristicProfile" type="_l5iewHjLEe6KdJ00TZsmOg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_uwoSoHl4Ee6KdJ00TZsmOg" annotatedElement="_07Y5sAXSEe6K5rGl_jmrlg">
+            <body>Defines the complex speed characteristics.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hv2-gHjJEe6KdJ00TZsmOg"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_OL-wAAXaEe6K5rGl_jmrlg" name="characteristicNameQualifier">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_qWRnMHl4Ee6KdJ00TZsmOg" annotatedElement="_OL-wAAXaEe6K5rGl_jmrlg">
+            <body>Additional qualification of the characteristic name (e.g., when there are two clocks, both will be CLOCK and need to be distinguished).</body>
+          </ownedComment>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4klIwAXkEe6K5rGl_jmrlg"/>
         </ownedAttribute>
       </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_PHn7QHjNEe6KdJ00TZsmOg" name="Status">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_8Qc2IHlqEe6KdJ00TZsmOg" annotatedElement="_PHn7QHjNEe6KdJ00TZsmOg">
+          <body>Placeholder.&#xD;
+A statement of the operational situation of the function.</body>
+        </ownedComment>
+      </packagedElement>
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_HOyOAAXSEe6K5rGl_jmrlg" name="SpeedCharacteristicName">
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_KIlFoAXSEe6K5rGl_jmrlg" name="CLOCK"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Mi1hkAXSEe6K5rGl_jmrlg" name="INSTRUCTIONS"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_PZ4nMAXSEe6K5rGl_jmrlg" name="FLOATING_POINT_OPERATIONS"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_HhAxAAXTEe6K5rGl_jmrlg" name="TRANSFER_RATE"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Yi2E4AXUEe6K5rGl_jmrlg" name="START_UP_DELAY"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_C3lncAXWEe6K5rGl_jmrlg" name="ACCESS_DELAY"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_I7npoAXaEe6K5rGl_jmrlg" name="OPERATIONS_PER_SECOND"/>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_x7EOUHl4Ee6KdJ00TZsmOg" annotatedElement="_HOyOAAXSEe6K5rGl_jmrlg">
+          <body>List of speed characteristics.&#xD;
+Note that each could have mean, max, min etc.</body>
+        </ownedComment>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_KIlFoAXSEe6K5rGl_jmrlg" name="CLOCK">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_2SYM0Hl4Ee6KdJ00TZsmOg" annotatedElement="_KIlFoAXSEe6K5rGl_jmrlg">
+            <body>Clock ticks.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Mi1hkAXSEe6K5rGl_jmrlg" name="INSTRUCTIONS">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_-G4q8Hl4Ee6KdJ00TZsmOg" annotatedElement="_Mi1hkAXSEe6K5rGl_jmrlg">
+            <body>Instructions in the native language of the processor.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_PZ4nMAXSEe6K5rGl_jmrlg" name="FLOATING_POINT_OPERATIONS">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_CI_OcHl5Ee6KdJ00TZsmOg" annotatedElement="_PZ4nMAXSEe6K5rGl_jmrlg">
+            <body>Floating point operations.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_HhAxAAXTEe6K5rGl_jmrlg" name="TRANSFER_RATE">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_Oc4pAHl5Ee6KdJ00TZsmOg" annotatedElement="_HhAxAAXTEe6K5rGl_jmrlg">
+            <body>Data transfer into/out of the function.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Yi2E4AXUEe6K5rGl_jmrlg" name="START_UP_DELAY">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_R6n7MHl5Ee6KdJ00TZsmOg" annotatedElement="_Yi2E4AXUEe6K5rGl_jmrlg">
+            <body>Time from initialization to full operation.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_C3lncAXWEe6K5rGl_jmrlg" name="ACCESS_DELAY">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_bSqBkHl5Ee6KdJ00TZsmOg" annotatedElement="_C3lncAXWEe6K5rGl_jmrlg">
+            <body>Delay in gaining access to the function.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_I7npoAXaEe6K5rGl_jmrlg" name="OPERATIONS_PER_SECOND">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_e7Fg0Hl5Ee6KdJ00TZsmOg" annotatedElement="_I7npoAXaEe6K5rGl_jmrlg">
+            <body>Generalized activities per second.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_9lO2wHl1Ee6KdJ00TZsmOg" name="ROTATION">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_ivoJcHl5Ee6KdJ00TZsmOg" annotatedElement="_9lO2wHl1Ee6KdJ00TZsmOg">
+            <body>Rotation speed of a mechanical device.</body>
+          </ownedComment>
+        </ownedLiteral>
       </packagedElement>
       <packagedElement xmi:type="uml:Usage" xmi:id="_uyFi4HjCEe6KdJ00TZsmOg" client="_nQE1sAXREe6K5rGl_jmrlg" supplier="_HOyOAAXSEe6K5rGl_jmrlg"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_40oPwHjLEe6KdJ00TZsmOg" client="_nQE1sAXREe6K5rGl_jmrlg" supplier="_l5iewHjLEe6KdJ00TZsmOg"/>
-      <packagedElement xmi:type="uml:DataType" xmi:id="_PHn7QHjNEe6KdJ00TZsmOg" name="Status"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_hJ43gHl1Ee6KdJ00TZsmOg" client="_nQE1sAXREe6K5rGl_jmrlg" supplier="_l5iewHjLEe6KdJ00TZsmOg"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_GycuIHjPEe6KdJ00TZsmOg" name="Media">
       <packagedElement xmi:type="uml:DataType" xmi:id="_pzd6gHjHEe6KdJ00TZsmOg" name="Media">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_v4lhkHlqEe6KdJ00TZsmOg" annotatedElement="_pzd6gHjHEe6KdJ00TZsmOg">
+          <body>Details of the physical realization.&#xD;
+Note that this should migrate to the physical model.</body>
+        </ownedComment>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_Q5qhsABdEe6K5rGl_jmrlg" name="mediaType" type="_le6cgABfEe6K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_oEII8Hl5Ee6KdJ00TZsmOg" annotatedElement="_Q5qhsABdEe6K5rGl_jmrlg">
+            <body>Type of the media.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-GSREAXUEe6K5rGl_jmrlg"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_2o2jgABgEe6K5rGl_jmrlg" name="lifetime">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_2o2jgABgEe6K5rGl_jmrlg" name="lifetime" type="_4dKkAHllEe6KdJ00TZsmOg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_DzTlwHl6Ee6KdJ00TZsmOg" annotatedElement="_2o2jgABgEe6K5rGl_jmrlg">
+            <body>Specification of characteristics of expected operating lifetime.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_c1WMUHjJEe6KdJ00TZsmOg"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_Z54BIABhEe6K5rGl_jmrlg" name="isPowerDownSafe">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_KOI7MHl6Ee6KdJ00TZsmOg" annotatedElement="_Z54BIABhEe6K5rGl_jmrlg">
+            <body>Can be powered down without losing or corrupting state.</body>
+          </ownedComment>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pop9AAXZEe6K5rGl_jmrlg"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_M63iEHjIEe6KdJ00TZsmOg" name="rotationSpeedCharacteristicProfile" type="_l5iewHjLEe6KdJ00TZsmOg">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_M63iEHjIEe6KdJ00TZsmOg" name="speedCharacteristicProfile" type="_nQE1sAXREe6K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_NxY8UHl2Ee6KdJ00TZsmOg" annotatedElement="_M63iEHjIEe6KdJ00TZsmOg">
+            <body>A statement of operational performance.&#xD;
+Includes ROTATION speed for disks.&#xD;
+Note that this is a somewhat simplistic property. Speed/performance is far more complex and requires a temporal treatment.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UKoUYHjIEe6KdJ00TZsmOg"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_kW02MHjIEe6KdJ00TZsmOg" name="speedCharacteristicProfile" type="_l5iewHjLEe6KdJ00TZsmOg">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eZ36IHjJEe6KdJ00TZsmOg"/>
-        </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_PiHJwHjLEe6KdJ00TZsmOg" name="removable">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_NSjucHl6Ee6KdJ00TZsmOg" annotatedElement="_PiHJwHjLEe6KdJ00TZsmOg">
+            <body>Can be removed during operation.</body>
+          </ownedComment>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Vf-PUHjLEe6KdJ00TZsmOg"/>
         </ownedAttribute>
       </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_4dKkAHllEe6KdJ00TZsmOg" name="Lifetime">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_-j13QHl5Ee6KdJ00TZsmOg" annotatedElement="_4dKkAHllEe6KdJ00TZsmOg">
+          <body>Placeholder.&#xD;
+Specification of characteristics of expected operating lifetime.</body>
+        </ownedComment>
+      </packagedElement>
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_le6cgABfEe6K5rGl_jmrlg" name="MediaType">
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_rMlJ8ABfEe6K5rGl_jmrlg" name="SOLID_STATE"/>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_tpaYwABfEe6K5rGl_jmrlg" name="ROTATING"/>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_rJhMkHl5Ee6KdJ00TZsmOg" annotatedElement="_le6cgABfEe6K5rGl_jmrlg">
+          <body>List of types of media.</body>
+        </ownedComment>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_rMlJ8ABfEe6K5rGl_jmrlg" name="SOLID_STATE">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_u2ktIHl5Ee6KdJ00TZsmOg" annotatedElement="_rMlJ8ABfEe6K5rGl_jmrlg">
+            <body>Transistor etc. based with no mechanically active parts.</body>
+          </ownedComment>
+        </ownedLiteral>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_tpaYwABfEe6K5rGl_jmrlg" name="ROTATING">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_w0jcwHl5Ee6KdJ00TZsmOg" annotatedElement="_tpaYwABfEe6K5rGl_jmrlg">
+            <body>Mechanical and rotating.</body>
+          </ownedComment>
+        </ownedLiteral>
       </packagedElement>
       <packagedElement xmi:type="uml:Usage" xmi:id="_zYefMHjCEe6KdJ00TZsmOg" client="_pzd6gHjHEe6KdJ00TZsmOg" supplier="_le6cgABfEe6K5rGl_jmrlg"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_v_wg0HjLEe6KdJ00TZsmOg" client="_pzd6gHjHEe6KdJ00TZsmOg" supplier="_l5iewHjLEe6KdJ00TZsmOg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_v_wg0HjLEe6KdJ00TZsmOg" client="_pzd6gHjHEe6KdJ00TZsmOg" supplier="_nQE1sAXREe6K5rGl_jmrlg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_VdxMcHlmEe6KdJ00TZsmOg" client="_pzd6gHjHEe6KdJ00TZsmOg" supplier="_4dKkAHllEe6KdJ00TZsmOg"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_y0NWsHjREe6KdJ00TZsmOg" name="ComputeConstruct">
       <packagedElement xmi:type="uml:Usage" xmi:id="_K_YUgHjCEe6KdJ00TZsmOg" client="_lkQQwPrTEe2K5rGl_jmrlg" supplier="_sbzS8ABbEe6K5rGl_jmrlg"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_lkQQwPrTEe2K5rGl_jmrlg" name="ComputeConstruct">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_n3KTsHloEe6KdJ00TZsmOg" annotatedElement="_lkQQwPrTEe2K5rGl_jmrlg">
+          <body>An assembly of processing and storage functionality that provides an overall compute capability.&#xD;
+The interconnect of the processing and storage is not detailed. The purpose of this model is to deal primarily with resource allocation and usage. &#xD;
+At this stage this is a degenerate form of component-system pattern. &#xD;
+It is expected that the compute construct will gain ports in a later development and that some detailed modeling of the system may be necessary.</body>
+        </ownedComment>
         <ownedRule xmi:type="uml:Constraint" xmi:id="_sZ0IMABWEe6K5rGl_jmrlg" name="SourceOfComputeConstruct" constrainedElement="_vpHLMABVEe6K5rGl_jmrlg _x3ZnsABVEe6K5rGl_jmrlg _hZdZYPrVEe2K5rGl_jmrlg _8PPtQD0GEe6Rauf2bWY-_w">
           <specification xmi:type="uml:LiteralString" xmi:id="_5FtzEABWEe6K5rGl_jmrlg" value="XOR"/>
         </ownedRule>
@@ -299,39 +660,69 @@
           <general xmi:type="uml:Class" href="CoreModel.uml#_iVJ1kI2wEeO38ZmbECnvbg"/>
         </generalization>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_Zc19kPrUEe2K5rGl_jmrlg" name="processorComponent" type="_m4gjYPrSEe2K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_i54hYHloEe6KdJ00TZsmOg" annotatedElement="_Zc19kPrUEe2K5rGl_jmrlg">
+            <body>The properties of the processing capability of a compute construct.&#xD;
+The compute construct may have several distinct processing forms.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_G97ooABuEe6K5rGl_jmrlg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Y_rDcAXXEe6K5rGl_jmrlg" value="*"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_vpPHAgBVEe6K5rGl_jmrlg" name="_processingConstruct" association="_vpHLMABVEe6K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_R4-vsHlpEe6KdJ00TZsmOg" annotatedElement="_vpPHAgBVEe6K5rGl_jmrlg">
+            <body>The processing construct that gives rise to the compute construct.</body>
+          </ownedComment>
           <type xmi:type="uml:Class" href="CoreModel.uml#_P1YSAKFbEea-zNDndPZCDg"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vpbUQABVEe6K5rGl_jmrlg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vpbUQQBVEe6K5rGl_jmrlg" value="1"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_x3aOwQBVEe6K5rGl_jmrlg" name="_equipment" association="_x3ZnsABVEe6K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_Vr0IIHlpEe6KdJ00TZsmOg" annotatedElement="_x3aOwQBVEe6K5rGl_jmrlg">
+            <body>The equipment that gives rise to the compute construct.</body>
+          </ownedComment>
           <type xmi:type="uml:Class" href="CoreModel.uml#_8SXNej-HEeaRI-H69PghuA"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_x3mcAABVEe6K5rGl_jmrlg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_x3nDEABVEe6K5rGl_jmrlg" value="1"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_In7sUABuEe6K5rGl_jmrlg" name="storageProperties" type="_sbzS8ABbEe6K5rGl_jmrlg">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_In7sUABuEe6K5rGl_jmrlg" name="storageComponent" type="_sbzS8ABbEe6K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_x60xAHloEe6KdJ00TZsmOg" annotatedElement="_In7sUABuEe6K5rGl_jmrlg">
+            <body>The properties of the storage capability of a compute construct.&#xD;
+The compute construct may have several distinct storage forms.&#xD;
+Note that storage covers any element that has the purposeful capability of retaining data (e.g., RAM, a buffer, a queue).</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WujVYAXXEe6K5rGl_jmrlg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WupcAAXXEe6K5rGl_jmrlg" value="*"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_gz7qcfrVEe2K5rGl_jmrlg" name="_computePoolInput" type="_RCGqEPrNEe2K5rGl_jmrlg" association="_gzx5cPrVEe2K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_aJxhMHlpEe6KdJ00TZsmOg" annotatedElement="_gz7qcfrVEe2K5rGl_jmrlg">
+            <body>The usage of the compute construct in a pool.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7V_M0PrVEe2K5rGl_jmrlg"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_hZl8QvrVEe2K5rGl_jmrlg" name="_computePoolOutput" type="_etifUPrNEe2K5rGl_jmrlg" association="_hZdZYPrVEe2K5rGl_jmrlg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_c7n9wHlpEe6KdJ00TZsmOg" annotatedElement="_hZl8QvrVEe2K5rGl_jmrlg">
+            <body>The compute pool output that gives rise to the compute construct.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AWZRAPrpEe2K5rGl_jmrlg"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_8PQUUj0GEe6Rauf2bWY-_w" name="_runningVirtualMachine" association="_8PPtQD0GEe6Rauf2bWY-_w">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_fMvr0HlpEe6KdJ00TZsmOg" annotatedElement="_8PQUUj0GEe6Rauf2bWY-_w">
+            <body>The virtual machine that gives rise to the compute construct.</body>
+          </ownedComment>
           <type xmi:type="uml:Class" href="CoreModel.uml#_-jakoD7oEei6HehkJk8P-g"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8PT-sD0GEe6Rauf2bWY-_w"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_1Ayycj0aEe6Rauf2bWY-_w" name="_fileSystem" association="_1ApogD0aEe6Rauf2bWY-_w">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_iuSf8HlpEe6KdJ00TZsmOg" annotatedElement="_1Ayycj0aEe6Rauf2bWY-_w">
+            <body>The file system that gives rise to the compute construct.</body>
+          </ownedComment>
           <type xmi:type="uml:Class" href="CoreModel.uml#_CP_ikD3BEei6HehkJk8P-g"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1AyydD0aEe6Rauf2bWY-_w"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1AyydT0aEe6Rauf2bWY-_w" value="*"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="__yj2cz0bEe6Rauf2bWY-_w" name="_runningSoftwareProcess" association="__yj2cD0bEe6Rauf2bWY-_w">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_lEKyMHlpEe6KdJ00TZsmOg" annotatedElement="__yj2cz0bEe6Rauf2bWY-_w">
+            <body>The software process that gives rise to the compute construct.</body>
+          </ownedComment>
           <type xmi:type="uml:Class" href="CoreModel.uml#_m2K6AD4pEei6HehkJk8P-g"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__yoH4D0bEe6Rauf2bWY-_w"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__yoH4T0bEe6Rauf2bWY-_w" value="*"/>
@@ -479,7 +870,6 @@
   <OpenModel_Profile:OpenModelAttribute xmi:id="_EMvucAXUEe6K5rGl_jmrlg" base_StructuralFeature="_Q5qhsABdEe6K5rGl_jmrlg"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_rEk6sAXUEe6K5rGl_jmrlg" base_StructuralFeature="_jf3AwABdEe6K5rGl_jmrlg"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_rEpMIAXUEe6K5rGl_jmrlg" base_StructuralFeature="_our2EABdEe6K5rGl_jmrlg"/>
-  <OpenModel_Profile:OpenModelAttribute xmi:id="_rEpMIQXUEe6K5rGl_jmrlg" base_StructuralFeature="_rxhU8ABdEe6K5rGl_jmrlg"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_rEpMIgXUEe6K5rGl_jmrlg" base_StructuralFeature="_vGwLYABdEe6K5rGl_jmrlg"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_rEpMIwXUEe6K5rGl_jmrlg" base_StructuralFeature="_zOKFoABdEe6K5rGl_jmrlg"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_rEpMJgXUEe6K5rGl_jmrlg" base_StructuralFeature="_2o2jgABgEe6K5rGl_jmrlg"/>
@@ -499,9 +889,11 @@
   <OpenModel_Profile:OpenModelAttribute xmi:id="__yj2dD0bEe6Rauf2bWY-_w" base_StructuralFeature="__yj2cz0bEe6Rauf2bWY-_w"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="__yoH4z0bEe6Rauf2bWY-_w" base_StructuralFeature="__yoH4j0bEe6Rauf2bWY-_w"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_M63iEXjIEe6KdJ00TZsmOg" base_StructuralFeature="_M63iEHjIEe6KdJ00TZsmOg"/>
-  <OpenModel_Profile:OpenModelAttribute xmi:id="_kW02MXjIEe6KdJ00TZsmOg" base_StructuralFeature="_kW02MHjIEe6KdJ00TZsmOg"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_AGflwHjKEe6KdJ00TZsmOg" base_StructuralFeature="_AGe-sHjKEe6KdJ00TZsmOg"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_FaEYMXjKEe6KdJ00TZsmOg" base_StructuralFeature="_FaEYMHjKEe6KdJ00TZsmOg"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_PiHJwXjLEe6KdJ00TZsmOg" base_StructuralFeature="_PiHJwHjLEe6KdJ00TZsmOg"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_qfUFInjNEe6KdJ00TZsmOg" base_StructuralFeature="_qfUFIHjNEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_1-a7kXljEe6KdJ00TZsmOg" base_StructuralFeature="_1-a7kHljEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_UWLkM3lkEe6KdJ00TZsmOg" base_StructuralFeature="_UWLkMHlkEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_hn548XlkEe6KdJ00TZsmOg" base_StructuralFeature="_hn548HlkEe6KdJ00TZsmOg"/>
 </xmi:XMI>
