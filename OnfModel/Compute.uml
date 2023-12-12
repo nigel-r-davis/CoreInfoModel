@@ -124,7 +124,7 @@ Explains the mapping between inputs and outputs of the pool.</body>
         <ownedComment xmi:type="uml:Comment" xmi:id="_3rpVkHlnEe6KdJ00TZsmOg" annotatedElement="_trkvcPrOEe2K5rGl_jmrlg">
           <body>The role of the item in the pool.</body>
         </ownedComment>
-        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_u-anEHlkEe6KdJ00TZsmOg" name="NO_DEFINDE_ROLE">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_u-anEHlkEe6KdJ00TZsmOg" name="NO_DEFINED_ROLE">
           <ownedComment xmi:type="uml:Comment" xmi:id="_8hwI4HlnEe6KdJ00TZsmOg" annotatedElement="_u-anEHlkEe6KdJ00TZsmOg">
             <body>The item has no defined role, the pool is simply grouping several items.</body>
           </ownedComment>
