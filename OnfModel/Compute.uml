@@ -14,14 +14,14 @@ The pool does allow for some combination of resources but is not modelled as a s
         <generalization xmi:type="uml:Generalization" xmi:id="_LxLtkPrOEe2K5rGl_jmrlg">
           <general xmi:type="uml:Class" href="CoreModel.uml#_iVJ1kI2wEeO38ZmbECnvbg"/>
         </generalization>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_uzq1YPrNEe2K5rGl_jmrlg" name="_computePoolInputEntry" type="_RCGqEPrNEe2K5rGl_jmrlg" aggregation="composite" association="_uzmj8PrNEe2K5rGl_jmrlg">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_uzq1YPrNEe2K5rGl_jmrlg" name="_computePoolInputEntry" type="_RCGqEPrNEe2K5rGl_jmrlg" isOrdered="true" aggregation="composite" association="_uzmj8PrNEe2K5rGl_jmrlg">
           <ownedComment xmi:type="uml:Comment" xmi:id="_xMqVYHlmEe6KdJ00TZsmOg" annotatedElement="_uzq1YPrNEe2K5rGl_jmrlg">
             <body>The resources provided to the pool.</body>
           </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uzwU8PrNEe2K5rGl_jmrlg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uzwU8frNEe2K5rGl_jmrlg" value="*"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_vbwwIfrNEe2K5rGl_jmrlg" name="_computePoolOutputEntry" type="_etifUPrNEe2K5rGl_jmrlg" aggregation="composite" association="_vbviAPrNEe2K5rGl_jmrlg">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_vbwwIfrNEe2K5rGl_jmrlg" name="_computePoolOutputEntry" type="_etifUPrNEe2K5rGl_jmrlg" isOrdered="true" aggregation="composite" association="_vbviAPrNEe2K5rGl_jmrlg">
           <ownedComment xmi:type="uml:Comment" xmi:id="_zDFEcHlmEe6KdJ00TZsmOg" annotatedElement="_vbwwIfrNEe2K5rGl_jmrlg">
             <body>The resources exposed by the pool.</body>
           </ownedComment>

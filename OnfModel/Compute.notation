@@ -371,7 +371,13 @@
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_uz9JRvrNEe2K5rGl_jmrlg" type="Association_SourceRoleLabel">
         <styles xmi:type="notation:BooleanValueStyle" xmi:id="_ZH720PrPEe2K5rGl_jmrlg" name="IS_UPDATED_POSITION" booleanValue="true"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_uz9JR_rNEe2K5rGl_jmrlg" x="-13" y="90"/>
+        <styles xmi:type="notation:StringListValueStyle" xmi:id="_MMXUQJmsEe6stvDfZNvB5Q" name="maskLabel">
+          <stringListValue>visibility</stringListValue>
+          <stringListValue>name</stringListValue>
+          <stringListValue>modifiers</stringListValue>
+          <stringListValue>derived</stringListValue>
+        </styles>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_uz9JR_rNEe2K5rGl_jmrlg" x="-13" y="140"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_uz9JSPrNEe2K5rGl_jmrlg" type="Association_SourceMultiplicityLabel">
         <styles xmi:type="notation:BooleanValueStyle" xmi:id="_ZIQm8PrPEe2K5rGl_jmrlg" name="IS_UPDATED_POSITION" booleanValue="true"/>
@@ -402,7 +408,13 @@
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_vcGHUvrNEe2K5rGl_jmrlg" type="Association_SourceRoleLabel">
         <styles xmi:type="notation:BooleanValueStyle" xmi:id="_act4cPrPEe2K5rGl_jmrlg" name="IS_UPDATED_POSITION" booleanValue="true"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_vcGHU_rNEe2K5rGl_jmrlg" x="-13" y="-78"/>
+        <styles xmi:type="notation:StringListValueStyle" xmi:id="_M_Hm4JmsEe6stvDfZNvB5Q" name="maskLabel">
+          <stringListValue>visibility</stringListValue>
+          <stringListValue>name</stringListValue>
+          <stringListValue>modifiers</stringListValue>
+          <stringListValue>derived</stringListValue>
+        </styles>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_vcGHU_rNEe2K5rGl_jmrlg" x="-13" y="-165"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_vcGHVPrNEe2K5rGl_jmrlg" type="Association_SourceMultiplicityLabel">
         <styles xmi:type="notation:BooleanValueStyle" xmi:id="_adEdwPrPEe2K5rGl_jmrlg" name="IS_UPDATED_POSITION" booleanValue="true"/>
