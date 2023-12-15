@@ -300,8 +300,8 @@ Essentially spec references.</body>
       </packagedElement>
       <packagedElement xmi:type="uml:Usage" xmi:id="_xDr8oHjDEe6KdJ00TZsmOg" client="_r1VCsPrSEe2K5rGl_jmrlg" supplier="_7VvckPrSEe2K5rGl_jmrlg"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_3MmboHjDEe6KdJ00TZsmOg" client="_m4gjYPrSEe2K5rGl_jmrlg" supplier="_6cDB8ABYEe6K5rGl_jmrlg"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_QqZ2QHjFEe6KdJ00TZsmOg" client="_m4gjYPrSEe2K5rGl_jmrlg" supplier="_nQE1sAXREe6K5rGl_jmrlg"/>
-      <packagedElement xmi:type="uml:Usage" xmi:id="_xm7IYHjKEe6KdJ00TZsmOg" client="_VttPwABuEe6K5rGl_jmrlg" supplier="_pzd6gHjHEe6KdJ00TZsmOg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_QqZ2QHjFEe6KdJ00TZsmOg" client="_VttPwABuEe6K5rGl_jmrlg" supplier="_nQE1sAXREe6K5rGl_jmrlg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_xm7IYHjKEe6KdJ00TZsmOg" client="_VttPwABuEe6K5rGl_jmrlg _GPz9cPrTEe2K5rGl_jmrlg" supplier="_pzd6gHjHEe6KdJ00TZsmOg"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_X0wqgHjNEe6KdJ00TZsmOg" client="_m4gjYPrSEe2K5rGl_jmrlg" supplier="_PHn7QHjNEe6KdJ00TZsmOg"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_UPq2UHjREe6KdJ00TZsmOg" client="_m4gjYPrSEe2K5rGl_jmrlg" supplier="_J5qZAPrTEe2K5rGl_jmrlg"/>
     </packagedElement>
@@ -1053,7 +1053,7 @@ Note that storage covers any element that has the purposeful capability of retai
           </value>
         </slot>
       </packagedElement>
-      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_2EMY0JqTEe6UNI7rFQsHZg" name="Vmm">
+      <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_2EMY0JqTEe6UNI7rFQsHZg" name="VMM">
         <classifier xmi:type="uml:Class" href="CoreModel.uml#_K6OlYD6eEei6HehkJk8P-g"/>
         <slot xmi:type="uml:Slot" xmi:id="__9VBIZqTEe6UNI7rFQsHZg">
           <definingFeature xmi:type="uml:Property" href="CoreModel.uml#_RSJ7sz7pEei6HehkJk8P-g"/>
@@ -1200,4 +1200,103 @@ Note that storage covers any element that has the purposeful capability of retai
   <OpenModel_Profile:OpenModelAttribute xmi:id="_1-a7kXljEe6KdJ00TZsmOg" base_StructuralFeature="_1-a7kHljEe6KdJ00TZsmOg"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_UWLkM3lkEe6KdJ00TZsmOg" base_StructuralFeature="_UWLkMHlkEe6KdJ00TZsmOg"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_hn548XlkEe6KdJ00TZsmOg" base_StructuralFeature="_hn548HlkEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:Experimental xmi:id="_X_cQsJsgEe6UNI7rFQsHZg" base_Element="_N4yvwPrNEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_btczgJsgEe6UNI7rFQsHZg" base_Element="_uzq1YPrNEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_dlrgcJsgEe6UNI7rFQsHZg" base_Element="_vbwwIfrNEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_e41KYJsgEe6UNI7rFQsHZg" base_Element="_xfrIofrNEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_gSoO4JsgEe6UNI7rFQsHZg" base_Element="_bUTgkzziEe6Rauf2bWY-_w"/>
+  <OpenModel_Profile:Experimental xmi:id="_iDPQ4JsgEe6UNI7rFQsHZg" base_Element="_RCGqEPrNEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_jdkg4JsgEe6UNI7rFQsHZg" base_Element="_wUw_QPrOEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_llnygJsgEe6UNI7rFQsHZg" base_Element="_1-a7kHljEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:Experimental xmi:id="_nX0v8JsgEe6UNI7rFQsHZg" base_Element="_etifUPrNEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_oq0o4JsgEe6UNI7rFQsHZg" base_Element="_bY1X4PrOEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_p7u3IJsgEe6UNI7rFQsHZg" base_Element="_UWLkMHlkEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:Experimental xmi:id="_sBGoMJsgEe6UNI7rFQsHZg" base_Element="_nvF_YPrNEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_tSYC0JsgEe6UNI7rFQsHZg" base_Element="_z56WcvrNEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_uodE8JsgEe6UNI7rFQsHZg" base_Element="_0j-AE_rNEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_wMiG0JsgEe6UNI7rFQsHZg" base_Element="_hn548HlkEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:Experimental xmi:id="_yRUCAJsgEe6UNI7rFQsHZg" base_Element="_gZ9oQDzhEe6Rauf2bWY-_w"/>
+  <OpenModel_Profile:Experimental xmi:id="_0Qg5oJsgEe6UNI7rFQsHZg" base_Element="_trkvcPrOEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_121-QJsgEe6UNI7rFQsHZg" base_Element="_u-anEHlkEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:Experimental xmi:id="_KV1qoJskEe6UNI7rFQsHZg" base_Element="_m4gjYPrSEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_LwayQJskEe6UNI7rFQsHZg" base_Element="_r1VCsPrSEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_NGhCgJskEe6UNI7rFQsHZg" base_Element="_BitVIPrTEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_OKscUJskEe6UNI7rFQsHZg" base_Element="_GPz9cPrTEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_PUadcJskEe6UNI7rFQsHZg" base_Element="_TddDcPrTEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_QWtn8JskEe6UNI7rFQsHZg" base_Element="_V4_40PrTEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_RcGisJskEe6UNI7rFQsHZg" base_Element="_m_AiEPrUEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_S1TxUJskEe6UNI7rFQsHZg" base_Element="_zfYKwABYEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_T_j98JskEe6UNI7rFQsHZg" base_Element="_V-6HwABeEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_VLQVAJskEe6UNI7rFQsHZg" base_Element="_FaEYMHjKEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:Experimental xmi:id="_WihC4JskEe6UNI7rFQsHZg" base_Element="_qfUFIHjNEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:Experimental xmi:id="_YE5boJskEe6UNI7rFQsHZg" base_Element="_7VvckPrSEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_ZwrA8JskEe6UNI7rFQsHZg" base_Element="_9I100ABXEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_bV22EJskEe6UNI7rFQsHZg" base_Element="_J5qZAPrTEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_cwvfsJskEe6UNI7rFQsHZg" base_Element="_AnbbkABYEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_el3OQJskEe6UNI7rFQsHZg" base_Element="_6cDB8ABYEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_3Bl9UJskEe6UNI7rFQsHZg" base_Element="_sbzS8ABbEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_4reFMJskEe6UNI7rFQsHZg" base_Element="_urV3MABcEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_5vqGEJskEe6UNI7rFQsHZg" base_Element="_GTZtoABdEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_6-7VkJskEe6UNI7rFQsHZg" base_Element="_MD33cABdEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_79WssJskEe6UNI7rFQsHZg" base_Element="_jf3AwABdEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_9BAiEJskEe6UNI7rFQsHZg" base_Element="_our2EABdEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_-AmW0JskEe6UNI7rFQsHZg" base_Element="_vGwLYABdEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="__A5WMJskEe6UNI7rFQsHZg" base_Element="_zOKFoABdEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_AA724JslEe6UNI7rFQsHZg" base_Element="_fGAu0ABhEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_BQidkJslEe6UNI7rFQsHZg" base_Element="_RaZ4AAXTEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_CRb54JslEe6UNI7rFQsHZg" base_Element="_uDRRsAXaEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_DZ-2UJslEe6UNI7rFQsHZg" base_Element="_AGe-sHjKEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:Experimental xmi:id="_FHuKgJslEe6UNI7rFQsHZg" base_Element="_iKZ1AAXUEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_Gi7kQJslEe6UNI7rFQsHZg" base_Element="_D9yP8AXVEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_HeWqsJslEe6UNI7rFQsHZg" base_Element="_Jw-WkAXVEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_I00uYJslEe6UNI7rFQsHZg" base_Element="_U2D6MHjMEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:Experimental xmi:id="_KMazcJslEe6UNI7rFQsHZg" base_Element="_wo6WEHjMEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:Experimental xmi:id="_MsYOwJslEe6UNI7rFQsHZg" base_Element="_ATFfEABfEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_OY7QIJslEe6UNI7rFQsHZg" base_Element="_C0lygABfEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_QnCtgJslEe6UNI7rFQsHZg" base_Element="_LD2S8ABfEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_SLj0QJslEe6UNI7rFQsHZg" base_Element="_67hvEABfEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_Tc0AwJslEe6UNI7rFQsHZg" base_Element="_A08ZgABgEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_UwX6YJslEe6UNI7rFQsHZg" base_Element="_DosTgABgEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_V0RnYJslEe6UNI7rFQsHZg" base_Element="_Cx6nEABhEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_XL2eUJslEe6UNI7rFQsHZg" base_Element="_UNgm4AXVEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_YcrNAJslEe6UNI7rFQsHZg" base_Element="_5tAZ0DzhEe6Rauf2bWY-_w"/>
+  <OpenModel_Profile:Experimental xmi:id="_aQ6KwJslEe6UNI7rFQsHZg" base_Element="_1ureMAXaEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_bql6gJslEe6UNI7rFQsHZg" base_Element="_4r-80AXaEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_dHc6EJslEe6UNI7rFQsHZg" base_Element="__xx60AXaEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_eowUwJslEe6UNI7rFQsHZg" base_Element="_x1I3YHl2Ee6KdJ00TZsmOg"/>
+  <OpenModel_Profile:Experimental xmi:id="_hL4_4JslEe6UNI7rFQsHZg" base_Element="_l5iewHjLEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:Experimental xmi:id="_jObfYJslEe6UNI7rFQsHZg" base_Element="_nQE1sAXREe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_kVcx0JslEe6UNI7rFQsHZg" base_Element="_YnLdMAXSEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_mE9AkJslEe6UNI7rFQsHZg" base_Element="_07Y5sAXSEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_nmOmEJslEe6UNI7rFQsHZg" base_Element="_OL-wAAXaEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_p_s-4JslEe6UNI7rFQsHZg" base_Element="_PHn7QHjNEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:Experimental xmi:id="_s6JWwJslEe6UNI7rFQsHZg" base_Element="_HOyOAAXSEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_t6h1sJslEe6UNI7rFQsHZg" base_Element="_KIlFoAXSEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_vGrfwJslEe6UNI7rFQsHZg" base_Element="_Mi1hkAXSEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_w5T7AJslEe6UNI7rFQsHZg" base_Element="_PZ4nMAXSEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_yTyU8JslEe6UNI7rFQsHZg" base_Element="_HhAxAAXTEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_zUnf0JslEe6UNI7rFQsHZg" base_Element="_Yi2E4AXUEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_0t8DMJslEe6UNI7rFQsHZg" base_Element="_C3lncAXWEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_2laiMJslEe6UNI7rFQsHZg" base_Element="_I7npoAXaEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_3-kGcJslEe6UNI7rFQsHZg" base_Element="_9lO2wHl1Ee6KdJ00TZsmOg"/>
+  <OpenModel_Profile:Experimental xmi:id="_9PkGAJslEe6UNI7rFQsHZg" base_Element="_pzd6gHjHEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:Experimental xmi:id="_-jdW0JslEe6UNI7rFQsHZg" base_Element="_Q5qhsABdEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="__4VfEJslEe6UNI7rFQsHZg" base_Element="_2o2jgABgEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_BVnVYJsmEe6UNI7rFQsHZg" base_Element="_Z54BIABhEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_CiJZ8JsmEe6UNI7rFQsHZg" base_Element="_M63iEHjIEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:Experimental xmi:id="_DqgJIJsmEe6UNI7rFQsHZg" base_Element="_PiHJwHjLEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:Experimental xmi:id="_FiovcJsmEe6UNI7rFQsHZg" base_Element="_4dKkAHllEe6KdJ00TZsmOg"/>
+  <OpenModel_Profile:Experimental xmi:id="_HQOSoJsmEe6UNI7rFQsHZg" base_Element="_le6cgABfEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_IV8kkJsmEe6UNI7rFQsHZg" base_Element="_rMlJ8ABfEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_JkLSQJsmEe6UNI7rFQsHZg" base_Element="_tpaYwABfEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_NUaCoJsmEe6UNI7rFQsHZg" base_Element="_lkQQwPrTEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_O1aiYJsmEe6UNI7rFQsHZg" base_Element="_Zc19kPrUEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_P--LcJsmEe6UNI7rFQsHZg" base_Element="_vpPHAgBVEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_RA5igJsmEe6UNI7rFQsHZg" base_Element="_x3aOwQBVEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_SC_RoJsmEe6UNI7rFQsHZg" base_Element="_In7sUABuEe6K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_TKKVEJsmEe6UNI7rFQsHZg" base_Element="_gz7qcfrVEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_UdflMJsmEe6UNI7rFQsHZg" base_Element="_hZl8QvrVEe2K5rGl_jmrlg"/>
+  <OpenModel_Profile:Experimental xmi:id="_VqdHkJsmEe6UNI7rFQsHZg" base_Element="_8PQUUj0GEe6Rauf2bWY-_w"/>
+  <OpenModel_Profile:Experimental xmi:id="_WyfGoJsmEe6UNI7rFQsHZg" base_Element="_1Ayycj0aEe6Rauf2bWY-_w"/>
+  <OpenModel_Profile:Experimental xmi:id="_X_gTYJsmEe6UNI7rFQsHZg" base_Element="__yj2cz0bEe6Rauf2bWY-_w"/>
 </xmi:XMI>
