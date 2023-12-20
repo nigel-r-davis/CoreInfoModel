@@ -381,6 +381,11 @@ For example, this property interacts with monthPhasing such that the months chos
           <defaultValue xmi:type="uml:InstanceValue" xmi:id="_CtVbYHtpEey4cMhm9-6ddw" instance="_xzCS4HtnEey4cMhm9-6ddw"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_ypRJYIUBEey4cMhm9-6ddw" name="weekInMonth" type="_fXfH8IUHEey4cMhm9-6ddw">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_BG1zsJ7CEe6Uw-XY9h7Nog" annotatedElement="_ypRJYIUBEey4cMhm9-6ddw">
+            <body>Identifies a week start day and which weeks of the month are included.&#xD;
+The structure identifies weeks from the start of the month and from the end of the month.&#xD;
+The structure also allows for whole weeks and for partial weeks counting.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8FGxsIUBEey4cMhm9-6ddw"/>
         </ownedAttribute>
       </packagedElement>
@@ -674,6 +679,9 @@ The time is the start moment of the identified hour/minute, so 00:00 is the mome
           <defaultValue xmi:type="uml:LiteralString" xmi:id="_ga9pIHzuEey4cMhm9-6ddw" value="hourInDay=0, minuteInHour=0"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_kIzocHtwEey4cMhm9-6ddw" name="endDayInMonth" type="_Uf79gHttEey4cMhm9-6ddw">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_V_I4QJ7CEe6Uw-XY9h7Nog" annotatedElement="_kIzocHtwEey4cMhm9-6ddw">
+            <body>Specific day in year that the event ends.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pU-yYHtwEey4cMhm9-6ddw"/>
           <defaultValue xmi:type="uml:LiteralString" xmi:id="_53BMwHzuEey4cMhm9-6ddw" value="same as startDayInMonth"/>
         </ownedAttribute>
@@ -695,6 +703,9 @@ If not present then assumes defined by endDay/endTime..</body>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bkoo0HztEey4cMhm9-6ddw"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_JI5pIHz0Eey4cMhm9-6ddw" name="accountForLeapYear" type="_8BkmgHzzEey4cMhm9-6ddw">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_mLUL8J7CEe6Uw-XY9h7Nog" annotatedElement="_JI5pIHz0Eey4cMhm9-6ddw">
+            <body>Indicates whether the period should account for leap years.</body>
+          </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aApCUHz0Eey4cMhm9-6ddw"/>
           <defaultValue xmi:type="uml:InstanceValue" xmi:id="_VRiO4Hz0Eey4cMhm9-6ddw" instance="_Dz4FMHz0Eey4cMhm9-6ddw"/>
         </ownedAttribute>
