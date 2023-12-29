@@ -120,7 +120,7 @@ This is especially relevant when considering periods related to days as the day 
           <ownedComment xmi:type="uml:Comment" xmi:id="_9N-l0AQXEe2V3aJvQ3vT5A" annotatedElement="_a7rbUH0BEey4cMhm9-6ddw">
             <body>It is possible that a specific conflict action cannot overcome the conflict.&#xD;
 There may be several alternative conflict actions.&#xD;
-The conflict actions should be run in preference order with the lowest value integer being the most preferred and hence the first to runm.&#xD;
+The conflict actions should be run in preference order with the lowest value integer being the most preferred and hence the first to run.&#xD;
 Same preference value actions will be run in an arbitrary order.</body>
           </ownedComment>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -129,9 +129,9 @@ Same preference value actions will be run in an arbitrary order.</body>
           <ownedComment xmi:type="uml:Comment" xmi:id="_XMHWoH4wEey4cMhm9-6ddw" annotatedElement="_kzktgH0BEey4cMhm9-6ddw">
             <body>Indicates how many alternatives in the temporal direction can be tried. &#xD;
 For example, if the exclusion is of a public holiday Monday and the normal occurrence is Monday then the alternative action will activate.&#xD;
-If the the referenced TemporalExpression offers every week day and temporal direction is NEXT, then the first opportunity will be Tuesday. &#xD;
-If the opportunities is set to 1 then that is all that may be tried. But it may not be available for some other exclusion reason and hence no alternative will be available and the period will be skiped.&#xD;
-However, if the opportunuties is set to 2 then the next but one day can also be tried (i.e., Wedneday in the example) and that may be available.&#xD;
+If the referenced TemporalExpression offers every week day and temporal direction is NEXT, then the first opportunity will be Tuesday. &#xD;
+If the opportunities is set to 1 then that is all that may be tried. But it may not be available for some other exclusion reason and hence no alternative will be available and the period will be skipped.&#xD;
+However, if the opportunities is set to 2 then the next but one day can also be tried (i.e., Wednesday in the example) and that may be available.&#xD;
 And so on...</body>
           </ownedComment>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -145,11 +145,11 @@ And so on...</body>
       <packagedElement xmi:type="uml:Class" xmi:id="_Zwl_0HtiEey4cMhm9-6ddw" name="IncorporatedTe">
         <ownedComment xmi:type="uml:Comment" xmi:id="_0OceAAQiEe2V3aJvQ3vT5A" annotatedElement="_Zwl_0HtiEey4cMhm9-6ddw">
           <body>Provides rules for incorporation of a referenced temporal expression.&#xD;
-An incorporated temporal expression is combinded with the temporal expression element that owns the incorporated te. </body>
+An incorporated temporal expression is combined with the temporal expression element that owns the incorporated TE. </body>
         </ownedComment>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_TdOesHl9EeygLpMY3b1PCQ" name="incorporationMethod" type="_nZPhMHl9EeygLpMY3b1PCQ">
           <ownedComment xmi:type="uml:Comment" xmi:id="_ellpwAQjEe2V3aJvQ3vT5A" annotatedElement="_TdOesHl9EeygLpMY3b1PCQ">
-            <body>The method for incorproation of the temporal expression.</body>
+            <body>The method for incorporation of the temporal expression.</body>
           </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GsTUcHl-EeygLpMY3b1PCQ"/>
           <defaultValue xmi:type="uml:InstanceValue" xmi:id="_CZxvUHl-EeygLpMY3b1PCQ" instance="_rjO1YHl9EeygLpMY3b1PCQ"/>
@@ -215,11 +215,11 @@ Is the union of all listed periods.</body>
           <body>Applied from the beginning of each continuous period. The continuous period is defined by period, daysOfWeek, periodInDay, DayInMonth and RangeEachYear.&#xD;
 Phasing starts at the beginning of the continuous period for the stated duration then repeated after phasing value from the beginning of the previous phasing.&#xD;
 If there are no phasing statement then the active period is the whole of the continuous period (every hour of every day of every week of every year, duration 60 minutes).&#xD;
-If no continuous period statement then phasingapplies to a specific period by intersection where the intersection is defined as starting at the beginning of the period of the other intersecting element(s).&#xD;
+If no continuous period statement then phasing applies to a specific period by intersection where the intersection is defined as starting at the beginning of the period of the other intersecting element(s).&#xD;
 The phasings can be accumulated (essentially formed by an intersection of the properties).&#xD;
 For example:&#xD;
 - hourPhasing of 0.5 and dayPhasing of 2.0 and duration of 15 minutes means 15 minutes for every 30 minutes for a whole day every other day.&#xD;
-- hourPhasing of 0.5 and dayPhasing of 2.5 and duratoin of 15 minutes means 15 minutes for every 30 minutes for a whole day then the same for a day starting a day and a half after the end of the first period.</body>
+- hourPhasing of 0.5 and dayPhasing of 2.5 and duration of 15 minutes means 15 minutes for every 30 minutes for a whole day then the same for a day starting a day and a half after the end of the first period.</body>
         </ownedComment>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_dOPUgHl3EeygLpMY3b1PCQ" name="hourPhasing">
           <ownedComment xmi:type="uml:Comment" xmi:id="_FVafgHzrEey4cMhm9-6ddw" annotatedElement="_dOPUgHl3EeygLpMY3b1PCQ">
@@ -397,7 +397,7 @@ The structure also allows for whole weeks and for partial weeks counting.</body>
       </packagedElement>
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_F6EWYHPEEeyyQZoR1M2guQ" name="DayPositionInMonth">
         <ownedComment xmi:type="uml:Comment" xmi:id="_UyafMAzZEe2zlIat60rxqg" annotatedElement="_F6EWYHPEEeyyQZoR1M2guQ">
-          <body>There are a number of occurrences of each named day in a mont.&#xD;
+          <body>There are a number of occurrences of each named day in a month.&#xD;
 This property identifies which of the occurrences should be active.</body>
         </ownedComment>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_KeHwYHPEEeyyQZoR1M2guQ" name="FIRST">
@@ -454,9 +454,9 @@ This property identifies which of the occurrences should be active.</body>
         </ownedLiteral>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_njbdkHtiEey4cMhm9-6ddw" name="INTERSECT_COMPLEMENT">
           <ownedComment xmi:type="uml:Comment" xmi:id="_mstnIH0GEey4cMhm9-6ddw" annotatedElement="_njbdkHtiEey4cMhm9-6ddw">
-            <body>The resulting temporal expression will not include the definition of the refereneced TemporalExpression, i.e., Intersection with the complement of the referenced TemporalExpression.&#xD;
+            <body>The resulting temporal expression will not include the definition of the referenced TemporalExpression, i.e., Intersection with the complement of the referenced TemporalExpression.&#xD;
 Using a simple integer equivalent as an example, if an integer list expression is 1, 3, 5, 7, 9 and the expression to be incorporated via INTERSECTION_COMPLEMENT is 3, 4, 5 then the result will be 1, 7, 9.&#xD;
-This is because the complement of 3, 4, 5 is 1, 2, 6, 7, 8, 9, 10, 11, ... and the intersectiion of 1, 2, 6, 7, 8, 9, 10, 11,... with 1, 3, 5, 7, 9 is 1, 7, 9.</body>
+This is because the complement of 3, 4, 5 is 1, 2, 6, 7, 8, 9, 10, 11, ... and the intersection of 1, 2, 6, 7, 8, 9, 10, 11,... with 1, 3, 5, 7, 9 is 1, 7, 9.</body>
           </ownedComment>
         </ownedLiteral>
       </packagedElement>
@@ -663,7 +663,7 @@ Periods may merge and hence become continuous over several period definitions.</
 However, this is an unlikely approach.&#xD;
 More likely there will be an exclusion rule.&#xD;
 This is equivalent to BoundingPeriod with no year defined, hence repeats every year.&#xD;
-Can be intersected with other structures. If no other structures intersected then the perioid is continuous.</body>
+Can be intersected with other structures. If no other structures intersected then the period is continuous.</body>
         </ownedComment>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_peDrUHtvEey4cMhm9-6ddw" name="startDayInMonth" type="_Uf79gHttEey4cMhm9-6ddw">
           <ownedComment xmi:type="uml:Comment" xmi:id="_5mddsHztEey4cMhm9-6ddw" annotatedElement="_peDrUHtvEey4cMhm9-6ddw">
@@ -861,7 +861,7 @@ For example, the last day of the week is the first day of the month.</body>
         </ownedLiteral>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_jTDX4IUCEey4cMhm9-6ddw" name="FIRST_WHOLE_WEEK_IN_MONTH">
           <ownedComment xmi:type="uml:Comment" xmi:id="_gMvIQAzrEe2zlIat60rxqg" annotatedElement="_jTDX4IUCEey4cMhm9-6ddw">
-            <body>The month start boundary occurs at or before the week start boundary but there are less than seven days between the month start and week start..&#xD;
+            <body>The month start boundary occurs at or before the week start boundary but there are less than seven days between the month start and week start.&#xD;
 All days of the week are in the month. &#xD;
 This may be the same as the FIRST_WEEK_IN_MONTH, but is more often the SECOND_WEEK_IN_MONTH.</body>
           </ownedComment>
@@ -873,7 +873,7 @@ This may be the same as the FIRST_WEEK_IN_MONTH, but is more often the SECOND_WE
         </ownedLiteral>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_21KFkIUCEey4cMhm9-6ddw" name="SECOND_WHOLE_WEEK_IN_MONTH">
           <ownedComment xmi:type="uml:Comment" xmi:id="_qvmDAAzrEe2zlIat60rxqg" annotatedElement="_21KFkIUCEey4cMhm9-6ddw">
-            <body>The week directlty after the FIRST_WHOLE_WEEK_IN_MONTH.</body>
+            <body>The week directly after the FIRST_WHOLE_WEEK_IN_MONTH.</body>
           </ownedComment>
         </ownedLiteral>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_B8JoIIUDEey4cMhm9-6ddw" name="THIRD_WEEK_IN_MONTH">
@@ -883,7 +883,7 @@ This may be the same as the FIRST_WEEK_IN_MONTH, but is more often the SECOND_WE
         </ownedLiteral>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_IifqAIUDEey4cMhm9-6ddw" name="THIRD_WHOLE_WEEK_IN_MONTH">
           <ownedComment xmi:type="uml:Comment" xmi:id="_FJoR0AzsEe2zlIat60rxqg" annotatedElement="_IifqAIUDEey4cMhm9-6ddw">
-            <body>The week directlty after the SECOND_WHOLE_WEEK_IN_MONTH.</body>
+            <body>The week directly after the SECOND_WHOLE_WEEK_IN_MONTH.</body>
           </ownedComment>
         </ownedLiteral>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_z8U6cIUGEey4cMhm9-6ddw" name="FOURTH_WEEK_IN_MONTH">
@@ -893,7 +893,7 @@ This may be the same as the FIRST_WEEK_IN_MONTH, but is more often the SECOND_WE
         </ownedLiteral>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_3oPLgIUGEey4cMhm9-6ddw" name="FOURTH_WHOLE_WEEK_IN_MONTH">
           <ownedComment xmi:type="uml:Comment" xmi:id="_HhhWQAzsEe2zlIat60rxqg" annotatedElement="_3oPLgIUGEey4cMhm9-6ddw">
-            <body>The week directlty after the THIRD_WHOLE_WEEK_IN_MONTH.</body>
+            <body>The week directly after the THIRD_WHOLE_WEEK_IN_MONTH.</body>
           </ownedComment>
         </ownedLiteral>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_7DysYIUGEey4cMhm9-6ddw" name="FIFTH_WEEK_IN_MONTH">
@@ -915,7 +915,7 @@ For example, the first day of the week is the last day of the month.</body>
         </ownedLiteral>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_MwdicIUHEey4cMhm9-6ddw" name="LAST_WHOLE_WEEK_IN_MONTH">
           <ownedComment xmi:type="uml:Comment" xmi:id="_t-vqIAzsEe2zlIat60rxqg" annotatedElement="_MwdicIUHEey4cMhm9-6ddw">
-            <body>The month end boundary occurs at or after the week end boundary but there are less than seven days between the month end and week end.&#xD;
+            <body>The month end boundary occurs at or after the end of week boundary but there are less than seven days between the month end and the end of the week.&#xD;
 All days of the week are in the month.</body>
           </ownedComment>
         </ownedLiteral>
@@ -946,7 +946,7 @@ All days of the week are in the month.</body>
       <packagedElement xmi:type="uml:Class" xmi:id="_TH_BAMIXEeyCO-OTTyuWTA" name="SimplePhasedPeriodIntersectionTe">
         <ownedComment xmi:type="uml:Comment" xmi:id="_Dze5gMNGEeypn59zBr_fGw" annotatedElement="_TH_BAMIXEeyCO-OTTyuWTA">
           <body>There is a natural intersection of periods such that there is only activity if all stated periods indicate activity.&#xD;
-Hence if a second phasing indicates activity every other second and a minute phasing every other minute then thre is only activity every other second in every other minute.</body>
+Hence if a second phasing indicates activity every other second and a minute phasing every other minute then there is only activity every other second in every other minute.</body>
         </ownedComment>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_jVtXYMIYEeyCO-OTTyuWTA" name="second" type="_xHpkoMIVEeyCO-OTTyuWTA">
           <ownedComment xmi:type="uml:Comment" xmi:id="_KzFiwAzuEe2zlIat60rxqg" annotatedElement="_jVtXYMIYEeyCO-OTTyuWTA">
