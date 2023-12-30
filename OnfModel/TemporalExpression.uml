@@ -14,9 +14,6 @@ This forms the TemproalExpression statement.</body>
         <body>Each exclusion probably needs a dedicated action, although these may spread across several specific exclusions. &#xD;
 For example, if the exclusion is exclude bank holidays then the choice may be next working day etc.</body>
       </ownedComment>
-      <ownedComment xmi:type="uml:Comment" xmi:id="_lMHBgAPFEe2V3aJvQ3vT5A" annotatedElement="_WlMvcHLeEeyyQZoR1M2guQ">
-        <body>The holder of a single temporal expression.</body>
-      </ownedComment>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_vUQ0wHLfEeyyQZoR1M2guQ" name="Imports">
       <packageImport xmi:type="uml:PackageImport" xmi:id="_KWhzIHLeEeyyQZoR1M2guQ">
@@ -39,7 +36,7 @@ For example, if the exclusion is exclude bank holidays then the choice may be ne
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BE2z8HtkEey4cMhm9-6ddw" value="*"/>
         </ownedEnd>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_MM55wH0BEey4cMhm9-6ddw" memberEnd="_MM6g0n0BEey4cMhm9-6ddw _MNAAYn0BEey4cMhm9-6ddw">
+      <packagedElement xmi:type="uml:Association" xmi:id="_MM55wH0BEey4cMhm9-6ddw" name="ExclusionConflictActionAlternativeHasTemporalExpression" memberEnd="_MM6g0n0BEey4cMhm9-6ddw _MNAAYn0BEey4cMhm9-6ddw">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MM6g0H0BEey4cMhm9-6ddw" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MM6g0X0BEey4cMhm9-6ddw" key="nature" value="UML_Nature"/>
         </eAnnotations>
@@ -109,7 +106,8 @@ This is especially relevant when considering periods related to days as the day 
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_phOk4H0AEey4cMhm9-6ddw" name="ExclusionConflictActionAlternative">
         <ownedComment xmi:type="uml:Comment" xmi:id="_7e8DYAQSEe2V3aJvQ3vT5A" annotatedElement="_phOk4H0AEey4cMhm9-6ddw">
-          <body>The rules that apply when an exclusion from one part of a temporal expression causes disruption to a fundamental sequence from another part of the temproal expression.</body>
+          <body>The rules that apply when an exclusion from one part of a temporal expression causes disruption to a fundamental sequence from another part of the temproal expression.&#xD;
+Note that this class is early experimental. The usage detail needs to be developed further.</body>
         </ownedComment>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_MM6g0n0BEey4cMhm9-6ddw" name="_temporalExpression" type="_JePDwHLfEeyyQZoR1M2guQ" association="_MM55wH0BEey4cMhm9-6ddw">
           <ownedComment xmi:type="uml:Comment" xmi:id="_Gzp44AQTEe2V3aJvQ3vT5A" annotatedElement="_MM6g0n0BEey4cMhm9-6ddw">
@@ -145,7 +143,8 @@ And so on...</body>
       <packagedElement xmi:type="uml:Class" xmi:id="_Zwl_0HtiEey4cMhm9-6ddw" name="IncorporatedTe">
         <ownedComment xmi:type="uml:Comment" xmi:id="_0OceAAQiEe2V3aJvQ3vT5A" annotatedElement="_Zwl_0HtiEey4cMhm9-6ddw">
           <body>Provides rules for incorporation of a referenced temporal expression.&#xD;
-An incorporated temporal expression is combined with the temporal expression element that owns the incorporated TE. </body>
+An incorporated temporal expression is combined with the temporal expression element that owns the incorporated TE.&#xD;
+Note that this fragment of the model is early experimental. </body>
         </ownedComment>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_TdOesHl9EeygLpMY3b1PCQ" name="incorporationMethod" type="_nZPhMHl9EeygLpMY3b1PCQ">
           <ownedComment xmi:type="uml:Comment" xmi:id="_ellpwAQjEe2V3aJvQ3vT5A" annotatedElement="_TdOesHl9EeygLpMY3b1PCQ">
@@ -161,7 +160,9 @@ An incorporated temporal expression is combined with the temporal expression ele
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_0Y1AkH0AEey4cMhm9-6ddw" name="_exclusionConflictActionAlternative" type="_phOk4H0AEey4cMhm9-6ddw" aggregation="composite" association="_0Y0ZgH0AEey4cMhm9-6ddw">
           <ownedComment xmi:type="uml:Comment" xmi:id="_x3b0QAQrEe2V3aJvQ3vT5A" annotatedElement="_0Y1AkH0AEey4cMhm9-6ddw">
-            <body>Any relevant conflict actions.</body>
+            <body>Any relevant conflict actions.&#xD;
+&#xD;
+This model area requires further work.</body>
           </ownedComment>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0Y6gIH0AEey4cMhm9-6ddw"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0Y6gIX0AEey4cMhm9-6ddw" value="*"/>
@@ -389,7 +390,7 @@ The structure also allows for whole weeks and for partial weeks counting.</body>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8FGxsIUBEey4cMhm9-6ddw"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_0Y0ZgH0AEey4cMhm9-6ddw" memberEnd="_0Y1AkH0AEey4cMhm9-6ddw _0Y6gIn0AEey4cMhm9-6ddw">
+      <packagedElement xmi:type="uml:Association" xmi:id="_0Y0ZgH0AEey4cMhm9-6ddw" name="IncorporatedTeHasExclusionConflictsActionAlternatives" memberEnd="_0Y1AkH0AEey4cMhm9-6ddw _0Y6gIn0AEey4cMhm9-6ddw">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0Y0ZgX0AEey4cMhm9-6ddw" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0Y0Zgn0AEey4cMhm9-6ddw" key="nature" value="UML_Nature"/>
         </eAnnotations>
@@ -1517,4 +1518,5 @@ The repeatPeriod is an alternative to gap.</body>
   <OpenModel_Profile:Experimental xmi:id="_poX20J4AEe6UNI7rFQsHZg" base_Element="_YsYFYIUIEey4cMhm9-6ddw"/>
   <OpenModel_Profile:Experimental xmi:id="_rhR5MJ4AEe6UNI7rFQsHZg" base_Element="_fXfH8IUHEey4cMhm9-6ddw"/>
   <OpenModel_Profile:Experimental xmi:id="_uxAkkJ4AEe6UNI7rFQsHZg" base_Element="_xHpkoMIVEeyCO-OTTyuWTA"/>
+  <OpenDddAggregateProfile:AggWithin xmi:id="_ksBF8KYhEe60lJd3iBcTYQ" base_Association="_0Y0ZgH0AEey4cMhm9-6ddw"/>
 </xmi:XMI>
