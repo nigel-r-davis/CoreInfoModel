@@ -8444,7 +8444,7 @@ This specific model follows a subset of the Component-System Pattern. &#xD;
           <ownedAttribute xmi:type="uml:Property" xmi:id="_Qw2b4rNZEe2Z-6WXofZ1eg" name="_governedCd" type="_RcjQAOksEea0ZYSsp-EUkw" aggregation="shared" association="_Qwz_oLNZEe2Z-6WXofZ1eg">
             <ownedComment xmi:type="uml:Comment" xmi:id="_quUOALNaEe2Z-6WXofZ1eg" annotatedElement="_Qw2b4rNZEe2Z-6WXofZ1eg">
               <body>A Constraint Domain governed by the Control Construct. &#xD;
-A Constriant Domain may be goverend by more than one Control Construct (shared) during a handover.&#xD;
+A Constraint Domain may be governed by more than one Control Construct (shared) during a handover.&#xD;
 This association is a lifecycle aggregate where the Constraint Domain must be governed by at least one Control Construct.&#xD;
 A Control Construct may modify and delete a Constraint Domain it governs.&#xD;
 A Control Construct may create a Constraint Domain.&#xD;
@@ -8457,7 +8457,7 @@ It is not expected that a Control Construct will govern a Constraint Domain that
         <packagedElement xmi:type="uml:Class" xmi:id="_D5kTMJmiEeWTOvbfd7_4-A" name="ControlPort">
           <ownedComment xmi:type="uml:Comment" xmi:id="_Poh2MGpPEeaBUOurxzA2sw" annotatedElement="_D5kTMJmiEeWTOvbfd7_4-A">
             <body>The access to the ControlConstruct following the normal Component-Port pattern (i.e., the functions of a component are accessed via ports).&#xD;
-Is assumed to usually be bidirectional.</body>
+Is assumed to be bidirectional.</body>
           </ownedComment>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_yclZAMAvEeWbqPZwR-Ot6A" name="_protectingControlPort" type="_D5kTMJmiEeWTOvbfd7_4-A" association="_yckK4MAvEeWbqPZwR-Ot6A">
             <ownedComment xmi:type="uml:Comment" xmi:id="_p1804FlbEeeAxe1wuzs6dw" annotatedElement="_yclZAMAvEeWbqPZwR-Ot6A">
@@ -8801,7 +8801,7 @@ A user has needs that are satisfied by a provider.</body>
           <ownedComment xmi:type="uml:Comment" xmi:id="_hTpIEJS5Eei_9c44xHCpzQ" annotatedElement="_XFoTIRbsEeitqc-Dc8Gf8A">
             <body>A universal structure for representation of output from a task.</body>
           </ownedComment>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_XFoTIhbsEeitqc-Dc8Gf8A" name="progressStatus" visibility="public" type="_XFoTChbsEeitqc-Dc8Gf8A" isReadOnly="true">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_XFoTIhbsEeitqc-Dc8Gf8A" name="progressStatus" visibility="public" isReadOnly="true">
             <ownedComment xmi:type="uml:Comment" xmi:id="_kBzXcJS5Eei_9c44xHCpzQ" annotatedElement="_XFoTIhbsEeitqc-Dc8Gf8A">
               <body>Indicates the progress of the task.</body>
             </ownedComment>
@@ -8886,7 +8886,7 @@ A user has needs that are satisfied by a provider.</body>
             <body>Exposes a view of the things controlled by a control system. For example of resources defined in this model (and referenced by clause A.10 of ONF TR-521).&#xD;
 The referenced ConstraintDomain bounds the view which is a structured presentation of the underlying controlled things (the &quot;actual&quot; entities) for some purpose.&#xD;
 The ExposureContext provides access to the view. &#xD;
-It may further constrain the view in some limited way (e.g., read only). &#xD;
+It may further constrain the capabilities supported by the view (e.g., read only). &#xD;
 It does not provide a different view as its only source of information is the associated CD and the purpose of the ExposureContext is to expose the view as provided by the CD.&#xD;
 The model bounded by the ConstraintDomain is constructed by mapping/abstracting the models of the underlying controlled things.&#xD;
 The ControlConstruct is itself controlled and presents itself in terms of ControlConstructs (subordinate) in a view.&#xD;
@@ -9119,7 +9119,7 @@ Related terms:&#xD;
 - Task: A piece of work to be done&#xD;
 - Job: A task or piece of work&#xD;
 - Activity: A thing that is done&#xD;
-- Use Case: A written description of how a task will be performed&#xD;
+- Use Case: A written description of how a task will be performed for a particular purpose&#xD;
 - Function: An activity that is natural to or the purpose of a thing&#xD;
 - Action: A thing done&#xD;
 - Runnable Task: Used to handle any computational work&#xD;
@@ -9128,7 +9128,7 @@ Related terms:&#xD;
           <generalization xmi:type="uml:Generalization" xmi:id="_1h88EC9KEe22jbMp3BDUaA" general="_iVJ1kI2wEeO38ZmbECnvbg"/>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_XFoTUBbsEeitqc-Dc8Gf8A" name="problemsAndWarnings" type="_aL8EoGnNEeaBUOurxzA2sw">
             <ownedComment xmi:type="uml:Comment" xmi:id="_1OuBUJS3Eei_9c44xHCpzQ" annotatedElement="_XFoTUBbsEeitqc-Dc8Gf8A">
-              <body>A list or problems and warnings related to the task.</body>
+              <body>A list of problems and warnings related to the task.</body>
             </ownedComment>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_h7L7YC9LEe22jbMp3BDUaA"/>
           </ownedAttribute>
@@ -9356,32 +9356,13 @@ Related Terms&#xD;
             </ownedComment>
           </ownedLiteral>
         </packagedElement>
-        <packagedElement xmi:type="uml:Enumeration" xmi:id="_XFoTChbsEeitqc-Dc8Gf8A" name="ProgressStatus">
-          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTCxbsEeitqc-Dc8Gf8A" name="COMPLETED">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_3e59oKLdEe2Z-6WXofZ1eg" annotatedElement="_XFoTCxbsEeitqc-Dc8Gf8A">
-              <body>The task has been completed.&#xD;
-There may have been warnings and non catastrophic error conditions none of which prevented completion.</body>
-            </ownedComment>
-          </ownedLiteral>
-          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTDBbsEeitqc-Dc8Gf8A" name="IN_PROGRESS">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_6Crh8KLdEe2Z-6WXofZ1eg" annotatedElement="_XFoTDBbsEeitqc-Dc8Gf8A">
-              <body>The task is progressing.</body>
-            </ownedComment>
-          </ownedLiteral>
-          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTDRbsEeitqc-Dc8Gf8A" name="FAILED">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_KvGb8KLeEe2Z-6WXofZ1eg" annotatedElement="_XFoTDRbsEeitqc-Dc8Gf8A">
-              <body>The task has failed.&#xD;
-The task may have failed to start or may have progressed to a point where a condition occurred that prevented furthe meaningful progress.</body>
-            </ownedComment>
-          </ownedLiteral>
-        </packagedElement>
         <packagedElement xmi:type="uml:Enumeration" xmi:id="_XFoTFBbsEeitqc-Dc8Gf8A" name="TaskLifecycleState">
           <ownedComment xmi:type="uml:Comment" xmi:id="_YpzvAJS6Eei_9c44xHCpzQ" annotatedElement="_XFoTFBbsEeitqc-Dc8Gf8A">
             <body>The potential states of the task.</body>
           </ownedComment>
           <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTFRbsEeitqc-Dc8Gf8A" name="RUNNING">
             <ownedComment xmi:type="uml:Comment" xmi:id="_OKrBMJS7Eei_9c44xHCpzQ" annotatedElement="_XFoTFRbsEeitqc-Dc8Gf8A">
-              <body>The task is running.</body>
+              <body>The task is running/progressing.</body>
             </ownedComment>
           </ownedLiteral>
           <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTFhbsEeitqc-Dc8Gf8A" name="PAUSED">
@@ -9401,7 +9382,8 @@ The task may have failed to start or may have progressed to a point where a cond
           </ownedLiteral>
           <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTGRbsEeitqc-Dc8Gf8A" name="COMPLETED">
             <ownedComment xmi:type="uml:Comment" xmi:id="_58sE8JS6Eei_9c44xHCpzQ" annotatedElement="_XFoTGRbsEeitqc-Dc8Gf8A">
-              <body>The task has been completed successfully.</body>
+              <body>The task has been completed successfully.&#xD;
+There may have been warnings and non catastrophic error conditions none of which prevented completion or some useful outcome.</body>
             </ownedComment>
           </ownedLiteral>
           <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTGhbsEeitqc-Dc8Gf8A" name="ABORTED">
@@ -9431,7 +9413,8 @@ The task may have failed to start or may have progressed to a point where a cond
           </ownedLiteral>
           <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTHxbsEeitqc-Dc8Gf8A" name="FAILED">
             <ownedComment xmi:type="uml:Comment" xmi:id="_H3krcJS7Eei_9c44xHCpzQ" annotatedElement="_XFoTHxbsEeitqc-Dc8Gf8A">
-              <body>The task has failed.</body>
+              <body>The task has failed.&#xD;
+The task may have failed to start or may have progressed to a point where a condition occurred that prevented further meaningful progress and has had no useful outcome.</body>
             </ownedComment>
           </ownedLiteral>
           <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTIBbsEeitqc-Dc8Gf8A" name="ARCHIVED">
@@ -14401,10 +14384,6 @@ This class should not be implemented.</body>
   <OpenModel_Profile:Experimental xmi:id="_zKJaoBb5Eeitqc-Dc8Gf8A" base_Element="_XFoS_hbsEeitqc-Dc8Gf8A"/>
   <OpenModel_Profile:Experimental xmi:id="_0WEbMBb5Eeitqc-Dc8Gf8A" base_Element="_XFoTBxbsEeitqc-Dc8Gf8A"/>
   <OpenModel_Profile:Experimental xmi:id="_1Va_YBb5Eeitqc-Dc8Gf8A" base_Element="_XFoTBBbsEeitqc-Dc8Gf8A"/>
-  <OpenModel_Profile:Experimental xmi:id="_7zpnEBb5Eeitqc-Dc8Gf8A" base_Element="_XFoTDBbsEeitqc-Dc8Gf8A"/>
-  <OpenModel_Profile:Experimental xmi:id="_860qgBb5Eeitqc-Dc8Gf8A" base_Element="_XFoTCxbsEeitqc-Dc8Gf8A"/>
-  <OpenModel_Profile:Experimental xmi:id="_-EXFcBb5Eeitqc-Dc8Gf8A" base_Element="_XFoTDRbsEeitqc-Dc8Gf8A"/>
-  <OpenModel_Profile:Experimental xmi:id="__FVaQBb5Eeitqc-Dc8Gf8A" base_Element="_XFoTChbsEeitqc-Dc8Gf8A"/>
   <OpenModel_Profile:Experimental xmi:id="_AXPHABb6Eeitqc-Dc8Gf8A" base_Element="_XFoTERbsEeitqc-Dc8Gf8A"/>
   <OpenModel_Profile:Experimental xmi:id="_Bh9NsBb6Eeitqc-Dc8Gf8A" base_Element="_XFoTDhbsEeitqc-Dc8Gf8A"/>
   <OpenModel_Profile:Experimental xmi:id="_ChCFEBb6Eeitqc-Dc8Gf8A" base_Element="_XFoTqhbsEeitqc-Dc8Gf8A"/>
