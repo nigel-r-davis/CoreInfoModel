@@ -426,7 +426,7 @@
     <styles xmi:type="notation:StringValueStyle" xmi:id="_rDYD0XLeEeyyQZoR1M2guQ" name="diagram_compatibility_version" stringValue="1.4.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_rDYD0nLeEeyyQZoR1M2guQ"/>
     <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_rDYD03LeEeyyQZoR1M2guQ" diagramKindId="org.eclipse.papyrus.uml.diagram.class">
-      <owner xmi:type="uml:Package" href="TemporalExpression.uml#_WlMvcHLeEeyyQZoR1M2guQ"/>
+      <owner xmi:type="uml:Package" href="TemporalExpression.uml#_NisMIKlREe60lJd3iBcTYQ"/>
     </styles>
     <element xmi:type="uml:Package" href="TemporalExpression.uml#_WlMvcHLeEeyyQZoR1M2guQ"/>
     <edges xmi:type="notation:Connector" xmi:id="_XbJDgHLfEeyyQZoR1M2guQ" type="Association_Edge" source="_JeVKYHLfEeyyQZoR1M2guQ" target="_6eg8IHLeEeyyQZoR1M2guQ">
