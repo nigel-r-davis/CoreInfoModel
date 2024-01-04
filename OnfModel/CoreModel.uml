@@ -8930,13 +8930,6 @@ Each ViewMappingFunction in the context of a ControlConstruct define the relatio
 The ViewMappingFunction is applied to the entities aggregated by one or more ConstraintDomains (via VmfPort - CdPort VmfMapsFromCdConstraintSet association) to construct the view in another ConstraintDomain (via VmfPort - CdPort VmfGovernsCdConstraintSet association).&#xD;
 For example, a pair of LTPs with matching adjacency tags in a nodal view may be mapped to a Link in a network view where the rules would describe the matching criteria etc.</body>
           </ownedComment>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_rXl-MMAtEeWbqPZwR-Ot6A" name="_exposureContext" type="_5LsaEFY2EeiyzdV8zVsJ_w" association="_rXkJAMAtEeWbqPZwR-Ot6A">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_GEFlwGqkEeiRh-lc79MSRw" annotatedElement="_rXl-MMAtEeWbqPZwR-Ot6A">
-              <body>An ExposureContext available to the ViewMappingFunction.</body>
-            </ownedComment>
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hdnZoMAzEeWbqPZwR-Ot6A" value="2"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hdqc8MAzEeWbqPZwR-Ot6A" value="2"/>
-          </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_VTHkIGmFEeio5tbL36vGKA" name="_vmfPort" type="_SdUbsGmFEeio5tbL36vGKA" aggregation="composite" association="_VTEg0GmFEeio5tbL36vGKA">
             <ownedComment xmi:type="uml:Comment" xmi:id="_Mbqy4GqkEeiRh-lc79MSRw" annotatedElement="_VTHkIGmFEeio5tbL36vGKA">
               <body>A port of the ViewMappingFunction.</body>
@@ -8988,17 +8981,7 @@ This governs what the ConstraintDomain may aggregate and also governs the lifecy
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Fri84GmGEeio5tbL36vGKA" value="1"/>
           </ownedEnd>
         </packagedElement>
-        <packagedElement xmi:type="uml:Package" xmi:id="_BePvwBqIEeqCeNa5GcKdyg" name="associationsControlModule">
-          <packagedElement xmi:type="uml:Association" xmi:id="_rXkJAMAtEeWbqPZwR-Ot6A" name="ViewMappingMapsExposureContexts" memberEnd="_rXkwEsAtEeWbqPZwR-Ot6A _rXl-MMAtEeWbqPZwR-Ot6A">
-            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rXkwEMAtEeWbqPZwR-Ot6A" source="org.eclipse.papyrus">
-              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rXkwEcAtEeWbqPZwR-Ot6A" key="nature" value="UML_Nature"/>
-            </eAnnotations>
-            <ownedEnd xmi:type="uml:Property" xmi:id="_rXkwEsAtEeWbqPZwR-Ot6A" name="viewmapping" type="_U928EMAtEeWbqPZwR-Ot6A" association="_rXkJAMAtEeWbqPZwR-Ot6A">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_h2QjIMAzEeWbqPZwR-Ot6A"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_h2TmcMAzEeWbqPZwR-Ot6A" value="*"/>
-            </ownedEnd>
-          </packagedElement>
-        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_BePvwBqIEeqCeNa5GcKdyg" name="associationsControlModule"/>
         <packagedElement xmi:type="uml:Package" xmi:id="_FozEoBqIEeqCeNa5GcKdyg" name="associationsExternalModule">
           <packagedElement xmi:type="uml:Association" xmi:id="_ocWCUGmGEeio5tbL36vGKA" name="VmfGovernsCdConstraintSet" memberEnd="_ocWCU2mGEeio5tbL36vGKA _ocWpYWmGEeio5tbL36vGKA">
             <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ocWCUWmGEeio5tbL36vGKA" source="org.eclipse.papyrus">
@@ -13541,7 +13524,6 @@ This class should not be implemented.</body>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_pf5qgeebEeapD6ZL2WzaLQ">
     <base_StructuralFeature xmi:type="uml:Property" href="CoreModelEnhancements.uml#_qz6CUsAtEeWbqPZwR-Ot6A"/>
   </OpenModel_Profile:OpenModelAttribute>
-  <OpenModel_Profile:OpenModelAttribute xmi:id="_pf5qguebEeapD6ZL2WzaLQ" base_StructuralFeature="_rXkwEsAtEeWbqPZwR-Ot6A"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_pf6RkOebEeapD6ZL2WzaLQ">
     <base_StructuralFeature xmi:type="uml:Property" href="CoreModelEnhancements.uml#_9tT70MAuEeWbqPZwR-Ot6A"/>
   </OpenModel_Profile:OpenModelAttribute>
@@ -13583,7 +13565,6 @@ This class should not be implemented.</body>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_pgeSQeebEeapD6ZL2WzaLQ">
     <base_StructuralFeature xmi:type="uml:Property" href="CoreModelEnhancements.uml#_qz6pYMAtEeWbqPZwR-Ot6A"/>
   </OpenModel_Profile:OpenModelAttribute>
-  <OpenModel_Profile:OpenModelAttribute xmi:id="_pgeSQuebEeapD6ZL2WzaLQ" base_StructuralFeature="_rXl-MMAtEeWbqPZwR-Ot6A"/>
   <OpenModel_Profile:OpenModelClass xmi:id="_RdCYMOksEea0ZYSsp-EUkw" base_Class="_RcjQAOksEea0ZYSsp-EUkw"/>
   <OpenModel_Profile:OpenModelClass xmi:id="_fWjsweksEea0ZYSsp-EUkw" base_Class="_fWjswOksEea0ZYSsp-EUkw"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_ugk_4OksEea0ZYSsp-EUkw" base_StructuralFeature="_ugkY0OksEea0ZYSsp-EUkw"/>
@@ -13731,7 +13712,6 @@ This class should not be implemented.</body>
   <OpenModel_Profile:Experimental xmi:id="_voicQPHZEea2l9FuDSKfDQ">
     <base_Element xmi:type="uml:Association" href="CoreModelEnhancements.uml#_0IZIMPHYEea2l9FuDSKfDQ"/>
   </OpenModel_Profile:Experimental>
-  <OpenModel_Profile:Experimental xmi:id="_DfetUPHhEea2l9FuDSKfDQ" base_Element="_rXkJAMAtEeWbqPZwR-Ot6A"/>
   <OpenModel_Profile:OpenModelClass xmi:id="_HiYYsPH6Eea2l9FuDSKfDQ" base_Class="_HiXxoPH6Eea2l9FuDSKfDQ"/>
   <OpenModel_Profile:OpenModelClass xmi:id="_FUr8oPH7Eea2l9FuDSKfDQ" base_Class="_FUrVkPH7Eea2l9FuDSKfDQ"/>
   <OpenModel_Profile:OpenModelClass xmi:id="_L3gJYfH7Eea2l9FuDSKfDQ" base_Class="_L3gJYPH7Eea2l9FuDSKfDQ"/>
@@ -14019,7 +13999,6 @@ This class should not be implemented.</body>
   <OpenModel_Profile:Experimental xmi:id="_Ven6EFpFEee0ZvXJLxwizg">
     <base_Element xmi:type="uml:Property" href="CoreModelEnhancements.uml#_qz6pYMAtEeWbqPZwR-Ot6A"/>
   </OpenModel_Profile:Experimental>
-  <OpenModel_Profile:Experimental xmi:id="_YCUl4FpFEee0ZvXJLxwizg" base_Element="_rXl-MMAtEeWbqPZwR-Ot6A"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_pbKDgFpREee0ZvXJLxwizg" base_StructuralFeature="_pbJccFpREee0ZvXJLxwizg"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_pbL4sFpREee0ZvXJLxwizg" base_StructuralFeature="_pbLRoFpREee0ZvXJLxwizg"/>
   <OpenModel_Profile:Experimental xmi:id="_NFKB0FpSEee0ZvXJLxwizg" base_Element="_panQ8FpREee0ZvXJLxwizg"/>
