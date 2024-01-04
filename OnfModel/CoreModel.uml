@@ -8924,9 +8924,8 @@ Represents the domain of control available to the viewer.</body>
       <packagedElement xmi:type="uml:Package" xmi:id="_yALsoBpCEeqAktXlUG_iEw" name="ViewMappingFunction">
         <packagedElement xmi:type="uml:Class" xmi:id="_U928EMAtEeWbqPZwR-Ot6A" name="ViewMappingFunction">
           <ownedComment xmi:type="uml:Comment" xmi:id="_f73h0GpPEeaBUOurxzA2sw" annotatedElement="_U928EMAtEeWbqPZwR-Ot6A">
-            <body>The rules that relate one view to another.&#xD;
+            <body>The rules that relate one view to another and enable the transformation from one view to another.&#xD;
 A ControlConstruct aggregates ViewMappingFunctions. &#xD;
-Each ViewMappingFunction in the context of a ControlConstruct define the relationship between the view presented in an ExposureContext of that ControlConstruct and other views within the Controller.&#xD;
 The ViewMappingFunction is applied to the entities aggregated by one or more ConstraintDomains (via VmfPort - CdPort VmfMapsFromCdConstraintSet association) to construct the view in another ConstraintDomain (via VmfPort - CdPort VmfGovernsCdConstraintSet association).&#xD;
 For example, a pair of LTPs with matching adjacency tags in a nodal view may be mapped to a Link in a network view where the rules would describe the matching criteria etc.</body>
           </ownedComment>
