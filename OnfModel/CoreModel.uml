@@ -8939,8 +8939,8 @@ For example, a pair of LTPs with matching adjacency tags in a nodal view may be 
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_SdUbsGmFEeio5tbL36vGKA" name="VmfPort">
           <ownedComment xmi:type="uml:Comment" xmi:id="_vMUswGsEEeiRh-lc79MSRw" annotatedElement="_SdUbsGmFEeio5tbL36vGKA">
-            <body>A port of the MappingFunction through which the effects of the mapping is exposed.&#xD;
-This can be an input to the mapping or an output from the mapping where the inputs and outputs may have more detailed roles.</body>
+            <body>A port of the MappingFunction.&#xD;
+This can provide an input to the mapping or an output from the mapping where the inputs and outputs may have more detailed roles.</body>
           </ownedComment>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_7tVAQWmFEeio5tbL36vGKA" name="_vmfPort" type="_SdUbsGmFEeio5tbL36vGKA" association="_7tUZMGmFEeio5tbL36vGKA">
             <ownedComment xmi:type="uml:Comment" xmi:id="_1weWQGsEEeiRh-lc79MSRw" annotatedElement="_7tVAQWmFEeio5tbL36vGKA">
