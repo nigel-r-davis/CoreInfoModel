@@ -12,6 +12,20 @@ The ControlTaskFlowGraph is only represented fully in the Spec layer.</body>
 Likewise whether the output goes through a port or elsewhere.&#xD;
 Both the above may be spec only properties.</body>
     </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_CEb0EHIZEe2_e5PQKRXPAw">
+      <body>Capability: The opportunity for a thing (e.g., Component) to carry out specific activities.&#xD;
+Possessing the means to carry out specific activities&#xD;
+Related Terms&#xD;
+- Functionality: An activity that is natural to or the purpose of a thing&#xD;
+- Ability: Possession of the means or skill to do something&#xD;
+- Potential, Competence, Faculty, Aptitude, Talent</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_lxqFgHIZEe2_e5PQKRXPAw">
+      <body>CapabilitySpecification: The description of capability (of a thing (e.g., Component)) to carry out activities &#xD;
+&#xD;
+Related Terms&#xD;
+- Descriptor, Template, Profile, Specification</body>
+    </ownedComment>
     <packageImport xmi:type="uml:PackageImport" xmi:id="_8Q4ecKxrEeS5HuAudtqItw">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
     </packageImport>
@@ -7336,7 +7350,7 @@ The referenced Class may:&#xD;
           <body>Explain better who controls what.</body>
         </ownedComment>
         <ownedComment xmi:type="uml:Comment" xmi:id="_xzvkkLxBEey15NKF0wAXwA">
-          <body>Get/Post/Put/Patch</body>
+          <body>Get/Post/Put/Patch/Stream</body>
         </ownedComment>
         <ownedComment xmi:type="uml:Comment" xmi:id="__3IKULxCEey15NKF0wAXwA">
           <body>Need to add Transmit Filter for Get Response construction</body>
@@ -7349,7 +7363,6 @@ The ConstraintDomain, and hence the LogRecordBidy, can incorporate any Aggregate
           <ownedComment xmi:type="uml:Comment" xmi:id="_XZT6kMneEeyRHaEo8DHwog" annotatedElement="_VR6iIM_XEem0y513gQlC0Q">
             <body>Defines which events are sent to a specific Topic.&#xD;
 The expectation is that ALL events from an ExposureContext will be available through the combination of TransmitFilters and streams such that a client connected to an appropriate set of streams can maintain alignment with the entire ExposureContext as defined by its ConstraintDomain. &#xD;
-May want to allow the client to specify the streams but there is a danger that the client does not set up the right combination of streams to ensure that all content is available. Maybe a set of profiles?  Based upon orchestrator internal partition.&#xD;
 Provider defines one or more profiles defining a set of streams all of which provide full ExposureContext access and the user selects a profile. May be by negotiation, but certainly not created by the client on the fly with random choices. &#xD;
 If the desired profile does not exist then a slow timeframe process will cause it to become available in the next release of the product/catalogue/etc.</body>
           </ownedComment>
@@ -7364,15 +7377,14 @@ If the desired profile does not exist then a slow timeframe process will cause i
 May do compaction/truncation etc. May use a technology such as Kafka.</body>
           </ownedComment>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_pcVpgs_WEem0y513gQlC0Q" name="_streamSource" type="_1sea4M_VEem0y513gQlC0Q" association="_pcUbYM_WEem0y513gQlC0Q">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pcW3oM_WEem0y513gQlC0Q" value="1"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pcXesM_WEem0y513gQlC0Q" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pcW3oM_WEem0y513gQlC0Q"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_j7kUgrsoEey15NKF0wAXwA" name="_storedInformation" type="_x5b3MLsgEey15NKF0wAXwA" aggregation="composite" association="_j7jtcLsoEey15NKF0wAXwA"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_iaPVMM_VEem0y513gQlC0Q" name="LogStreamControl">
           <ownedComment xmi:type="uml:Comment" xmi:id="_DeB34MneEeyRHaEo8DHwog" annotatedElement="_iaPVMM_VEem0y513gQlC0Q">
             <body>For stream transmitter, monitors StreamLog state and StreamHandler behaviour.&#xD;
-For stream receiver,monitors ReceiveStreamBuffer.&#xD;
+For stream receiver, monitors ReceiveStreamBuffer.&#xD;
 Controls the communications in response to monitored conditions dropping and restarting connections as appropriate.&#xD;
 Need to explain how the client chooses the record to start from.</body>
           </ownedComment>
@@ -7394,9 +7406,10 @@ Need to explain how the client chooses the record to start from.</body>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_1sea4M_VEem0y513gQlC0Q" name="StreamHandler">
           <ownedComment xmi:type="uml:Comment" xmi:id="_JnDhEMndEeyRHaEo8DHwog" annotatedElement="_1sea4M_VEem0y513gQlC0Q">
-            <body>Maintains flow integrity of a stream.&#xD;
-Feeds StreamRecords to the ControlPort built from StreamLogRecords from the StreamLog.&#xD;
-Responds to backpressure from the ControlPort accounting for Demand.</body>
+            <body>Represents the function that maintains flow integrity of a stream.&#xD;
+This functions &#xD;
+- feeds StreamRecords to the ControlPort built from StreamLogRecords from the StreamLog.&#xD;
+- responds to backpressure from the ControlPort accounting for Demand.</body>
           </ownedComment>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_uTXp4s_WEem0y513gQlC0Q" name="_controlPort" type="_D5kTMJmiEeWTOvbfd7_4-A" association="_uTXC0M_WEem0y513gQlC0Q">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uTYQ8M_WEem0y513gQlC0Q" value="1"/>
@@ -7406,7 +7419,10 @@ Responds to backpressure from the ControlPort accounting for Demand.</body>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dQIioM_nEem0y513gQlC0Q" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dQIioc_nEem0y513gQlC0Q" value="1"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_O3i2MrsqEey15NKF0wAXwA" name="conveyedinformation" type="_Do7BoLsqEey15NKF0wAXwA" aggregation="composite" association="_O3hoELsqEey15NKF0wAXwA">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_O3i2MrsqEey15NKF0wAXwA" name="_conveyedinformation" type="_Do7BoLsqEey15NKF0wAXwA" aggregation="composite" association="_O3hoELsqEey15NKF0wAXwA">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_S1DUwM7jEe2fLo4LuLQK4w" annotatedElement="_O3i2MrsqEey15NKF0wAXwA">
+              <body>Information conveyed by the stream handler.</body>
+            </ownedComment>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_O3mgkLsqEey15NKF0wAXwA"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_O3mgkbsqEey15NKF0wAXwA" value="1"/>
           </ownedAttribute>
@@ -7453,7 +7469,9 @@ Responds to backpressure from the ControlPort accounting for Demand.</body>
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dQGGYM_nEem0y513gQlC0Q" source="org.eclipse.papyrus">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dQGGYc_nEem0y513gQlC0Q" key="nature" value="UML_Nature"/>
           </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_dQJJsM_nEem0y513gQlC0Q" name="streamsource" type="_1sea4M_VEem0y513gQlC0Q" association="_dQERMM_nEem0y513gQlC0Q"/>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_dQJJsM_nEem0y513gQlC0Q" name="streamsource" type="_1sea4M_VEem0y513gQlC0Q" association="_dQERMM_nEem0y513gQlC0Q">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0Q5GIJZ_Ee23Mf_cgdmd7w"/>
+          </ownedEnd>
         </packagedElement>
         <packagedElement xmi:type="uml:Association" xmi:id="_I3bz4M_WEem0y513gQlC0Q" name="MonitoredStreamProperties" memberEnd="_I3dCAc_WEem0y513gQlC0Q _I3eQIs_WEem0y513gQlC0Q">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_I3ca8M_WEem0y513gQlC0Q" source="org.eclipse.papyrus">
@@ -7496,12 +7514,14 @@ Responds to backpressure from the ControlPort accounting for Demand.</body>
         <packagedElement xmi:type="uml:Class" xmi:id="__y5TQCECEey5mun8Wbck9w" name="TransmitStreamPipeline">
           <ownedComment xmi:type="uml:Comment" xmi:id="_91HkEMncEeyRHaEo8DHwog" annotatedElement="__y5TQCECEey5mun8Wbck9w">
             <body>Set up by ControlConstruct. Relates to a particular flow of information from the ExposureContext&#xD;
-Controls a specific stream intergrity (using sequence numbers etc.)&#xD;
+Controls a specific stream integrity (using sequence numbers etc.)&#xD;
 Coordinates the TransmitFilter settings for the stream.&#xD;
 Coordinates the StreamHandler.</body>
           </ownedComment>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_kPgvYCEFEey5mun8Wbck9w" name="_TransmitFilter" type="_VR6iIM_XEem0y513gQlC0Q" aggregation="composite" association="_kPcd8CEFEey5mun8Wbck9w"/>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_tk24siEGEey5mun8Wbck9w" name="_streamHandler" type="_1sea4M_VEem0y513gQlC0Q" aggregation="composite" association="_tk1DgCEGEey5mun8Wbck9w"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_tk24siEGEey5mun8Wbck9w" name="_streamHandler" type="_1sea4M_VEem0y513gQlC0Q" aggregation="composite" association="_tk1DgCEGEey5mun8Wbck9w">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_t-PcUJZ_Ee23Mf_cgdmd7w"/>
+          </ownedAttribute>
         </packagedElement>
         <packagedElement xmi:type="uml:Association" xmi:id="_kPcd8CEFEey5mun8Wbck9w" name="TransmitStreamPipelineHasFilteredLog" memberEnd="_kPgvYCEFEey5mun8Wbck9w _kPmO8CEFEey5mun8Wbck9w">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kPfhQCEFEey5mun8Wbck9w" source="org.eclipse.papyrus">
@@ -7569,7 +7589,8 @@ The connection protocol is chosen from the list of connection protocols identifi
           <ownedComment xmi:type="uml:Comment" xmi:id="_O8eUUMniEeyRHaEo8DHwog" annotatedElement="_shKRoLw2Eey15NKF0wAXwA">
             <body>Function that recognizes difference between the current state of an Aggregate (in the related ConstraintDomain) and the Aggregate details in the record received and causes necessary updates to the Aggregates in the related ConstraintDomain.&#xD;
 This function deals with Idempotent behavior.&#xD;
-Deals with properties the client is not interest in.</body>
+Removes properties the client is not interest in.&#xD;
+This is intentionally a limited capability that can simply remove some properties and not perform major transformations or complex filters.</body>
           </ownedComment>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_eUh-Yrw3Eey15NKF0wAXwA" name="_constraintDomain" type="_RcjQAOksEea0ZYSsp-EUkw" association="_eUgJMLw3Eey15NKF0wAXwA"/>
         </packagedElement>
@@ -7667,7 +7688,7 @@ May be &quot;NOT_APPLICABLE&quot; if compaction is essentially immediate (i.e., 
             <defaultValue xmi:type="uml:LiteralString" xmi:id="_XxTacykuEe2juI-ggmBSIQ" value="NOT_APPLICABLE"/>
           </ownedAttribute>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_0oGNoKtNEey15NKF0wAXwA" name="LogRecordBody">
+        <packagedElement xmi:type="uml:Class" xmi:id="_0oGNoKtNEey15NKF0wAXwA" name="BodyOfRecord">
           <ownedComment xmi:type="uml:Comment" xmi:id="_GyoxUMngEeyRHaEo8DHwog" annotatedElement="_0oGNoKtNEey15NKF0wAXwA">
             <body>The key contents of the log record. Details for one Aggregate instance.&#xD;
 - event time (allowing for time inaccuracy)&#xD;
@@ -7685,10 +7706,12 @@ The structure allows for time uncertainty.</body>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_JmZJACkwEe2juI-ggmBSIQ" name="parentAddress" isOrdered="true" isReadOnly="true">
             <ownedComment xmi:type="uml:Comment" xmi:id="_JmZJASkwEe2juI-ggmBSIQ" annotatedElement="_JmZJACkwEe2juI-ggmBSIQ">
-              <body>Where the entity is a local class this provides the ordered list of ids from the closest global class (a UUID cast as a string) to the direct parent (which may be the global class).&#xD;
-The field can include all entities back to the Context and hence can be used for global classes where the tree is being represented in full.&#xD;
+              <body>Where the entity to be reported is a global class this provides the compositional position of the entity in terms of an ordered list of UUIDs.&#xD;
+Where the entity is a local class this provides the ordered list of ids through composition via the next parent which may be a local class to the closest global class (which may be the next parent).&#xD;
+The field can then also include ids of all entities back to the Context and hence can be used for global classes where the tree is being represented in full.&#xD;
 Gives the position of the entity in the address tree (usually containment) that is raising the event by providing the name/id values in the address of the parent.&#xD;
-Is the sequence of named levels in the tree up to but excluding the entity of the notification. </body>
+Is the sequence of named levels in the tree up to but excluding the entity of the notification. &#xD;
+A stream record may include only a portion of a DDD entity where only that portion has changed.</body>
             </ownedComment>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JmZJAikwEe2juI-ggmBSIQ"/>
@@ -7709,6 +7732,9 @@ This property is used to control the conditional augmentation of the body with d
           </ownedComment>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_KOyG0LvkEey15NKF0wAXwA" name="_exposureContext" type="_5LsaEFY2EeiyzdV8zVsJ_w" association="_KOvDgLvkEey15NKF0wAXwA"/>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_iiDeIMviEeyRHaEo8DHwog" name="_controlConstruct" type="_Vuh_EJmhEeWTOvbfd7_4-A" association="_ihxKQMviEeyRHaEo8DHwog">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_Ccjn0NIOEe2BDcWLQ11o3A" annotatedElement="_iiDeIMviEeyRHaEo8DHwog">
+              <body>The receive filter will route messages to the control construct where the message contains a request as opposed to information to apply to the exposure context.</body>
+            </ownedComment>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iiTVwMviEeyRHaEo8DHwog"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iiT80MviEeyRHaEo8DHwog" value="1"/>
           </ownedAttribute>
@@ -7730,7 +7756,7 @@ Applies backpressure on the communications system. Forms part of the overall str
           <ownedAttribute xmi:type="uml:Property" xmi:id="_-xqT4rw-Eey15NKF0wAXwA" name="_controlPort" type="_D5kTMJmiEeWTOvbfd7_4-A" association="_-xpFwLw-Eey15NKF0wAXwA"/>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_6tc3kLw-Eey15NKF0wAXwA" name="_exposureContext" type="_5LsaEFY2EeiyzdV8zVsJ_w" association="_6tU7wLw-Eey15NKF0wAXwA"/>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_r0wvwKtNEey15NKF0wAXwA" name="StreamLogRecord">
+        <packagedElement xmi:type="uml:Class" xmi:id="_r0wvwKtNEey15NKF0wAXwA" name="LogRecord">
           <ownedComment xmi:type="uml:Comment" xmi:id="_tbTLEMneEeyRHaEo8DHwog" annotatedElement="_r0wvwKtNEey15NKF0wAXwA">
             <body>Definition of a record in a StreamLog.&#xD;
 These records are immutable. Once logged they will never change (but can be removed from the log as appropriate).&#xD;
@@ -7741,7 +7767,7 @@ Includes log record header information.&#xD;
 - source authenticity token&#xD;
 </body>
           </ownedComment>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_jYvRErskEey15NKF0wAXwA" name="_logReocrdBody" type="_0oGNoKtNEey15NKF0wAXwA" aggregation="composite" association="_jYs00LskEey15NKF0wAXwA">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_jYvRErskEey15NKF0wAXwA" name="_bodyOfRecord" type="_0oGNoKtNEey15NKF0wAXwA" aggregation="composite" association="_jYs00LskEey15NKF0wAXwA">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jY3z8LskEey15NKF0wAXwA"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jY3z8bskEey15NKF0wAXwA" value="1"/>
           </ownedAttribute>
@@ -7826,7 +7852,7 @@ Includes:&#xD;
 - time the record was formed&#xD;
 Note that this record may contain records for multiple Aggregate instances of mixed Aggregate types.</body>
           </ownedComment>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_RK5Y4bsqEey15NKF0wAXwA" name="_streamLogRecord" type="_r0wvwKtNEey15NKF0wAXwA" aggregation="composite" association="_RK3jsLsqEey15NKF0wAXwA">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_RK5Y4bsqEey15NKF0wAXwA" name="_logRecord" type="_r0wvwKtNEey15NKF0wAXwA" aggregation="composite" association="_RK3jsLsqEey15NKF0wAXwA">
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RK9qULsqEey15NKF0wAXwA" value="*"/>
           </ownedAttribute>
         </packagedElement>
@@ -7913,7 +7939,7 @@ The list may be a subset of the classes within the context.</body>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bmDZALwCEey15NKF0wAXwA"/>
           </ownedEnd>
         </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_OFIF0KtHEey15NKF0wAXwA" name="AvailableStreamIsTypeSyupportedStream" memberEnd="_OFJ7AqtHEey15NKF0wAXwA _OFNlYqtHEey15NKF0wAXwA">
+        <packagedElement xmi:type="uml:Association" xmi:id="_OFIF0KtHEey15NKF0wAXwA" name="AvailableStreamIsSupportedStreamType" memberEnd="_OFJ7AqtHEey15NKF0wAXwA _OFNlYqtHEey15NKF0wAXwA">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OFJ7AKtHEey15NKF0wAXwA" source="org.eclipse.papyrus">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OFJ7AatHEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
           </eAnnotations>
@@ -8038,7 +8064,7 @@ The list may be a subset of the classes within the context.</body>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0X3L8LvlEey15NKF0wAXwA"/>
           </ownedEnd>
         </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_KnyF8LxCEey15NKF0wAXwA" name="ControlPortFeedsRequestsToReceiveFilter" memberEnd="_KnzUErxCEey15NKF0wAXwA _Kn4MkrxCEey15NKF0wAXwA">
+        <packagedElement xmi:type="uml:Association" xmi:id="_KnyF8LxCEey15NKF0wAXwA" name="ControlPortFeedsRequestToReceiveFilter" memberEnd="_KnzUErxCEey15NKF0wAXwA _Kn4MkrxCEey15NKF0wAXwA">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KnzUELxCEey15NKF0wAXwA" source="org.eclipse.papyrus">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KnzUEbxCEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
           </eAnnotations>
@@ -8055,7 +8081,7 @@ The list may be a subset of the classes within the context.</body>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_r74U0CkXEe2juI-ggmBSIQ" value="*"/>
           </ownedEnd>
         </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_-xpFwLw-Eey15NKF0wAXwA" name="RequestConstructorIssuesGet" memberEnd="_-xqT4rw-Eey15NKF0wAXwA _-xxBkrw-Eey15NKF0wAXwA">
+        <packagedElement xmi:type="uml:Association" xmi:id="_-xpFwLw-Eey15NKF0wAXwA" name="RequestConstructorIssuesRequest" memberEnd="_-xqT4rw-Eey15NKF0wAXwA _-xxBkrw-Eey15NKF0wAXwA">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-xqT4Lw-Eey15NKF0wAXwA" source="org.eclipse.papyrus">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-xqT4bw-Eey15NKF0wAXwA" key="nature" value="UML_Nature"/>
           </eAnnotations>
@@ -8079,11 +8105,11 @@ The list may be a subset of the classes within the context.</body>
 Defines information storage type etc.</body>
           </ownedComment>
         </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_S9u-kLshEey15NKF0wAXwA" name="StoredInformationComposedOfStreamLogRecords" memberEnd="_S9wMsbshEey15NKF0wAXwA _S91sQrshEey15NKF0wAXwA" navigableOwnedEnd="_S9wMsbshEey15NKF0wAXwA">
+        <packagedElement xmi:type="uml:Association" xmi:id="_S9u-kLshEey15NKF0wAXwA" name="StoredInformationComposedOfLogRecords" memberEnd="_S9wMsbshEey15NKF0wAXwA _S91sQrshEey15NKF0wAXwA" navigableOwnedEnd="_S9wMsbshEey15NKF0wAXwA">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_S9vloLshEey15NKF0wAXwA" source="org.eclipse.papyrus">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_S9wMsLshEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
           </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_S9wMsbshEey15NKF0wAXwA" name="_streamLogRecord" type="_r0wvwKtNEey15NKF0wAXwA" isOrdered="true" aggregation="composite" association="_S9u-kLshEey15NKF0wAXwA">
+          <ownedEnd xmi:type="uml:Property" xmi:id="_S9wMsbshEey15NKF0wAXwA" name="_logRecord" type="_r0wvwKtNEey15NKF0wAXwA" isOrdered="true" aggregation="composite" association="_S9u-kLshEey15NKF0wAXwA">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_S91sQLshEey15NKF0wAXwA"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_S91sQbshEey15NKF0wAXwA" value="*"/>
           </ownedEnd>
@@ -8115,7 +8141,7 @@ Defines information storage type etc.</body>
           </eAnnotations>
           <ownedEnd xmi:type="uml:Property" xmi:id="_aazzoatIEey15NKF0wAXwA" name="supportedstreamtype" type="_WV2QwKtFEey15NKF0wAXwA" association="_aauUEKtIEey15NKF0wAXwA"/>
         </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_jYs00LskEey15NKF0wAXwA" name="StreamLogRecordHasLogRecordBody" memberEnd="_jYvRErskEey15NKF0wAXwA _jY4bALskEey15NKF0wAXwA">
+        <packagedElement xmi:type="uml:Association" xmi:id="_jYs00LskEey15NKF0wAXwA" name="LogRecordHasBody" memberEnd="_jYvRErskEey15NKF0wAXwA _jY4bALskEey15NKF0wAXwA">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jYvRELskEey15NKF0wAXwA" source="org.eclipse.papyrus">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jYvREbskEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
           </eAnnotations>
@@ -8133,13 +8159,13 @@ Defines information storage type etc.</body>
           </eAnnotations>
           <ownedEnd xmi:type="uml:Property" xmi:id="_igZFkqtGEey15NKF0wAXwA" name="streamserver" type="_ODG-gKtFEey15NKF0wAXwA" association="_igTmAKtGEey15NKF0wAXwA"/>
         </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_jd-vMKtGEey15NKF0wAXwA" name="StreamProviderHasSupportedStream" memberEnd="_jd_9UqtGEey15NKF0wAXwA _jeAkYqtGEey15NKF0wAXwA">
+        <packagedElement xmi:type="uml:Association" xmi:id="_jd-vMKtGEey15NKF0wAXwA" name="StreamProviderHasSupportedStreamType" memberEnd="_jd_9UqtGEey15NKF0wAXwA _jeAkYqtGEey15NKF0wAXwA">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jd_9UKtGEey15NKF0wAXwA" source="org.eclipse.papyrus">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jd_9UatGEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
           </eAnnotations>
           <ownedEnd xmi:type="uml:Property" xmi:id="_jeAkYqtGEey15NKF0wAXwA" name="streamserver" type="_ODG-gKtFEey15NKF0wAXwA" association="_jd-vMKtGEey15NKF0wAXwA"/>
         </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_RK3jsLsqEey15NKF0wAXwA" name="StreamRecordComposedOfStreamLogRecords" memberEnd="_RK5Y4bsqEey15NKF0wAXwA _RK9qUbsqEey15NKF0wAXwA">
+        <packagedElement xmi:type="uml:Association" xmi:id="_RK3jsLsqEey15NKF0wAXwA" name="StreamRecordComposedOfLogRecords" memberEnd="_RK5Y4bsqEey15NKF0wAXwA _RK9qUbsqEey15NKF0wAXwA">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RK4x0LsqEey15NKF0wAXwA" source="org.eclipse.papyrus">
             <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RK5Y4LsqEey15NKF0wAXwA" key="nature" value="UML_Nature"/>
           </eAnnotations>
@@ -8349,7 +8375,7 @@ Is only a LogRecordHeader with no LogRecordBody.</body>
             <body>Represents control capability/functionality.&#xD;
 ControlConstructs communicate with other ControlConstructs through ControlPorts about things within the related ConstraintDomains.&#xD;
 The ControlConstruct applies to all Control/Management cases including:&#xD;
-- the controller in the Network/Managed Element e.g. an SNMP agent).&#xD;
+- the controller in the Network/Managed Element, e.g., an SNMP agent.&#xD;
 - an SDN Controller.&#xD;
 - an EMS.&#xD;
 - an NMS.&#xD;
@@ -8415,11 +8441,23 @@ This specific model follows a subset of the Component-System Pattern. &#xD;
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Jt2IYH02EeqhQsSsGiMOkA"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Jt2IYX02EeqhQsSsGiMOkA" value="*"/>
           </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Qw2b4rNZEe2Z-6WXofZ1eg" name="_governedCd" type="_RcjQAOksEea0ZYSsp-EUkw" aggregation="shared" association="_Qwz_oLNZEe2Z-6WXofZ1eg">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_quUOALNaEe2Z-6WXofZ1eg" annotatedElement="_Qw2b4rNZEe2Z-6WXofZ1eg">
+              <body>A Constraint Domain governed by the Control Construct. &#xD;
+A Constraint Domain may be governed by more than one Control Construct (shared) during a handover.&#xD;
+This association is a lifecycle aggregate where the Constraint Domain must be governed by at least one Control Construct.&#xD;
+A Control Construct may modify and delete a Constraint Domain it governs.&#xD;
+A Control Construct may create a Constraint Domain.&#xD;
+It is not expected that a Control Construct will govern a Constraint Domain that constrains the governing Control Construct.</body>
+            </ownedComment>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Qw7UYLNZEe2Z-6WXofZ1eg"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Qw7UYbNZEe2Z-6WXofZ1eg" value="*"/>
+          </ownedAttribute>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_D5kTMJmiEeWTOvbfd7_4-A" name="ControlPort">
           <ownedComment xmi:type="uml:Comment" xmi:id="_Poh2MGpPEeaBUOurxzA2sw" annotatedElement="_D5kTMJmiEeWTOvbfd7_4-A">
             <body>The access to the ControlConstruct following the normal Component-Port pattern (i.e., the functions of a component are accessed via ports).&#xD;
-Is assumed to usually be bidirectional.</body>
+Is assumed to be bidirectional.</body>
           </ownedComment>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_yclZAMAvEeWbqPZwR-Ot6A" name="_protectingControlPort" type="_D5kTMJmiEeWTOvbfd7_4-A" association="_yckK4MAvEeWbqPZwR-Ot6A">
             <ownedComment xmi:type="uml:Comment" xmi:id="_p1804FlbEeeAxe1wuzs6dw" annotatedElement="_yclZAMAvEeWbqPZwR-Ot6A">
@@ -8464,14 +8502,20 @@ Peer controllers are assumed to both the subordinate of each other.</body>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OXI0EFdSEeev6YvG59B3Sg"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OXOToFdSEeev6YvG59B3Sg" value="*"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_Ghle4rw9Eey15NKF0wAXwA" name="_receiveFilter" type="_kRvu4LvjEey15NKF0wAXwA" aggregation="composite" association="_GhjpsLw9Eey15NKF0wAXwA">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Ghle4rw9Eey15NKF0wAXwA" name="_receiveFilterResponse" type="_kRvu4LvjEey15NKF0wAXwA" aggregation="composite" association="_GhjpsLw9Eey15NKF0wAXwA">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_MReKcKLaEe2Z-6WXofZ1eg" annotatedElement="_Ghle4rw9Eey15NKF0wAXwA">
+              <body>Passes the response to a previously made request to the receive filter for onward directing.</body>
+            </ownedComment>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GhpwUbw9Eey15NKF0wAXwA" value="*"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_HlLKobvAEey15NKF0wAXwA" name="_receiveStreamPipelineBuffer" type="_Wx9TULu_Eey15NKF0wAXwA" association="_HlIHULvAEey15NKF0wAXwA">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HlR4ULvAEey15NKF0wAXwA"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HlR4UbvAEey15NKF0wAXwA" value="1"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_KnzUErxCEey15NKF0wAXwA" name="_receiveFilter" type="_kRvu4LvjEey15NKF0wAXwA" aggregation="composite" association="_KnyF8LxCEey15NKF0wAXwA">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_KnzUErxCEey15NKF0wAXwA" name="_receiveFilterRequest" type="_kRvu4LvjEey15NKF0wAXwA" aggregation="composite" association="_KnyF8LxCEey15NKF0wAXwA">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_WjS_kKLaEe2Z-6WXofZ1eg" annotatedElement="_KnzUErxCEey15NKF0wAXwA">
+              <body>Passes a request to the receive filter for onward directing.</body>
+            </ownedComment>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Kn4MkbxCEey15NKF0wAXwA" value="*"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_FPLTwM_WEem0y513gQlC0Q" name="_streamServer" type="_1sea4M_VEem0y513gQlC0Q" association="_FPJekM_WEem0y513gQlC0Q">
@@ -8602,7 +8646,7 @@ A user has needs that are satisfied by a provider.</body>
           <packagedElement xmi:type="uml:Realization" xmi:id="_XFoTjRbsEeitqc-Dc8Gf8A" name="RealizesDetailSignalConsumer" client="_XFoTRRbsEeitqc-Dc8Gf8A" supplier="_XFoTORbsEeitqc-Dc8Gf8A"/>
           <packagedElement xmi:type="uml:Realization" xmi:id="_QVGpkBdVEeitqc-Dc8Gf8A" name="RealizesQuerySignalConsumer" client="_XFoTMRbsEeitqc-Dc8Gf8A" supplier="_XFoTSxbsEeitqc-Dc8Gf8A"/>
           <packagedElement xmi:type="uml:Realization" xmi:id="_Ol6j4BdVEeitqc-Dc8Gf8A" name="RealizesQuerySignalProvider" client="_XFoTRRbsEeitqc-Dc8Gf8A" supplier="_XFoTSxbsEeitqc-Dc8Gf8A"/>
-          <packagedElement xmi:type="uml:Realization" xmi:id="_XFoTjhbsEeitqc-Dc8Gf8A" name="RealizesSignalDetailProvider" client="_XFoTMRbsEeitqc-Dc8Gf8A" supplier="_XFoTORbsEeitqc-Dc8Gf8A"/>
+          <packagedElement xmi:type="uml:Realization" xmi:id="_XFoTjhbsEeitqc-Dc8Gf8A" name="RealizesDetailSignalProvider" client="_XFoTMRbsEeitqc-Dc8Gf8A" supplier="_XFoTORbsEeitqc-Dc8Gf8A"/>
           <packagedElement xmi:type="uml:Association" xmi:id="_XFoTmxbsEeitqc-Dc8Gf8A" name="InterfaceAssociatesClientRole" memberEnd="_XFoTcRbsEeitqc-Dc8Gf8A _XFoTnhbsEeitqc-Dc8Gf8A">
             <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XFoTnBbsEeitqc-Dc8Gf8A" source="org.eclipse.papyrus">
               <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XFoTnRbsEeitqc-Dc8Gf8A" key="nature" value="UML_Nature"/>
@@ -8757,7 +8801,7 @@ A user has needs that are satisfied by a provider.</body>
           <ownedComment xmi:type="uml:Comment" xmi:id="_hTpIEJS5Eei_9c44xHCpzQ" annotatedElement="_XFoTIRbsEeitqc-Dc8Gf8A">
             <body>A universal structure for representation of output from a task.</body>
           </ownedComment>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_XFoTIhbsEeitqc-Dc8Gf8A" name="progressStatus" visibility="public" type="_XFoTChbsEeitqc-Dc8Gf8A" isReadOnly="true">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_XFoTIhbsEeitqc-Dc8Gf8A" name="progressStatus" visibility="public" isReadOnly="true">
             <ownedComment xmi:type="uml:Comment" xmi:id="_kBzXcJS5Eei_9c44xHCpzQ" annotatedElement="_XFoTIhbsEeitqc-Dc8Gf8A">
               <body>Indicates the progress of the task.</body>
             </ownedComment>
@@ -8827,18 +8871,29 @@ A user has needs that are satisfied by a provider.</body>
         </packagedElement>
         <packagedElement xmi:type="uml:Usage" xmi:id="_LtHhIBhqEe2NeYxRC236WA" name="ResponseToClient" client="_D5kTMJmiEeWTOvbfd7_4-A" supplier="_qV42sBhpEe2NeYxRC236WA"/>
         <packagedElement xmi:type="uml:Usage" xmi:id="_cyROwBhrEe2NeYxRC236WA" name="StreamToClient" client="_D5kTMJmiEeWTOvbfd7_4-A" supplier="_qV42sBhpEe2NeYxRC236WA"/>
+        <packagedElement xmi:type="uml:Association" xmi:id="_Qwz_oLNZEe2Z-6WXofZ1eg" name="CdGovernedByCc" memberEnd="_Qw2b4rNZEe2Z-6WXofZ1eg _Qw77cLNZEe2Z-6WXofZ1eg">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Qw2b4LNZEe2Z-6WXofZ1eg" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Qw2b4bNZEe2Z-6WXofZ1eg" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_Qw77cLNZEe2Z-6WXofZ1eg" name="controlconstruct" type="_Vuh_EJmhEeWTOvbfd7_4-A" association="_Qwz_oLNZEe2Z-6WXofZ1eg">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ejvkALNZEe2Z-6WXofZ1eg" value="*"/>
+          </ownedEnd>
+        </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_vGW_0BpCEeqAktXlUG_iEw" name="ExposureContext">
         <packagedElement xmi:type="uml:Class" xmi:id="_5LsaEFY2EeiyzdV8zVsJ_w" name="ExposureContext">
           <ownedComment xmi:type="uml:Comment" xmi:id="_DfBRwFY8EeiyzdV8zVsJ_w" annotatedElement="_5LsaEFY2EeiyzdV8zVsJ_w">
-            <body>A view of the things controlled by a control system. For example, a virtual network of ONF TR-502, or more generally, resources (clause A.10 of ONF TR-521).&#xD;
-A referenced ConstraintDomain bounds a view which is a structured presentation of the underlying controlled things (the &quot;actual&quot; entities) for some purpose.&#xD;
+            <body>Exposes a view of the things controlled by a control system. For example of resources defined in this model (and referenced by clause A.10 of ONF TR-521).&#xD;
+The referenced ConstraintDomain bounds the view which is a structured presentation of the underlying controlled things (the &quot;actual&quot; entities) for some purpose.&#xD;
+The ExposureContext provides access to the view. &#xD;
+It may further constrain the capabilities supported by the view (e.g., read only). &#xD;
+It does not provide a different view as its only source of information is the associated CD and the purpose of the ExposureContext is to expose the view as provided by the CD.&#xD;
 The model bounded by the ConstraintDomain is constructed by mapping/abstracting the models of the underlying controlled things.&#xD;
 The ControlConstruct is itself controlled and presents itself in terms of ControlConstructs (subordinate) in a view.&#xD;
 At one extreme the referenced ConstraintDomain may expose all underlying details of everything controlled with no adjustment from the presentation provided by the controlled things.&#xD;
 A ConstraintDomain may expose a subset of the controlled things that focuses on a particular aspect (e.g., only the ControlConstructs).&#xD;
-A ControlPort has an association to the ExposureContext that explains, via the related ConstraintDomain, what can be acquired through the port&#xD;
-The emphasis is on exposing a constrained set of information and operations &#xD;
+A ControlPort has an association to the ExposureContext that explains, via the related ConstraintDomain, what can be acquired through the port.&#xD;
+The emphasis is on exposing a constrained set of information and operations.&#xD;
 Bounds what is presented over an interface from a particular viewpoint. The domain of control is almost always broader than the entities etc. bounded by the ConstraintDomain. &#xD;
 Represents the domain of control available to the viewer.</body>
           </ownedComment>
@@ -8869,19 +8924,11 @@ Represents the domain of control available to the viewer.</body>
       <packagedElement xmi:type="uml:Package" xmi:id="_yALsoBpCEeqAktXlUG_iEw" name="ViewMappingFunction">
         <packagedElement xmi:type="uml:Class" xmi:id="_U928EMAtEeWbqPZwR-Ot6A" name="ViewMappingFunction">
           <ownedComment xmi:type="uml:Comment" xmi:id="_f73h0GpPEeaBUOurxzA2sw" annotatedElement="_U928EMAtEeWbqPZwR-Ot6A">
-            <body>The rules that relate one view to another.&#xD;
+            <body>The rules that relate one view to another and enable the transformation from one view to another.&#xD;
 A ControlConstruct aggregates ViewMappingFunctions. &#xD;
-Each ViewMappingFunction in the context of a ControlConstruct define the relationship between the views presented in an ExposureContext of that ControlConstruct and other views within the Controller.&#xD;
-The ViewMappingFunction is applied to the entities aggregated by one or more ConstraintDomains (via VmfPort - CdPort VmfMapsFromCdConstraintSet to construct the view in another ConstraintDomain (via VmfPort - CdPort VmfGovernsCdConstraintSet association).&#xD;
+The ViewMappingFunction is applied to the entities aggregated by one or more ConstraintDomains (via VmfPort - CdPort VmfMapsFromCdConstraintSet association) to construct the view in another ConstraintDomain (via VmfPort - CdPort VmfGovernsCdConstraintSet association).&#xD;
 For example, a pair of LTPs with matching adjacency tags in a nodal view may be mapped to a Link in a network view where the rules would describe the matching criteria etc.</body>
           </ownedComment>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_rXl-MMAtEeWbqPZwR-Ot6A" name="_exposureContext" type="_5LsaEFY2EeiyzdV8zVsJ_w" association="_rXkJAMAtEeWbqPZwR-Ot6A">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_GEFlwGqkEeiRh-lc79MSRw" annotatedElement="_rXl-MMAtEeWbqPZwR-Ot6A">
-              <body>An ExposureContext available to the ViewMappingFunction.</body>
-            </ownedComment>
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hdnZoMAzEeWbqPZwR-Ot6A" value="2"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hdqc8MAzEeWbqPZwR-Ot6A" value="2"/>
-          </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_VTHkIGmFEeio5tbL36vGKA" name="_vmfPort" type="_SdUbsGmFEeio5tbL36vGKA" aggregation="composite" association="_VTEg0GmFEeio5tbL36vGKA">
             <ownedComment xmi:type="uml:Comment" xmi:id="_Mbqy4GqkEeiRh-lc79MSRw" annotatedElement="_VTHkIGmFEeio5tbL36vGKA">
               <body>A port of the ViewMappingFunction.</body>
@@ -8892,8 +8939,8 @@ For example, a pair of LTPs with matching adjacency tags in a nodal view may be 
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_SdUbsGmFEeio5tbL36vGKA" name="VmfPort">
           <ownedComment xmi:type="uml:Comment" xmi:id="_vMUswGsEEeiRh-lc79MSRw" annotatedElement="_SdUbsGmFEeio5tbL36vGKA">
-            <body>A port of the MappingFunction through which the effects of the mapping is exposed.&#xD;
-This can be an input to the mapping of as an output of the mapping where the inputs and outputs may have more detailed roles.</body>
+            <body>A port of the MappingFunction.&#xD;
+This can provide an input to the mapping or an output from the mapping where the inputs and outputs may have more detailed roles.</body>
           </ownedComment>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_7tVAQWmFEeio5tbL36vGKA" name="_vmfPort" type="_SdUbsGmFEeio5tbL36vGKA" association="_7tUZMGmFEeio5tbL36vGKA">
             <ownedComment xmi:type="uml:Comment" xmi:id="_1weWQGsEEeiRh-lc79MSRw" annotatedElement="_7tVAQWmFEeio5tbL36vGKA">
@@ -8933,17 +8980,7 @@ This governs what the ConstraintDomain may aggregate and also governs the lifecy
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Fri84GmGEeio5tbL36vGKA" value="1"/>
           </ownedEnd>
         </packagedElement>
-        <packagedElement xmi:type="uml:Package" xmi:id="_BePvwBqIEeqCeNa5GcKdyg" name="associationsControlModule">
-          <packagedElement xmi:type="uml:Association" xmi:id="_rXkJAMAtEeWbqPZwR-Ot6A" name="ViewMappingMapsExposureContexts" memberEnd="_rXkwEsAtEeWbqPZwR-Ot6A _rXl-MMAtEeWbqPZwR-Ot6A">
-            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rXkwEMAtEeWbqPZwR-Ot6A" source="org.eclipse.papyrus">
-              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rXkwEcAtEeWbqPZwR-Ot6A" key="nature" value="UML_Nature"/>
-            </eAnnotations>
-            <ownedEnd xmi:type="uml:Property" xmi:id="_rXkwEsAtEeWbqPZwR-Ot6A" name="viewmapping" type="_U928EMAtEeWbqPZwR-Ot6A" association="_rXkJAMAtEeWbqPZwR-Ot6A">
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_h2QjIMAzEeWbqPZwR-Ot6A"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_h2TmcMAzEeWbqPZwR-Ot6A" value="*"/>
-            </ownedEnd>
-          </packagedElement>
-        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_BePvwBqIEeqCeNa5GcKdyg" name="associationsControlModule"/>
         <packagedElement xmi:type="uml:Package" xmi:id="_FozEoBqIEeqCeNa5GcKdyg" name="associationsExternalModule">
           <packagedElement xmi:type="uml:Association" xmi:id="_ocWCUGmGEeio5tbL36vGKA" name="VmfGovernsCdConstraintSet" memberEnd="_ocWCU2mGEeio5tbL36vGKA _ocWpYWmGEeio5tbL36vGKA">
             <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ocWCUWmGEeio5tbL36vGKA" source="org.eclipse.papyrus">
@@ -9021,7 +9058,7 @@ This class should not be implemented.</body>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_KXePoCQEEee9I5wuRX6wwQ" name="View:SdnControllerViewedFromManager" isAbstract="true">
               <ownedComment xmi:type="uml:Comment" xmi:id="_P2JO8CWdEee9I5wuRX6wwQ" annotatedElement="_KXePoCQEEee9I5wuRX6wwQ">
-                <body>Traditional model of the view of the SDN controller as seen from a manager .&#xD;
+                <body>Traditional model of the view of the SDN controller as seen from a manager.&#xD;
 No equivalent in v1.2.&#xD;
 This class should not be implemented.</body>
               </ownedComment>
@@ -9045,24 +9082,26 @@ This class should not be implemented.</body>
       <packagedElement xmi:type="uml:Package" xmi:id="_Sz-1UC6TEe2juI-ggmBSIQ" name="ControlTask">
         <packagedElement xmi:type="uml:Class" xmi:id="_XFoTTxbsEeitqc-Dc8Gf8A" name="ControlTask">
           <ownedComment xmi:type="uml:Comment" xmi:id="_ZSejcJS4Eei_9c44xHCpzQ" annotatedElement="_XFoTTxbsEeitqc-Dc8Gf8A">
-            <body>The representation of the task related to some request for control activity or some spontaneous control activity.&#xD;
+            <body>The ControlTask represents an apparent (abstract/emergent) functional Component that provides/exposes management-control capability where that capability is defined in terms of a CtTransferFunction (Control Task Transfer Function).&#xD;
 &#xD;
-The ControlTask represents... An apparent/emergent functional Component that provides management-control capability where that capability is defined in terms of a ControlTaskTransferFunction.&#xD;
-The whole defined ControlTaskTransferFunction is available and active in an instance.&#xD;
-- Note that the ControlTask exposes a specific purposeful ControlTaskTransferFunction where the underlying componentry may be far more capable. It has architected behavior.&#xD;
-The use of “apparent” emphasizes that this is NOT the underlying/implementation component. &#xD;
-- The behaviour defined by the ControlTaskTransferFunction is emergent from a set of underlying implementation components that have been constrained to behave in a particular way.&#xD;
+The use of “apparent” and &quot;emergent&quot; emphasizes that this is NOT the underlying/implementation componentary. &#xD;
+- The behaviour defined by the CtTransferFunction is emergent from a set of underlying implementation components that have been constrained to behave in a particular way.&#xD;
+- The ControlTask defines a specific purposeful CtTransferFunction where the underlying componentry may be far more capable/complex. It has architected behavior.&#xD;
+- The ControlTask capability is defined from the outside and hence its description does not vary due to internal hidden control (other components expose capability that is defined from the inside).&#xD;
 &#xD;
-Achieves outcomes/goals etc.&#xD;
-Covers all success and failure behaviors&#xD;
+The whole defined CtTransferFunction is available and active in an instance.&#xD;
+&#xD;
+It achieves outcomes/goals etc. and covers all success and failure behaviors.&#xD;
+&#xD;
+It is the representation of the behavior related to some request for control activity or some spontaneous control activity.&#xD;
+&#xD;
 ControlTask capability definition and instance of running ControlTask with state&#xD;
-ControlTask capability is defined from the outside and hence its description does not vary due to internal hidden control&#xD;
-- Other components expose capability that is defined from the inside.&#xD;
 &#xD;
 Related terms:&#xD;
 - Task: A piece of work to be done&#xD;
 - Job: A task or piece of work&#xD;
 - Activity: A thing that is done&#xD;
+- Use Case: A written description of how a task will be performed for a particular purpose&#xD;
 - Function: An activity that is natural to or the purpose of a thing&#xD;
 - Action: A thing done&#xD;
 - Runnable Task: Used to handle any computational work&#xD;
@@ -9071,7 +9110,7 @@ Related terms:&#xD;
           <generalization xmi:type="uml:Generalization" xmi:id="_1h88EC9KEe22jbMp3BDUaA" general="_iVJ1kI2wEeO38ZmbECnvbg"/>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_XFoTUBbsEeitqc-Dc8Gf8A" name="problemsAndWarnings" type="_aL8EoGnNEeaBUOurxzA2sw">
             <ownedComment xmi:type="uml:Comment" xmi:id="_1OuBUJS3Eei_9c44xHCpzQ" annotatedElement="_XFoTUBbsEeitqc-Dc8Gf8A">
-              <body>A list or problems and warnings related to the task.</body>
+              <body>A list of problems and warnings related to the task.</body>
             </ownedComment>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_h7L7YC9LEe22jbMp3BDUaA"/>
           </ownedAttribute>
@@ -9114,7 +9153,7 @@ Related terms:&#xD;
             <ownedComment xmi:type="uml:Comment" xmi:id="_k6IngC9FEe22jbMp3BDUaA" annotatedElement="_KdTpAi65Ee22jbMp3BDUaA">
               <body>Provides a specific access. &#xD;
 ControlTasks can only be connected by ports.&#xD;
-A ControlTask may have no ports when it is not explicitly in some ControlTaskFlowGraph, i.e., where there is no explicitly stated trigger and no explicityly stated output to cause flow progression.</body>
+A ControlTask may have no ports when it is not explicitly in some ControlTaskFlowGraph, i.e., where there is no explicitly stated trigger and no explicitly stated output to cause flow progression.</body>
             </ownedComment>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KdaWsC65Ee22jbMp3BDUaA"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KdaWsS65Ee22jbMp3BDUaA" value="*"/>
@@ -9134,17 +9173,17 @@ A ControlTask may have no ports when it is not explicitly in some ControlTaskFlo
           <ownedComment xmi:type="uml:Comment" xmi:id="_g9lPMC9BEe22jbMp3BDUaA" annotatedElement="_auSpYC6nEe2juI-ggmBSIQ">
             <body>An access to a ControlTask.</body>
           </ownedComment>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_we_3ci65Ee22jbMp3BDUaA" name="_cctfPort" type="_OoyasC6oEe2juI-ggmBSIQ" association="_we_QYC65Ee22jbMp3BDUaA">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_we_3ci65Ee22jbMp3BDUaA" name="_cttfPort" type="_OoyasC6oEe2juI-ggmBSIQ" association="_we_QYC65Ee22jbMp3BDUaA">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wfJBYC65Ee22jbMp3BDUaA"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wfJBYS65Ee22jbMp3BDUaA" value="1"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_kWivEC9BEe22jbMp3BDUaA" name="PortInternalRole">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_kWivEC9BEe22jbMp3BDUaA" name="portInternalRole">
             <ownedComment xmi:type="uml:Comment" xmi:id="_wcQjsC9BEe22jbMp3BDUaA" annotatedElement="_kWivEC9BEe22jbMp3BDUaA">
               <body>The aspect of the ControlTask functionality accessed via the port.</body>
             </ownedComment>
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_xmVKIC9BEe22jbMp3BDUaA" name="PortFlowDirection" type="_FZZsAC9CEe22jbMp3BDUaA">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_xmVKIC9BEe22jbMp3BDUaA" name="portFlowDirection" type="_FZZsAC9CEe22jbMp3BDUaA">
             <ownedComment xmi:type="uml:Comment" xmi:id="_-CskMC9BEe22jbMp3BDUaA" annotatedElement="_xmVKIC9BEe22jbMp3BDUaA">
               <body>The direction of flow (in or out).</body>
             </ownedComment>
@@ -9165,7 +9204,7 @@ There may be a DIRECT connection but it may not be known at the RECEIVE_LISTEN e
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UPdPYC9EEe22jbMp3BDUaA"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UPd2cC9EEe22jbMp3BDUaA" value="1"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_zD_BoC9GEe22jbMp3BDUaA" name="PortAccessMode" type="_ocn20C9FEe22jbMp3BDUaA">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_zD_BoC9GEe22jbMp3BDUaA" name="portAccessMode" type="_ocn20C9FEe22jbMp3BDUaA">
             <ownedComment xmi:type="uml:Comment" xmi:id="_LUxE8C9HEe22jbMp3BDUaA" annotatedElement="_zD_BoC9GEe22jbMp3BDUaA">
               <body>The mode of access to the port.</body>
             </ownedComment>
@@ -9173,32 +9212,69 @@ There may be a DIRECT connection but it may not be known at the RECEIVE_LISTEN e
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_fCEywC6nEe2juI-ggmBSIQ" name="CtTransferFunction">
           <ownedComment xmi:type="uml:Comment" xmi:id="_MooIQC9BEe22jbMp3BDUaA" annotatedElement="_fCEywC6nEe2juI-ggmBSIQ">
-            <body>A statement of the capability of the ControlTask in necessary detail to enable a client to fully understand the externally visible characteristics of the ControlTask (i.e., how the outputs are generated from the inputs, or from any other relevant internal behavior) &#xD;
-It may be expressed in terms of: &#xD;
-- an apparent ControlTaskFlowGraph that explains, in abstract, how the outputs are generated from the inputs&#xD;
-- a logic function, arithmetic function or some other structure that is not in a ControlTaskFlowGraph form&#xD;
+            <body>A statement of the capability of the ControlTask in necessary detail to enable a client to fully understand the externally visible characteristics of the ControlTask (i.e., how the outputs are generated from the inputs, or from any other relevant internal behavior). &#xD;
+Each apparent ControlTask should have a defined CtTransferFunction.&#xD;
+&#xD;
+It may be expressed in terms of:&#xD;
+- an apparent Flow Graph that explains, in abstract, how the outputs are generated from the inputs.&#xD;
+- logic function, arithmetic function or some other structure (CttfAbstractFunctionStructure) that is not in a ControlTaskFlowGraph form.&#xD;
+&#xD;
+The _controlTaskOfCtFlowGraph collects the ControlTasks of the Flow Graph. &#xD;
+&#xD;
 Related Terms&#xD;
 - Behaviour: The way in which a thing works&#xD;
 - Transfer Function: The relationship between the output signal of a control system and the input signal&#xD;
+&#xD;
+The CtFlowGraph (not modelled directly) is a structure of interconnected apparent/abstract ControlTasks (each having a defined CtTransferFunction)  where the structure expresses all possible flows (including cycles/loops) from exposed inputs to exposed outputs (which are the inputs and outputs of the ControlTask the ControlTaskFlow defines).&#xD;
+The CtFlowGraph is formed from the linking of CtPorts using _flowReceiveFromCtPort and _flowSendToCtPort (of the CtPort of the ControlTask).&#xD;
+The CtFlowGraph supports the workflow of the Component.&#xD;
+&#xD;
+Related Terms&#xD;
+- Workflow: the order of the stages in a particular work process&#xD;
+- Flow (Kestra): A simple list of tasks for Kestra, grouped by namespace. It defines all the behavior for the current flow.&#xD;
+- Use Case sequence: a list of actions or event steps&#xD;
+- Process: a series of actions or steps taken in order to achieve a particular end&#xD;
+- Procedure: a series of actions conducted in a certain order or manner&#xD;
+- Action Steps: Detail of an action plan&#xD;
+&#xD;
 </body>
           </ownedComment>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_JcGqsi65Ee22jbMp3BDUaA" name="_cctfPort" type="_OoyasC6oEe2juI-ggmBSIQ" aggregation="composite" association="_JcGDoC65Ee22jbMp3BDUaA">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_JcGqsi65Ee22jbMp3BDUaA" name="_cttfPort" type="_OoyasC6oEe2juI-ggmBSIQ" aggregation="composite" association="_JcGDoC65Ee22jbMp3BDUaA">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JcNYYC65Ee22jbMp3BDUaA"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JcN_cC65Ee22jbMp3BDUaA" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JcN_cC65Ee22jbMp3BDUaA" value="*"/>
           </ownedAttribute>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_rj3aMS65Ee22jbMp3BDUaA" name="_controlTaskOfCtFlowGraph" type="_XFoTTxbsEeitqc-Dc8Gf8A" aggregation="shared" association="_rj2zIC65Ee22jbMp3BDUaA">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rj-H4C65Ee22jbMp3BDUaA"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rj-u8C65Ee22jbMp3BDUaA" value="*"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_i37vYy66Ee22jbMp3BDUaA" name="abstractfunctionstructure" type="_9O-KAC65Ee22jbMp3BDUaA" aggregation="composite" association="_i37vYC66Ee22jbMp3BDUaA">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_i37vYy66Ee22jbMp3BDUaA" name="_cttfAbstractFunctionStructure" type="_9O-KAC65Ee22jbMp3BDUaA" aggregation="composite" association="_i37vYC66Ee22jbMp3BDUaA">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_i4CdEC66Ee22jbMp3BDUaA"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_i4CdES66Ee22jbMp3BDUaA" value="1"/>
           </ownedAttribute>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_OoyasC6oEe2juI-ggmBSIQ" name="CttfPort">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_zXayAHGUEe2_e5PQKRXPAw" annotatedElement="_OoyasC6oEe2juI-ggmBSIQ">
+            <body>Represents the transfer function aspects of the CtPort</body>
+          </ownedComment>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_zYAr8i65Ee22jbMp3BDUaA" name="_ctPort" type="_auSpYC6nEe2juI-ggmBSIQ" aggregation="shared" association="_zYAE4C65Ee22jbMp3BDUaA">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zYHZoC65Ee22jbMp3BDUaA"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zYHZoS65Ee22jbMp3BDUaA" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_33GCUHGUEe2_e5PQKRXPAw" name="triggerCondition">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_F5DhMHGVEe2_e5PQKRXPAw" annotatedElement="_33GCUHGUEe2_e5PQKRXPAw">
+              <body>The condition that triggers the ControlTask through the related CtPort.</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IdB50HGVEe2_e5PQKRXPAw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IdLDwHGVEe2_e5PQKRXPAw" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_NGA3IHGVEe2_e5PQKRXPAw" name="outputCondition">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_WqVtEHGVEe2_e5PQKRXPAw" annotatedElement="_NGA3IHGVEe2_e5PQKRXPAw">
+              <body>The condition output by the related CtPort.</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RO270HGVEe2_e5PQKRXPAw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RPB68HGVEe2_e5PQKRXPAw" value="*"/>
           </ownedAttribute>
         </packagedElement>
         <packagedElement xmi:type="uml:Association" xmi:id="_HYVcIC65Ee22jbMp3BDUaA" name="ControlTaskHasExposedTransferFunction" memberEnd="_HYZGgC65Ee22jbMp3BDUaA _HYhCUi65Ee22jbMp3BDUaA">
@@ -9262,18 +9338,13 @@ Related Terms&#xD;
             </ownedComment>
           </ownedLiteral>
         </packagedElement>
-        <packagedElement xmi:type="uml:Enumeration" xmi:id="_XFoTChbsEeitqc-Dc8Gf8A" name="ProgressStatus">
-          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTCxbsEeitqc-Dc8Gf8A" name="COMPLETE"/>
-          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTDBbsEeitqc-Dc8Gf8A" name="IN_PROGRESS"/>
-          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTDRbsEeitqc-Dc8Gf8A" name="FAILED"/>
-        </packagedElement>
         <packagedElement xmi:type="uml:Enumeration" xmi:id="_XFoTFBbsEeitqc-Dc8Gf8A" name="TaskLifecycleState">
           <ownedComment xmi:type="uml:Comment" xmi:id="_YpzvAJS6Eei_9c44xHCpzQ" annotatedElement="_XFoTFBbsEeitqc-Dc8Gf8A">
             <body>The potential states of the task.</body>
           </ownedComment>
           <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTFRbsEeitqc-Dc8Gf8A" name="RUNNING">
             <ownedComment xmi:type="uml:Comment" xmi:id="_OKrBMJS7Eei_9c44xHCpzQ" annotatedElement="_XFoTFRbsEeitqc-Dc8Gf8A">
-              <body>The task is running.</body>
+              <body>The task is running/progressing.</body>
             </ownedComment>
           </ownedLiteral>
           <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTFhbsEeitqc-Dc8Gf8A" name="PAUSED">
@@ -9293,7 +9364,8 @@ Related Terms&#xD;
           </ownedLiteral>
           <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTGRbsEeitqc-Dc8Gf8A" name="COMPLETED">
             <ownedComment xmi:type="uml:Comment" xmi:id="_58sE8JS6Eei_9c44xHCpzQ" annotatedElement="_XFoTGRbsEeitqc-Dc8Gf8A">
-              <body>The task has been completed successfully.</body>
+              <body>The task has been completed successfully.&#xD;
+There may have been warnings and non catastrophic error conditions none of which prevented completion or some useful outcome.</body>
             </ownedComment>
           </ownedLiteral>
           <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTGhbsEeitqc-Dc8Gf8A" name="ABORTED">
@@ -9306,7 +9378,7 @@ Related Terms&#xD;
               <body>The task is attempting to return the controlled system to a previous state.</body>
             </ownedComment>
           </ownedLiteral>
-          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTHBbsEeitqc-Dc8Gf8A" name="ROLLBACK_COMPLETE">
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTHBbsEeitqc-Dc8Gf8A" name="ROLLBACK_COMPLETED">
             <ownedComment xmi:type="uml:Comment" xmi:id="_MSfXkJS7Eei_9c44xHCpzQ" annotatedElement="_XFoTHBbsEeitqc-Dc8Gf8A">
               <body>The task has completed a roll back action.</body>
             </ownedComment>
@@ -9323,7 +9395,8 @@ Related Terms&#xD;
           </ownedLiteral>
           <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTHxbsEeitqc-Dc8Gf8A" name="FAILED">
             <ownedComment xmi:type="uml:Comment" xmi:id="_H3krcJS7Eei_9c44xHCpzQ" annotatedElement="_XFoTHxbsEeitqc-Dc8Gf8A">
-              <body>The task has failed.</body>
+              <body>The task has failed.&#xD;
+The task may have failed to start or may have progressed to a point where a condition occurred that prevented further meaningful progress and has had no useful outcome.</body>
             </ownedComment>
           </ownedLiteral>
           <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XFoTIBbsEeitqc-Dc8Gf8A" name="ARCHIVED">
@@ -9355,7 +9428,7 @@ Related Terms&#xD;
           <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_PRvtUC9GEe22jbMp3BDUaA" name="ENVIRONMENT">
             <ownedComment xmi:type="uml:Comment" xmi:id="_R0XJIC9IEe22jbMp3BDUaA" annotatedElement="_PRvtUC9GEe22jbMp3BDUaA">
               <body>The port accesses the general environment. There is no explicit connection.&#xD;
-A RECEIVE_LISTEN port takes input from anywhere and examines for appropriatness. There is no expected source.&#xD;
+A RECEIVE_LISTEN port takes input from anywhere and examines for appropriateness. There is no expected source.&#xD;
 A SEND port broadcasts into the environment. There is no expected recipient.&#xD;
 Analogue: An antenna.</body>
             </ownedComment>
@@ -9526,8 +9599,8 @@ A CdPort may be associated with another CdPort or with an LTP at a particular sp
 It provides the context for and constrains the formation, adjustment and removal of PCs and hence offers the potential to enable processing.  &#xD;
 The LTPs available are those defined at the boundary of the CD. &#xD;
 A CD may be:&#xD;
-- Asymmetric such that it offers several functions and such that different functions are offered to different attached entities. &#xD;
-- Symmetric such that it offers (or is considered as offering) only one function and the same function is offered to any attached entity with no interactions between functions offered to each attached entity&#xD;
+- Asymmetric such that it offers several functions and such that different functions are offered to different attached entities (e.g.,specific ViewMappingFunction).&#xD;
+- Symmetric such that it offers (or is considered as offering) only one function and the same function is offered to any attached entity with no interactions between attached entities.&#xD;
 An asymmetric CD offering a number of distinct functions will have CdPorts through which the distinct functions are accessed.&#xD;
 A symmetric CD offering only a single function need not have CdPorts, the function can be accessed directly from the CD.</body>
           </ownedComment>
@@ -9552,7 +9625,7 @@ A constrained PC connects LTPs that are on the CD boundary.</body>
             <ownedComment xmi:type="uml:Comment" xmi:id="_7zTQ4FtAEee0ZvXJLxwizg" annotatedElement="_s-8AYPPUEea2l9FuDSKfDQ">
               <body>A symmetric CD instance is associated with zero or more LTP objects.  &#xD;
 The LTPs on the CD boundary provide capacity for processing. &#xD;
-For asymmetric FDs the association to the LTP is via the FdPort.</body>
+For an asymmetric CD instance the association to the LTP is via the CdPort.</body>
             </ownedComment>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7Vz_UPPUEea2l9FuDSKfDQ"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7WKkoPPUEea2l9FuDSKfDQ" value="1"/>
@@ -9583,7 +9656,7 @@ In this case the CD can be associated to the physical equipment.</body>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_3xC-YlsqEee0ZvXJLxwizg" name="_fcInDomain" type="_oGqmC1LNEeO75dO39GbF8Q" aggregation="shared" association="_3w83wFsqEee0ZvXJLxwizg">
             <ownedComment xmi:type="uml:Comment" xmi:id="_2rE9YFtBEee0ZvXJLxwizg" annotatedElement="_3xC-YlsqEee0ZvXJLxwizg">
               <body>A CD constrains one or more FCs. &#xD;
-A constrained FC connects LTPs that are on the CD boundary.</body>
+A constrained FC abides by rules stated in the constraining CD where those rules may relate to LTPs referenced by the FC that are also included in the CD.</body>
             </ownedComment>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XDa1IFsrEee0ZvXJLxwizg"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XDg7wFsrEee0ZvXJLxwizg" value="*"/>
@@ -9591,7 +9664,7 @@ A constrained FC connects LTPs that are on the CD boundary.</body>
           <ownedAttribute xmi:type="uml:Property" xmi:id="_6iUMI1sqEee0ZvXJLxwizg" name="_fdInDomain" type="_oGql-FLNEeO75dO39GbF8Q" aggregation="shared" association="_6iUMIFsqEee0ZvXJLxwizg">
             <ownedComment xmi:type="uml:Comment" xmi:id="_8yluMFtBEee0ZvXJLxwizg" annotatedElement="_6iUMI1sqEee0ZvXJLxwizg">
               <body>A CD constrains one or more FDs. &#xD;
-A constrained FD connects LTPs that are on the CD boundary.</body>
+A constrained FD abides by rules stated in the constraining CD where those rules may relate to LTPs referenced by the FD that are also included in the CD.</body>
             </ownedComment>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bawo0FsrEee0ZvXJLxwizg"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ba2vcFsrEee0ZvXJLxwizg" value="*"/>
@@ -9673,7 +9746,7 @@ A constrained Link connects LTPs that are on the CD boundary.</body>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cMGSdKtFEey15NKF0wAXwA"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cMGSdatFEey15NKF0wAXwA" value="*"/>
           </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_dL0DAqtFEey15NKF0wAXwA" name="_streamServer" type="_ODG-gKtFEey15NKF0wAXwA" aggregation="shared" association="_dLyN0KtFEey15NKF0wAXwA">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_dL0DAqtFEey15NKF0wAXwA" name="_streamProvider" type="_ODG-gKtFEey15NKF0wAXwA" aggregation="shared" association="_dLyN0KtFEey15NKF0wAXwA">
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dL0DBKtFEey15NKF0wAXwA"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dL0DBatFEey15NKF0wAXwA" value="*"/>
           </ownedAttribute>
@@ -13450,7 +13523,6 @@ This class should not be implemented.</body>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_pf5qgeebEeapD6ZL2WzaLQ">
     <base_StructuralFeature xmi:type="uml:Property" href="CoreModelEnhancements.uml#_qz6CUsAtEeWbqPZwR-Ot6A"/>
   </OpenModel_Profile:OpenModelAttribute>
-  <OpenModel_Profile:OpenModelAttribute xmi:id="_pf5qguebEeapD6ZL2WzaLQ" base_StructuralFeature="_rXkwEsAtEeWbqPZwR-Ot6A"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_pf6RkOebEeapD6ZL2WzaLQ">
     <base_StructuralFeature xmi:type="uml:Property" href="CoreModelEnhancements.uml#_9tT70MAuEeWbqPZwR-Ot6A"/>
   </OpenModel_Profile:OpenModelAttribute>
@@ -13492,7 +13564,6 @@ This class should not be implemented.</body>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_pgeSQeebEeapD6ZL2WzaLQ">
     <base_StructuralFeature xmi:type="uml:Property" href="CoreModelEnhancements.uml#_qz6pYMAtEeWbqPZwR-Ot6A"/>
   </OpenModel_Profile:OpenModelAttribute>
-  <OpenModel_Profile:OpenModelAttribute xmi:id="_pgeSQuebEeapD6ZL2WzaLQ" base_StructuralFeature="_rXl-MMAtEeWbqPZwR-Ot6A"/>
   <OpenModel_Profile:OpenModelClass xmi:id="_RdCYMOksEea0ZYSsp-EUkw" base_Class="_RcjQAOksEea0ZYSsp-EUkw"/>
   <OpenModel_Profile:OpenModelClass xmi:id="_fWjsweksEea0ZYSsp-EUkw" base_Class="_fWjswOksEea0ZYSsp-EUkw"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_ugk_4OksEea0ZYSsp-EUkw" base_StructuralFeature="_ugkY0OksEea0ZYSsp-EUkw"/>
@@ -13640,7 +13711,6 @@ This class should not be implemented.</body>
   <OpenModel_Profile:Experimental xmi:id="_voicQPHZEea2l9FuDSKfDQ">
     <base_Element xmi:type="uml:Association" href="CoreModelEnhancements.uml#_0IZIMPHYEea2l9FuDSKfDQ"/>
   </OpenModel_Profile:Experimental>
-  <OpenModel_Profile:Experimental xmi:id="_DfetUPHhEea2l9FuDSKfDQ" base_Element="_rXkJAMAtEeWbqPZwR-Ot6A"/>
   <OpenModel_Profile:OpenModelClass xmi:id="_HiYYsPH6Eea2l9FuDSKfDQ" base_Class="_HiXxoPH6Eea2l9FuDSKfDQ"/>
   <OpenModel_Profile:OpenModelClass xmi:id="_FUr8oPH7Eea2l9FuDSKfDQ" base_Class="_FUrVkPH7Eea2l9FuDSKfDQ"/>
   <OpenModel_Profile:OpenModelClass xmi:id="_L3gJYfH7Eea2l9FuDSKfDQ" base_Class="_L3gJYPH7Eea2l9FuDSKfDQ"/>
@@ -13928,7 +13998,6 @@ This class should not be implemented.</body>
   <OpenModel_Profile:Experimental xmi:id="_Ven6EFpFEee0ZvXJLxwizg">
     <base_Element xmi:type="uml:Property" href="CoreModelEnhancements.uml#_qz6pYMAtEeWbqPZwR-Ot6A"/>
   </OpenModel_Profile:Experimental>
-  <OpenModel_Profile:Experimental xmi:id="_YCUl4FpFEee0ZvXJLxwizg" base_Element="_rXl-MMAtEeWbqPZwR-Ot6A"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_pbKDgFpREee0ZvXJLxwizg" base_StructuralFeature="_pbJccFpREee0ZvXJLxwizg"/>
   <OpenModel_Profile:OpenModelAttribute xmi:id="_pbL4sFpREee0ZvXJLxwizg" base_StructuralFeature="_pbLRoFpREee0ZvXJLxwizg"/>
   <OpenModel_Profile:Experimental xmi:id="_NFKB0FpSEee0ZvXJLxwizg" base_Element="_panQ8FpREee0ZvXJLxwizg"/>
@@ -14293,10 +14362,6 @@ This class should not be implemented.</body>
   <OpenModel_Profile:Experimental xmi:id="_zKJaoBb5Eeitqc-Dc8Gf8A" base_Element="_XFoS_hbsEeitqc-Dc8Gf8A"/>
   <OpenModel_Profile:Experimental xmi:id="_0WEbMBb5Eeitqc-Dc8Gf8A" base_Element="_XFoTBxbsEeitqc-Dc8Gf8A"/>
   <OpenModel_Profile:Experimental xmi:id="_1Va_YBb5Eeitqc-Dc8Gf8A" base_Element="_XFoTBBbsEeitqc-Dc8Gf8A"/>
-  <OpenModel_Profile:Experimental xmi:id="_7zpnEBb5Eeitqc-Dc8Gf8A" base_Element="_XFoTDBbsEeitqc-Dc8Gf8A"/>
-  <OpenModel_Profile:Experimental xmi:id="_860qgBb5Eeitqc-Dc8Gf8A" base_Element="_XFoTCxbsEeitqc-Dc8Gf8A"/>
-  <OpenModel_Profile:Experimental xmi:id="_-EXFcBb5Eeitqc-Dc8Gf8A" base_Element="_XFoTDRbsEeitqc-Dc8Gf8A"/>
-  <OpenModel_Profile:Experimental xmi:id="__FVaQBb5Eeitqc-Dc8Gf8A" base_Element="_XFoTChbsEeitqc-Dc8Gf8A"/>
   <OpenModel_Profile:Experimental xmi:id="_AXPHABb6Eeitqc-Dc8Gf8A" base_Element="_XFoTERbsEeitqc-Dc8Gf8A"/>
   <OpenModel_Profile:Experimental xmi:id="_Bh9NsBb6Eeitqc-Dc8Gf8A" base_Element="_XFoTDhbsEeitqc-Dc8Gf8A"/>
   <OpenModel_Profile:Experimental xmi:id="_ChCFEBb6Eeitqc-Dc8Gf8A" base_Element="_XFoTqhbsEeitqc-Dc8Gf8A"/>
@@ -15846,4 +15911,10 @@ This class should not be implemented.</body>
   <OpenModel_Profile:Experimental xmi:id="_vwF70DTUEe22jbMp3BDUaA" base_Element="_-6SWOikwEe2juI-ggmBSIQ"/>
   <OpenModel_Profile:Experimental xmi:id="_yC0zcDTUEe22jbMp3BDUaA" base_Element="_-6SWPikwEe2juI-ggmBSIQ"/>
   <OpenModel_Profile:Experimental xmi:id="_zP31YDTUEe22jbMp3BDUaA" base_Element="_-6SWPCkwEe2juI-ggmBSIQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_33GpYHGUEe2_e5PQKRXPAw" base_StructuralFeature="_33GCUHGUEe2_e5PQKRXPAw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_NGA3IXGVEe2_e5PQKRXPAw" base_StructuralFeature="_NGA3IHGVEe2_e5PQKRXPAw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_Qw3C8LNZEe2Z-6WXofZ1eg" base_StructuralFeature="_Qw2b4rNZEe2Z-6WXofZ1eg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_Qw77cbNZEe2Z-6WXofZ1eg" base_StructuralFeature="_Qw77cLNZEe2Z-6WXofZ1eg"/>
+  <OpenModel_Profile:Experimental xmi:id="_0pghQLNZEe2Z-6WXofZ1eg" base_Element="_Qwz_oLNZEe2Z-6WXofZ1eg"/>
+  <OpenModel_Profile:Experimental xmi:id="_7iOskLNZEe2Z-6WXofZ1eg" base_Element="_Qw2b4rNZEe2Z-6WXofZ1eg"/>
 </xmi:XMI>
