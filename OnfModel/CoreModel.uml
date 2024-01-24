@@ -5299,8 +5299,8 @@ Work order needs to be fulfilled correctly. did the operator put the right card 
           <body>Support Constraints are potentially complex expressions.</body>
         </ownedComment>
         <ownedComment xmi:type="uml:Comment" xmi:id="_8SXNUT-HEeaRI-H69PghuA">
-          <body>Suggest that Expected forms a structure that actual uses when expectation met but when not met actual has its own structure that branches from the expected structure.&#xD;
-This will cause an instance transition is actual is accepted as expected.</body>
+          <body>Expected forms a structure that actual uses when expectation met but when not met actual has its own structure that branches from the expected structure.&#xD;
+This will cause an instance transition as actual is accepted as expected.</body>
         </ownedComment>
         <ownedComment xmi:type="uml:Comment" xmi:id="_8SXNUz-HEeaRI-H69PghuA">
           <body>Expected is the primary for need&#xD;
@@ -5314,19 +5314,6 @@ Type and serial number&#xD;
 Functional role&#xD;
 Paid work activity</body>
         </ownedComment>
-        <ownedComment xmi:type="uml:Comment" xmi:id="_8SXNRz-HEeaRI-H69PghuA">
-          <body>May fold/zip model based upon expected/actual match/mismatch.</body>
-        </ownedComment>
-        <ownedComment xmi:type="uml:Comment" xmi:id="_8SXNWz-HEeaRI-H69PghuA">
-          <body>Propose we build this essential model structure for spec, expecetd/intent and actual covering the orange/brown classes (witha ttrbutes from other model diagram)&#xD;
-BUT need to deal with the complexity of expectation v actual (discuss)&#xD;
-Propose we keep this pattern model in the model for reference&#xD;
-Propose once we have the expected v actual approach developed we capture the pattern and apply it to all cases of intent.&#xD;
-Note that the green classes exist already&#xD;
-Propose that we develop the function model (purple)&#xD;
-Propose that we do not do the cable (red)&#xD;
-Note that the other classes are fold or are abstract</body>
-        </ownedComment>
         <ownedComment xmi:type="uml:Comment" xmi:id="_8SXNXj-HEeaRI-H69PghuA" annotatedElement="_8SXNfz-HEeaRI-H69PghuA _8SXNZD-HEeaRI-H69PghuA">
           <body>Spec, expected (intent) and actual follow the same pattern. &#xD;
 As expected is intent it may be very loose.&#xD;
@@ -5337,10 +5324,7 @@ If intent has a subset of properties when the actual equipment arrives it will f
 The spec will provide definition for all property ranges etc.&#xD;
 If the actual matches the expectation both can be in one compact structure&#xD;
 If the actual differes from the expected a replication of some or all of the structure may be necessary.&#xD;
-BUT as the cases we are covering are constrained it may be possible to use one structure with some leaves to capture both intent and actual.</body>
-        </ownedComment>
-        <ownedComment xmi:type="uml:Comment" xmi:id="_8SXNYD-HEeaRI-H69PghuA">
-          <body>Use the term expected here not intention.</body>
+</body>
         </ownedComment>
         <ownedComment xmi:type="uml:Comment" xmi:id="_IECUcEmqEeaDccCv6BIgdg">
           <body>Should we fold actual or expected into Equipment?&#xD;
@@ -5359,13 +5343,13 @@ There is no temporality to the constraints.</body>
         <ownedComment xmi:type="uml:Comment" xmi:id="_dRZ30EmvEeaDccCv6BIgdg">
           <body>A holder represents an addressed place in the context of the containing equipment. &#xD;
 If the equipment is not as expected in its containing holder there will be an actual/expected discrepancy at that level of equipment.&#xD;
-This may lead to holders having strange actual/expectation mismatche.</body>
+This may lead to holders having strange actual/expectation mismatches.</body>
         </ownedComment>
         <ownedComment xmi:type="uml:Comment" xmi:id="_0tFpsEmwEeaDccCv6BIgdg">
           <body>Assumes equipment expected in a specific holder.</body>
         </ownedComment>
         <ownedComment xmi:type="uml:Comment" xmi:id="_-JZMEEmwEeaDccCv6BIgdg">
-          <body>May need constraint interaction logic but within bounds of the single expected equipment</body>
+          <body>Needs constraint interaction logic but within bounds of the single expected equipment</body>
         </ownedComment>
         <ownedComment xmi:type="uml:Comment" xmi:id="_8SXNYj-HEeaRI-H69PghuA">
           <body>_port id may be UUID of pin group&#xD;
@@ -7345,9 +7329,6 @@ The referenced Class may:&#xD;
 - compaction delay&#xD;
 - retention&#xD;
 - tombstone retention</body>
-        </ownedComment>
-        <ownedComment xmi:type="uml:Comment" xmi:id="_9dCNAKtYEey15NKF0wAXwA">
-          <body>Explain better who controls what.</body>
         </ownedComment>
         <ownedComment xmi:type="uml:Comment" xmi:id="_xzvkkLxBEey15NKF0wAXwA">
           <body>Get/Post/Put/Patch/Stream</body>
